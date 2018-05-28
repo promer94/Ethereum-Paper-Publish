@@ -4,7 +4,7 @@
   "description": "MSc projects",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/",
+    "test": "jest",
     "compile": "node scripts/compile.js",
     "pretest": "npm run compile",
     "predeploy": "npm run test",

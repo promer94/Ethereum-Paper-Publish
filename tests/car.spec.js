@@ -6,41 +6,42 @@ const consola = require('consola');
 
 //1. Get bytecode
 const contractPath = path.resolve(__dirname, '../compiled/Car.json');
-const { interface, bytecode } = require(contractPath);
+const _contractObject = require(contractPath);
+const _interface = _contractObject['interface']
+const bytecode = _contractObject['bytecode']
+
 
 //2. config provider
 const web3 = new Web3(ganache.provider());
 
-let account;
+let accounts;
 let contract;
 const initialBrand = 'BWM';
 
-describe('contract',() => {
+describe('Contract: Car',() => {
     beforeEach(async ()=>{
         accounts = await web3.eth.getAccounts();
 
-        contract = await new web3.eth.Contract(JSON.parse(interface))
+        contract = await new web3.eth.Contract(JSON.parse(_interface))
         .deploy({data: bytecode, arguments: [initialBrand]})
         .send({from:accounts[0], gas:'1000000'});
-
-        consola.success(`Account:${accounts[0]}`)
-        consola.success(`Contracts have been deployed at ${contract.options.address}`)
-
-        
     })
-    it('deploy a contact', () => {
-        assert.ok(contract.options.address);
+
+    it('Deploy a contact', () => {
+        expect(contract.options.address).toBeDefined()
     });
 
-    it('has initial brand', async () => {
+    it('Has initial brand', async () => {
+        expect.assertions(1);
         const brand = await contract.methods.brand().call();
-        assert.equal(brand, initialBrand)
+        expect(brand).toEqual(initialBrand)
     });
     
-    it('can change the brand', async () => {
+    it('Can change the brand', async () => {
+        expect.assertions(1)
         const newBrand = 'ZZZ';
         await contract.methods.setBrand(newBrand).send({from:accounts[0]});
         const brand = await contract.methods.brand().call();
-        assert.equal(brand, newBrand);
+        expect(brand).toEqual(newBrand);
     })
 })
