@@ -1,3 +1,4 @@
+require('dotenv').config();
 const path = require('path');
 const Web3 = require('web3');
 const HDWalletProvider = require('truffle-hdwallet-provider');
@@ -10,8 +11,8 @@ const bytecode = _contractObject['bytecode']
 
 
 const provider = new HDWalletProvider(
-    'slab gadget motor monkey island symptom book battle beyond section know poverty',
-    'https://rinkeby.infura.io/hLV2Ay1wJwLSk0vAzMTr'
+    process.env.SEEDPRASE,
+    process.env.WEBACCESSPOINT
 )
 
 const web3 = new Web3(provider);
