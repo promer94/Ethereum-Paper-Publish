@@ -2,33 +2,40 @@ require('dotenv').config();
 const path = require('path');
 const Web3 = require('web3');
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const consola = require('consola');
+const signale = require('signale');
 
 const contractPath = path.resolve(__dirname, '../compiled/Car.json');
 const _contractObject = require(contractPath);
-const _interface = _contractObject['interface']
-const bytecode = _contractObject['bytecode']
-
+const _interface = _contractObject.interface;
+const { bytecode } = _contractObject;
 
 const provider = new HDWalletProvider(
-    process.env.SEEDPRASE,
-    process.env.WEBACCESSPOINT
-)
+  process.env.SEEDPRASE,
+  process.env.WEBACCESSPOINT
+);
 
 const web3 = new Web3(provider);
 
 (async () => {
-    console.time('Deployment time')
-    const accounts = await web3.eth.getAccounts();
-    consola.info(`Account:${accounts[0]}`);
+  signale.time('Deploy');
+  const accounts = await web3.eth.getAccounts();
+  signale.info(`Account:${accounts[0]}`);
+  signale.pending('Deploying....');
+  const result = await new web3.eth.Contract(JSON.parse(_interface))
+    .deploy({
+      data: bytecode,
+      arguments: ['AUDI']
+    })
+    .send({
+      from: accounts[0],
+      gas: '1000000'
+    });
 
-    consola.start('Deployment start')
-    
-    const result = await new web3.eth.Contract(JSON.parse(_interface))
-    .deploy({data: bytecode, arguments:['AUDI']})
-    .send({from: accounts[0], gas:'1000000'})
-    
-
-    consola.success(`Contract has been depolyed:${result.options.address}`)
-    console.timeEnd('Deployment time')
-})()
+  signale.success(`Contract has been depolyed:${result.options.address}`);
+  signale.info(
+    `You can view the transaction at https://rinkeby.etherscan.io/address/${
+      result.options.address
+    }`
+  );
+  signale.timeEnd('Deploy');
+})();
