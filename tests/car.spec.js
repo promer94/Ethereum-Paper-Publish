@@ -1,6 +1,8 @@
 const path = require('path');
 const ganache = require('ganache-cli');
 const Web3 = require('web3');
+const fs = require('fs-extra');
+const signale = require('signale');
 
 //1. Get bytecode
 const contractPath = path.resolve(__dirname, '../compiled/Car.json');
@@ -8,15 +10,22 @@ const _contractObject = require(contractPath);
 const _interface = _contractObject.interface;
 const { bytecode } = _contractObject;
 
-//2. config provider
-const web3 = new Web3(ganache.provider());
+const logDir = path.resolve(__dirname, 'carlog');
+fs.removeSync(logDir);
+fs.ensureDirSync(logDir);
 
+//2. config provider
+const provider = ganache.provider({
+  db_path: path.resolve(__dirname, 'carlog'),
+  logger: signale
+});
+const web3 = new Web3(provider);
 let accounts;
 let contract;
 const initialBrand = 'BWM';
 
 describe('Contract: Car', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     accounts = await web3.eth.getAccounts();
 
     contract = await new web3.eth.Contract(JSON.parse(_interface))
@@ -39,6 +48,7 @@ describe('Contract: Car', () => {
     const newBrand = 'zzz';
     await contract.methods.setBrand(newBrand).send({ from: accounts[0] });
     const brand = await contract.methods.brand().call();
+
     expect(brand).toEqual(newBrand);
   });
 });

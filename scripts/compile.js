@@ -13,7 +13,6 @@ const contractFiles = fs.readdirSync(path.resolve(__dirname, '../contracts'));
 contractFiles.forEach(contractFile => {
   signale.time('Compile');
   //Compile
-
   signale.pending('Compiling....');
   const contractPath = path.resolve(__dirname, '../contracts', contractFile);
   const contractSource = fs.readFileSync(contractPath, 'utf8');
