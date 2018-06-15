@@ -4,7 +4,8 @@
   "description": "MSc projects",
   "main": "index.js",
   "scripts": {
-    "test": "jest -o --watch",
+    "test": "jest",
+    "localtest":"jest -o --watch",
     "compile": "node scripts/compile.js",
     "pretest": "npm run compile",
     "predeploy": "npm run test",
