@@ -42,7 +42,7 @@ describe('Contract: Car', () => {
 
   it('Can change the brand', async () => {
     expect.assertions(1);
-    const newBrand = 'zzz';
+    const newBrand = 'BWM';
     await contract.methods.setBrand(newBrand).send({ from: accounts[0] });
     const brand = await contract.methods.brand().call();
 
