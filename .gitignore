@@ -5,3 +5,4 @@ include
 .env
 pip-selfcheck.json
 .Python
+**/tests/log
