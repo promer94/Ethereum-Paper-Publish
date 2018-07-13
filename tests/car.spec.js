@@ -2,7 +2,7 @@ const path = require('path');
 const ganache = require('ganache-cli');
 const Web3 = require('web3');
 const fs = require('fs-extra');
-
+const winston = require('winston');
 //1. Get bytecode
 const contractPath = path.resolve(__dirname, '../compiled/Car.json');
 const _contractObject = require(contractPath);
@@ -13,10 +13,30 @@ const logDir = path.resolve(__dirname, 'log/carlog');
 fs.removeSync(logDir);
 fs.ensureDirSync(logDir);
 
+// Set logger
+const blockLogger = winston.createLogger({
+  format: winston.format.json(),
+  transports: [
+    //
+    // - Write to all logs with level `info` and below to `combined.log`
+    // - Write all logs error (and below) to `error.log`.
+    //
+    new winston.transports.File({
+      filename: `${logDir}/Car.log`,
+      json: true,
+      maxsize: 5242880, // 5MB
+      maxFiles: 5,
+      colorize: false
+    })
+  ]
+});
+blockLogger.log = blockLogger.info;
+
 //2. config provider
 const provider = ganache.provider({
-  db_path: logDir
+  logger: blockLogger
 });
+//3. Initialize web3 instance
 const web3 = new Web3(provider);
 let accounts;
 let contract;
