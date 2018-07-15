@@ -3,6 +3,8 @@ node_js:
   - "node"
   - "8"
 cache:
-  yarn
+  directories:
+    - "node_modules"
+  yarn: true
 script:
   - yarn deploy
