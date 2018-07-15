@@ -6,3 +6,4 @@ include
 pip-selfcheck.json
 .Python
 **/tests/log
+/.idea/

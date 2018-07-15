@@ -13,14 +13,10 @@ const logDir = path.resolve(__dirname, 'log/carlog')
 fs.removeSync(logDir)
 fs.ensureDirSync(logDir)
 
-// Set logger
+// Config logger
 const blockLogger = winston.createLogger({
   format: winston.format.json(),
   transports: [
-    //
-    // - Write to all logs with level `info` and below to `combined.log`
-    // - Write all logs error (and below) to `error.log`.
-    //
     new winston.transports.File({
       filename: `${logDir}/Car.log`,
       json: true,
@@ -36,7 +32,8 @@ blockLogger.log = blockLogger.info
 const provider = ganache.provider({
   logger: blockLogger
 })
-//3. Initialize web3 instance
+
+//Initialize web3 instance
 const web3 = new Web3(provider)
 let accounts
 let contract
@@ -46,7 +43,10 @@ describe('Contract: Car', () => {
   beforeEach(async () => {
     accounts = await web3.eth.getAccounts()
     contract = await new web3.eth.Contract(JSON.parse(_interface))
-      .deploy({ data: bytecode, arguments: [initialBrand] })
+      .deploy({
+        data: bytecode,
+        arguments: [initialBrand]
+      })
       .send({ from: accounts[0], gas: '1000000' })
   })
 
@@ -63,7 +63,9 @@ describe('Contract: Car', () => {
   it('Can change the brand', async () => {
     expect.assertions(1)
     const newBrand = 'BWM'
-    await contract.methods.setBrand(newBrand).send({ from: accounts[0] })
+    await contract.methods.setBrand(newBrand).send({
+      from: accounts[0]
+    })
     const brand = await contract.methods.brand().call()
 
     expect(brand).toEqual(newBrand)
