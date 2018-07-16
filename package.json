@@ -34,16 +34,16 @@
   "author": "YixuanXu",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "fs-extra": "^6.0.1",
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.0",
+    "dotenv": "6.0.0",
+    "fs-extra": "6.0.1",
+    "husky": "1.0.0-rc.13",
+    "lint-staged": "7.2.0",
     "openzeppelin-solidity": "1.11.0",
-    "signale": "^1.2.0",
-    "solc": "^0.4.24",
+    "signale": "1.2.1",
+    "solc": "0.4.24",
     "truffle-hdwallet-provider": "0.0.3",
-    "web3": "^1.0.0-beta.34",
-    "winston": "^3.0.0"
+    "web3": "1.0.0-beta.34",
+    "winston": "3.0.0"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
