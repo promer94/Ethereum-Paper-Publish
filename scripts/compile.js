@@ -11,13 +11,13 @@ fs.ensureDirSync(compiledDir)
 //search all contracts
 const contractFiles = fs.readdirSync(path.resolve(__dirname, '../contracts'))
 contractFiles.forEach(contractFile => {
-  signale.time('Compile')
+  signale.time(`Compile ${contractFile}`)
   //Compile
   signale.pending('Compiling....')
   const contractPath = path.resolve(__dirname, '../contracts', contractFile)
   const contractSource = fs.readFileSync(contractPath, 'utf8')
   const result = solc.compile(contractSource, 1)
-  signale.info(`file compiled: ${contractFile}`)
+  signale.info(`File compiled: ${contractFile}`)
 
   //Check errors
   if (Array.isArray(result.errors) && result.errors.length) {
@@ -30,6 +30,6 @@ contractFiles.forEach(contractFile => {
     const filePath = path.resolve(compiledDir, `${contractName}.json`)
     fs.outputJsonSync(filePath, result.contracts[name])
     signale.success(`Contract ${contractName} saved to ${filePath}`)
-    signale.timeEnd('Compile')
+    signale.timeEnd(`Compile ${contractFile}`)
   })
 })

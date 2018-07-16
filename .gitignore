@@ -2,6 +2,7 @@ node_modules
 bin
 lib
 include
+env
 .env
 pip-selfcheck.json
 .Python
