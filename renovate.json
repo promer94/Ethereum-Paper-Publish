@@ -1,8 +1,9 @@
 {
   "extends": ["config:base"],
-  "pinVersions": {
-    "description":
-      "Use version pinning (maintain a single version only and not semver ranges)",
-    "rangeStrategy": "pin"
-  }
+  "packageFiles": [
+    {
+      "packageFile": "package.json",
+      "pinVersions": false
+    }
+  ]
 }
