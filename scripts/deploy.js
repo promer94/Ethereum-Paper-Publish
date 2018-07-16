@@ -30,11 +30,12 @@ const web3 = new Web3(provider)
       gas: '3000000'
     })
 
-  signale.success(`Contract has been depolyed:${result.options.address}`)
+  signale.success(`Contract has been deployed:${result.options.address}`)
   signale.info(
     `You can view the transaction at https://rinkeby.etherscan.io/address/${
       result.options.address
     }`
   )
   signale.timeEnd('Deploy')
+  process.exit()
 })()

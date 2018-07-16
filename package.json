@@ -1,15 +1,15 @@
 {
   "name": "ethereum-contract",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MSc projects",
-  "main": "index.js",
   "scripts": {
     "test": "jest --silent",
     "localtest": "jest -o --watch --verbose",
     "compile": "node scripts/compile.js",
     "pretest": "npm run compile",
     "predeploy": "npm run test",
-    "deploy": "node scripts/deploy.js"
+    "deploy": "node scripts/deploy.js",
+    "lint": "eslint --fix ."
   },
   "husky": {
     "hooks": {
@@ -17,7 +17,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,css,md}": [
       "prettier --write",
       "git add"
     ]
