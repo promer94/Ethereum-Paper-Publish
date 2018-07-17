@@ -104,7 +104,7 @@ describe('Contract: EscrowContract', () => {
         .approve()
         .send({ from: accounts[1] })
       const balance = new BN(await web3.eth.getBalance(accounts[2]))
-      expect(approve).toBeTruthy()
+      expect(approve.status).toBeTruthy()
       expect(balance).toStrictEqual(initialBalance.add(initialInvest))
     })
 
