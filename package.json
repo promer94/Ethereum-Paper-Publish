@@ -3,11 +3,10 @@
   "version": "0.0.2",
   "description": "MSc projects",
   "scripts": {
-    "test": "npm run deploy",
-    "localtest": "jest --silent",
+    "test": "jest --silent",
+    "localtest": "jest -o --verbose",
     "compile": "node scripts/compile.js",
     "prelocaltest": "npm run compile",
-    "predeploy": "npm run localtest",
     "deploy": "node scripts/deploy.js",
     "lint": "eslint --fix ."
   },
