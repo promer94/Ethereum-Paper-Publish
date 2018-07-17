@@ -1,6 +1,6 @@
 {
   "name": "ethereum-contract",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "MSc projects",
   "scripts": {
     "test": "jest --silent",
@@ -35,8 +35,6 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "fs-extra": "^6.0.1",
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.0",
     "openzeppelin-solidity": "1.11.0",
     "signale": "^1.2.0",
     "solc": "^0.4.24",
@@ -60,6 +58,8 @@
     "eslint-plugin-react": "7.10.0",
     "ganache-cli": "6.1.6",
     "jest": "23.4.1",
-    "prettier": "1.13.7"
+    "prettier": "1.13.7",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0"
   }
 }
