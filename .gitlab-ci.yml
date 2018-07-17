@@ -2,7 +2,6 @@ image: node:8.11-jessie
 cache:
   paths:
     - node_modules/
-    - .yarn
 
 stages:
   - lint
@@ -12,7 +11,6 @@ stages:
 ESlint:
   stage: lint
   before_script:
-    - yarn config set cache-folder .yarn
     - yarn install
   script:
     - yarn lint
@@ -21,7 +19,6 @@ Test 6:
   stage: test
   image: node:6
   before_script:
-    - yarn config set cache-folder .yarn
     - yarn install
   script:
     - yarn test
@@ -29,7 +26,6 @@ Test 6:
 Test 8:
   stage: test
   before_script:
-    - yarn config set cache-folder .yarn
     - yarn install
   script:
     - yarn test
@@ -37,7 +33,6 @@ Test 8:
 Deploy:
   stage: deploy
   before_script:
-    - yarn config set cache-folder .yarn
     - yarn install
   script:
     - yarn deploy
