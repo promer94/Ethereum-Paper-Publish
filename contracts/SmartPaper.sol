@@ -18,57 +18,30 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 pragma solidity ^0.4.24;
-/**
- * @title Roles
- * @author Francisco Giordano (@frangio)
- * @dev Library for managing addresses assigned to a Role.
- * See RBAC.sol for example usage.
- */
 library Roles {
     struct Role {
         mapping (address => bool) bearer;
     }
 
-  /**
-   * @dev give an address access to this role
-   */
-    function add(Role storage role, address addr)
-      internal{
+
+    function add(Role storage role, address addr) internal{
         role.bearer[addr] = true;
     }
 
-  /**
-   * @dev remove an address' access to this role
-   */
-    function remove (Role storage role, address addr) internal{
+
+    function remove(Role storage role, address addr) internal{
         role.bearer[addr] = false;
     }
 
-  /**
-   * @dev check if an address has this role
-   * // reverts
-   */
+
     function check(Role storage role, address addr) view internal{
         require(has(role, addr));
     }
 
-  /**
-   * @dev check if an address has this role
-   * @return bool
-   */
     function has(Role storage role, address addr) view internal returns (bool){
         return role.bearer[addr];
     }
 }
-/**
- * @title RBAC (Role-Based Access Control)
- * @author Matt Condon (@Shrugs)
- * @dev Stores and provides setters and getters for roles and addresses.
- * Supports unlimited numbers of roles and addresses.
- * See //contracts/mocks/RBACMock.sol for an example of usage.
- * This RBAC method uses strings to key roles. It may be beneficial
- * for you to write your own implementation of this interface using Enums or similar.
- */
 contract RBAC {
     using Roles for Roles.Role;
 
@@ -93,7 +66,7 @@ contract RBAC {
    * @param _role the name of the role
    * @return bool
    */
-    function hasRole(address _operator, string _role) view public returns (bool){
+    function hasRole(address _operator, string _role) view internal returns (bool){
         return roles[_role].has(_operator);
     }
 
@@ -149,6 +122,30 @@ contract RBAC {
   //     _;
   // }
 }
+
+contract AuthorList is RBAC {
+    string private constant ROLE_AUTHOR = "author";
+    
+    modifier onlyIfAuthor(address _operator){
+        checkRole(_operator, ROLE_AUTHOR);
+        _;
+    }
+
+    function addAddressToAuthor(address _operator) internal {
+        addRole(_operator, ROLE_AUTHOR);
+    }
+
+    function authorlist(address _operator) internal view returns (bool) {
+        return hasRole(_operator, ROLE_AUTHOR);
+    }
+
+    function addAddressesToAuthorList(address[] _operators) internal {
+        for (uint256 i = 0; i < _operators.length; i++) {
+            addAddressToAuthor(_operators[i]);
+        }
+    }
+}
+
 contract SmartPaperList {
     address[] public smartPapers;
     function createPaper(bytes32 _description, bytes32 _metaData, bytes16 _paperMD5, address[] _authors) public returns(address){
@@ -162,41 +159,85 @@ contract SmartPaperList {
     }
 }
 
-contract SmartPaper is RBAC{
+contract SmartPaper is AuthorList{
     struct Version{
-        bytes32 versionNumber;
+        uint versionNumber;
+        bytes32 versionDescription;
         bytes32 metaData;
         bool isPublished;
+        mapping (address => bool) signs;
+        uint voterCount;
     }
-    bytes32 public description;
-    bytes32 public metaData;
-    bytes16[] public listOfPaperMD5;
+    bytes32 public latestDescription;
+    bytes32 public latestMetaData;
+    bytes16 public latestPaper;  //md5
     address[] public authors;
-    mapping (bytes16 => Version) public versions;   // md5 => specific Version.
-    mapping (address => uint) public verifiedAuthors; // verified => 1
-    
+    bytes16[] public md5List;
+    Version[] public versions;
+    mapping (bytes16 => Version) public versionMap;
     constructor (bytes32 _description, bytes32 _metaData, bytes16 _paperMD5, address[] _authors) public{
         require(_authors.length > 0, "Invalid authors list");
-        description = _description;
-        metaData = _metaData;
-        listOfPaperMD5.push(_paperMD5);
-        authors = _authors;  
-        bytes32 versionNumber = bytes32(0);    // defalut version number 0
-        Version memory newVersion = Version(
-            versionNumber,
-            _metaData,
-            false        // defalut state false;
-        );            
-        versions[_paperMD5] = newVersion;
-        verifiedAuthors[msg.sender] = 1;          
-    }
-    
+        authors = _authors;
+        latestPaper = _paperMD5;
+        md5List.push(latestPaper);
+        latestMetaData = _metaData;
+        latestDescription = _description;
+        uint versionNumber = uint(1); 
+        addAddressesToAuthorList(_authors);
+        Version memory newVersion = Version({
+            versionNumber: versionNumber,
+            versionDescription:latestDescription,
+            metaData:latestMetaData,
+            isPublished:false,
+            voterCount:1
+        });
+        versions.push(newVersion);
+        versions[0].signs[msg.sender] = true;
+        versionMap[latestPaper] = newVersion;
 
+        
+    }
+    function checkIn() public onlyIfAuthor(msg.sender){
+        require(versions[0].signs[msg.sender] == false);
+        versions[0].signs[msg.sender] = true;
+        versions[0].voterCount++;
+        if(versions[0].voterCount == authors.length){
+            versions[0].isPublished = true;
+        }
+        versionMap[md5List[0]] = versions[0];
+    }
     function getPapers() public view returns (bytes16[]){
-        return listOfPaperMD5;
+        return md5List;
     }
-
     function getAuthors() public view returns (address[]){
         return authors;
     }
-} 
+    function createNewVersion(uint versionNumber, bytes32 versionDescription, bytes32 metaData, bytes16 md5)
+    onlyIfAuthor(msg.sender) public payable {
+        Version memory newVersion = Version({
+            versionNumber: versionNumber,
+            versionDescription:versionDescription,
+            metaData:metaData,
+            isPublished:false,
+            voterCount:1
+        });
+        md5List.push(md5);
+        versions.push(newVersion);
+        versionMap[md5] = newVersion;
+    }
+    function approveVersion(uint versionNumber, bytes16 md5) onlyIfAuthor(msg.sender) public{
+        Version storage version = versions[versionNumber-1];
+        require(!version.signs[msg.sender]);
+        version.signs[msg.sender] = true;
+        version.voterCount++;
+        if(version.voterCount==authors.length){
+            version.isPublished = true;
+        }
+        versionMap[md5] = version;
+        require(versionMap[md5].versionNumber == versions[versionNumber-1].versionNumber);
+        require(versionMap[md5].versionDescription == versions[versionNumber-1].versionDescription);
+        require(versionMap[md5].isPublished == versions[versionNumber-1].isPublished);
+        require(versionMap[md5].metaData == versions[versionNumber-1].metaData);
+        require(versionMap[md5].voterCount == versions[versionNumber-1].voterCount);
+    }
+}  
