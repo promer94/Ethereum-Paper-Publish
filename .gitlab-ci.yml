@@ -10,7 +10,7 @@ Test 8:
   before_script:
     - yarn install
   script:
-    - yarn deploy
+    - yarn test
 
 
 
