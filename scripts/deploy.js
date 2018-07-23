@@ -13,7 +13,7 @@ const smartPaper = require(path.resolve(
 ))
 const smartPaperList = require(path.resolve(
 	__dirname,
-	'../compiled/smartPaperList.json'
+	'../compiled/SmartPaperList.json'
 ))
 const smartPaperInterface = smartPaper.interface //eslint-disable-line
 const smartPaperByte = smartPaper.bytecode //eslint-disable-line
