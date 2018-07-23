@@ -8,7 +8,7 @@ const crypto = require('crypto')
 
 const contract = require(path.resolve(
 	__dirname,
-	'../compiled/smartPaperList.json'
+	'../compiled/SmartPaperList.json'
 ))
 const _interface = contract.interface
 const _bytecode = contract.bytecode
