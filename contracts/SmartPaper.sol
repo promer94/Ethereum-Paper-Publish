@@ -3,6 +3,11 @@ Copyright (c) 2016 Smart Contract Solutions, Inc.
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
+/**The MIT License (MIT)
+Copyright (c) 2016 Smart Contract Solutions, Inc.
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
 without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
@@ -170,7 +175,8 @@ contract SmartPaper is AuthorList{
     }
     bytes32 public latestDescription;
     bytes32 public latestMetaData;
-    bytes16 public latestPaper;  //md5
+    bytes16 public latestPaper;
+    uint public latestVersion;  //md5
     address[] public authors;
     bytes16[] public md5List;
     Version[] public versions;
@@ -193,9 +199,7 @@ contract SmartPaper is AuthorList{
         });
         versions.push(newVersion);
         versions[0].signs[msg.sender] = true;
-        versionMap[latestPaper] = newVersion;
-
-        
+        versionMap[latestPaper] = newVersion;        
     }
     function checkIn() public onlyIfAuthor(msg.sender){
         require(versions[0].signs[msg.sender] == false);
@@ -203,6 +207,7 @@ contract SmartPaper is AuthorList{
         versions[0].voterCount++;
         if(versions[0].voterCount == authors.length){
             versions[0].isPublished = true;
+            latestVersion = versions[0].versionNumber;
         }
         versionMap[md5List[0]] = versions[0];
     }
@@ -212,8 +217,9 @@ contract SmartPaper is AuthorList{
     function getAuthors() public view returns (address[]){
         return authors;
     }
-    function createNewVersion(uint versionNumber, bytes32 versionDescription, bytes32 metaData, bytes16 md5)
+    function createNewVersion(bytes32 versionDescription, bytes32 metaData, bytes16 md5)
     onlyIfAuthor(msg.sender) public payable {
+        uint versionNumber = latestVersion + 1;
         Version memory newVersion = Version({
             versionNumber: versionNumber,
             versionDescription:versionDescription,
@@ -225,19 +231,25 @@ contract SmartPaper is AuthorList{
         versions.push(newVersion);
         versionMap[md5] = newVersion;
     }
-    function approveVersion(uint versionNumber, bytes16 md5) onlyIfAuthor(msg.sender) public{
-        Version storage version = versions[versionNumber-1];
+    function approveVersion(uint _versionNumber, bytes16 md5) onlyIfAuthor(msg.sender) public{
+        Version storage version = versions[_versionNumber-1];
         require(!version.signs[msg.sender]);
         version.signs[msg.sender] = true;
         version.voterCount++;
         if(version.voterCount==authors.length){
             version.isPublished = true;
+            latestVersion = version.versionNumber;
+            latestDescription = version.versionDescription;
+            latestMetaData = version.metaData;
+            latestPaper = md5;
+            versionMap[md5] = version;
+            require(versionMap[md5].versionNumber == versions[_versionNumber-1].versionNumber);
+            require(versionMap[md5].versionDescription == versions[_versionNumber-1].versionDescription);
+            require(versionMap[md5].isPublished == versions[_versionNumber-1].isPublished);
+            require(versionMap[md5].metaData == versions[_versionNumber-1].metaData);
+            require(versionMap[md5].voterCount == versions[_versionNumber-1].voterCount);
+            require(latestVersion == versions[_versionNumber-1].versionNumber);
         }
         versionMap[md5] = version;
-        require(versionMap[md5].versionNumber == versions[versionNumber-1].versionNumber);
-        require(versionMap[md5].versionDescription == versions[versionNumber-1].versionDescription);
-        require(versionMap[md5].isPublished == versions[versionNumber-1].isPublished);
-        require(versionMap[md5].metaData == versions[versionNumber-1].metaData);
-        require(versionMap[md5].voterCount == versions[versionNumber-1].voterCount);
     }
 }  
