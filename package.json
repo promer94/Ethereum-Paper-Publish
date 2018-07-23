@@ -6,7 +6,7 @@
 		"compile": "node scripts/compile.js",
 		"lint": "eslint --fix .",
 		"pretest": "npm run compile",
-		"test": "jest --silent",
+		"test": "jest --verbose",
 		"localtest": "jest -o --verbose",
 		"predeploy": "npm run test",
 		"deploy": "node scripts/deploy.js"
@@ -36,6 +36,7 @@
 	"dependencies": {
 		"dotenv": "^6.0.0",
 		"fs-extra": "^7.0.0",
+		"mathjs": "^5.0.4",
 		"openzeppelin-solidity": "1.11.0",
 		"signale": "^1.2.1",
 		"solc": "^0.4.24",
