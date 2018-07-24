@@ -1,39 +1,16 @@
 require('dotenv').config()
 const fs = require('fs-extra')
 const path = require('path')
-const Web3 = require('web3')
-const HDWalletProvider = require('truffle-hdwallet-provider')
 const signale = require('signale')
 const math = require('mathjs')
+const {
+	smartPaperListInterface,
+	smartPaperListByte
+} = require('../utils/contracts')
+const initialWeb3 = require('../utils/web3')
 
-//1. Get bytecode
-const smartPaper = require(path.resolve(
-	__dirname,
-	'../compiled/SmartPaper.json'
-))
-const smartPaperList = require(path.resolve(
-	__dirname,
-	'../compiled/SmartPaperList.json'
-))
-const smartPaperInterface = smartPaper.interface //eslint-disable-line
-const smartPaperByte = smartPaper.bytecode //eslint-disable-line
-const smartPaperListInterface = smartPaperList.interface
-const smartPaperListByte = smartPaperList.bytecode
-;(async () => {
-	const web3Provider = []
-	for (let i = 0; i < 3; i += 1) {
-		const provider = new HDWalletProvider(
-			process.env.SEEDPRASE,
-			process.env.WEBACCESSPOINT,
-			i
-		)
-		const web3 = new Web3(provider)
-		web3Provider.push(web3)
-	}
-	let accounts = await Promise.all(
-		web3Provider.map(web3 => web3.eth.getAccounts())
-	)
-	accounts = accounts.map(address => address[0])
+const deployRootContact = async () => {
+	const { web3Provider, accounts } = await initialWeb3()
 	const web3 = web3Provider[0]
 	const { fromWei } = web3.utils
 	/** Deploy the contract, calculate the fees and create log*/
@@ -44,13 +21,11 @@ const smartPaperListByte = smartPaperList.bytecode
 
 	const initial = await web3.eth.getBalance(accounts[0])
 	const initialBalance = parseFloat(fromWei(initial, 'ether'))
-	const listContract = await new web3.eth.Contract(
-		JSON.parse(smartPaperListInterface)
-	)
+	const listContract = await new web3.eth.Contract(smartPaperListInterface)
 		.deploy({
 			data: smartPaperListByte
 		})
-		.send({ from: accounts[0], gas: '5000000' })
+		.send({ from: accounts[0], gas: '2100000' })
 	const listContractAddress = listContract.options.address
 
 	signale.success('SmartPaperList contract has been deployed')
@@ -79,4 +54,5 @@ const smartPaperListByte = smartPaperList.bytecode
 	signale.success(`Contract address saved at ${addressFile}`)
 	signale.timeEnd('Deploy')
 	process.exit()
-})()
+}
+deployRootContact()

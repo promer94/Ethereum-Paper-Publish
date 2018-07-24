@@ -1,17 +1,14 @@
 /** @jest-environment node
  *
  */
-const path = require('path')
 const ganache = require('ganache-cli')
 const Web3 = require('web3')
 const crypto = require('crypto')
 
-const contract = require(path.resolve(
-	__dirname,
-	'../compiled/SmartPaperList.json'
-))
-const _interface = contract.interface
-const _bytecode = contract.bytecode
+const {
+	smartPaperListInterface,
+	smartPaperListByte
+} = require('../utils/contracts')
 
 const provider = ganache.provider()
 
@@ -33,9 +30,9 @@ const { isAddress } = web3.utils
 describe('SmartPaperList 📝', () => {
 	beforeEach(async () => {
 		accounts = await web3.eth.getAccounts()
-		listContract = await new web3.eth.Contract(JSON.parse(_interface))
+		listContract = await new web3.eth.Contract(smartPaperListInterface)
 			.deploy({
-				data: _bytecode
+				data: smartPaperListByte
 			})
 			.send({
 				from: accounts[0],
@@ -58,7 +55,7 @@ describe('SmartPaperList 📝', () => {
 		})
 		it('New paper stored 👌', async () => {
 			const addressList = await new web3.eth.Contract(
-				JSON.parse(_interface),
+				smartPaperListInterface,
 				listContract.options.address
 			).methods
 				.getProjects()
