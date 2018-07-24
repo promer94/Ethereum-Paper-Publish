@@ -12,12 +12,15 @@ const contract = require(path.resolve(__dirname, '../compiled/SmartPaper.json'))
 const _interface = contract.interface
 const _bytecode = contract.bytecode
 const provider = ganache.provider()
-const description = 'First Smart Paper'
+
+const description = 'The Smart paper'
 const metaData = 'Written by'
-const paper = 'First paper'
-const newPaper = 'new paper'
+const paper = 'The 1 Paper'
+const md5 = `0x${crypto
+	.createHash('md5')
+	.update(paper)
+	.digest('hex')}`
 let accounts
-let _authors
 let paperContract
 
 const web3 = new Web3(provider)
@@ -27,18 +30,15 @@ const { hexToUtf8 } = web3.utils
 describe('SmartPaper 📝', () => {
 	beforeEach(async () => {
 		accounts = await web3.eth.getAccounts()
-		const _description = toHex(description)
-		const _metaData = toHex(metaData)
-		const _paperMD5 = `0x${crypto
-			.createHash('md5')
-			.update(paper)
-			.digest('hex')}`
-		_authors = [accounts[0], accounts[1], accounts[2]]
-
 		paperContract = await new web3.eth.Contract(JSON.parse(_interface))
 			.deploy({
 				data: _bytecode,
-				arguments: [_description, _metaData, _paperMD5, _authors]
+				arguments: [
+					toHex(description),
+					toHex(metaData),
+					md5,
+					accounts.filter((ele, index) => index < 3)
+				]
 			})
 			.send({
 				from: accounts[0],
@@ -81,11 +81,11 @@ describe('SmartPaper 📝', () => {
 			})
 			it('authors 👌', async () => {
 				const author1 = await paperContract.methods.authors(0).call()
-				expect(author1).toEqual(_authors[0])
+				expect(author1).toEqual(accounts[0])
 				const author2 = await paperContract.methods.authors(1).call()
-				expect(author2).toEqual(_authors[1])
+				expect(author2).toEqual(accounts[1])
 				const author3 = await paperContract.methods.authors(2).call()
-				expect(author3).toEqual(_authors[2])
+				expect(author3).toEqual(accounts[2])
 			})
 		})
 	})
@@ -103,7 +103,7 @@ describe('SmartPaper 📝', () => {
 		})
 		it('get authors 👌', async () => {
 			const authors = await paperContract.methods.getAuthors().call()
-			expect(authors).toEqual(_authors)
+			expect(authors).toEqual(accounts.filter((ele, index) => index < 3))
 		})
 		it('author can check in 👌', async () => {
 			const second = await paperContract.methods.checkIn().send({
@@ -173,11 +173,11 @@ describe('SmartPaper 📝', () => {
 		it('author can create new version 👌', async () => {
 			const versionNumber = await paperContract.methods.latestVersion().call()
 			const expectNewVersion = parseInt(versionNumber, 10) + 1
-			const description = toHex('New smart paper')
-			const metaData = toHex('New smart paper')
+			const description = toHex('The smart paper 2')
+			const metaData = toHex('version 2')
 			const md5 = `0x${crypto
 				.createHash('md5')
-				.update(newPaper)
+				.update('paper 2')
 				.digest('hex')}`
 			await paperContract.methods
 				.createNewVersion(description, metaData, md5)
@@ -199,8 +199,8 @@ describe('SmartPaper 📝', () => {
 
 			expect(list[list.length - 1]).toEqual(md5)
 			expect(version.versionNumber).toBe(expectNewVersion.toString())
-			expect(hexToUtf8(version.versionDescription)).toBe('New smart paper')
-			expect(hexToUtf8(version.metaData)).toBe('New smart paper')
+			expect(hexToUtf8(version.versionDescription)).toBe('The smart paper 2')
+			expect(hexToUtf8(version.metaData)).toBe('version 2')
 			expect(version.isPublished).toBe(false)
 			expect(version.voterCount).toBe('1')
 			expect(versionMap).toEqual(version)
@@ -208,11 +208,11 @@ describe('SmartPaper 📝', () => {
 		it('author can approve new version 👌', async () => {
 			const versionNumber = await paperContract.methods.latestVersion().call()
 			const expectNewVersion = parseInt(versionNumber, 10) + 1
-			const description = toHex('New smart paper')
-			const metaData = toHex('New smart paper')
+			const description = toHex('The smart paper 2')
+			const metaData = toHex('version 2')
 			const md5 = `0x${crypto
 				.createHash('md5')
-				.update(newPaper)
+				.update('paper 2')
 				.digest('hex')}`
 			await paperContract.methods
 				.createNewVersion(description, metaData, md5)
@@ -256,14 +256,16 @@ describe('SmartPaper 📝', () => {
 				gas: '2100000'
 			})
 
-			expect(hexToUtf8(latestDescription)).toBe('New smart paper')
-			expect(hexToUtf8(latestMetaData)).toBe('New smart paper')
+			expect(hexToUtf8(latestDescription)).toBe('The smart paper 2')
+			expect(hexToUtf8(latestMetaData)).toBe('version 2')
 			expect(latestPaper).toBe(md5)
 			expect(newVersionNumber).toBe(expectNewVersion.toString())
 			expect(list[list.length - 1]).toEqual(md5)
 			expect(version.versionNumber).toBe(expectNewVersion.toString())
-			expect(hexToUtf8(version.versionDescription)).toBe('New smart paper')
-			expect(hexToUtf8(version.metaData)).toBe('New smart paper')
+			expect(hexToUtf8(version.versionDescription)).toEqual(
+				hexToUtf8(latestDescription)
+			)
+			expect(hexToUtf8(version.metaData)).toEqual(hexToUtf8(latestMetaData))
 			expect(version.isPublished).toBe(true)
 			expect(version.voterCount).toBe('3')
 			expect(versionMap).toEqual(version)
@@ -285,7 +287,7 @@ describe('SmartPaper 📝', () => {
 			const metaData = toHex('New smart paper')
 			const md5 = `0x${crypto
 				.createHash('md5')
-				.update(newPaper)
+				.update('paper 2')
 				.digest('hex')}`
 			await paperContract.methods
 				.createNewVersion(description, metaData, md5)
@@ -307,7 +309,7 @@ describe('SmartPaper 📝', () => {
 			const metaData = toHex('New smart paper')
 			const md5 = `0x${crypto
 				.createHash('md5')
-				.update(newPaper)
+				.update('paper 2')
 				.digest('hex')}`
 			await paperContract.methods
 				.createNewVersion(description, metaData, md5)

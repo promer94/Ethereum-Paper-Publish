@@ -74,7 +74,10 @@ const smartPaperListByte = smartPaperList.bytecode //eslint-disable-line
 
 	/** Save the SmartPaperList contract address to disk */
 	const addressFile = path.resolve(__dirname, '../address.json')
-	fs.writeFileSync(addressFile, JSON.stringify(listContractAddress))
+	fs.writeFileSync(
+		addressFile,
+		`{"address":${JSON.stringify(listContractAddress)}}`
+	)
 	signale.success(`Contract address saved at ${addressFile}`)
 	signale.timeEnd('Deploy')
 	process.exit()

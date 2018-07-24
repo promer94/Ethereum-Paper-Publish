@@ -15,9 +15,13 @@ const _bytecode = contract.bytecode
 
 const provider = ganache.provider()
 
-const description = 'First Smart Paper'
+const description = 'The Smart paper'
 const metaData = 'Written by'
-const paper = 'First paper'
+const paper = 'The 1 Paper'
+const md5 = `0x${crypto
+	.createHash('md5')
+	.update(paper)
+	.digest('hex')}`
 let accounts
 let listContract
 let paperAddress
@@ -45,13 +49,8 @@ describe('SmartPaperList 📝', () => {
 	})
 	describe('Function tests 🛠', () => {
 		beforeAll(async () => {
-			const testHash = crypto.createHash('md5')
-			const _description = toHex(description)
-			const _metaData = toHex(metaData)
-			const _paperMD5 = `0x${testHash.update(paper).digest('hex')}`
-			const authors = [accounts[0], accounts[1], accounts[2]]
 			paperAddress = await listContract.methods
-				.createPaper(_description, _metaData, _paperMD5, authors)
+				.createPaper(toHex(description), toHex(metaData), md5, [accounts[0]])
 				.call()
 		})
 		it('New paper created 👌', async () => {
