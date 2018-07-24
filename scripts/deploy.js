@@ -17,10 +17,8 @@ const smartPaperList = require(path.resolve(
 ))
 const smartPaperInterface = smartPaper.interface //eslint-disable-line
 const smartPaperByte = smartPaper.bytecode //eslint-disable-line
-const smartPaperListInterface = smartPaperList.interface //eslint-disable-line
-const smartPaperListByte = smartPaperList.bytecode //eslint-disable-line
-
-// eslint-disable-line
+const smartPaperListInterface = smartPaperList.interface
+const smartPaperListByte = smartPaperList.bytecode
 ;(async () => {
 	const web3Provider = []
 	for (let i = 0; i < 3; i += 1) {
