@@ -6,13 +6,10 @@
 		"compile": "node scripts/compile.js",
 		"lint": "eslint --fix .",
 		"pretest": "npm run compile",
-		"test": "jest --verbose",
 		"localtest": "jest -o --verbose",
 		"predeploy": "npm run test",
 		"deploy": "node scripts/deploy.js",
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"eject": "react-scripts eject"
+		"test": "jest --silent"
 	},
 	"husky": {
 		"hooks": {
@@ -41,12 +38,10 @@
 		"express": "^4.16.3",
 		"faker": "^4.1.0",
 		"fs-extra": "^7.0.0",
+		"jest": "^23.4.1",
 		"mathjs": "^5.0.4",
 		"morgan": "^1.9.0",
 		"openzeppelin-solidity": "1.11.0",
-		"react": "^16.4.1",
-		"react-dom": "^16.4.1",
-		"react-scripts": "1.1.4",
 		"signale": "^1.2.1",
 		"solc": "^0.4.24",
 		"truffle-hdwallet-provider": "0.0.3",
@@ -69,7 +64,6 @@
 		"eslint-plugin-react": "^7.10.0",
 		"ganache-cli": "^6.1.6",
 		"husky": "1.0.0-rc.13",
-		"jest": "^23.4.1",
 		"lint-staged": "^7.2.0",
 		"prettier": "^1.13.7",
 		"regenerator-runtime": "^0.12.0"
