@@ -6,7 +6,7 @@
 const faker = require('faker')
 const crypto = require('crypto')
 const math = require('mathjs') //eslint-disable-lines
-const web3 = require('../utils/web3')
+const web3 = require('../utils/Web3')
 const address = require('../utils/address')
 const {
 	smartPaperListInterface,
@@ -24,24 +24,30 @@ const md5 = content =>
 		.digest('hex')}`
 const versionTest = async times => {
 	const { accounts, web3Providers, totalBalance } = await web3()
-	const web3One = web3Providers[0]
-	const web3Two = web3Providers[1]
-	const web3Three = web3Providers[2]
+	const web3One = Array.isArray(web3Providers)
+		? web3Providers[0]
+		: web3Providers
+	const web3Two = Array.isArray(web3Providers)
+		? web3Providers[1]
+		: web3Providers
+	const web3Three = Array.isArray(web3Providers)
+		? web3Providers[2]
+		: web3Providers
 	const { toHex } = web3One.utils
 	const paper = faker.commerce.product()
 
 	const internalLogger = logger(`versionTest${times + 1}`)
 	try {
 		internalLogger.info(`The version test ${times + 1} starts`)
-		const { to } = await new web3One.eth.Contract(
+		const { to } = await new web3Two.eth.Contract(
 			smartPaperListInterface,
 			address
 		).methods
 			.createPaper(toHex(description), toHex(metaData), md5(paper), accounts)
-			.send({ from: accounts[0], gas: 2100000 })
+			.send({ from: accounts[1], gas: 2100000 })
 		internalLogger.info(`The ${times + 1} version is at ${to}`)
 		smartPaperList.push(to)
-		await new web3Two.eth.Contract(smartPaperInterface, to).methods
+		await new web3One.eth.Contract(smartPaperInterface, to).methods
 			.checkIn()
 			.call()
 		await new web3Three.eth.Contract(smartPaperInterface, to).methods
@@ -63,5 +69,7 @@ const versionTest = async times => {
 	}
 }
 for (let i = 0; i < 100; i += 1) {
-	setTimeout(() => versionTest(i), i * 10000)
+	setTimeout(() => {
+		versionTest(i)
+	}, i * 1000 * 60)
 }

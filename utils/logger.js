@@ -26,7 +26,7 @@ module.exports = function(name) {
 				colorize: false
 			}),
 			new transports.File({
-				filename: `${paperLogDir}/${name}_cost.log`,
+				filename: `${paperLogDir}/cost.log`,
 				level: 'warn',
 				json: true,
 				maxsize: 5242880, // 5MB
