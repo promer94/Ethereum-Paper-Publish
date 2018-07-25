@@ -1,6 +1,6 @@
 {
 	"name": "ethereum-contract",
-	"version": "0.0.3",
+	"version": "1.0.0",
 	"description": "MSc projects",
 	"scripts": {
 		"compile": "node scripts/compile.js",
@@ -9,7 +9,10 @@
 		"test": "jest --verbose",
 		"localtest": "jest -o --verbose",
 		"predeploy": "npm run test",
-		"deploy": "node scripts/deploy.js"
+		"deploy": "node scripts/deploy.js",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"eject": "react-scripts eject"
 	},
 	"husky": {
 		"hooks": {
@@ -35,10 +38,15 @@
 	"license": "MIT",
 	"dependencies": {
 		"dotenv": "^6.0.0",
+		"express": "^4.16.3",
 		"faker": "^4.1.0",
 		"fs-extra": "^7.0.0",
 		"mathjs": "^5.0.4",
+		"morgan": "^1.9.0",
 		"openzeppelin-solidity": "1.11.0",
+		"react": "^16.4.1",
+		"react-dom": "^16.4.1",
+		"react-scripts": "1.1.4",
 		"signale": "^1.2.1",
 		"solc": "^0.4.24",
 		"truffle-hdwallet-provider": "0.0.3",

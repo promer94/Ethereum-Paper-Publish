@@ -6,7 +6,7 @@
 const faker = require('faker')
 const crypto = require('crypto')
 const math = require('mathjs') //eslint-disable-lines
-const web3 = require('../utils/Web3')
+const web3 = require('../utils/web3')
 const address = require('../utils/address')
 const {
 	smartPaperListInterface,
@@ -68,7 +68,7 @@ const versionTest = async times => {
 		internalLogger.info(`The version test ${times + 1} is over`)
 	}
 }
-for (let i = 0; i < 100; i += 1) {
+for (let i = 0; i < 1; i += 1) {
 	setTimeout(() => {
 		versionTest(i)
 	}, i * 1000 * 60)
