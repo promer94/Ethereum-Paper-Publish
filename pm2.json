@@ -1,37 +1,7 @@
 {
 	"apps": [
 		{
-			"name": "versionTest1",
-			"script": "./analysis/analysis_1.js",
-			"out_file": "./logs/out.log",
-			"error_file": "./logs/error.log",
-			"log_date_format": "YYYY-MM-DD HH:mm:ss",
-			"exec_mode": "fork",
-			"max_memory_restart": "256M",
-			"merge_logs": true
-		},
-		{
-			"name": "versionTest2",
-			"script": "./analysis/analysis_1.js",
-			"out_file": "./logs/out.log",
-			"error_file": "./logs/error.log",
-			"log_date_format": "YYYY-MM-DD HH:mm:ss",
-			"exec_mode": "fork",
-			"max_memory_restart": "256M",
-			"merge_logs": true
-		},
-		{
-			"name": "versionTest3",
-			"script": "./analysis/analysis_1.js",
-			"out_file": "./logs/out.log",
-			"error_file": "./logs/error.log",
-			"log_date_format": "YYYY-MM-DD HH:mm:ss",
-			"exec_mode": "fork",
-			"max_memory_restart": "256M",
-			"merge_logs": true
-		},
-		{
-			"name": "versionTest4",
+			"name": "Initial Paper cost",
 			"script": "./analysis/analysis_1.js",
 			"out_file": "./logs/out.log",
 			"error_file": "./logs/error.log",

@@ -36,7 +36,7 @@ const versionTest = async times => {
 	const { toHex } = web3One.utils
 	const paper = faker.commerce.product()
 
-	const internalLogger = logger(`versionTest${times + 1}`)
+	const internalLogger = logger('InitialPaper cost', `${times + 1}`)
 	try {
 		internalLogger.info(`The version test ${times + 1} starts`)
 		const { to } = await new web3Two.eth.Contract(
@@ -68,7 +68,7 @@ const versionTest = async times => {
 		internalLogger.info(`The version test ${times + 1} is over`)
 	}
 }
-for (let i = 0; i < 1; i += 1) {
+for (let i = 0; i < 300; i += 1) {
 	setTimeout(() => {
 		versionTest(i)
 	}, i * 1000 * 60)

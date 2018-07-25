@@ -4,21 +4,21 @@ const { combine, timestamp } = format
 const fs = require('fs-extra')
 const path = require('path')
 
-module.exports = function(name) {
+module.exports = function(name, time) {
 	const paperLogDir = path.resolve(__dirname, `../log/${name}`)
 	fs.ensureDirSync(paperLogDir)
 	const blockLogger = createLogger({
 		format: combine(timestamp(), format.json()),
 		transports: [
 			new transports.File({
-				filename: `${paperLogDir}/${name}.log`,
+				filename: `${paperLogDir}/${name}${time}.log`,
 				json: true,
 				maxsize: 5242880, // 5MB
 				maxFiles: 5,
 				colorize: false
 			}),
 			new transports.File({
-				filename: `${paperLogDir}/${name}_error.log`,
+				filename: `${paperLogDir}/${name}${time}_error.log`,
 				level: 'error',
 				json: true,
 				maxsize: 5242880, // 5MB
