@@ -11,6 +11,12 @@
 		"deploy": "node scripts/deploy.js",
 		"test": "jest --silent"
 	},
+	"jest": {
+		"testPathIgnorePatterns": [
+			"<rootDir>/demo/",
+			"<rootDir>/node_modules/"
+		]
+	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged"
