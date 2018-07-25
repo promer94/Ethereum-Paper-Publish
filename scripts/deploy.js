@@ -10,8 +10,8 @@ const {
 const initialWeb3 = require('../utils/web3')
 
 const deployRootContact = async () => {
-	const { web3Provider, accounts } = await initialWeb3()
-	const web3 = web3Provider[0]
+	const { web3Providers, accounts } = await initialWeb3()
+	const web3 = web3Providers[0]
 	const { fromWei } = web3.utils
 	/** Deploy the contract, calculate the fees and create log*/
 	signale.time('Deploy')

@@ -16,8 +16,31 @@ module.exports = function(name) {
 				maxsize: 5242880, // 5MB
 				maxFiles: 5,
 				colorize: false
+			}),
+			new transports.File({
+				filename: `${paperLogDir}/${name}_error.log`,
+				level: 'error',
+				json: true,
+				maxsize: 5242880, // 5MB
+				maxFiles: 5,
+				colorize: false
+			}),
+			new transports.File({
+				filename: `${paperLogDir}/${name}_cost.log`,
+				level: 'warn',
+				json: true,
+				maxsize: 5242880, // 5MB
+				maxFiles: 5,
+				colorize: false
 			})
 		]
 	})
+	if (process.env.NODE_ENV !== 'TESTSERVER') {
+		blockLogger.add(
+			new transports.Console({
+				format: format.simple()
+			})
+		)
+	}
 	return blockLogger
 }
