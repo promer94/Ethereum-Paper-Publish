@@ -6,7 +6,7 @@
 		"compile": "node scripts/compile.js",
 		"lint": "eslint --fix .",
 		"pretest": "npm run compile",
-		"localtest": "jest -o --verbose",
+		"localtest": "jest --verbose",
 		"predeploy": "npm run test",
 		"deploy": "node scripts/deploy.js",
 		"test": "jest --silent"

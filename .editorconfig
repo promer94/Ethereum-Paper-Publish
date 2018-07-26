@@ -8,10 +8,10 @@ insert_final_newline = true
 indent_style = tab
 indent_size = 2
 
-[{*.sol,*.json}]
+[{*.sol}]
 indent_style = tab
 indent_size = 4
 
-[{*.yml,*.json}]
+[{*.yml,*.json,*.html}]
 indent_style = tab
 indent_size = 2

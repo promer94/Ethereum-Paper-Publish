@@ -3,6 +3,8 @@
  * The cost of Create a Smart Paper and approve will be record.
  *
  */
+const fs = require('fs-extra')
+const path = require('path')
 const faker = require('faker')
 const crypto = require('crypto')
 const math = require('mathjs') //eslint-disable-lines
@@ -36,7 +38,7 @@ const versionTest = async times => {
 	const { toHex } = web3One.utils
 	const paper = faker.commerce.product()
 
-	const internalLogger = logger('InitialPaper cost', `${times + 1}`)
+	const internalLogger = logger('InitialPaper-cost', `${times + 1}`)
 	try {
 		internalLogger.info(`The version test ${times + 1} starts`)
 		const { to } = await new web3Two.eth.Contract(
@@ -62,6 +64,8 @@ const versionTest = async times => {
 			.done()
 			.toString()
 		internalLogger.warn(cost)
+		const costFile = path.resolve(__dirname, 'InitialPaper-cost.csv')
+		fs.appendFileSync(costFile, `${cost},`)
 	} catch (error) {
 		internalLogger.error(error.message)
 	} finally {
