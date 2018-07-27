@@ -18,7 +18,6 @@ const logger = require('../utils/logger')
 
 const description = 'The Smart paper'
 const metaData = 'Written by'
-const smartPaperList = []
 const md5 = content =>
 	`0x${crypto
 		.createHash('md5')
@@ -48,7 +47,6 @@ const versionTest = async times => {
 			.createPaper(toHex(description), toHex(metaData), md5(paper), accounts)
 			.send({ from: accounts[1], gas: 2100000 })
 		internalLogger.info(`The ${times + 1} version is at ${to}`)
-		smartPaperList.push(to)
 		await new web3One.eth.Contract(smartPaperInterface, to).methods
 			.checkIn()
 			.call()
@@ -65,7 +63,7 @@ const versionTest = async times => {
 			.toString()
 		internalLogger.warn(cost)
 		const costFile = path.resolve(__dirname, 'InitialPaper-cost.csv')
-		fs.appendFileSync(costFile, `${cost},`)
+		fs.appendFileSync(costFile, `${times},${cost},\n`)
 	} catch (error) {
 		internalLogger.error(error.message)
 	} finally {

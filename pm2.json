@@ -1,14 +1,26 @@
 {
 	"apps": [
 		{
-			"name": "Initial Paper cost",
-			"script": "./analysis/analysis_1.js",
+			"name": "authors_numbers_with_initial_cost",
+			"script": "./analysis/author_version_initial_cost.js",
 			"out_file": "./logs/out.log",
 			"error_file": "./logs/error.log",
 			"log_date_format": "YYYY-MM-DD HH:mm:ss",
 			"exec_mode": "fork",
 			"max_memory_restart": "1024M",
-			"merge_logs": true
+			"merge_logs": true,
+			"autorestart": false
+		},
+		{
+			"name": "authors_numbers_with_new_cost",
+			"script": "./analysis/author_version_new_cost.js",
+			"out_file": "./logs/out.log",
+			"error_file": "./logs/error.log",
+			"log_date_format": "YYYY-MM-DD HH:mm:ss",
+			"exec_mode": "fork",
+			"max_memory_restart": "1024M",
+			"merge_logs": true,
+			"autorestart": false
 		}
 	]
 }
