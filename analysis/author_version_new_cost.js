@@ -10,7 +10,7 @@ const {
 	smartPaperInterface
 } = require('../utils/contracts')
 const logger = require('../utils/logger')
-
+/** Initialize test data*/
 const description = 'The Smart paper'
 const metaData = 'Written by'
 const md5 = content =>
@@ -18,6 +18,7 @@ const md5 = content =>
 		.createHash('md5')
 		.update(content)
 		.digest('hex')}`
+/** Initialize cost records file */
 const costFile = path.resolve(__dirname, 'author-version-new-cost.csv')
 fs.removeSync(costFile)
 fs.ensureFileSync(costFile)
