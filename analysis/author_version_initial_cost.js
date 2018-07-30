@@ -54,7 +54,7 @@ const authorTest = async numbers => {
 		)
 		const totalAfterBalance = afterBalance
 			.map(amount => parseFloat(web3Providers.utils.fromWei(amount)))
-			.reduce((total, current) => total + current, parseFloat(0))
+			.reduce((total, current) => total + current, parseFloat('0'))
 		const cost = math
 			.chain(totalBalance)
 			.add(-totalAfterBalance)

@@ -53,7 +53,7 @@ const authorTest = async numbers => {
 		)
 		const totalBalance = Balance.map(amount =>
 			parseFloat(web3Providers.utils.fromWei(amount))
-		).reduce((total, current) => total + current, parseFloat(0))
+		).reduce((total, current) => total + current, parseFloat('0'))
 
 		const newMd5 = md5(faker.commerce.product())
 		await new web3Providers.eth.Contract(smartPaperInterface, result[0]).methods
@@ -72,7 +72,7 @@ const authorTest = async numbers => {
 		)
 		const afterTotalBalance = afterBalance
 			.map(amount => parseFloat(web3Providers.utils.fromWei(amount)))
-			.reduce((total, current) => total + current, parseFloat(0))
+			.reduce((total, current) => total + current, parseFloat('0'))
 		const cost = math
 			.chain(totalBalance)
 			.add(-afterTotalBalance)

@@ -26,6 +26,6 @@ module.exports = async function() {
 		.map((amount, index) =>
 			parseFloat(web3Providers[index].utils.fromWei(amount, 'ether'))
 		)
-		.reduce((total, current) => total + current, parseFloat(0))
+		.reduce((total, current) => total + current, parseFloat('0'))
 	return { web3Providers, accounts, totalBalance }
 }
