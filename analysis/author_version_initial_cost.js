@@ -62,7 +62,7 @@ const authorTest = async numbers => {
 			.multiply(350)
 			.done()
 			.toString()
-		fs.appendFileSync(createCostFile, `${numbers},${createCost},\n`)
+		fs.appendFileSync(createCostFile, `${numbers},${createCost}\n`)
 		const result = await splContract.methods.getProjects().call()
 		await Promise.all(
 			accounts.map(address =>
@@ -90,6 +90,7 @@ const authorTest = async numbers => {
 			.done()
 			.toString()
 			.trim()
+		fs.appendFileSync(createCostFile, `${numbers},${createCost}\n`)
 		fs.appendFileSync(approveCostFile, `${numbers},${approveCost}\n`)
 		fs.appendFileSync(costFile, `${numbers},${cost}\n`)
 		internalLogger.info(`${numbers} accounts cost: ${cost}`)
