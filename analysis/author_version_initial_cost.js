@@ -20,10 +20,18 @@ const md5 = content =>
 		.update(content)
 		.digest('hex')}`
 /** Initialize cost records file */
-const costFile = path.resolve(__dirname, 'author-version-initial-cost.csv')
+const costFile = path.resolve(__dirname, 'author-initial-totalcost.csv')
+const createCostFile = path.resolve(__dirname, 'author--paper-create-cost.csv')
+const approveCostFile = path.resolve(__dirname, 'author-paper-approve-cost.csv')
 fs.removeSync(costFile)
+fs.removeSync(createCostFile)
+fs.removeSync(approveCostFile)
 fs.ensureFileSync(costFile)
-fs.appendFileSync(costFile, 'authors,cost,\n')
+fs.ensureFileSync(createCostFile)
+fs.ensureFileSync(approveCostFile)
+fs.appendFileSync(costFile, 'numOfAuthor,TotalCost\n')
+fs.appendFileSync(createCostFile, 'numOfAuthor,InitialPaperCost\n')
+fs.appendFileSync(approveCostFile, 'numOfAuthor,ApprovePaper\n')
 const authorTest = async numbers => {
 	const { accounts, web3Providers, totalBalance } = await web3(numbers)
 	const { toHex } = web3Providers.utils
@@ -40,8 +48,22 @@ const authorTest = async numbers => {
 		await splContract.methods
 			.createPaper(toHex(description), toHex(metaData), md5(paper), accounts)
 			.send({ from: accounts[0], gas: '6721975' })
-		const result = await splContract.methods.getProjects().call()
 
+		const createBalance = await Promise.all(
+			accounts.map(address => web3Providers.eth.getBalance(address))
+		)
+		const singleCreateBalance = createBalance
+			.map(amount => parseFloat(web3Providers.utils.fromWei(amount)))
+			.reduce((total, current) => total + current, parseFloat('0'))
+
+		const createCost = math
+			.chain(totalBalance)
+			.add(-singleCreateBalance)
+			.multiply(350)
+			.done()
+			.toString()
+		fs.appendFileSync(createCostFile, `${numbers},${createCost},\n`)
+		const result = await splContract.methods.getProjects().call()
 		await Promise.all(
 			accounts.map(address =>
 				new web3Providers.eth.Contract(smartPaperInterface, result[0]).methods
@@ -55,14 +77,21 @@ const authorTest = async numbers => {
 		const totalAfterBalance = afterBalance
 			.map(amount => parseFloat(web3Providers.utils.fromWei(amount)))
 			.reduce((total, current) => total + current, parseFloat('0'))
+		const approveCost = math
+			.chain(singleCreateBalance)
+			.add(-totalAfterBalance)
+			.multiply(350)
+			.done()
+			.toString()
 		const cost = math
 			.chain(totalBalance)
 			.add(-totalAfterBalance)
 			.multiply(350)
 			.done()
 			.toString()
-		const costFile = path.resolve(__dirname, 'author-version-initial-cost.csv')
-		fs.appendFileSync(costFile, `${numbers},${cost},\n`)
+			.trim()
+		fs.appendFileSync(approveCostFile, `${numbers},${approveCost}\n`)
+		fs.appendFileSync(costFile, `${numbers},${cost}\n`)
 		internalLogger.info(`${numbers} accounts cost: ${cost}`)
 	} catch (error) {
 		internalLogger.error(error.message)

@@ -19,6 +19,17 @@ module.exports = {
 		'react/prop-types': [0],
 		'react/prefer-stateless-function': [0],
 		'no-else-return': [0],
+		'react/jsx-wrap-multilines': [
+			{
+				declaration: 'parens',
+				assignment: 'parens',
+				return: 'parens',
+				arrow: 'parens',
+				condition: 'ignore',
+				logical: 'ignore',
+				prop: 'ignore'
+			}
+		],
 		'no-restricted-syntax': [0],
 		'import/no-extraneous-dependencies': [0],
 		'no-use-before-define': [0],
