@@ -1,0 +1,484 @@
+2018-07-31 23:36:16: info: 1 accounts cost: 20.35638500000232 {"timestamp":"2018-07-31T22:36:16.237Z"}
+2018-07-31 23:36:16: info: test for 1 authors is over {"timestamp":"2018-07-31T22:36:16.240Z"}
+2018-07-31 23:37:18: info: 1 accounts cost: 2.0254010000002154 {"timestamp":"2018-07-31T22:37:18.384Z"}
+2018-07-31 23:37:18: info: test for 1 authors is over {"timestamp":"2018-07-31T22:37:18.399Z"}
+2018-07-31 23:37:18: info: 2 accounts cost: 21.606031999998265 {"timestamp":"2018-07-31T22:37:18.461Z"}
+2018-07-31 23:37:18: info: test for 2 authors is over {"timestamp":"2018-07-31T22:37:18.461Z"}
+2018-07-31 23:37:29: info: 3 accounts cost: 22.462754999992285 {"timestamp":"2018-07-31T22:37:29.292Z"}
+2018-07-31 23:37:29: info: test for 3 authors is over {"timestamp":"2018-07-31T22:37:29.292Z"}
+2018-07-31 23:37:33: info: 2 accounts cost: 3.177244000001167 {"timestamp":"2018-07-31T22:37:33.839Z"}
+2018-07-31 23:37:33: info: test for 2 authors is over {"timestamp":"2018-07-31T22:37:33.840Z"}
+2018-07-31 23:37:34: info: 4 accounts cost: 23.319471000010594 {"timestamp":"2018-07-31T22:37:34.644Z"}
+2018-07-31 23:37:34: info: test for 4 authors is over {"timestamp":"2018-07-31T22:37:34.644Z"}
+2018-07-31 23:37:42: info: 5 accounts cost: 24.17618700000901 {"timestamp":"2018-07-31T22:37:42.174Z"}
+2018-07-31 23:37:42: info: test for 5 authors is over {"timestamp":"2018-07-31T22:37:42.175Z"}
+2018-07-31 23:37:43: info: 3 accounts cost: 3.713948000012124 {"timestamp":"2018-07-31T22:37:43.209Z"}
+2018-07-31 23:37:43: info: test for 3 authors is over {"timestamp":"2018-07-31T22:37:43.210Z"}
+2018-07-31 23:37:51: info: 6 accounts cost: 25.03290999999308 {"timestamp":"2018-07-31T22:37:51.141Z"}
+2018-07-31 23:37:51: info: test for 6 authors is over {"timestamp":"2018-07-31T22:37:51.141Z"}
+2018-07-31 23:37:54: info: 4 accounts cost: 4.250651999993238 {"timestamp":"2018-07-31T22:37:54.670Z"}
+2018-07-31 23:37:54: info: test for 4 authors is over {"timestamp":"2018-07-31T22:37:54.671Z"}
+2018-07-31 23:37:59: info: 7 accounts cost: 25.889625999991495 {"timestamp":"2018-07-31T22:37:59.560Z"}
+2018-07-31 23:37:59: info: test for 7 authors is over {"timestamp":"2018-07-31T22:37:59.561Z"}
+2018-07-31 23:38:05: info: 8 accounts cost: 26.745900999958394 {"timestamp":"2018-07-31T22:38:05.351Z"}
+2018-07-31 23:38:05: info: test for 8 authors is over {"timestamp":"2018-07-31T22:38:05.352Z"}
+2018-07-31 23:38:06: info: 5 accounts cost: 4.787355999994247 {"timestamp":"2018-07-31T22:38:06.763Z"}
+2018-07-31 23:38:06: info: test for 5 authors is over {"timestamp":"2018-07-31T22:38:06.763Z"}
+2018-07-31 23:38:11: info: 9 accounts cost: 27.60261700003639 {"timestamp":"2018-07-31T22:38:11.778Z"}
+2018-07-31 23:38:11: info: test for 9 authors is over {"timestamp":"2018-07-31T22:38:11.778Z"}
+2018-07-31 23:38:15: info: 6 accounts cost: 5.324059999975361 {"timestamp":"2018-07-31T22:38:15.123Z"}
+2018-07-31 23:38:15: info: test for 6 authors is over {"timestamp":"2018-07-31T22:38:15.123Z"}
+2018-07-31 23:38:15: info: 10 accounts cost: 28.459787999997843 {"timestamp":"2018-07-31T22:38:15.943Z"}
+2018-07-31 23:38:15: info: test for 10 authors is over {"timestamp":"2018-07-31T22:38:15.943Z"}
+2018-07-31 23:38:21: info: 11 accounts cost: 29.316504000075838 {"timestamp":"2018-07-31T22:38:21.077Z"}
+2018-07-31 23:38:21: info: test for 11 authors is over {"timestamp":"2018-07-31T22:38:21.078Z"}
+2018-07-31 23:38:23: info: 7 accounts cost: 5.860764000055951 {"timestamp":"2018-07-31T22:38:23.292Z"}
+2018-07-31 23:38:23: info: test for 7 authors is over {"timestamp":"2018-07-31T22:38:23.292Z"}
+2018-07-31 23:38:24: info: 12 accounts cost: 30.173227000079805 {"timestamp":"2018-07-31T22:38:24.807Z"}
+2018-07-31 23:38:24: info: test for 12 authors is over {"timestamp":"2018-07-31T22:38:24.807Z"}
+2018-07-31 23:38:29: info: 13 accounts cost: 31.029495000120733 {"timestamp":"2018-07-31T22:38:29.899Z"}
+2018-07-31 23:38:29: info: test for 13 authors is over {"timestamp":"2018-07-31T22:38:29.899Z"}
+2018-07-31 23:38:31: info: 8 accounts cost: 6.39746799997738 {"timestamp":"2018-07-31T22:38:31.108Z"}
+2018-07-31 23:38:31: info: test for 8 authors is over {"timestamp":"2018-07-31T22:38:31.109Z"}
+2018-07-31 23:38:33: info: 14 accounts cost: 31.886666000082187 {"timestamp":"2018-07-31T22:38:33.835Z"}
+2018-07-31 23:38:33: info: test for 14 authors is over {"timestamp":"2018-07-31T22:38:33.835Z"}
+2018-07-31 23:38:39: info: 15 accounts cost: 32.742934000123114 {"timestamp":"2018-07-31T22:38:39.287Z"}
+2018-07-31 23:38:39: info: test for 15 authors is over {"timestamp":"2018-07-31T22:38:39.288Z"}
+2018-07-31 23:38:39: info: 9 accounts cost: 6.934171999978389 {"timestamp":"2018-07-31T22:38:39.420Z"}
+2018-07-31 23:38:39: info: test for 9 authors is over {"timestamp":"2018-07-31T22:38:39.420Z"}
+2018-07-31 23:38:44: info: 16 accounts cost: 33.59965700012708 {"timestamp":"2018-07-31T22:38:44.743Z"}
+2018-07-31 23:38:44: info: test for 16 authors is over {"timestamp":"2018-07-31T22:38:44.743Z"}
+2018-07-31 23:38:47: info: 10 accounts cost: 7.470875999979398 {"timestamp":"2018-07-31T22:38:47.280Z"}
+2018-07-31 23:38:47: info: test for 10 authors is over {"timestamp":"2018-07-31T22:38:47.280Z"}
+2018-07-31 23:38:49: info: 17 accounts cost: 34.456828000168116 {"timestamp":"2018-07-31T22:38:49.134Z"}
+2018-07-31 23:38:49: info: test for 17 authors is over {"timestamp":"2018-07-31T22:38:49.135Z"}
+2018-07-31 23:38:54: info: 18 accounts cost: 35.31354400016653 {"timestamp":"2018-07-31T22:38:54.937Z"}
+2018-07-31 23:38:54: info: test for 18 authors is over {"timestamp":"2018-07-31T22:38:54.937Z"}
+2018-07-31 23:38:57: info: 11 accounts cost: 8.007579999980408 {"timestamp":"2018-07-31T22:38:57.916Z"}
+2018-07-31 23:38:57: info: test for 11 authors is over {"timestamp":"2018-07-31T22:38:57.916Z"}
+2018-07-31 23:38:59: info: 19 accounts cost: 36.1702670001705 {"timestamp":"2018-07-31T22:38:59.764Z"}
+2018-07-31 23:38:59: info: test for 19 authors is over {"timestamp":"2018-07-31T22:38:59.764Z"}
+2018-07-31 23:39:05: info: 20 accounts cost: 37.026535000211425 {"timestamp":"2018-07-31T22:39:05.397Z"}
+2018-07-31 23:39:05: info: test for 20 authors is over {"timestamp":"2018-07-31T22:39:05.397Z"}
+2018-07-31 23:39:06: info: 12 accounts cost: 8.544284000060998 {"timestamp":"2018-07-31T22:39:06.272Z"}
+2018-07-31 23:39:06: info: test for 12 authors is over {"timestamp":"2018-07-31T22:39:06.272Z"}
+2018-07-31 23:39:09: info: 21 accounts cost: 37.882810000178324 {"timestamp":"2018-07-31T22:39:09.899Z"}
+2018-07-31 23:39:09: info: test for 21 authors is over {"timestamp":"2018-07-31T22:39:09.899Z"}
+2018-07-31 23:39:15: info: 22 accounts cost: 38.74042900033601 {"timestamp":"2018-07-31T22:39:15.590Z"}
+2018-07-31 23:39:15: info: test for 22 authors is over {"timestamp":"2018-07-31T22:39:15.590Z"}
+2018-07-31 23:39:17: info: 13 accounts cost: 9.080987999982426 {"timestamp":"2018-07-31T22:39:17.026Z"}
+2018-07-31 23:39:17: info: test for 13 authors is over {"timestamp":"2018-07-31T22:39:17.027Z"}
+2018-07-31 23:39:22: info: 23 accounts cost: 39.596249000260286 {"timestamp":"2018-07-31T22:39:22.177Z"}
+2018-07-31 23:39:22: info: test for 23 authors is over {"timestamp":"2018-07-31T22:39:22.178Z"}
+2018-07-31 23:39:25: info: 14 accounts cost: 9.610971999745743 {"timestamp":"2018-07-31T22:39:25.624Z"}
+2018-07-31 23:39:25: info: test for 14 authors is over {"timestamp":"2018-07-31T22:39:25.624Z"}
+2018-07-31 23:39:27: info: 24 accounts cost: 40.45386800025881 {"timestamp":"2018-07-31T22:39:27.934Z"}
+2018-07-31 23:39:27: info: test for 24 authors is over {"timestamp":"2018-07-31T22:39:27.934Z"}
+2018-07-31 23:39:33: info: 25 accounts cost: 41.30924700023115 {"timestamp":"2018-07-31T22:39:33.077Z"}
+2018-07-31 23:39:33: info: test for 25 authors is over {"timestamp":"2018-07-31T22:39:33.077Z"}
+2018-07-31 23:39:37: info: 15 accounts cost: 10.154396000064025 {"timestamp":"2018-07-31T22:39:37.515Z"}
+2018-07-31 23:39:37: info: test for 15 authors is over {"timestamp":"2018-07-31T22:39:37.516Z"}
+2018-07-31 23:39:38: info: 26 accounts cost: 42.1659700003147 {"timestamp":"2018-07-31T22:39:38.924Z"}
+2018-07-31 23:39:38: info: test for 26 authors is over {"timestamp":"2018-07-31T22:39:38.925Z"}
+2018-07-31 23:39:44: info: 27 accounts cost: 43.02313400035018 {"timestamp":"2018-07-31T22:39:44.427Z"}
+2018-07-31 23:39:44: info: test for 27 authors is over {"timestamp":"2018-07-31T22:39:44.428Z"}
+2018-07-31 23:39:47: info: 16 accounts cost: 10.691099999985454 {"timestamp":"2018-07-31T22:39:47.458Z"}
+2018-07-31 23:39:47: info: test for 16 authors is over {"timestamp":"2018-07-31T22:39:47.458Z"}
+2018-07-31 23:39:51: info: 28 accounts cost: 43.88030500031164 {"timestamp":"2018-07-31T22:39:51.426Z"}
+2018-07-31 23:39:51: info: test for 28 authors is over {"timestamp":"2018-07-31T22:39:51.426Z"}
+2018-07-31 23:39:57: info: 17 accounts cost: 11.227803999986463 {"timestamp":"2018-07-31T22:39:57.306Z"}
+2018-07-31 23:39:57: info: test for 17 authors is over {"timestamp":"2018-07-31T22:39:57.306Z"}
+2018-07-31 23:39:58: info: 29 accounts cost: 44.737028000395185 {"timestamp":"2018-07-31T22:39:58.013Z"}
+2018-07-31 23:39:58: info: test for 29 authors is over {"timestamp":"2018-07-31T22:39:58.013Z"}
+2018-07-31 23:40:04: info: 30 accounts cost: 45.59375100031957 {"timestamp":"2018-07-31T22:40:04.654Z"}
+2018-07-31 23:40:04: info: test for 30 authors is over {"timestamp":"2018-07-31T22:40:04.654Z"}
+2018-07-31 23:40:07: info: 18 accounts cost: 11.764508000067053 {"timestamp":"2018-07-31T22:40:07.903Z"}
+2018-07-31 23:40:07: info: test for 18 authors is over {"timestamp":"2018-07-31T22:40:07.904Z"}
+2018-07-31 23:40:10: info: 31 accounts cost: 46.449578000328984 {"timestamp":"2018-07-31T22:40:10.767Z"}
+2018-07-31 23:40:10: info: test for 31 authors is over {"timestamp":"2018-07-31T22:40:10.767Z"}
+2018-07-31 23:40:16: info: 32 accounts cost: 47.30679100048292 {"timestamp":"2018-07-31T22:40:16.801Z"}
+2018-07-31 23:40:16: info: test for 32 authors is over {"timestamp":"2018-07-31T22:40:16.801Z"}
+2018-07-31 23:40:21: info: 19 accounts cost: 12.301211999988482 {"timestamp":"2018-07-31T22:40:21.124Z"}
+2018-07-31 23:40:21: info: test for 19 authors is over {"timestamp":"2018-07-31T22:40:21.124Z"}
+2018-07-31 23:40:23: info: 33 accounts cost: 48.163591000388806 {"timestamp":"2018-07-31T22:40:23.171Z"}
+2018-07-31 23:40:23: info: test for 33 authors is over {"timestamp":"2018-07-31T22:40:23.171Z"}
+2018-07-31 23:40:30: info: 34 accounts cost: 49.02038400052788 {"timestamp":"2018-07-31T22:40:30.942Z"}
+2018-07-31 23:40:30: info: test for 34 authors is over {"timestamp":"2018-07-31T22:40:30.942Z"}
+2018-07-31 23:40:32: info: 20 accounts cost: 12.837915999989491 {"timestamp":"2018-07-31T22:40:32.836Z"}
+2018-07-31 23:40:32: info: test for 20 authors is over {"timestamp":"2018-07-31T22:40:32.836Z"}
+2018-07-31 23:40:37: info: 35 accounts cost: 49.87808000050791 {"timestamp":"2018-07-31T22:40:37.941Z"}
+2018-07-31 23:40:37: info: test for 35 authors is over {"timestamp":"2018-07-31T22:40:37.941Z"}
+2018-07-31 23:40:44: info: 36 accounts cost: 50.73263300046165 {"timestamp":"2018-07-31T22:40:44.457Z"}
+2018-07-31 23:40:44: info: test for 36 authors is over {"timestamp":"2018-07-31T22:40:44.457Z"}
+2018-07-31 23:40:45: info: 21 accounts cost: 13.374620000149662 {"timestamp":"2018-07-31T22:40:45.780Z"}
+2018-07-31 23:40:45: info: test for 21 authors is over {"timestamp":"2018-07-31T22:40:45.780Z"}
+2018-07-31 23:40:50: info: 37 accounts cost: 51.59077700047874 {"timestamp":"2018-07-31T22:40:50.788Z"}
+2018-07-31 23:40:50: info: test for 37 authors is over {"timestamp":"2018-07-31T22:40:50.788Z"}
+2018-07-31 23:41:06: info: 22 accounts cost: 13.91132399999151 {"timestamp":"2018-07-31T22:41:06.711Z"}
+2018-07-31 23:41:06: info: test for 22 authors is over {"timestamp":"2018-07-31T22:41:06.711Z"}
+2018-07-31 23:41:11: info: 38 accounts cost: 52.44712200058075 {"timestamp":"2018-07-31T22:41:10.922Z"}
+info: test for 38 authors is over {"timestamp":"2018-07-31T22:41:10.922Z"}
+2018-07-31 23:41:40: info: 39 accounts cost: 53.30347400060873 {"timestamp":"2018-07-31T22:41:40.334Z"}
+2018-07-31 23:41:40: info: test for 39 authors is over {"timestamp":"2018-07-31T22:41:40.334Z"}
+2018-07-31 23:42:04: info: 23 accounts cost: 14.448027999992519 {"timestamp":"2018-07-31T22:42:04.974Z"}
+2018-07-31 23:42:04: info: test for 23 authors is over {"timestamp":"2018-07-31T22:42:04.974Z"}
+2018-07-31 23:42:19: info: 40 accounts cost: 54.160715000625714 {"timestamp":"2018-07-31T22:42:19.143Z"}
+2018-07-31 23:42:19: info: test for 40 authors is over {"timestamp":"2018-07-31T22:42:19.144Z"}
+2018-07-31 23:42:57: info: 41 accounts cost: 55.01751500037244 {"timestamp":"2018-07-31T22:42:57.175Z"}
+2018-07-31 23:42:57: info: test for 41 authors is over {"timestamp":"2018-07-31T22:42:57.176Z"}
+2018-07-31 23:43:03: info: 24 accounts cost: 14.98473200015269 {"timestamp":"2018-07-31T22:43:03.385Z"}
+2018-07-31 23:43:03: info: test for 24 authors is over {"timestamp":"2018-07-31T22:43:03.385Z"}
+2018-07-31 23:43:23: info: 42 accounts cost: 55.874315000755814 {"timestamp":"2018-07-31T22:43:23.749Z"}
+2018-07-31 23:43:23: info: test for 42 authors is over {"timestamp":"2018-07-31T22:43:23.749Z"}
+2018-07-31 23:43:49: info: 43 accounts cost: 56.73110800057657 {"timestamp":"2018-07-31T22:43:49.749Z"}
+2018-07-31 23:43:49: info: test for 43 authors is over {"timestamp":"2018-07-31T22:43:49.750Z"}
+2018-07-31 23:43:56: info: 25 accounts cost: 15.521435999994537 {"timestamp":"2018-07-31T22:43:56.491Z"}
+2018-07-31 23:43:56: info: test for 25 authors is over {"timestamp":"2018-07-31T22:43:56.492Z"}
+2018-07-31 23:44:43: info: 44 accounts cost: 57.58835600067869 {"timestamp":"2018-07-31T22:44:43.798Z"}
+2018-07-31 23:44:43: info: test for 44 authors is over {"timestamp":"2018-07-31T22:44:43.798Z"}
+2018-07-31 23:45:10: info: 45 accounts cost: 58.44381200063253 {"timestamp":"2018-07-31T22:45:10.142Z"}
+2018-07-31 23:45:10: info: test for 45 authors is over {"timestamp":"2018-07-31T22:45:10.142Z"}
+2018-07-31 23:45:19: info: 26 accounts cost: 16.058140000154708 {"timestamp":"2018-07-31T22:45:19.132Z"}
+info: test for 26 authors is over {"timestamp":"2018-07-31T22:45:19.132Z"}
+2018-07-31 23:45:45: info: 46 accounts cost: 59.30106000073465 {"timestamp":"2018-07-31T22:45:45.332Z"}
+2018-07-31 23:45:45: info: test for 46 authors is over {"timestamp":"2018-07-31T22:45:45.332Z"}
+2018-07-31 23:46:00: info: 47 accounts cost: 60.156964000725566 {"timestamp":"2018-07-31T22:46:00.177Z"}
+2018-07-31 23:46:00: info: test for 47 authors is over {"timestamp":"2018-07-31T22:46:00.177Z"}
+2018-07-31 23:46:00: info: 27 accounts cost: 16.594843999996556 {"timestamp":"2018-07-31T22:46:00.456Z"}
+2018-07-31 23:46:00: info: test for 27 authors is over {"timestamp":"2018-07-31T22:46:00.456Z"}
+2018-07-31 23:46:09: info: 48 accounts cost: 61.01420500058339 {"timestamp":"2018-07-31T22:46:09.772Z"}
+2018-07-31 23:46:09: info: test for 48 authors is over {"timestamp":"2018-07-31T22:46:09.772Z"}
+2018-07-31 23:46:11: info: 28 accounts cost: 17.131547999997565 {"timestamp":"2018-07-31T22:46:11.886Z"}
+2018-07-31 23:46:11: info: test for 28 authors is over {"timestamp":"2018-07-31T22:46:11.886Z"}
+2018-07-31 23:46:14: info: 49 accounts cost: 61.87190100072257 {"timestamp":"2018-07-31T22:46:14.538Z"}
+2018-07-31 23:46:14: info: test for 49 authors is over {"timestamp":"2018-07-31T22:46:14.538Z"}
+2018-07-31 23:46:24: info: 50 accounts cost: 62.72780500071349 {"timestamp":"2018-07-31T22:46:24.673Z"}
+2018-07-31 23:46:24: info: test for 50 authors is over {"timestamp":"2018-07-31T22:46:24.674Z"}
+2018-07-31 23:46:25: info: 29 accounts cost: 17.668251999998574 {"timestamp":"2018-07-31T22:46:25.946Z"}
+2018-07-31 23:46:25: info: test for 29 authors is over {"timestamp":"2018-07-31T22:46:25.947Z"}
+2018-07-31 23:46:30: info: 51 accounts cost: 63.58550100085267 {"timestamp":"2018-07-31T22:46:30.775Z"}
+2018-07-31 23:46:30: info: test for 51 authors is over {"timestamp":"2018-07-31T22:46:30.775Z"}
+2018-07-31 23:46:35: info: 52 accounts cost: 64.4423010005994 {"timestamp":"2018-07-31T22:46:35.736Z"}
+2018-07-31 23:46:35: info: test for 52 authors is over {"timestamp":"2018-07-31T22:46:35.736Z"}
+2018-07-31 23:46:38: info: 30 accounts cost: 18.204955999999584 {"timestamp":"2018-07-31T22:46:38.334Z"}
+2018-07-31 23:46:38: info: test for 30 authors is over {"timestamp":"2018-07-31T22:46:38.335Z"}
+2018-07-31 23:46:44: info: 53 accounts cost: 65.29865300062738 {"timestamp":"2018-07-31T22:46:44.222Z"}
+2018-07-31 23:46:44: info: test for 53 authors is over {"timestamp":"2018-07-31T22:46:44.223Z"}
+2018-07-31 23:46:50: info: 54 accounts cost: 66.15501200089966 {"timestamp":"2018-07-31T22:46:50.100Z"}
+2018-07-31 23:46:50: info: test for 54 authors is over {"timestamp":"2018-07-31T22:46:50.100Z"}
+2018-07-31 23:46:55: info: 55 accounts cost: 67.01181900089068 {"timestamp":"2018-07-31T22:46:55.415Z"}
+2018-07-31 23:46:55: info: test for 55 authors is over {"timestamp":"2018-07-31T22:46:55.416Z"}
+2018-07-31 23:46:55: info: 31 accounts cost: 18.741660000159754 {"timestamp":"2018-07-31T22:46:55.537Z"}
+2018-07-31 23:46:55: info: test for 31 authors is over {"timestamp":"2018-07-31T22:46:55.537Z"}
+2018-07-31 23:47:00: info: 56 accounts cost: 67.86861900095573 {"timestamp":"2018-07-31T22:47:00.922Z"}
+2018-07-31 23:47:00: info: test for 56 authors is over {"timestamp":"2018-07-31T22:47:00.923Z"}
+2018-07-31 23:47:07: info: 32 accounts cost: 19.278364000160764 {"timestamp":"2018-07-31T22:47:07.545Z"}
+2018-07-31 23:47:07: info: test for 32 authors is over {"timestamp":"2018-07-31T22:47:07.546Z"}
+2018-07-31 23:47:07: info: 57 accounts cost: 68.72676300081366 {"timestamp":"2018-07-31T22:47:07.991Z"}
+2018-07-31 23:47:07: info: test for 57 authors is over {"timestamp":"2018-07-31T22:47:07.991Z"}
+2018-07-31 23:47:14: info: 58 accounts cost: 69.58266700080458 {"timestamp":"2018-07-31T22:47:14.363Z"}
+2018-07-31 23:47:14: info: test for 58 authors is over {"timestamp":"2018-07-31T22:47:14.363Z"}
+2018-07-31 23:47:20: info: 59 accounts cost: 70.43813700092869 {"timestamp":"2018-07-31T22:47:20.510Z"}
+2018-07-31 23:47:20: info: test for 59 authors is over {"timestamp":"2018-07-31T22:47:20.510Z"}
+2018-07-31 23:47:24: info: 33 accounts cost: 19.81506800000261 {"timestamp":"2018-07-31T22:47:24.779Z"}
+2018-07-31 23:47:24: info: test for 33 authors is over {"timestamp":"2018-07-31T22:47:24.779Z"}
+2018-07-31 23:47:26: info: 60 accounts cost: 71.29628100078662 {"timestamp":"2018-07-31T22:47:26.016Z"}
+2018-07-31 23:47:26: info: test for 60 authors is over {"timestamp":"2018-07-31T22:47:26.017Z"}
+2018-07-31 23:47:31: info: 61 accounts cost: 72.1539770009258 {"timestamp":"2018-07-31T22:47:31.653Z"}
+2018-07-31 23:47:31: info: test for 61 authors is over {"timestamp":"2018-07-31T22:47:31.654Z"}
+2018-07-31 23:47:37: info: 34 accounts cost: 20.351772000162782 {"timestamp":"2018-07-31T22:47:37.629Z"}
+2018-07-31 23:47:37: info: test for 34 authors is over {"timestamp":"2018-07-31T22:47:37.629Z"}
+2018-07-31 23:47:37: info: 62 accounts cost: 73.01033600087976 {"timestamp":"2018-07-31T22:47:37.958Z"}
+2018-07-31 23:47:37: info: test for 62 authors is over {"timestamp":"2018-07-31T22:47:37.959Z"}
+2018-07-31 23:47:43: info: 63 accounts cost: 73.8644550009667 {"timestamp":"2018-07-31T22:47:43.758Z"}
+2018-07-31 23:47:43: info: test for 63 authors is over {"timestamp":"2018-07-31T22:47:43.758Z"}
+2018-07-31 23:47:48: info: 35 accounts cost: 20.88847600016379 {"timestamp":"2018-07-31T22:47:48.773Z"}
+2018-07-31 23:47:48: info: test for 35 authors is over {"timestamp":"2018-07-31T22:47:48.773Z"}
+2018-07-31 23:47:50: info: 64 accounts cost: 74.72259900082463 {"timestamp":"2018-07-31T22:47:50.524Z"}
+2018-07-31 23:47:50: info: test for 64 authors is over {"timestamp":"2018-07-31T22:47:50.524Z"}
+2018-07-31 23:47:55: info: 65 accounts cost: 75.57985400085272 {"timestamp":"2018-07-31T22:47:55.405Z"}
+2018-07-31 23:47:55: info: test for 65 authors is over {"timestamp":"2018-07-31T22:47:55.406Z"}
+2018-07-31 23:48:01: info: 66 accounts cost: 76.43531700105086 {"timestamp":"2018-07-31T22:48:01.241Z"}
+2018-07-31 23:48:01: info: test for 66 authors is over {"timestamp":"2018-07-31T22:48:01.241Z"}
+2018-07-31 23:48:04: info: 36 accounts cost: 21.4251800001648 {"timestamp":"2018-07-31T22:48:04.840Z"}
+2018-07-31 23:48:04: info: test for 36 authors is over {"timestamp":"2018-07-31T22:48:04.840Z"}
+2018-07-31 23:48:04: info: 67 accounts cost: 77.29167600100482 {"timestamp":"2018-07-31T22:48:04.972Z"}
+2018-07-31 23:48:04: info: test for 67 authors is over {"timestamp":"2018-07-31T22:48:04.972Z"}
+2018-07-31 23:48:11: info: 68 accounts cost: 78.14893800095888 {"timestamp":"2018-07-31T22:48:11.631Z"}
+2018-07-31 23:48:11: info: test for 68 authors is over {"timestamp":"2018-07-31T22:48:11.632Z"}
+2018-07-31 23:48:17: info: 69 accounts cost: 79.00708200113513 {"timestamp":"2018-07-31T22:48:17.099Z"}
+2018-07-31 23:48:17: info: test for 69 authors is over {"timestamp":"2018-07-31T22:48:17.099Z"}
+2018-07-31 23:48:17: info: 37 accounts cost: 21.96188400016581 {"timestamp":"2018-07-31T22:48:17.988Z"}
+2018-07-31 23:48:17: info: test for 37 authors is over {"timestamp":"2018-07-31T22:48:17.989Z"}
+2018-07-31 23:48:23: info: 70 accounts cost: 79.86254500101495 {"timestamp":"2018-07-31T22:48:23.029Z"}
+2018-07-31 23:48:23: info: test for 70 authors is over {"timestamp":"2018-07-31T22:48:23.029Z"}
+2018-07-31 23:48:26: info: 71 accounts cost: 80.72025500100608 {"timestamp":"2018-07-31T22:48:26.380Z"}
+2018-07-31 23:48:26: info: test for 71 authors is over {"timestamp":"2018-07-31T22:48:26.380Z"}
+2018-07-31 23:48:30: info: 72 accounts cost: 81.57839900118233 {"timestamp":"2018-07-31T22:48:30.656Z"}
+2018-07-31 23:48:30: info: test for 72 authors is over {"timestamp":"2018-07-31T22:48:30.657Z"}
+2018-07-31 23:48:33: info: 38 accounts cost: 22.481115999039503 {"timestamp":"2018-07-31T22:48:33.256Z"}
+2018-07-31 23:48:33: info: test for 38 authors is over {"timestamp":"2018-07-31T22:48:33.256Z"}
+2018-07-31 23:48:35: info: 73 accounts cost: 82.43342100126938 {"timestamp":"2018-07-31T22:48:35.464Z"}
+2018-07-31 23:48:35: info: test for 73 authors is over {"timestamp":"2018-07-31T22:48:35.464Z"}
+2018-07-31 23:48:40: info: 74 accounts cost: 83.29112400133454 {"timestamp":"2018-07-31T22:48:40.305Z"}
+2018-07-31 23:48:40: info: test for 74 authors is over {"timestamp":"2018-07-31T22:48:40.306Z"}
+2018-07-31 23:48:43: info: 75 accounts cost: 84.1456980010662 {"timestamp":"2018-07-31T22:48:43.248Z"}
+2018-07-31 23:48:43: info: test for 75 authors is over {"timestamp":"2018-07-31T22:48:43.249Z"}
+2018-07-31 23:48:45: info: 39 accounts cost: 23.017371999003444 {"timestamp":"2018-07-31T22:48:45.024Z"}
+2018-07-31 23:48:45: info: test for 39 authors is over {"timestamp":"2018-07-31T22:48:45.024Z"}
+2018-07-31 23:48:49: info: 76 accounts cost: 85.00519300127962 {"timestamp":"2018-07-31T22:48:49.716Z"}
+2018-07-31 23:48:49: info: test for 76 authors is over {"timestamp":"2018-07-31T22:48:49.717Z"}
+2018-07-31 23:48:54: info: 77 accounts cost: 85.86066300108541 {"timestamp":"2018-07-31T22:48:54.492Z"}
+2018-07-31 23:48:54: info: test for 77 authors is over {"timestamp":"2018-07-31T22:48:54.493Z"}
+2018-07-31 23:48:57: info: 78 accounts cost: 86.71702200135769 {"timestamp":"2018-07-31T22:48:57.274Z"}
+2018-07-31 23:48:57: info: test for 78 authors is over {"timestamp":"2018-07-31T22:48:57.275Z"}
+2018-07-31 23:48:57: info: 40 accounts cost: 23.571996000168838 {"timestamp":"2018-07-31T22:48:57.818Z"}
+2018-07-31 23:48:57: info: test for 40 authors is over {"timestamp":"2018-07-31T22:48:57.819Z"}
+2018-07-31 23:49:02: info: 79 accounts cost: 87.5760760011417 {"timestamp":"2018-07-31T22:49:02.995Z"}
+2018-07-31 23:49:02: info: test for 79 authors is over {"timestamp":"2018-07-31T22:49:02.996Z"}
+2018-07-31 23:49:06: info: 80 accounts cost: 88.42705900128749 {"timestamp":"2018-07-31T22:49:06.053Z"}
+2018-07-31 23:49:06: info: test for 80 authors is over {"timestamp":"2018-07-31T22:49:06.053Z"}
+2018-07-31 23:49:09: info: 41 accounts cost: 24.108700000169847 {"timestamp":"2018-07-31T22:49:09.563Z"}
+2018-07-31 23:49:09: info: test for 41 authors is over {"timestamp":"2018-07-31T22:49:09.563Z"}
+2018-07-31 23:49:10: info: 81 accounts cost: 89.2874570011827 {"timestamp":"2018-07-31T22:49:10.274Z"}
+2018-07-31 23:49:10: info: test for 81 authors is over {"timestamp":"2018-07-31T22:49:10.274Z"}
+2018-07-31 23:49:12: info: 82 accounts cost: 90.14516700117383 {"timestamp":"2018-07-31T22:49:12.988Z"}
+2018-07-31 23:49:12: info: test for 82 authors is over {"timestamp":"2018-07-31T22:49:12.988Z"}
+2018-07-31 23:49:16: info: 83 accounts cost: 91.00331800127606 {"timestamp":"2018-07-31T22:49:16.877Z"}
+2018-07-31 23:49:16: info: test for 83 authors is over {"timestamp":"2018-07-31T22:49:16.877Z"}
+2018-07-31 23:49:21: info: 84 accounts cost: 91.8587880017185 {"timestamp":"2018-07-31T22:49:21.377Z"}
+2018-07-31 23:49:21: info: test for 84 authors is over {"timestamp":"2018-07-31T22:49:21.377Z"}
+2018-07-31 23:49:24: info: 85 accounts cost: 92.71515400159842 {"timestamp":"2018-07-31T22:49:24.568Z"}
+2018-07-31 23:49:24: info: test for 85 authors is over {"timestamp":"2018-07-31T22:49:24.568Z"}
+2018-07-31 23:49:26: info: 42 accounts cost: 24.64540399969337 {"timestamp":"2018-07-31T22:49:26.452Z"}
+2018-07-31 23:49:26: info: test for 42 authors is over {"timestamp":"2018-07-31T22:49:26.453Z"}
+2018-07-31 23:49:27: info: 86 accounts cost: 93.56927300168536 {"timestamp":"2018-07-31T22:49:27.469Z"}
+2018-07-31 23:49:27: info: test for 86 authors is over {"timestamp":"2018-07-31T22:49:27.469Z"}
+2018-07-31 23:49:31: info: 87 accounts cost: 94.43012600186194 {"timestamp":"2018-07-31T22:49:31.400Z"}
+2018-07-31 23:49:31: info: test for 87 authors is over {"timestamp":"2018-07-31T22:49:31.400Z"}
+2018-07-31 23:49:31: info: 43 accounts cost: 25.162395999177534 {"timestamp":"2018-07-31T22:49:31.695Z"}
+2018-07-31 23:49:31: info: test for 43 authors is over {"timestamp":"2018-07-31T22:49:31.695Z"}
+2018-07-31 23:49:36: info: 88 accounts cost: 95.28604400138647 {"timestamp":"2018-07-31T22:49:36.505Z"}
+2018-07-31 23:49:36: info: test for 88 authors is over {"timestamp":"2018-07-31T22:49:36.505Z"}
+2018-07-31 23:49:37: info: 89 accounts cost: 96.14464300184409 {"timestamp":"2018-07-31T22:49:37.296Z"}
+2018-07-31 23:49:37: info: test for 89 authors is over {"timestamp":"2018-07-31T22:49:37.297Z"}
+2018-07-31 23:49:41: info: 90 accounts cost: 97.00056800193124 {"timestamp":"2018-07-31T22:49:41.083Z"}
+2018-07-31 23:49:41: info: test for 90 authors is over {"timestamp":"2018-07-31T22:49:41.084Z"}
+2018-07-31 23:49:43: info: 91 accounts cost: 97.85603800173703 {"timestamp":"2018-07-31T22:49:43.626Z"}
+2018-07-31 23:49:43: info: test for 91 authors is over {"timestamp":"2018-07-31T22:49:43.627Z"}
+2018-07-31 23:49:46: info: 92 accounts cost: 98.71106000182408 {"timestamp":"2018-07-31T22:49:46.351Z"}
+2018-07-31 23:49:46: info: test for 92 authors is over {"timestamp":"2018-07-31T22:49:46.352Z"}
+2018-07-31 23:49:49: info: 44 accounts cost: 25.71881199969539 {"timestamp":"2018-07-31T22:49:49.061Z"}
+2018-07-31 23:49:49: info: test for 44 authors is over {"timestamp":"2018-07-31T22:49:49.062Z"}
+2018-07-31 23:49:49: info: 93 accounts cost: 99.56877000149689 {"timestamp":"2018-07-31T22:49:49.268Z"}
+2018-07-31 23:49:49: info: test for 93 authors is over {"timestamp":"2018-07-31T22:49:49.269Z"}
+2018-07-31 23:49:52: info: 94 accounts cost: 100.42648000180634 {"timestamp":"2018-07-31T22:49:52.112Z"}
+2018-07-31 23:49:52: info: test for 94 authors is over {"timestamp":"2018-07-31T22:49:52.112Z"}
+2018-07-31 23:49:55: info: 95 accounts cost: 101.28374900168637 {"timestamp":"2018-07-31T22:49:55.479Z"}
+2018-07-31 23:49:55: info: test for 95 authors is over {"timestamp":"2018-07-31T22:49:55.479Z"}
+2018-07-31 23:49:56: info: 96 accounts cost: 102.13833000198065 {"timestamp":"2018-07-31T22:49:56.890Z"}
+2018-07-31 23:49:56: info: test for 96 authors is over {"timestamp":"2018-07-31T22:49:56.891Z"}
+2018-07-31 23:49:59: info: 97 accounts cost: 102.99648800200885 {"timestamp":"2018-07-31T22:49:59.136Z"}
+2018-07-31 23:49:59: info: test for 97 authors is over {"timestamp":"2018-07-31T22:49:59.137Z"}
+2018-07-31 23:50:01: info: 45 accounts cost: 26.255515999537238 {"timestamp":"2018-07-31T22:50:01.192Z"}
+2018-07-31 23:50:01: info: test for 45 authors is over {"timestamp":"2018-07-31T22:50:01.192Z"}
+2018-07-31 23:50:03: info: 98 accounts cost: 103.85286100181474 {"timestamp":"2018-07-31T22:50:03.254Z"}
+2018-07-31 23:50:03: info: test for 98 authors is over {"timestamp":"2018-07-31T22:50:03.255Z"}
+2018-07-31 23:50:05: info: 99 accounts cost: 104.7074350015464 {"timestamp":"2018-07-31T22:50:05.031Z"}
+2018-07-31 23:50:05: info: test for 99 authors is over {"timestamp":"2018-07-31T22:50:05.031Z"}
+2018-07-31 23:50:05: info: 100 accounts cost: 105.56648900164873 {"timestamp":"2018-07-31T22:50:05.688Z"}
+2018-07-31 23:50:05: info: test for 100 authors is over {"timestamp":"2018-07-31T22:50:05.688Z"}
+2018-07-31 23:50:08: info: 101 accounts cost: 106.42420600188416 {"timestamp":"2018-07-31T22:50:08.774Z"}
+2018-07-31 23:50:08: info: test for 101 authors is over {"timestamp":"2018-07-31T22:50:08.775Z"}
+2018-07-31 23:50:11: info: 102 accounts cost: 107.28102700204545 {"timestamp":"2018-07-31T22:50:11.056Z"}
+2018-07-31 23:50:11: info: test for 102 authors is over {"timestamp":"2018-07-31T22:50:11.056Z"}
+2018-07-31 23:50:13: info: 103 accounts cost: 108.1369520021326 {"timestamp":"2018-07-31T22:50:13.318Z"}
+2018-07-31 23:50:13: info: test for 103 authors is over {"timestamp":"2018-07-31T22:50:13.318Z"}
+2018-07-31 23:50:13: info: 104 accounts cost: 108.9924220019384 {"timestamp":"2018-07-31T22:50:13.779Z"}
+2018-07-31 23:50:13: info: test for 104 authors is over {"timestamp":"2018-07-31T22:50:13.779Z"}
+2018-07-31 23:50:15: info: 46 accounts cost: 26.792219999379085 {"timestamp":"2018-07-31T22:50:15.435Z"}
+2018-07-31 23:50:15: info: test for 46 authors is over {"timestamp":"2018-07-31T22:50:15.435Z"}
+2018-07-31 23:50:16: info: 105 accounts cost: 109.85237900204083 {"timestamp":"2018-07-31T22:50:16.375Z"}
+2018-07-31 23:50:16: info: test for 105 authors is over {"timestamp":"2018-07-31T22:50:16.375Z"}
+2018-07-31 23:50:16: info: 106 accounts cost: 110.70964800192087 {"timestamp":"2018-07-31T22:50:16.809Z"}
+2018-07-31 23:50:16: info: test for 106 authors is over {"timestamp":"2018-07-31T22:50:16.809Z"}
+2018-07-31 23:50:18: info: 107 accounts cost: 111.56467700193389 {"timestamp":"2018-07-31T22:50:18.170Z"}
+2018-07-31 23:50:18: info: test for 107 authors is over {"timestamp":"2018-07-31T22:50:18.170Z"}
+2018-07-31 23:50:21: info: 109 accounts cost: 113.27428700224118 {"timestamp":"2018-07-31T22:50:21.206Z"}
+2018-07-31 23:50:21: info: test for 109 authors is over {"timestamp":"2018-07-31T22:50:21.206Z"}
+2018-07-31 23:50:21: info: 108 accounts cost: 112.42105000173979 {"timestamp":"2018-07-31T22:50:21.677Z"}
+2018-07-31 23:50:21: info: test for 108 authors is over {"timestamp":"2018-07-31T22:50:21.677Z"}
+2018-07-31 23:50:22: info: 110 accounts cost: 114.13514000178111 {"timestamp":"2018-07-31T22:50:22.914Z"}
+2018-07-31 23:50:22: info: test for 110 authors is over {"timestamp":"2018-07-31T22:50:22.915Z"}
+2018-07-31 23:50:23: info: 111 accounts cost: 114.99376000201664 {"timestamp":"2018-07-31T22:50:23.686Z"}
+2018-07-31 23:50:23: info: test for 111 authors is over {"timestamp":"2018-07-31T22:50:23.686Z"}
+2018-07-31 23:50:25: info: 112 accounts cost: 115.85147700225207 {"timestamp":"2018-07-31T22:50:25.371Z"}
+2018-07-31 23:50:25: info: test for 112 authors is over {"timestamp":"2018-07-31T22:50:25.371Z"}
+2018-07-31 23:50:25: info: 113 accounts cost: 116.70471400211682 {"timestamp":"2018-07-31T22:50:25.906Z"}
+2018-07-31 23:50:25: info: test for 113 authors is over {"timestamp":"2018-07-31T22:50:25.907Z"}
+2018-07-31 23:50:26: info: 47 accounts cost: 27.328923999220933 {"timestamp":"2018-07-31T22:50:26.076Z"}
+2018-07-31 23:50:26: info: test for 47 authors is over {"timestamp":"2018-07-31T22:50:26.076Z"}
+2018-07-31 23:50:27: info: 114 accounts cost: 117.56063900220397 {"timestamp":"2018-07-31T22:50:27.487Z"}
+2018-07-31 23:50:27: info: test for 114 authors is over {"timestamp":"2018-07-31T22:50:27.488Z"}
+2018-07-31 23:50:27: info: 115 accounts cost: 118.41746700229123 {"timestamp":"2018-07-31T22:50:27.792Z"}
+2018-07-31 23:50:27: info: test for 115 authors is over {"timestamp":"2018-07-31T22:50:27.792Z"}
+2018-07-31 23:50:28: info: 116 accounts cost: 119.27608700189012 {"timestamp":"2018-07-31T22:50:28.710Z"}
+2018-07-31 23:50:28: info: test for 116 authors is over {"timestamp":"2018-07-31T22:50:28.710Z"}
+2018-07-31 23:50:28: info: 117 accounts cost: 120.13201200197727 {"timestamp":"2018-07-31T22:50:28.898Z"}
+2018-07-31 23:50:28: info: test for 117 authors is over {"timestamp":"2018-07-31T22:50:28.898Z"}
+2018-07-31 23:50:29: info: 118 accounts cost: 120.98704100199029 {"timestamp":"2018-07-31T22:50:29.739Z"}
+2018-07-31 23:50:29: info: test for 118 authors is over {"timestamp":"2018-07-31T22:50:29.739Z"}
+2018-07-31 23:50:30: info: 119 accounts cost: 121.84297300200342 {"timestamp":"2018-07-31T22:50:30.164Z"}
+2018-07-31 23:50:30: info: test for 119 authors is over {"timestamp":"2018-07-31T22:50:30.164Z"}
+2018-07-31 23:50:30: info: 120 accounts cost: 122.70203400203172 {"timestamp":"2018-07-31T22:50:30.589Z"}
+2018-07-31 23:50:30: info: test for 120 authors is over {"timestamp":"2018-07-31T22:50:30.590Z"}
+2018-07-31 23:50:30: info: 121 accounts cost: 123.56021300247448 {"timestamp":"2018-07-31T22:50:30.774Z"}
+2018-07-31 23:50:30: info: test for 121 authors is over {"timestamp":"2018-07-31T22:50:30.774Z"}
+2018-07-31 23:50:39: info: 48 accounts cost: 27.865627999381104 {"timestamp":"2018-07-31T22:50:39.327Z"}
+2018-07-31 23:50:39: info: test for 48 authors is over {"timestamp":"2018-07-31T22:50:39.327Z"}
+2018-07-31 23:50:49: info: 49 accounts cost: 28.40233199890463 {"timestamp":"2018-07-31T22:50:49.800Z"}
+2018-07-31 23:50:49: info: test for 49 authors is over {"timestamp":"2018-07-31T22:50:49.800Z"}
+2018-07-31 23:50:57: info: 50 accounts cost: 28.9390359990648 {"timestamp":"2018-07-31T22:50:57.347Z"}
+2018-07-31 23:50:57: info: test for 50 authors is over {"timestamp":"2018-07-31T22:50:57.347Z"}
+2018-07-31 23:51:09: info: 51 accounts cost: 29.475739998588324 {"timestamp":"2018-07-31T22:51:09.016Z"}
+2018-07-31 23:51:09: info: test for 51 authors is over {"timestamp":"2018-07-31T22:51:09.016Z"}
+2018-07-31 23:51:24: info: 52 accounts cost: 30.01244399843017 {"timestamp":"2018-07-31T22:51:24.300Z"}
+2018-07-31 23:51:24: info: test for 52 authors is over {"timestamp":"2018-07-31T22:51:24.300Z"}
+2018-07-31 23:51:35: info: 53 accounts cost: 30.54914799827202 {"timestamp":"2018-07-31T22:51:35.011Z"}
+2018-07-31 23:51:35: info: test for 53 authors is over {"timestamp":"2018-07-31T22:51:35.011Z"}
+2018-07-31 23:51:48: info: 54 accounts cost: 31.085851998113867 {"timestamp":"2018-07-31T22:51:48.656Z"}
+2018-07-31 23:51:48: info: test for 54 authors is over {"timestamp":"2018-07-31T22:51:48.656Z"}
+2018-07-31 23:51:51: info: 55 accounts cost: 31.622555998274038 {"timestamp":"2018-07-31T22:51:51.165Z"}
+2018-07-31 23:51:51: info: test for 55 authors is over {"timestamp":"2018-07-31T22:51:51.165Z"}
+2018-07-31 23:52:01: info: 56 accounts cost: 32.15925999779756 {"timestamp":"2018-07-31T22:52:01.895Z"}
+2018-07-31 23:52:01: info: test for 56 authors is over {"timestamp":"2018-07-31T22:52:01.896Z"}
+2018-07-31 23:52:11: info: 57 accounts cost: 32.66998000090098 {"timestamp":"2018-07-31T22:52:11.460Z"}
+2018-07-31 23:52:11: info: test for 57 authors is over {"timestamp":"2018-07-31T22:52:11.460Z"}
+2018-07-31 23:52:22: info: 58 accounts cost: 33.23266799748126 {"timestamp":"2018-07-31T22:52:22.416Z"}
+2018-07-31 23:52:22: info: test for 58 authors is over {"timestamp":"2018-07-31T22:52:22.416Z"}
+2018-07-31 23:52:35: info: 59 accounts cost: 33.769371997323105 {"timestamp":"2018-07-31T22:52:35.204Z"}
+2018-07-31 23:52:35: info: test for 59 authors is over {"timestamp":"2018-07-31T22:52:35.204Z"}
+2018-07-31 23:52:41: info: 60 accounts cost: 34.306075997483276 {"timestamp":"2018-07-31T22:52:41.985Z"}
+2018-07-31 23:52:41: info: test for 60 authors is over {"timestamp":"2018-07-31T22:52:41.986Z"}
+2018-07-31 23:52:57: info: 61 accounts cost: 34.842779997325124 {"timestamp":"2018-07-31T22:52:57.121Z"}
+2018-07-31 23:52:57: info: test for 61 authors is over {"timestamp":"2018-07-31T22:52:57.121Z"}
+2018-07-31 23:53:03: info: 62 accounts cost: 35.37948399684865 {"timestamp":"2018-07-31T22:53:03.706Z"}
+2018-07-31 23:53:03: info: test for 62 authors is over {"timestamp":"2018-07-31T22:53:03.706Z"}
+2018-07-31 23:53:15: info: 63 accounts cost: 35.916187996690496 {"timestamp":"2018-07-31T22:53:15.875Z"}
+2018-07-31 23:53:15: info: test for 63 authors is over {"timestamp":"2018-07-31T22:53:15.875Z"}
+2018-07-31 23:53:27: info: 64 accounts cost: 36.452891996532344 {"timestamp":"2018-07-31T22:53:27.935Z"}
+2018-07-31 23:53:27: info: test for 64 authors is over {"timestamp":"2018-07-31T22:53:27.936Z"}
+2018-07-31 23:53:30: info: 65 accounts cost: 36.98959599637419 {"timestamp":"2018-07-31T22:53:30.896Z"}
+2018-07-31 23:53:30: info: test for 65 authors is over {"timestamp":"2018-07-31T22:53:30.896Z"}
+2018-07-31 23:53:39: info: 66 accounts cost: 37.52629999653436 {"timestamp":"2018-07-31T22:53:39.967Z"}
+2018-07-31 23:53:39: info: test for 66 authors is over {"timestamp":"2018-07-31T22:53:39.967Z"}
+2018-07-31 23:53:49: info: 67 accounts cost: 38.06300399605789 {"timestamp":"2018-07-31T22:53:49.094Z"}
+info: test for 67 authors is over {"timestamp":"2018-07-31T22:53:49.094Z"}
+2018-07-31 23:53:58: info: 68 accounts cost: 38.59970799621806 {"timestamp":"2018-07-31T22:53:58.569Z"}
+2018-07-31 23:53:58: info: test for 68 authors is over {"timestamp":"2018-07-31T22:53:58.569Z"}
+2018-07-31 23:54:11: info: 69 accounts cost: 39.13641199574158 {"timestamp":"2018-07-31T22:54:11.350Z"}
+2018-07-31 23:54:11: info: test for 69 authors is over {"timestamp":"2018-07-31T22:54:11.350Z"}
+2018-07-31 23:54:22: info: 70 accounts cost: 39.64130800250132 {"timestamp":"2018-07-31T22:54:22.223Z"}
+2018-07-31 23:54:22: info: test for 70 authors is over {"timestamp":"2018-07-31T22:54:22.223Z"}
+2018-07-31 23:54:27: info: 71 accounts cost: 40.17756400262442 {"timestamp":"2018-07-31T22:54:27.030Z"}
+2018-07-31 23:54:27: info: test for 71 authors is over {"timestamp":"2018-07-31T22:54:27.030Z"}
+2018-07-31 23:54:33: info: 72 accounts cost: 40.746523995267125 {"timestamp":"2018-07-31T22:54:33.133Z"}
+2018-07-31 23:54:33: info: test for 72 authors is over {"timestamp":"2018-07-31T22:54:33.133Z"}
+2018-07-31 23:54:42: info: 73 accounts cost: 41.28322799510897 {"timestamp":"2018-07-31T22:54:42.001Z"}
+2018-07-31 23:54:42: info: test for 73 authors is over {"timestamp":"2018-07-31T22:54:42.001Z"}
+2018-07-31 23:54:51: info: 74 accounts cost: 41.81993199495082 {"timestamp":"2018-07-31T22:54:51.863Z"}
+2018-07-31 23:54:51: info: test for 74 authors is over {"timestamp":"2018-07-31T22:54:51.863Z"}
+2018-07-31 23:54:57: info: 75 accounts cost: 42.35663599479267 {"timestamp":"2018-07-31T22:54:57.257Z"}
+2018-07-31 23:54:57: info: test for 75 authors is over {"timestamp":"2018-07-31T22:54:57.258Z"}
+2018-07-31 23:55:07: info: 76 accounts cost: 42.89333999495284 {"timestamp":"2018-07-31T22:55:07.665Z"}
+2018-07-31 23:55:07: info: test for 76 authors is over {"timestamp":"2018-07-31T22:55:07.666Z"}
+2018-07-31 23:55:13: info: 77 accounts cost: 43.39510000336304 {"timestamp":"2018-07-31T22:55:13.870Z"}
+2018-07-31 23:55:13: info: test for 77 authors is over {"timestamp":"2018-07-31T22:55:13.870Z"}
+2018-07-31 23:55:20: info: 78 accounts cost: 43.931356003486144 {"timestamp":"2018-07-31T22:55:20.391Z"}
+2018-07-31 23:55:20: info: test for 78 authors is over {"timestamp":"2018-07-31T22:55:20.391Z"}
+2018-07-31 23:55:29: info: 79 accounts cost: 43.9784519940531 {"timestamp":"2018-07-31T22:55:29.341Z"}
+2018-07-31 23:55:29: info: test for 79 authors is over {"timestamp":"2018-07-31T22:55:29.342Z"}
+2018-07-31 23:55:36: info: 80 accounts cost: 45.04015599400191 {"timestamp":"2018-07-31T22:55:36.404Z"}
+2018-07-31 23:55:36: info: test for 80 authors is over {"timestamp":"2018-07-31T22:55:36.404Z"}
+2018-07-31 23:55:47: info: 81 accounts cost: 45.57685999416208 {"timestamp":"2018-07-31T22:55:47.305Z"}
+2018-07-31 23:55:47: info: test for 81 authors is over {"timestamp":"2018-07-31T22:55:47.305Z"}
+2018-07-31 23:55:51: info: 82 accounts cost: 46.11356399464057 {"timestamp":"2018-07-31T22:55:51.006Z"}
+2018-07-31 23:55:51: info: test for 82 authors is over {"timestamp":"2018-07-31T22:55:51.006Z"}
+2018-07-31 23:55:55: info: 83 accounts cost: 46.65026799320913 {"timestamp":"2018-07-31T22:55:55.631Z"}
+2018-07-31 23:55:55: info: test for 83 authors is over {"timestamp":"2018-07-31T22:55:55.631Z"}
+2018-07-31 23:55:59: info: 84 accounts cost: 47.18697199368762 {"timestamp":"2018-07-31T22:55:59.948Z"}
+2018-07-31 23:55:59: info: test for 84 authors is over {"timestamp":"2018-07-31T22:55:59.948Z"}
+2018-07-31 23:56:33: info: 85 accounts cost: 47.72367599352947 {"timestamp":"2018-07-31T22:56:33.366Z"}
+2018-07-31 23:56:33: info: test for 85 authors is over {"timestamp":"2018-07-31T22:56:33.366Z"}
+2018-07-31 23:57:00: info: 86 accounts cost: 48.22140400383432 {"timestamp":"2018-07-31T22:57:00.376Z"}
+2018-07-31 23:57:00: info: test for 86 authors is over {"timestamp":"2018-07-31T22:57:00.376Z"}
+2018-07-31 23:57:34: info: 87 accounts cost: 48.79708399257652 {"timestamp":"2018-07-31T22:57:34.586Z"}
+2018-07-31 23:57:34: info: test for 87 authors is over {"timestamp":"2018-07-31T22:57:34.586Z"}
+2018-07-31 23:57:41: info: 88 accounts cost: 48.808787992948055 {"timestamp":"2018-07-31T22:57:41.007Z"}
+2018-07-31 23:57:41: info: test for 88 authors is over {"timestamp":"2018-07-31T22:57:41.008Z"}
+2018-07-31 23:58:18: info: 89 accounts cost: 49.83017200420363 {"timestamp":"2018-07-31T22:58:18.044Z"}
+2018-07-31 23:58:18: info: test for 89 authors is over {"timestamp":"2018-07-31T22:58:18.059Z"}
+2018-07-31 23:58:28: info: 90 accounts cost: 50.40719599273871 {"timestamp":"2018-07-31T22:58:28.482Z"}
+2018-07-31 23:58:28: info: test for 90 authors is over {"timestamp":"2018-07-31T22:58:28.482Z"}
+2018-07-31 23:58:54: info: 91 accounts cost: 50.943899992580555 {"timestamp":"2018-07-31T22:58:54.741Z"}
+2018-07-31 23:58:54: info: test for 91 authors is over {"timestamp":"2018-07-31T22:58:54.742Z"}
+2018-07-31 23:59:47: info: 92 accounts cost: 51.4806039924224 {"timestamp":"2018-07-31T22:59:47.278Z"}
+2018-07-31 23:59:47: info: test for 92 authors is over {"timestamp":"2018-07-31T22:59:47.278Z"}
+2018-08-01 00:00:12: info: 93 accounts cost: 52.017307991627604 {"timestamp":"2018-07-31T23:00:12.297Z"}
+2018-08-01 00:00:12: info: test for 93 authors is over {"timestamp":"2018-07-31T23:00:12.297Z"}
+2018-08-01 00:00:22: info: 94 accounts cost: 52.5540119921061 {"timestamp":"2018-07-31T23:00:22.654Z"}
+2018-08-01 00:00:22: info: test for 94 authors is over {"timestamp":"2018-07-31T23:00:22.654Z"}
+2018-08-01 00:00:42: info: 95 accounts cost: 53.0907159913113 {"timestamp":"2018-07-31T23:00:42.514Z"}
+2018-08-01 00:00:42: info: test for 95 authors is over {"timestamp":"2018-07-31T23:00:42.514Z"}
+2018-08-01 00:00:44: info: 96 accounts cost: 53.62741999115315 {"timestamp":"2018-07-31T23:00:44.573Z"}
+2018-08-01 00:00:44: info: test for 96 authors is over {"timestamp":"2018-07-31T23:00:44.573Z"}
+2018-08-01 00:00:59: info: 97 accounts cost: 54.164123990994995 {"timestamp":"2018-07-31T23:00:59.396Z"}
+2018-08-01 00:00:59: info: test for 97 authors is over {"timestamp":"2018-07-31T23:00:59.397Z"}
+2018-08-01 00:01:03: info: 99 accounts cost: 55.23753199067869 {"timestamp":"2018-07-31T23:01:03.850Z"}
+2018-08-01 00:01:03: info: test for 99 authors is over {"timestamp":"2018-07-31T23:01:03.850Z"}
+2018-08-01 00:01:03: info: 98 accounts cost: 54.70082799083684 {"timestamp":"2018-07-31T23:01:03.876Z"}
+2018-08-01 00:01:03: info: test for 98 authors is over {"timestamp":"2018-07-31T23:01:03.876Z"}
+2018-08-01 00:01:07: info: 100 accounts cost: 55.77423599052054 {"timestamp":"2018-07-31T23:01:07.398Z"}
+2018-08-01 00:01:07: info: test for 100 authors is over {"timestamp":"2018-07-31T23:01:07.399Z"}
+2018-08-01 00:01:15: info: 102 accounts cost: 56.27650000569702 {"timestamp":"2018-07-31T23:01:15.921Z"}
+2018-08-01 00:01:15: info: test for 102 authors is over {"timestamp":"2018-07-31T23:01:15.921Z"}
+2018-08-01 00:01:17: info: 103 accounts cost: 57.38434799004608 {"timestamp":"2018-07-31T23:01:17.614Z"}
+2018-08-01 00:01:17: info: test for 103 authors is over {"timestamp":"2018-07-31T23:01:17.614Z"}
+2018-08-01 00:01:17: info: 101 accounts cost: 56.31093999099903 {"timestamp":"2018-07-31T23:01:17.670Z"}
+2018-08-01 00:01:17: info: test for 101 authors is over {"timestamp":"2018-07-31T23:01:17.671Z"}
+2018-08-01 00:01:21: info: 104 accounts cost: 57.92105198988793 {"timestamp":"2018-07-31T23:01:21.923Z"}
+2018-08-01 00:01:21: info: test for 104 authors is over {"timestamp":"2018-07-31T23:01:21.923Z"}
+2018-08-01 00:01:23: info: 105 accounts cost: 58.45775599036642 {"timestamp":"2018-07-31T23:01:23.605Z"}
+2018-08-01 00:01:23: info: test for 105 authors is over {"timestamp":"2018-07-31T23:01:23.605Z"}
+2018-08-01 00:01:26: info: 106 accounts cost: 58.99445999020827 {"timestamp":"2018-07-31T23:01:26.987Z"}
+2018-08-01 00:01:26: info: test for 106 authors is over {"timestamp":"2018-07-31T23:01:26.988Z"}
+2018-08-01 00:01:28: info: 107 accounts cost: 59.53116398941347 {"timestamp":"2018-07-31T23:01:28.905Z"}
+2018-08-01 00:01:28: info: test for 107 authors is over {"timestamp":"2018-07-31T23:01:28.905Z"}
+2018-08-01 00:01:32: info: 108 accounts cost: 60.067867989891965 {"timestamp":"2018-07-31T23:01:32.750Z"}
+2018-08-01 00:01:32: info: test for 108 authors is over {"timestamp":"2018-07-31T23:01:32.750Z"}
+2018-08-01 00:01:33: info: 109 accounts cost: 60.555292006665695 {"timestamp":"2018-07-31T23:01:33.884Z"}
+2018-08-01 00:01:33: info: test for 109 authors is over {"timestamp":"2018-07-31T23:01:33.885Z"}
+2018-08-01 00:01:35: info: 110 accounts cost: 61.141275988939014 {"timestamp":"2018-07-31T23:01:35.405Z"}
+2018-08-01 00:01:35: info: test for 110 authors is over {"timestamp":"2018-07-31T23:01:35.405Z"}
+2018-08-01 00:01:38: info: 111 accounts cost: 61.15297998931055 {"timestamp":"2018-07-31T23:01:38.552Z"}
+2018-08-01 00:01:38: info: test for 111 authors is over {"timestamp":"2018-07-31T23:01:38.552Z"}
+2018-08-01 00:01:39: info: 112 accounts cost: 62.214683989259356 {"timestamp":"2018-07-31T23:01:39.432Z"}
+2018-08-01 00:01:39: info: test for 112 authors is over {"timestamp":"2018-07-31T23:01:39.433Z"}
+2018-08-01 00:01:40: info: 113 accounts cost: 62.751387989101204 {"timestamp":"2018-07-31T23:01:40.282Z"}
+2018-08-01 00:01:40: info: test for 113 authors is over {"timestamp":"2018-07-31T23:01:40.282Z"}
+2018-08-01 00:01:42: info: 114 accounts cost: 63.23657200728121 {"timestamp":"2018-07-31T23:01:42.121Z"}
+2018-08-01 00:01:42: info: test for 114 authors is over {"timestamp":"2018-07-31T23:01:42.121Z"}
+2018-08-01 00:01:42: info: 115 accounts cost: 63.29979598867794 {"timestamp":"2018-07-31T23:01:42.963Z"}
+2018-08-01 00:01:42: info: test for 115 authors is over {"timestamp":"2018-07-31T23:01:42.963Z"}
+2018-08-01 00:01:43: info: 116 accounts cost: 64.36149998862675 {"timestamp":"2018-07-31T23:01:43.914Z"}
+2018-08-01 00:01:43: info: test for 116 authors is over {"timestamp":"2018-07-31T23:01:43.914Z"}
+2018-08-01 00:01:45: info: 117 accounts cost: 64.84534000765052 {"timestamp":"2018-07-31T23:01:45.171Z"}
+2018-08-01 00:01:45: info: test for 117 authors is over {"timestamp":"2018-07-31T23:01:45.171Z"}
+2018-08-01 00:01:45: info: 118 accounts cost: 65.43490798831044 {"timestamp":"2018-07-31T23:01:45.581Z"}
+2018-08-01 00:01:45: info: test for 118 authors is over {"timestamp":"2018-07-31T23:01:45.581Z"}
+2018-08-01 00:01:46: info: 119 accounts cost: 65.97161198815229 {"timestamp":"2018-07-31T23:01:46.504Z"}
+2018-08-01 00:01:46: info: test for 119 authors is over {"timestamp":"2018-07-31T23:01:46.504Z"}
+2018-08-01 00:01:47: info: 121 accounts cost: 67.04501998719934 {"timestamp":"2018-07-31T23:01:47.202Z"}
+2018-08-01 00:01:47: info: test for 121 authors is over {"timestamp":"2018-07-31T23:01:47.203Z"}
+2018-08-01 00:01:47: info: 120 accounts cost: 66.50831598799414 {"timestamp":"2018-07-31T23:01:47.272Z"}
+2018-08-01 00:01:47: info: test for 120 authors is over {"timestamp":"2018-07-31T23:01:47.272Z"}
