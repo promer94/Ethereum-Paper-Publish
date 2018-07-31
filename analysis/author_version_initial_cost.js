@@ -20,9 +20,9 @@ const md5 = content =>
 		.update(content)
 		.digest('hex')}`
 /** Initialize cost records file */
-const costFile = path.resolve(__dirname, 'author-initial-totalcost.csv')
-const createCostFile = path.resolve(__dirname, 'author--paper-create-cost.csv')
-const approveCostFile = path.resolve(__dirname, 'author-paper-approve-cost.csv')
+const costFile = path.resolve(__dirname, 'NewPaper-totalcost.csv')
+const createCostFile = path.resolve(__dirname, 'NewPaper-createcost.csv')
+const approveCostFile = path.resolve(__dirname, 'NewPaper-approvecost.csv')
 fs.removeSync(costFile)
 fs.removeSync(createCostFile)
 fs.removeSync(approveCostFile)

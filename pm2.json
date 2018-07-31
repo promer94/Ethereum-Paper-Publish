@@ -7,7 +7,7 @@
 			"error_file": "./logs/error.log",
 			"log_date_format": "YYYY-MM-DD HH:mm:ss",
 			"exec_mode": "fork",
-			"max_memory_restart": "1024M",
+			"max_memory_restart": "2048M",
 			"merge_logs": true,
 			"autorestart": false
 		},
@@ -18,7 +18,7 @@
 			"error_file": "./logs/error.log",
 			"log_date_format": "YYYY-MM-DD HH:mm:ss",
 			"exec_mode": "fork",
-			"max_memory_restart": "1024M",
+			"max_memory_restart": "2048M",
 			"merge_logs": true,
 			"autorestart": false
 		}
