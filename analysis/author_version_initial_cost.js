@@ -62,7 +62,6 @@ const authorTest = async numbers => {
 			.multiply(350)
 			.done()
 			.toString()
-		fs.appendFileSync(createCostFile, `${numbers},${createCost}\n`)
 		const result = await splContract.methods.getProjects().call()
 		await Promise.all(
 			accounts.map(address =>
