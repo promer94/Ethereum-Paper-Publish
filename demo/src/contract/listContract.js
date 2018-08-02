@@ -1,0 +1,7 @@
+import web3 from './web3Config'
+
+const paperList = require('./SmartPaperList.json')
+
+const listInterface = address =>
+	new web3.eth.Contract(JSON.parse(paperList.interface), address).methods
+export default listInterface
