@@ -11,6 +11,8 @@ export default function configureStore(preloadState) {
 	return createStore(
 		combinedReducers,
 		preloadState,
-		composeWithDevTools(applyMiddleware(thunk, promise(), loggerMiddleware))
+		process.env.NODE_ENV === 'development'
+			? composeWithDevTools(applyMiddleware(thunk, promise(), loggerMiddleware))
+			: applyMiddleware(thunk, promise())
 	)
 }

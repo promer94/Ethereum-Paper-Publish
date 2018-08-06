@@ -26,6 +26,7 @@ class App extends React.Component {
 				<Router>
 					<Home path="/" />
 					<Dashboard path="dashboard" />
+					<Details path="dashboard/:address" />
 				</Router>
 			</Layout>
 		)
@@ -35,5 +36,10 @@ export default connect()(App)
 const Home = () => (
 	<div>
 		<h2>Home</h2>
+	</div>
+)
+const Details = ({ address }) => (
+	<div>
+		<h2>{address}</h2>
 	</div>
 )

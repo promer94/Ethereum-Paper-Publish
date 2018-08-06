@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import { Link } from '@reach/router'
 import { connect } from 'react-redux'
 import { fetchPaper } from '../action/action'
-
+import PaperListItem from '../Component/PaperListItem'
+//TODO: Checkbox filter
 class Dashboard extends Component {
 	state = {
-		showOnlyYou: false
+		showOnlyYou: false,
+		filter: ''
 	}
 
 	componentDidMount() {
@@ -17,8 +19,13 @@ class Dashboard extends Component {
 		this.setState(prevState => ({ showOnlyYou: !prevState.showOnlyYou }))
 	}
 
+	handleChange = e => {
+		this.setState({ filter: e.target.value })
+	}
+
 	render() {
-		const { showOnlyYou } = this.state
+		const { showOnlyYou, filter } = this.state
+		const { paperList } = this.props
 		return (
 			<div className="section">
 				<div className="row">
@@ -26,15 +33,20 @@ class Dashboard extends Component {
 						<ul className="collection">
 							<li className="input-field col">
 								<i className="material-icons prefix">search</i>
-								<input type="text" />
+								<input
+									type="text"
+									value={filter}
+									onChange={this.handleChange}
+								/>
 							</li>
 						</ul>
 						<ul className="collection">
-							<li className="collection-item" onClick={this.handleCheckbox}>
+							<li className="collection-item"onClick={this.handleCheckbox} /*eslint-disable-line*/ >
 								<input
 									type="checkbox"
 									className="filled-in"
 									checked={showOnlyYou}
+									onClick={this.handleCheckbox}
 								/>
 								<span>Your paper only</span>
 							</li>
@@ -46,7 +58,17 @@ class Dashboard extends Component {
 							</Link>
 						</ul>
 					</div>
-					<div className="col s12 m9 l12" />
+					<div className="col s12 m9 l9">
+						{Array.isArray(paperList)
+							? paperList
+									.filter(
+										item =>
+											item.description.includes(filter) ||
+											item.address.includes(filter)
+									)
+									.map(item => <PaperListItem key={item.address} {...item} />)
+							: null}
+					</div>
 				</div>
 			</div>
 		)

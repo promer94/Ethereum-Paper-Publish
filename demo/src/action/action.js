@@ -35,18 +35,15 @@ export const fetchPaper = addresses => ({
 		)
 	)
 })
-const handleSummary = (address, data) => {
-	const obj = {}
-	obj[address] = {
-		description: hexToUtf8(data[0]),
-		metadata: hexToUtf8(data[1]),
-		md5: data[2],
-		latestVersion: data[3],
-		versionCount: data[4]
-	}
-	return obj
-}
-export const createPaper = (address, paper) => ({
+const handleSummary = (address, data) => ({
+	address,
+	description: hexToUtf8(data[0]),
+	metadata: hexToUtf8(data[1]),
+	md5: data[2],
+	latestVersion: data[3],
+	versionCount: data[4]
+})
+export const createPaper = (address, paper, creator) => ({
 	type: CREATE_PAPER[0],
 	payload: listInterface(address)
 		.createNewPaper(
@@ -55,7 +52,7 @@ export const createPaper = (address, paper) => ({
 			paper.md5,
 			paper.accounts
 		)
-		.send({ gas: '2100000' })
+		.send({ gas: '2100000', from: creator })
 		.catch(e => e.message)
 })
 
