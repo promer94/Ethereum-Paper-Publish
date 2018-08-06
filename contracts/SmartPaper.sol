@@ -176,7 +176,7 @@ contract SmartPaper is AuthorList{
     bytes32 public latestDescription;
     bytes32 public latestMetaData;
     bytes16 public latestPaper;
-    uint public latestVersion;  //md5
+    uint public latestVersion; 
     address[] public authors;
     bytes16[] public md5List;
     Version[] public versions;
@@ -251,5 +251,14 @@ contract SmartPaper is AuthorList{
             require(latestVersion == versions[_versionNumber-1].versionNumber);
         }
         versionMap[md5] = version;
+    }
+    function getSummary() public view returns (bytes32, bytes32, bytes16, uint, uint){
+        return (
+            latestDescription,
+            latestMetaData,
+            latestPaper,
+            latestVersion,
+            versions.length
+        );
     }
 }  
