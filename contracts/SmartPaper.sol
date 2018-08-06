@@ -40,7 +40,7 @@ library Roles {
 
 
     function check(Role storage role, address addr) view internal{
-        require(has(role, addr));
+        require(has(role, addr),"BAN");
     }
 
     function has(Role storage role, address addr) view internal returns (bool){
@@ -202,7 +202,7 @@ contract SmartPaper is AuthorList{
         versionMap[latestPaper] = newVersion;        
     }
     function checkIn() public onlyIfAuthor(msg.sender){
-        require(versions[0].signs[msg.sender] == false);
+        require(versions[0].signs[msg.sender] == false, "Ban");
         versions[0].signs[msg.sender] = true;
         versions[0].voterCount++;
         if(versions[0].voterCount == authors.length){
@@ -217,8 +217,8 @@ contract SmartPaper is AuthorList{
     function getAuthors() public view returns (address[]){
         return authors;
     }
-    function createNewVersion(bytes32 versionDescription, bytes32 metaData, bytes16 md5)
-    onlyIfAuthor(msg.sender) public payable {
+    function createNewVersion(bytes32 versionDescription, bytes32 metaData, bytes16 md5) public
+    onlyIfAuthor(msg.sender) payable {
         uint versionNumber = latestVersion + 1;
         Version memory newVersion = Version({
             versionNumber: versionNumber,
@@ -233,7 +233,7 @@ contract SmartPaper is AuthorList{
     }
     function approveVersion(uint _versionNumber, bytes16 md5) onlyIfAuthor(msg.sender) public{
         Version storage version = versions[_versionNumber-1];
-        require(!version.signs[msg.sender]);
+        require(!version.signs[msg.sender], "BAN");
         version.signs[msg.sender] = true;
         version.voterCount++;
         if(version.voterCount==authors.length){
@@ -243,12 +243,12 @@ contract SmartPaper is AuthorList{
             latestMetaData = version.metaData;
             latestPaper = md5;
             versionMap[md5] = version;
-            require(versionMap[md5].versionNumber == versions[_versionNumber-1].versionNumber);
-            require(versionMap[md5].versionDescription == versions[_versionNumber-1].versionDescription);
-            require(versionMap[md5].isPublished == versions[_versionNumber-1].isPublished);
-            require(versionMap[md5].metaData == versions[_versionNumber-1].metaData);
-            require(versionMap[md5].voterCount == versions[_versionNumber-1].voterCount);
-            require(latestVersion == versions[_versionNumber-1].versionNumber);
+            require(versionMap[md5].versionNumber == versions[_versionNumber-1].versionNumber, "BAN");
+            require(versionMap[md5].versionDescription == versions[_versionNumber-1].versionDescription, "BAN");
+            require(versionMap[md5].isPublished == versions[_versionNumber-1].isPublished, "BAN");
+            require(versionMap[md5].metaData == versions[_versionNumber-1].metaData, "BAN");
+            require(versionMap[md5].voterCount == versions[_versionNumber-1].voterCount, "BAN");
+            require(latestVersion == versions[_versionNumber-1].versionNumber, "BAN");
         }
         versionMap[md5] = version;
     }
