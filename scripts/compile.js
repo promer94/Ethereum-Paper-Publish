@@ -28,8 +28,16 @@ contractFiles.forEach(contractFile => {
 	Object.keys(result.contracts).forEach(name => {
 		const contractName = name.replace(/^:/, '')
 		const filePath = path.resolve(compiledDir, `${contractName}.json`)
+		const demoPath = path.resolve(
+			__dirname,
+			'../demo/src/Contract',
+			`${contractName}.json`
+		)
+		fs.outputJsonSync(demoPath, result.contracts[name])
 		fs.outputJsonSync(filePath, result.contracts[name])
-		signale.success(`Contract ${contractName} saved to ${filePath}`)
+		signale.success(
+			`Contract ${contractName} saved to ${filePath} and ${demoPath}`
+		)
 	})
 	signale.timeEnd(`Compile`)
 })

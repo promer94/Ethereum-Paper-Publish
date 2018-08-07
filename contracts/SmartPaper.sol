@@ -39,11 +39,11 @@ library Roles {
     }
 
 
-    function check(Role storage role, address addr) view internal{
+    function check(Role storage role, address addr) internal view {
         require(has(role, addr),"BAN");
     }
 
-    function has(Role storage role, address addr) view internal returns (bool){
+    function has(Role storage role, address addr) internal view  returns (bool){
         return role.bearer[addr];
     }
 }
@@ -61,7 +61,7 @@ contract RBAC {
    * @param _role the name of the role
    * // reverts
    */
-    function checkRole(address _operator, string _role) view public{
+    function checkRole(address _operator, string _role) public view {
         roles[_role].check(_operator);
     }
 
@@ -71,7 +71,7 @@ contract RBAC {
    * @param _role the name of the role
    * @return bool
    */
-    function hasRole(address _operator, string _role) view internal returns (bool){
+    function hasRole(address _operator, string _role) internal view returns (bool){
         return roles[_role].has(_operator);
     }
 
@@ -178,6 +178,7 @@ contract SmartPaper is AuthorList{
     bytes16 public latestPaper;
     uint public latestVersion; 
     address[] public authors;
+    mapping(address => bool) isAuthor;
     bytes16[] public md5List;
     Version[] public versions;
     mapping (bytes16 => Version) public versionMap;
@@ -199,7 +200,10 @@ contract SmartPaper is AuthorList{
         });
         versions.push(newVersion);
         versions[0].signs[msg.sender] = true;
-        versionMap[latestPaper] = newVersion;        
+        versionMap[latestPaper] = newVersion; 
+        for(uint256 i = 0; i < _authors.length; i++){
+            isAuthor[_authors[i]] = true;
+        }       
     }
     function checkIn() public onlyIfAuthor(msg.sender){
         require(versions[0].signs[msg.sender] == false, "Ban");
@@ -231,7 +235,7 @@ contract SmartPaper is AuthorList{
         versions.push(newVersion);
         versionMap[md5] = newVersion;
     }
-    function approveVersion(uint _versionNumber, bytes16 md5) onlyIfAuthor(msg.sender) public{
+    function approveVersion(uint _versionNumber, bytes16 md5)  public onlyIfAuthor(msg.sender){
         Version storage version = versions[_versionNumber-1];
         require(!version.signs[msg.sender], "BAN");
         version.signs[msg.sender] = true;
@@ -252,13 +256,14 @@ contract SmartPaper is AuthorList{
         }
         versionMap[md5] = version;
     }
-    function getSummary() public view returns (bytes32, bytes32, bytes16, uint, uint){
+    function getSummary() public view returns (bytes32, bytes32, bytes16, uint, uint, bool){
         return (
             latestDescription,
             latestMetaData,
             latestPaper,
             latestVersion,
-            versions.length
+            versions.length,
+            isAuthor[msg.sender]
         );
     }
 }  

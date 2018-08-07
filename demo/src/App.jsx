@@ -3,15 +3,16 @@ import { Router } from '@reach/router'
 import { connect } from 'react-redux'
 import Layout from './Layout/Layout'
 import Dashboard from './Routes/Dashboard'
-import { updatePaper, updateUser } from './action/action'
-import web3 from './Contract/web3'
+import { updatePaper } from './action/action'
+import web3 from './Web3/web3'
+
+const { rootContract } = require('./address.json')
 
 class App extends React.Component {
 	componentDidMount() {
 		window.M.AutoInit()
 		const { dispatch } = this.props
-		dispatch(updatePaper('0x77A75b52cD13ea8eFee72dBfF412a4E4963B8112'))
-		dispatch(updateUser(web3))
+		dispatch(updatePaper(rootContract, web3))
 	}
 
 	openSideBar = () => {

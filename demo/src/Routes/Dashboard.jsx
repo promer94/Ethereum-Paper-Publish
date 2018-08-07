@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from '@reach/router'
 import { connect } from 'react-redux'
-import { fetchPaper } from '../action/action'
 import PaperListItem from '../Component/PaperListItem'
 //TODO: Checkbox filter
 class Dashboard extends Component {
 	state = {
 		showOnlyYou: false,
 		filter: ''
-	}
-
-	componentDidMount() {
-		const { dispatch, addresses } = this.props
-		dispatch(fetchPaper(addresses))
 	}
 
 	handleCheckbox = () => {
@@ -31,7 +25,7 @@ class Dashboard extends Component {
 				<div className="row">
 					<div className="col s3 xl3 hide-on-small-only">
 						<ul className="collection">
-							<li className="input-field col">
+							<li className="input-field col hoverable">
 								<i className="material-icons prefix">search</i>
 								<input
 									type="text"
@@ -41,7 +35,7 @@ class Dashboard extends Component {
 							</li>
 						</ul>
 						<ul className="collection">
-							<li className="collection-item"onClick={this.handleCheckbox} /*eslint-disable-line*/ >
+							<li className="collection-item" onClick={this.handleCheckbox} /*eslint-disable-line*/ >
 								<input
 									type="checkbox"
 									className="filled-in"
