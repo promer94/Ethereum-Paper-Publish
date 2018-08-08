@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from '@reach/router'
 
-export default ({ address, description, metadata }) => {
+export default ({ address, description, metadata, versionCount }) => {
 	return (
 		<div className="card white hoverable">
 			<div className="card-content black-text">
@@ -9,7 +9,7 @@ export default ({ address, description, metadata }) => {
 				<p className="flow-text">{metadata}</p>
 			</div>
 			<div className="card-action">
-				<Link to={`/dashboard/${address}`}>Details</Link>
+				<Link to={`/dashboard/${address},${versionCount}`}>Details</Link>
 			</div>
 		</div>
 	)

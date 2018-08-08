@@ -18,7 +18,7 @@ class Dashboard extends Component {
 	}
 
 	componentDidMount() {
-		const props = this.props //eslint-disable-line
+		const { props } = this
 		props.dispatch(updatePaper(rootContract))
 		Dashboard.timer.push(
 			setTimeout(() => {
@@ -73,14 +73,17 @@ class Dashboard extends Component {
 								<span>Your paper only</span>
 							</li>
 							<Link
-								className="waves-effect waves-light collection-item"
-								to="/newpapercontract"
+								className="waves-effect waves-light red-text text-darken-2 collection-item"
+								to="/NewPaper"
 							>
-								New Paper Contract
+								New Paper Now
 							</Link>
 						</ul>
 					</div>
 					<div className="col s12 m9 l9">
+						<blockquote>
+							<h3>Smart paper list</h3>
+						</blockquote>
 						{isPending || isLoading ? (
 							<div className="flexbox-centering">
 								<Loader type="ball-grid-pulse" />
@@ -114,6 +117,7 @@ class Dashboard extends Component {
 const mapStateToProps = state => {
 	return {
 		paperList: state.paper.paperList,
+		addresses: state.paper.paperAddresses,
 		isPending: state.paper.isPending
 	}
 }

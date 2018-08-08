@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Loader from 'react-loaders'
 import { toast } from 'react-toastify'
-import { navigate } from '@reach/router'
 import { debounce } from 'lodash'
 import { createPaper } from '../action/action'
 import web3 from '../Web3/web3'
@@ -58,7 +57,7 @@ class PaperForm extends Component {
 	}
 
 	componentDidUpdate() {
-		const { transaction } = this.props
+		const { transaction, navigate } = this.props
 		if (transaction) {
 			this.navTimer = setTimeout(() => {
 				navigate('/dashboard')
@@ -67,7 +66,6 @@ class PaperForm extends Component {
 	}
 
 	componentWillUnmount() {
-		this.handleChange.cancel()
 		clearTimeout(this.navTimer)
 	}
 

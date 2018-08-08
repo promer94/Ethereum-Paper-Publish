@@ -3,6 +3,7 @@ import { Router } from '@reach/router'
 import { connect } from 'react-redux'
 import Layout from './Layout/Layout'
 import Dashboard from './Routes/Dashboard'
+import Details from './Routes/Details'
 import PaperForm from './Component/PaperForm'
 import { updatePaper } from './action/action'
 import './App.css'
@@ -28,7 +29,7 @@ class App extends React.Component {
 				<Router>
 					<Home path="/" />
 					<Dashboard path="dashboard" />
-					<PaperForm path="newpapercontract" />
+					<PaperForm path="NewPaper" />
 					<Details path="dashboard/:address" />
 				</Router>
 			</Layout>
@@ -39,10 +40,5 @@ export default connect()(App)
 const Home = () => (
 	<div className="flexbox-centering">
 		<h1>HOME</h1>
-	</div>
-)
-const Details = ({ address }) => (
-	<div>
-		<h2>{address}</h2>
 	</div>
 )

@@ -16,6 +16,7 @@ export const FETCH_PAPER_ADDRESS = promiseType('FETCH_PAPER_ADDRESS')
 export const FETCH_PAPER = promiseType('FETCH_PAPER')
 export const CREATE_PAPER = promiseType('CREATE_PAPER')
 export const INIT_USER = promiseType('INIT_USER')
+export const FETCH_VERSIONS = promiseType('FETCH_VERSION')
 const fetchAddress = address => ({
 	type: FETCH_PAPER_ADDRESS[0],
 	payload: listInterface(address)
@@ -115,8 +116,47 @@ export const updatePaper = address => {
 						'Please unlock you MetaMask and Make sure your are under Rinkeby Test Network'
 					)
 				} else {
-					dispatch(fetchPaper(data.value, user.value))
+					return dispatch(fetchPaper(data.value, user.value))
 				}
 			})
+	}
+}
+
+export const getVersions = (address, versionCount, caller) => {
+	if (web3.utils.isAddress(caller) !== true) {
+		return { type: FETCH_VERSIONS[3], payload: 'Invalid address' }
+	} else {
+		const version = []
+		for (let i = 0; i < versionCount; i += 1) {
+			version.push(
+				paperInterface(address)
+					.getVersion(i)
+					.call({ from: caller })
+					.then(data => {
+						const versionNumber = i
+						const versionDescription = web3.utils.toUtf8(data[0])
+						const metadata = web3.utils.toUtf8(data[1])
+						const isPublished = data[2]
+						const voterCount = data[3]
+						const versionAddress = data[4]
+						const md5 = data[5]
+						const isSigned = data[6]
+						return {
+							versionNumber,
+							versionDescription,
+							metadata,
+							isPublished,
+							voterCount,
+							versionAddress,
+							md5,
+							isSigned
+						}
+					})
+			)
+		}
+		return {
+			type: FETCH_VERSIONS[0],
+			payload: Promise.all(version)
+		}
 	}
 }

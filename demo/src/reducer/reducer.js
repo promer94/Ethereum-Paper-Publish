@@ -4,7 +4,8 @@ import {
 	FETCH_PAPER_ADDRESS,
 	FETCH_PAPER,
 	CREATE_PAPER,
-	INIT_USER
+	INIT_USER,
+	FETCH_VERSIONS
 } from '../action/action'
 
 const paper = (state = {}, action) => {
@@ -39,6 +40,10 @@ const paper = (state = {}, action) => {
 			}
 		case CREATE_PAPER[3]:
 			return { ...state, isPending: false, errorMessage: action.payload }
+		case FETCH_VERSIONS[1]:
+			return { ...state, isPending: true }
+		case FETCH_VERSIONS[2]:
+			return { ...state, isPending: false, versions: action.payload }
 		default: {
 			return state
 		}
