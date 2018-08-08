@@ -27,7 +27,7 @@ module.exports = {
 		'arrow-body-style': [0],
 		'import/extensions': [0],
 		'no-bitwise': [0],
-		'no-cond-assign': [0],
+
 		'import/no-unresolved': [0],
 		'require-yield': [1],
 		'no-param-reassign': [0],
@@ -37,6 +37,7 @@ module.exports = {
 		'func-names': [0],
 		'no-console': [1],
 		'import/no-dynamic-require': [0],
+		'react/sort-comp': [0],
 		semi: ['error', 'never'],
 		'prettier/prettier': ['error', { singleQuote: true, semi: false }]
 	},
