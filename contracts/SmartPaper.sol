@@ -205,11 +205,11 @@ contract SmartPaper is AuthorList{
             isAuthor[_authors[i]] = true;
         }       
     }
-    function checkIn() public onlyIfAuthor(msg.sender){
+    function checkIn() public onlyIfAuthor(msg.sender) payable{
         require(versions[0].signs[msg.sender] == false, "Ban");
         versions[0].signs[msg.sender] = true;
         versions[0].voterCount++;
-        if(versions[0].voterCount == authors.length){
+        if(versions[0].voterCount == authors.length + 1){
             versions[0].isPublished = true;
             latestVersion = versions[0].versionNumber;
         }
@@ -264,6 +264,19 @@ contract SmartPaper is AuthorList{
             latestVersion,
             versions.length,
             isAuthor[msg.sender]
+        );
+    }
+    function getVersion(uint _versionNumber) public view returns(bytes32,bytes32,bool,uint,address,bytes16,bool){
+        require(_versionNumber >= 0, "BAN");
+        address versionAddress = address(this);
+        return(
+            versions[_versionNumber].versionDescription,
+            versions[_versionNumber].metaData,
+            versions[_versionNumber].isPublished,
+            versions[_versionNumber].voterCount,
+            versionAddress,
+            md5List[_versionNumber],
+            versions[_versionNumber].signs[msg.sender]
         );
     }
 }  
