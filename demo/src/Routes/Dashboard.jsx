@@ -111,10 +111,10 @@ class Dashboard extends Component {
 		)
 	}
 }
-const mapStatetoProps = state => {
+const mapStateToProps = state => {
 	return {
 		paperList: state.paper.paperList,
 		isPending: state.paper.isPending
 	}
 }
-export default connect(mapStatetoProps)(Dashboard)
+export default connect(mapStateToProps)(Dashboard)

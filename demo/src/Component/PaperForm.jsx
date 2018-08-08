@@ -1,9 +1,9 @@
-//TODO: FORM
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Loader from 'react-loaders'
 import { toast } from 'react-toastify'
 import { navigate } from '@reach/router'
+import { debounce } from 'lodash'
 import { createPaper } from '../action/action'
 import web3 from '../Web3/web3'
 
@@ -17,7 +17,23 @@ const fileHash = (file, md5, callback) => {
 	}
 	reader.readAsArrayBuffer(file)
 }
-
+const validateForm = debounce(state => {
+	const { description, metadata, authors, md5 } = state
+	if (
+		authors
+			.split(',')
+			.map(v => v.trim())
+			.filter(Boolean)
+			.map(v => web3.utils.isAddress(v))
+			.filter(Boolean).length > 0 &&
+		description.length > 0 &&
+		metadata.length > 0 &&
+		md5.length === 34
+	) {
+		return { isValidate: true }
+	}
+	return { isValidate: false }
+}, 2000)
 class PaperForm extends Component {
 	state = {
 		description: '',
@@ -51,18 +67,19 @@ class PaperForm extends Component {
 	}
 
 	componentWillUnmount() {
+		this.handleChange.cancel()
 		clearTimeout(this.navTimer)
 	}
 
-	handleChange = (e, id) => {
+	handleChange = (value, id) => {
 		if (id === 'file') {
-			if (e.target.files[0] !== undefined)
-				fileHash(e.target.files[0], md5js, md5 => {
+			if (value !== undefined)
+				fileHash(value, md5js, md5 => {
 					this.setState({ md5 })
 				})
 		} else {
 			const obj = {}
-			obj[id] = e.target.value
+			obj[id] = value
 			this.setState(obj)
 		}
 		this.setState(prevState => validateForm(prevState))
@@ -94,9 +111,9 @@ class PaperForm extends Component {
 								id="description"
 								className="validate"
 								value={description}
-								onChange={e => this.handleChange(e, 'description')}
+								onChange={e => this.handleChange(e.target.value, 'description')}
 							/>
-							<label htmlFor="description">Paper descriprion</label>
+							<label htmlFor="description">Paper description</label>
 						</div>
 						<div className="input-field col s12">
 							<input
@@ -104,7 +121,7 @@ class PaperForm extends Component {
 								id="metadata"
 								className="validate"
 								onChange={e => {
-									this.handleChange(e, 'metadata')
+									this.handleChange(e.target.value, 'metadata')
 								}}
 								value={metadata}
 							/>
@@ -116,7 +133,7 @@ class PaperForm extends Component {
 								<input
 									className="no-autoinit"
 									type="file"
-									onChange={e => this.handleChange(e, 'file')}
+									onChange={e => this.handleChange(e.target.files[0], 'file')}
 								/>
 							</div>
 							<div className="file-path-wrapper no-autoinit">
@@ -132,7 +149,7 @@ class PaperForm extends Component {
 							<input
 								type="text"
 								id="icon_prefix"
-								onChange={e => this.handleChange(e, 'authors')}
+								onChange={e => this.handleChange(e.target.value, 'authors')}
 								value={authors}
 								className="validate"
 							/>
@@ -162,23 +179,7 @@ class PaperForm extends Component {
 		)
 	}
 }
-function validateForm(state) {
-	const { description, metadata, authors, md5 } = state
-	if (
-		authors
-			.split(',')
-			.map(v => v.trim())
-			.filter(Boolean)
-			.map(v => web3.utils.isAddress(v))
-			.filter(Boolean).length > 0 &&
-		description.length > 0 &&
-		metadata.length > 0 &&
-		md5.length > 0
-	) {
-		return { isValidate: true }
-	}
-	return { isValidate: false }
-}
+
 const mapStateToProps = state => ({
 	creator: state.user.address,
 	isPending: state.paper.isPending,
