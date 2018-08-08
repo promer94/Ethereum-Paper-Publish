@@ -3,8 +3,9 @@ import { Router } from '@reach/router'
 import { connect } from 'react-redux'
 import Layout from './Layout/Layout'
 import Dashboard from './Routes/Dashboard'
+import PaperForm from './Component/PaperForm'
 import { updatePaper } from './action/action'
-import web3 from './Web3/web3'
+import './App.css'
 
 const { rootContract } = require('./address.json')
 
@@ -12,7 +13,7 @@ class App extends React.Component {
 	componentDidMount() {
 		window.M.AutoInit()
 		const { dispatch } = this.props
-		dispatch(updatePaper(rootContract, web3))
+		dispatch(updatePaper(rootContract))
 	}
 
 	openSideBar = () => {
@@ -27,6 +28,7 @@ class App extends React.Component {
 				<Router>
 					<Home path="/" />
 					<Dashboard path="dashboard" />
+					<PaperForm path="newpapercontract" />
 					<Details path="dashboard/:address" />
 				</Router>
 			</Layout>
@@ -35,8 +37,8 @@ class App extends React.Component {
 }
 export default connect()(App)
 const Home = () => (
-	<div>
-		<h2>Home</h2>
+	<div className="flexbox-centering">
+		<h1>HOME</h1>
 	</div>
 )
 const Details = ({ address }) => (

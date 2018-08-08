@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify'
 import web3 from '../Web3/web3'
 import listInterface from '../Web3/listContract'
 import paperInterface from '../Web3/paperContract'
@@ -23,18 +24,21 @@ const fetchAddress = address => ({
 		.catch(e => e.message)
 })
 
-export const fetchPaper = (addresses, acc) => ({
-	type: FETCH_PAPER[0],
-	payload: Promise.all(
-		addresses.map(address =>
-			paperInterface(address)
-				.getSummary()
-				.call({ from: acc })
-				.then(data => handleSummary(address, data))
-				.catch(e => e.message)
-		)
-	)
-})
+export const fetchPaper = (addresses, acc) =>
+	Array.isArray(addresses)
+		? {
+				type: FETCH_PAPER[0],
+				payload: Promise.all(
+					addresses.map(address =>
+						paperInterface(address)
+							.getSummary()
+							.call({ from: acc })
+							.then(data => handleSummary(address, data))
+							.catch(e => e.message)
+					)
+				)
+		  }
+		: { type: FETCH_PAPER[3] }
 const handleSummary = (address, data) => ({
 	address,
 	description: hexToUtf8(data[0]),
@@ -47,11 +51,11 @@ const handleSummary = (address, data) => ({
 export const createPaper = (address, paper, creator) => ({
 	type: CREATE_PAPER[0],
 	payload: listInterface(address)
-		.createNewPaper(
+		.createPaper(
 			toHex(paper.description),
 			toHex(paper.metadata),
 			paper.md5,
-			paper.accounts
+			paper.authors
 		)
 		.send({ gas: '2100000', from: creator })
 		.catch(e => e.message)
@@ -74,6 +78,9 @@ export const updateUser = () => {
 					payload:
 						'Please unlock you MetaMask and Make sure your are under Rinkeby Test Network'
 				})
+				toast.warn(
+					'Please unlock you MetaMask and Make sure your are under Rinkeby Test Network'
+				)
 			}
 		})
 	}
@@ -85,6 +92,16 @@ export const updatePaper = address => {
 		account
 			.then(acc => {
 				user = acc
+				if (user.value === null) {
+					dispatch({
+						type: INIT_USER[3],
+						payload:
+							'Please unlock you MetaMask and Make sure your are under Rinkeby Test Network'
+					})
+					toast.warn(
+						'Please unlock you MetaMask and Make sure your are under Rinkeby Test Network'
+					)
+				}
 				return dispatch(fetchAddress(address))
 			})
 			.then(data => {
@@ -94,6 +111,9 @@ export const updatePaper = address => {
 						payload:
 							'Please unlock you MetaMask and Make sure your are under Rinkeby Test Network'
 					})
+					toast.warn(
+						'Please unlock you MetaMask and Make sure your are under Rinkeby Test Network'
+					)
 				} else {
 					dispatch(fetchPaper(data.value, user.value))
 				}

@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { toast } from 'react-toastify'
 import {
 	FETCH_PAPER_ADDRESS,
 	FETCH_PAPER,
@@ -13,16 +14,19 @@ const paper = (state = {}, action) => {
 		case FETCH_PAPER_ADDRESS[2]:
 			return { ...state, isPending: false, paperAddresses: action.payload }
 		case FETCH_PAPER_ADDRESS[3]:
+			toast.error('Please check your network and metamask 🤷‍')
 			return { ...state, errorMessage: action.payload }
 		case FETCH_PAPER[1]:
 			return { ...state, isPending: true }
 		case FETCH_PAPER[2]:
 			return { ...state, isPending: false, paperList: action.payload }
 		case FETCH_PAPER[3]:
+			toast.error('Please check your network and metamask 🤷‍')
 			return { ...state, isPending: false, errorMessage: action.payload }
 		case CREATE_PAPER[1]:
 			return { ...state, isPending: true }
 		case CREATE_PAPER[2]:
+			toast.success('Paper has been recorded at the Ethereum Blockchain ✨')
 			return {
 				...state,
 				isPending: false,

@@ -6,7 +6,7 @@ export default ({ sideBar }) => {
 	return (
 		<header>
 			<nav>
-				<div className="nav-wrapper white">
+				<div className="nav-wrapper ">
 					<ul className="left">
 						<li>
 							<h5

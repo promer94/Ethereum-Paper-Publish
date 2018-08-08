@@ -1,0 +1,8 @@
+.flexbox-centering {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ball-grid-pulse > div {
+	background-color: #ee6e73;
+}

@@ -1,12 +1,40 @@
 import React, { Component } from 'react'
 import { Link } from '@reach/router'
 import { connect } from 'react-redux'
+import Loader from 'react-loaders'
+import { toast } from 'react-toastify'
 import PaperListItem from '../Component/PaperListItem'
-//TODO: Checkbox filter
+import { updatePaper } from '../action/action'
+
+const { rootContract } = require('../address.json')
+
 class Dashboard extends Component {
+	static timer = []
+
 	state = {
 		showOnlyYou: false,
-		filter: ''
+		filter: '',
+		isLoading: true
+	}
+
+	componentDidMount() {
+		const props = this.props //eslint-disable-line
+		props.dispatch(updatePaper(rootContract))
+		Dashboard.timer.push(
+			setTimeout(() => {
+				this.setState({ isLoading: false }, () => {
+					const { paperList } = props
+					if (paperList && paperList.length !== 0)
+						toast.success('All Papers loaded')
+				})
+			}, 2000)
+		)
+	}
+
+	componentWillUnmount() {
+		Dashboard.timer.forEach(v => {
+			clearTimeout(v)
+		})
 	}
 
 	handleCheckbox = () => {
@@ -18,8 +46,8 @@ class Dashboard extends Component {
 	}
 
 	render() {
-		const { showOnlyYou, filter } = this.state
-		const { paperList } = this.props
+		const { showOnlyYou, filter, isLoading } = this.state
+		const { paperList, isPending } = this.props
 		return (
 			<div className="section">
 				<div className="row">
@@ -46,22 +74,37 @@ class Dashboard extends Component {
 							</li>
 							<Link
 								className="waves-effect waves-light collection-item"
-								to="newpapercontract"
+								to="/newpapercontract"
 							>
 								New Paper Contract
 							</Link>
 						</ul>
 					</div>
 					<div className="col s12 m9 l9">
-						{Array.isArray(paperList)
-							? paperList
+						{isPending || isLoading ? (
+							<div className="flexbox-centering">
+								<Loader type="ball-grid-pulse" />
+							</div>
+						) : Array.isArray(paperList) ? (
+							showOnlyYou ? (
+								paperList
+									.filter(
+										item =>
+											(item.description.includes(filter) &&
+												item.isArray === true) ||
+											(item.address.includes(filter) && item.isAuthor === true)
+									)
+									.map(item => <PaperListItem key={item.address} {...item} />)
+							) : (
+								paperList
 									.filter(
 										item =>
 											item.description.includes(filter) ||
 											item.address.includes(filter)
 									)
 									.map(item => <PaperListItem key={item.address} {...item} />)
-							: null}
+							)
+						) : null}
 					</div>
 				</div>
 			</div>
@@ -70,7 +113,6 @@ class Dashboard extends Component {
 }
 const mapStatetoProps = state => {
 	return {
-		addresses: state.paper.paperAddresses,
 		paperList: state.paper.paperList,
 		isPending: state.paper.isPending
 	}
