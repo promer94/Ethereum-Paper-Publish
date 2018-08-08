@@ -240,7 +240,7 @@ contract SmartPaper is AuthorList{
         require(!version.signs[msg.sender], "BAN");
         version.signs[msg.sender] = true;
         version.voterCount++;
-        if(version.voterCount==authors.length){
+        if(version.voterCount==authors.length + 1){
             version.isPublished = true;
             latestVersion = version.versionNumber;
             latestDescription = version.versionDescription;
