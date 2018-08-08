@@ -8,6 +8,7 @@ module.exports = {
 	extends: ['react-app', 'airbnb', 'prettier/react', 'prettier'],
 	rules: {
 		'jsx-a11y/href-no-hash': [0],
+		'jsx-a11y/label-has-for': [0],
 		'generator-star-spacing': [0],
 		'consistent-return': [0],
 		'react/react-in-jsx-scope': [0],
