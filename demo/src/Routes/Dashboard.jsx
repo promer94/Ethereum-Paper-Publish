@@ -3,6 +3,7 @@ import { Link } from '@reach/router'
 import { connect } from 'react-redux'
 import Loader from 'react-loaders'
 import { toast } from 'react-toastify'
+import { debounce } from 'lodash'
 import PaperListItem from '../Component/PaperListItem'
 import { updatePaper } from '../action/action'
 
@@ -35,15 +36,16 @@ class Dashboard extends Component {
 		Dashboard.timer.forEach(v => {
 			clearTimeout(v)
 		})
+		this.handleChange.cancel()
 	}
 
 	handleCheckbox = () => {
 		this.setState(prevState => ({ showOnlyYou: !prevState.showOnlyYou }))
 	}
 
-	handleChange = e => {
-		this.setState({ filter: e.target.value })
-	}
+	handleChange = debounce(value => {
+		this.setState({ filter: value })
+	}, 2000)
 
 	render() {
 		const { showOnlyYou, filter, isLoading } = this.state
@@ -57,8 +59,7 @@ class Dashboard extends Component {
 								<i className="material-icons prefix">search</i>
 								<input
 									type="text"
-									value={filter}
-									onChange={this.handleChange}
+									onChange={e => this.handleChange(e.target.value)}
 								/>
 							</li>
 						</ul>
@@ -105,7 +106,7 @@ class Dashboard extends Component {
 											item.description.includes(filter) ||
 											item.address.includes(filter)
 									)
-									.map(item => <PaperListItem key={item.address} {...item} />)
+									.map(item => <PaperListItem key={item.md5} {...item} />)
 							)
 						) : null}
 					</div>

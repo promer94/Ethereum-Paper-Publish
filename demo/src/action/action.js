@@ -1,4 +1,5 @@
 import { toast } from 'react-toastify'
+import { navigate } from '@reach/router'
 import web3 from '../Web3/web3'
 import listInterface from '../Web3/listContract'
 import paperInterface from '../Web3/paperContract'
@@ -17,6 +18,8 @@ export const FETCH_PAPER = promiseType('FETCH_PAPER')
 export const CREATE_PAPER = promiseType('CREATE_PAPER')
 export const INIT_USER = promiseType('INIT_USER')
 export const FETCH_VERSIONS = promiseType('FETCH_VERSION')
+export const CREATE_VERSION = promiseType('CREATE_VERSION')
+export const APPROVE_VERSION = promiseType('APPROVE_VERSION')
 const fetchAddress = address => ({
 	type: FETCH_PAPER_ADDRESS[0],
 	payload: listInterface(address)
@@ -160,3 +163,24 @@ export const getVersions = (address, versionCount, caller) => {
 		}
 	}
 }
+export const createVersion = (address, version, creator) => ({
+	type: CREATE_VERSION[0],
+	payload: paperInterface(address)
+		.createNewVersion(
+			toHex(version.description),
+			toHex(version.metadata),
+			version.md5
+		)
+		.send({ gas: '2100000', from: creator })
+		.catch(e => e.message)
+})
+export const approveVersion = (versionNumber, md5, address, user) => ({
+	type: APPROVE_VERSION[0],
+	payload: paperInterface(address)
+		.approveVersion(versionNumber, md5)
+		.send({ gas: '2100000', from: user })
+		.then(() => {
+			navigate('/dashboard')
+		})
+		.catch(e => e.message)
+})

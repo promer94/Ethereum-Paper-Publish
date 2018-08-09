@@ -2,37 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Loader from 'react-loaders'
 import { toast } from 'react-toastify'
-import { debounce } from 'lodash'
+import { throttle } from 'lodash'
 import { createPaper } from '../action/action'
 import web3 from '../Web3/web3'
 
 const md5js = require('js-md5')
 const { rootContract } = require('../address.json')
 
-const fileHash = (file, md5, callback) => {
-	const reader = new FileReader()
-	reader.onload = function(e) {
-		callback.call(window, `0x${md5(e.target.result)}`)
-	}
-	reader.readAsArrayBuffer(file)
-}
-const validateForm = debounce(state => {
-	const { description, metadata, authors, md5 } = state
-	if (
-		authors
-			.split(',')
-			.map(v => v.trim())
-			.filter(Boolean)
-			.map(v => web3.utils.isAddress(v))
-			.filter(Boolean).length > 0 &&
-		description.length > 0 &&
-		metadata.length > 0 &&
-		md5.length === 34
-	) {
-		return { isValidate: true }
-	}
-	return { isValidate: false }
-}, 2000)
 class PaperForm extends Component {
 	state = {
 		description: '',
@@ -51,7 +27,10 @@ class PaperForm extends Component {
 			}
 		} else {
 			toast.info(
-				`Account\n${creator}\nwill be used for the next transactions 🤝`
+				`Account which starts with\n${creator.slice(
+					0,
+					10
+				)}\nwill be used for the next transactions 🤝`
 			)
 		}
 	}
@@ -69,10 +48,36 @@ class PaperForm extends Component {
 		clearTimeout(this.navTimer)
 	}
 
+	fileHash = (file, md5, callback) => {
+		const reader = new FileReader()
+		reader.onload = function(e) {
+			callback.call(this, `0x${md5(e.target.result)}`)
+		}
+		reader.readAsArrayBuffer(file)
+	}
+
+	validateForm = throttle(state => {
+		const { description, metadata, authors, md5 } = state
+		if (
+			authors
+				.split(',')
+				.map(v => v.trim())
+				.filter(Boolean)
+				.map(v => web3.utils.isAddress(v))
+				.filter(Boolean).length > 0 &&
+			description.length > 0 &&
+			metadata.length > 0 &&
+			md5.length === 34
+		) {
+			return { isValidate: true }
+		}
+		return { isValidate: false }
+	}, 3000)
+
 	handleChange = (value, id) => {
 		if (id === 'file') {
 			if (value !== undefined)
-				fileHash(value, md5js, md5 => {
+				this.fileHash(value, md5js, md5 => {
 					this.setState({ md5 })
 				})
 		} else {
@@ -80,7 +85,7 @@ class PaperForm extends Component {
 			obj[id] = value
 			this.setState(obj)
 		}
-		this.setState(prevState => validateForm(prevState))
+		this.setState(prevState => this.validateForm(prevState))
 	}
 
 	handleSubmit = e => {

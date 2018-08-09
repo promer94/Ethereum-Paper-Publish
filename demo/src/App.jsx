@@ -5,8 +5,9 @@ import Layout from './Layout/Layout'
 import Dashboard from './Routes/Dashboard'
 import Details from './Routes/Details'
 import PaperForm from './Component/PaperForm'
-import { updatePaper } from './action/action'
+import VersionForm from './Component/VersionForm'
 import './App.css'
+import { updatePaper } from './action/action'
 
 const { rootContract } = require('./address.json')
 
@@ -30,6 +31,7 @@ class App extends React.Component {
 					<Home path="/" />
 					<Dashboard path="dashboard" />
 					<PaperForm path="NewPaper" />
+					<VersionForm path="NewVersion/:paper" />
 					<Details path="dashboard/:address" />
 				</Router>
 			</Layout>

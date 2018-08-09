@@ -8,8 +8,7 @@ const initalState = {
 	paper: { paperAddresses: [], isPending: false, paperList: [] },
 	user: { address: [] }
 }
-var store = configureStore(initalState) //eslint-disable-line
-window.store = store
+const store = configureStore(initalState) //eslint-disable-line
 ReactDOM.render(
 	<Provider store={store}>
 		<App />
