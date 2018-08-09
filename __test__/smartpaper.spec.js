@@ -111,64 +111,20 @@ describe('SmartPaper 📝', () => {
 				gas: '2100000'
 			})
 			const status = second && third
-			const latestDescription = await paperContract.methods
-				.latestDescription()
-				.call({
-					gas: '2100000'
-				})
-			const latestMetaData = await paperContract.methods.latestMetaData().call({
-				gas: '2100000'
-			})
-			const latestPaper = await paperContract.methods.latestPaper().call({
-				gas: '2100000'
-			})
-			const newVersionNumber = await paperContract.methods
-				.latestVersion()
-				.call({
-					gas: '2100000'
-				})
+
 			const list = await paperContract.methods.getPapers().call({
 				gas: '2100000'
 			})
-			const version = await paperContract.methods.versions(0).call({
-				gas: '2100000'
-			})
-			const versionMap = await paperContract.methods
-				.versionMap(
-					`0x${crypto
-						.createHash('md5')
-						.update(paper)
-						.digest('hex')}`
-				)
-				.call({
-					gas: '2100000'
-				})
+
 			expect(status).toBeTruthy()
-			expect(hexToUtf8(latestDescription)).toBe(description)
-			expect(hexToUtf8(latestMetaData)).toBe(metaData)
-			expect(latestPaper).toBe(
-				`0x${crypto
-					.createHash('md5')
-					.update(paper)
-					.digest('hex')}`
-			)
-			expect(newVersionNumber).toBe('1')
 			expect(list[list.length - 1]).toEqual(
 				`0x${crypto
 					.createHash('md5')
 					.update(paper)
 					.digest('hex')}`
 			)
-			expect(version.versionNumber).toBe('1')
-			expect(hexToUtf8(version.versionDescription)).toBe(description)
-			expect(hexToUtf8(version.metaData)).toBe(metaData)
-			expect(version.isPublished).toBe(true)
-			expect(version.voterCount).toBe('3')
-			expect(versionMap).toEqual(version)
 		})
 		it('author can create new version 👌', async () => {
-			const versionNumber = await paperContract.methods.latestVersion().call()
-			const expectNewVersion = parseInt(versionNumber, 10) + 1
 			const description = toHex('The smart paper 2')
 			const metaData = toHex('version 2')
 			const md5 = `0x${crypto
@@ -184,27 +140,11 @@ describe('SmartPaper 📝', () => {
 			const list = await paperContract.methods.getPapers().call({
 				gas: '2100000'
 			})
-			const version = await paperContract.methods
-				.versions(expectNewVersion)
-				.call({
-					gas: '2100000'
-				})
-			const versionMap = await paperContract.methods.versionMap(md5).call({
-				gas: '2100000'
-			})
 
 			expect(list[list.length - 1]).toEqual(md5)
-			expect(version.versionNumber).toBe(expectNewVersion.toString())
-			expect(hexToUtf8(version.versionDescription)).toBe('The smart paper 2')
-			expect(hexToUtf8(version.metaData)).toBe('version 2')
-			expect(version.isPublished).toBe(false)
-			expect(version.voterCount).toBe('1')
-			expect(versionMap).toEqual(version)
 		})
 		it('author can approve new version 👌', async () => {
-			const versionNumber = await paperContract.methods.latestVersion().call()
-			const expectNewVersion = parseInt(versionNumber, 10) + 1
-			const description = toHex('The smart paper 2')
+			const description = toHex('The Smart paper')
 			const metaData = toHex('version 2')
 			const md5 = `0x${crypto
 				.createHash('md5')
@@ -224,47 +164,12 @@ describe('SmartPaper 📝', () => {
 				from: accounts[2],
 				gas: '2100000'
 			})
-			const latestDescription = await paperContract.methods
-				.latestDescription()
-				.call({
-					gas: '2100000'
-				})
-			const latestMetaData = await paperContract.methods.latestMetaData().call({
-				gas: '2100000'
-			})
-			const latestPaper = await paperContract.methods.latestPaper().call({
-				gas: '2100000'
-			})
-			const newVersionNumber = await paperContract.methods
-				.latestVersion()
-				.call({
-					gas: '2100000'
-				})
+
 			const list = await paperContract.methods.getPapers().call({
 				gas: '2100000'
 			})
-			const version = await paperContract.methods
-				.versions(expectNewVersion)
-				.call({
-					gas: '2100000'
-				})
-			const versionMap = await paperContract.methods.versionMap(md5).call({
-				gas: '2100000'
-			})
 
-			expect(hexToUtf8(latestDescription)).toBe('The smart paper 2')
-			expect(hexToUtf8(latestMetaData)).toBe('version 2')
-			expect(latestPaper).toBe(md5)
-			expect(newVersionNumber).toBe(expectNewVersion.toString())
 			expect(list[list.length - 1]).toEqual(md5)
-			expect(version.versionNumber).toBe(expectNewVersion.toString())
-			expect(hexToUtf8(version.versionDescription)).toEqual(
-				hexToUtf8(latestDescription)
-			)
-			expect(hexToUtf8(version.metaData)).toEqual(hexToUtf8(latestMetaData))
-			expect(version.isPublished).toBe(true)
-			expect(version.voterCount).toBe('3')
-			expect(versionMap).toEqual(version)
 		})
 		it('cannot repeat check in 🙅', async () => {
 			await expectThrow(

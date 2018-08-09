@@ -16,7 +16,9 @@ const paper = (state = {}, action) => {
 			return {
 				...state,
 				isPending: false,
-				paperAddresses: action.payload.reverse()
+				paperAddresses: Array.isArray(action.payload)
+					? action.payload.reverse()
+					: action.payload
 			}
 		case FETCH_PAPER_ADDRESS[3]:
 			toast.error('Please check your network and metamask 🤷‍')
