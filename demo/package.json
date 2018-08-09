@@ -2,6 +2,7 @@
 	"name": "demo",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "promer94.github.io/Ethereum-Paper-Publish",
 	"dependencies": {
 		"@reach/router": "^1.1.1",
 		"js-md5": "^0.7.3",
