@@ -1,0 +1,18 @@
+{
+	"apps": [
+		{
+			"name": "Ethereum-Smart-Paper",
+			"script": "./server.js",
+			"out_file": "./logs/out.log",
+			"error_file": "./logs/error.log",
+			"log_date_format": "YYYY-MM-DD HH:mm:ss",
+			"exec_mode": "cluster",
+			"instances": 2,
+			"max_memory_restart": "500M",
+			"merge_logs": true,
+			"env": {
+				"NODE_ENV": "production"
+			}
+		}
+	]
+}

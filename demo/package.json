@@ -5,6 +5,8 @@
 	"dependencies": {
 		"@reach/router": "^1.1.1",
 		"js-md5": "^0.7.3",
+		"koa": "^2.5.2",
+		"koa-static": "^5.0.0",
 		"loaders.css": "^0.1.2",
 		"lodash": "^4.17.10",
 		"normalizr": "^3.2.4",
