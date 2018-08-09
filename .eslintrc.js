@@ -35,7 +35,7 @@ module.exports = {
 		'no-underscore-dangle': [0],
 		'spaced-comment': [0],
 		'func-names': [0],
-		'no-console': [1],
+		'no-console': [2],
 		'import/no-dynamic-require': [0],
 		'react/sort-comp': [0],
 		semi: ['error', 'never'],
