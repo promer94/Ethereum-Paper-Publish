@@ -8,9 +8,9 @@ stages:
 Test 8:
   stage: test
   before_script:
-    - yarn install
+    - npm install
   script:
-    - yarn test
+    - npm run test
 
 
 
