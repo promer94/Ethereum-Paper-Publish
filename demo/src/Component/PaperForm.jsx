@@ -9,6 +9,23 @@ import web3 from '../Web3/web3'
 const md5js = require('js-md5')
 const { rootContract } = require('../address.json')
 
+const validateForm = throttle(state => {
+	const { description, metadata, authors, md5 } = state
+	if (
+		authors
+			.split(',')
+			.map(v => v.trim())
+			.filter(Boolean)
+			.map(v => web3.utils.isAddress(v))
+			.filter(Boolean).length > 0 &&
+		description.length > 0 &&
+		metadata.length > 0 &&
+		md5.length === 34
+	) {
+		return { isValidate: true }
+	}
+	return { isValidate: false }
+}, 2000)
 class PaperForm extends Component {
 	state = {
 		description: '',
@@ -51,28 +68,10 @@ class PaperForm extends Component {
 	fileHash = (file, md5, callback) => {
 		const reader = new FileReader()
 		reader.onload = function(e) {
-			callback.call(this, `0x${md5(e.target.result)}`)
+			callback(`0x${md5(e.target.result)}`)
 		}
 		reader.readAsArrayBuffer(file)
 	}
-
-	validateForm = throttle(state => {
-		const { description, metadata, authors, md5 } = state
-		if (
-			authors
-				.split(',')
-				.map(v => v.trim())
-				.filter(Boolean)
-				.map(v => web3.utils.isAddress(v))
-				.filter(Boolean).length > 0 &&
-			description.length > 0 &&
-			metadata.length > 0 &&
-			md5.length === 34
-		) {
-			return { isValidate: true }
-		}
-		return { isValidate: false }
-	}, 3000)
 
 	handleChange = (value, id) => {
 		if (id === 'file') {
@@ -85,7 +84,6 @@ class PaperForm extends Component {
 			obj[id] = value
 			this.setState(obj)
 		}
-		this.setState(prevState => this.validateForm(prevState))
 	}
 
 	handleSubmit = e => {
@@ -98,6 +96,10 @@ class PaperForm extends Component {
 		}
 		const { dispatch, creator, isPending } = this.props
 		if (!isPending) dispatch(createPaper(rootContract, paper, creator))
+	}
+
+	static getDerivedStateFromProps(props, state) {
+		return validateForm(state)
 	}
 
 	render() {

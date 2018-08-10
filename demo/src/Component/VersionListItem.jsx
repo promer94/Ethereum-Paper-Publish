@@ -5,9 +5,10 @@ import { approveVersion } from '../action/action'
 
 const md5js = require('js-md5')
 
-const validateForm = (value, target) => {
-	const md5 = value
-	if (md5.length === target) {
+const validateForm = (state, props) => {
+	const { currentFile } = state
+	const { md5 } = props
+	if (currentFile === md5) {
 		return { isValidate: true }
 	}
 	return { isValidate: false }
@@ -20,13 +21,11 @@ class VersionListItem extends React.Component {
 
 	handelChange = e => {
 		const file = e.target.files[0]
-		if (file !== undefined)
+		if (file !== undefined) {
 			this.fileHash(file, md5js, md5 => {
 				this.setState({ currentFile: md5 })
 			})
-		this.setState(prevState => ({
-			isValidate: validateForm(prevState.currentFile)
-		}))
+		}
 	}
 
 	handleSubmit = e => {
@@ -41,6 +40,10 @@ class VersionListItem extends React.Component {
 			callback.call(this, `0x${md5(e.target.result)}`)
 		}
 		reader.readAsArrayBuffer(file)
+	}
+
+	static getDerivedStateFromProps(props, state) {
+		return validateForm(state, props)
 	}
 
 	render() {

@@ -106,7 +106,12 @@ class Dashboard extends Component {
 											item.description.includes(filter) ||
 											item.address.includes(filter)
 									)
-									.map(item => <PaperListItem key={item.md5} {...item} />)
+									.map(item => (
+										<PaperListItem
+											key={`${item.md5}+${item.address}`}
+											{...item}
+										/>
+									))
 							)
 						) : null}
 					</div>

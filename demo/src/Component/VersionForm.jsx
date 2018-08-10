@@ -8,6 +8,13 @@ import web3 from '../Web3/web3'
 
 const md5js = require('js-md5')
 
+const validateForm = throttle(state => {
+	const { description, metadata, md5 } = state
+	if (description.length > 0 && metadata.length > 0 && md5.length === 34) {
+		return { isValidate: true }
+	}
+	return { isValidate: false }
+}, 3000)
 class VersionForm extends Component {
 	state = {
 		description: '',
@@ -54,14 +61,6 @@ class VersionForm extends Component {
 		reader.readAsArrayBuffer(file)
 	}
 
-	validateForm = throttle(state => {
-		const { description, metadata, md5 } = state
-		if (description.length > 0 && metadata.length > 0 && md5.length === 34) {
-			return { isValidate: true }
-		}
-		return { isValidate: false }
-	}, 3000)
-
 	handleChange = (value, id) => {
 		if (id === 'file') {
 			if (value !== undefined)
@@ -73,7 +72,6 @@ class VersionForm extends Component {
 			obj[id] = value
 			this.setState(obj)
 		}
-		this.setState(prevState => this.validateForm(prevState))
 	}
 
 	handleSubmit = e => {
@@ -85,6 +83,10 @@ class VersionForm extends Component {
 		}
 		const { dispatch, paper, creator } = this.props
 		dispatch(createVersion(paper, version, creator))
+	}
+
+	static getDerivedStateFromProps(props, state) {
+		return validateForm(state)
 	}
 
 	render() {
