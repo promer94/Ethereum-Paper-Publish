@@ -28,12 +28,11 @@
 			"eslint --fix",
 			"prettier --write",
 			"git add"
-		],
-		"*.{json,css,md}": [
-			"prettier --write",
-			"git add"
 		]
 	},
+	"linters": {
+    "*.{json,css,md}": ["prettier --write","git add"]
+  },
 	"keywords": [
 		"ethereum",
 		"Smart-contract"
