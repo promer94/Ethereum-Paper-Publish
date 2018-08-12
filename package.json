@@ -10,7 +10,7 @@
 		"predeploy": "npm run test",
 		"deploy": "node scripts/deploy.js",
 		"test": "jest --silent",
-		"dev":"cd demo && npm start"
+		"dev": "cd demo && npm start"
 	},
 	"jest": {
 		"testPathIgnorePatterns": [
@@ -31,8 +31,11 @@
 		]
 	},
 	"linters": {
-    "*.{json,css,md}": ["prettier --write","git add"]
-  },
+		"*.{json,css,md}": [
+			"prettier --write",
+			"git add"
+		]
+	},
 	"keywords": [
 		"ethereum",
 		"Smart-contract"

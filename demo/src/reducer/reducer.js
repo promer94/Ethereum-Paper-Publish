@@ -7,7 +7,9 @@ import {
   INIT_USER,
   FETCH_VERSIONS,
   CREATE_VERSION,
-  APPROVE_VERSION
+  APPROVE_VERSION,
+  ADD_AUTHOR,
+  APPROVE_AUTHOR
 } from '../action/action'
 
 const paper = (state = {}, action) => {
@@ -73,6 +75,21 @@ const paper = (state = {}, action) => {
         isPending: false,
         errorMessage: action.payload
       }
+    case ADD_AUTHOR[1]:
+      return { ...state, isPending: true }
+    case ADD_AUTHOR[2]:
+      toast.success(
+        'Suggestion have published, other authors need to confirm it'
+      )
+      return { ...state, isPending: false, transaction: action.payload }
+    case ADD_AUTHOR[3]:
+      return { ...state, isPending: false, errorMessage: action.payload }
+    case APPROVE_AUTHOR[1]:
+      return { ...state, isPending: true }
+    case APPROVE_AUTHOR[2]:
+      return { ...state, isPending: false, transaction: action.payload }
+    case APPROVE_AUTHOR[3]:
+      return { ...state, isPending: false, transaction: action.payload }
     default: {
       return state
     }

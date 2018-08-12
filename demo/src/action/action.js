@@ -20,6 +20,8 @@ export const INIT_USER = promiseType('INIT_USER')
 export const FETCH_VERSIONS = promiseType('FETCH_VERSION')
 export const CREATE_VERSION = promiseType('CREATE_VERSION')
 export const APPROVE_VERSION = promiseType('APPROVE_VERSION')
+export const ADD_AUTHOR = promiseType('ADD_AUTHOR')
+export const APPROVE_AUTHOR = promiseType('APPROVE_AUTHOR')
 const fetchAddress = address => ({
   type: FETCH_PAPER_ADDRESS[0],
   payload: listInterface(address)
@@ -27,7 +29,6 @@ const fetchAddress = address => ({
     .call()
     .catch(e => e.message)
 })
-
 export const fetchPaper = (addresses, acc) =>
   Array.isArray(addresses)
     ? {
@@ -50,7 +51,9 @@ const handleSummary = (address, data) => ({
   md5: data[2],
   latestVersion: data[3],
   versionCount: data[4],
-  isAuthor: data[5]
+  isAuthor: data[5],
+  isAgreed: data[6],
+  newAuthorRequest: data[7]
 })
 export const createPaper = (address, paper, creator) => ({
   type: CREATE_PAPER[0],
@@ -182,5 +185,23 @@ export const approveVersion = (versionNumber, md5, address, user) => ({
     .then(() => {
       navigate('/dashboard')
     })
+    .catch(e => e.message)
+})
+export const addAuthor = (address, newAuthor, user) => ({
+  type: ADD_AUTHOR[0],
+  payload: paperInterface(address)
+    .addNewAuthor(newAuthor)
+    .send({ gas: '2100000', from: user })
+    .then(() => {
+      navigate('/dashboard')
+    })
+    .catch(e => e.message)
+})
+export const approveAuthor = (address, newAuthor, user) => ({
+  type: APPROVE_AUTHOR[0],
+  payload: paperInterface(address)
+    .approveNew(newAuthor)
+    .send({ gas: '210000', from: user })
+    .then(() => navigate('/dashboard'))
     .catch(e => e.message)
 })

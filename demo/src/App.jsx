@@ -6,6 +6,8 @@ import Dashboard from './Routes/Dashboard'
 import Details from './Routes/Details'
 import PaperForm from './Component/PaperForm'
 import VersionForm from './Component/VersionForm'
+import AuthorForm from './Component/AuthorForm'
+import ApproveForm from './Component/ApproveForm'
 import './App.css'
 import { updatePaper } from './action/action'
 
@@ -32,6 +34,8 @@ class App extends React.Component {
           <Dashboard path="dashboard" />
           <PaperForm path="NewPaper" />
           <VersionForm path="NewVersion/:paper" />
+          <AuthorForm path="RequestNewAuthor/:contractAddress" />
+          <ApproveForm path="ApproveNewAuthor/:contractAddress" />
           <Details path="dashboard/:address" />
         </Router>
       </Layout>

@@ -244,7 +244,8 @@ contract SmartPaper is AuthorList{
         newAuthor = _newAuthor;
         agreeCount = 0;
     }
-    function approveNew() public onlyIfAuthor(msg.sender) payable{
+    function approveNew(address _newAuthor) public onlyIfAuthor(msg.sender) payable{
+        require(newAuthor == _newAuthor,"BAN");
         agreeCount++;
         isAgree[msg.sender] = true;
         if(agreeCount == authors.length){
@@ -279,16 +280,30 @@ contract SmartPaper is AuthorList{
         }
         versionMap[md5] = version;
     }
-    function getSummary() public view returns (bytes32, bytes32, bytes16, uint, uint, bool, address){
-        return (
-            latestDescription,
-            latestMetaData,
-            latestPaper,
-            latestVersion,
-            versions.length,
-            isAuthor[msg.sender],
-            newAuthor
-        );
+    function getSummary() public view returns (bytes32, bytes32, bytes16, uint, uint, bool, bool, bool){
+        if(newAuthor != address(0)){
+            return (
+                latestDescription,
+                latestMetaData,
+                latestPaper,
+                latestVersion,
+                versions.length,
+                isAuthor[msg.sender],
+                isAgree[msg.sender],
+                true
+            );
+        }else{
+            return (
+                latestDescription,
+                latestMetaData,
+                latestPaper,
+                latestVersion,
+                versions.length,
+                isAuthor[msg.sender],
+                isAgree[msg.sender],
+                false
+            );
+        }
     }
     function getVersion(uint _versionNumber) public view returns(bytes32,bytes32,bool,uint,address,bytes16,bool){
         require(_versionNumber >= 0, "BAN");

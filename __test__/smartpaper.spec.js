@@ -8,7 +8,6 @@ const crypto = require('crypto')
 
 const { smartPaperInterface, smartPaperByte } = require('../utils/contracts')
 
-const RAWINITIALVALUE = '0x0000000000000000000000000000000000000000'
 const provider = ganache.provider()
 const description = 'The Smart paper'
 const metaData = 'Written by'
@@ -175,15 +174,17 @@ describe('SmartPaper 📝', () => {
 
       expect(list[list.length - 1]).toEqual(md5)
     })
-    it('could add new authors', async () => {
-      const newAuthor = await paperContract.methods.getSummary().call()
-      expect(newAuthor['6']).toEqual(accounts[3])
-    })
-    it('could approve new authors', async () => {
+    it('could add new authors 👌', async () => {
       expect.assertions(2)
+      const newAuthor = await paperContract.methods.getSummary().call()
+      expect(newAuthor['6']).toEqual(false)
+      expect(newAuthor['7']).toEqual(true)
+    })
+    it('could approve new authors 👌', async () => {
+      expect.assertions(3)
       await Promise.all(
         accounts.filter((value, index) => index < 3).map(address =>
-          paperContract.methods.approveNew().send({
+          paperContract.methods.approveNew(accounts[3]).send({
             from: address,
             gas: '4200000'
           })
@@ -192,7 +193,8 @@ describe('SmartPaper 📝', () => {
       const newAuthors = await paperContract.methods.getAuthors().call()
       const newAuthor = await paperContract.methods.getSummary().call()
       expect(newAuthors[3]).toEqual(accounts[3])
-      expect(newAuthor['6']).toEqual(RAWINITIALVALUE)
+      expect(newAuthor['6']).toEqual(false)
+      expect(newAuthor['7']).toEqual(false)
     })
     it('checkIn fails because invalidUser 🙅', async () => {
       expectThrow(paperContract.methods.checkIn().send({ from: accounts[4] }))
@@ -253,11 +255,11 @@ describe('SmartPaper 📝', () => {
     })
     it('cannot repeate agree 🙅', async () => {
       await paperContract.methods
-        .approveNew()
+        .approveNew(accounts[3])
         .send({ from: accounts[0], gas: '4200000' })
       expectThrow(
         paperContract.methods
-          .approveNew()
+          .approveNew(accounts[3])
           .send({ from: accounts[0], gas: '4200000' })
       )
     })
