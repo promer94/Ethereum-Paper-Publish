@@ -194,15 +194,8 @@ describe('SmartPaper 📝', () => {
       expect(newAuthors[3]).toEqual(accounts[3])
       expect(newAuthor['6']).toEqual(RAWINITIALVALUE)
     })
-    it('cannot repeat check in 🙅', async () => {
-      await expectThrow(
-        paperContract.methods.checkIn().send({ from: accounts[0] })
-      )
-    })
     it('checkIn fails because invalidUser 🙅', async () => {
-      await expectThrow(
-        paperContract.methods.checkIn().send({ from: accounts[4] })
-      )
+      expectThrow(paperContract.methods.checkIn().send({ from: accounts[4] }))
     })
     it('approve fails because invalidUser 🙅', async () => {
       const versionNumber = await paperContract.methods.latestVersion().call()
@@ -219,12 +212,22 @@ describe('SmartPaper 📝', () => {
           from: accounts[0],
           gas: '4200000'
         })
-      await expectThrow(
+      expectThrow(
         paperContract.methods.approveVersion(expectNewVersion, md5).send({
           from: accounts[4],
           gas: '4200000'
         })
       )
+    })
+    it('new author fails because invalidUser🙅', async () => {
+      expectThrow(
+        paperContract.methods
+          .addNewAuthor(accounts[3])
+          .send({ from: accounts[3], gas: '4200000' })
+      )
+    })
+    it('cannot repeat check in 🙅', async () => {
+      expectThrow(paperContract.methods.checkIn().send({ from: accounts[0] }))
     })
     it('cannot repeat approve 🙅', async () => {
       const versionNumber = await paperContract.methods.latestVersion().call()
@@ -241,11 +244,21 @@ describe('SmartPaper 📝', () => {
           from: accounts[0],
           gas: '4200000'
         })
-      await expectThrow(
+      expectThrow(
         paperContract.methods.approveVersion(expectNewVersion, md5).send({
           from: accounts[0],
           gas: '4200000'
         })
+      )
+    })
+    it('cannot repeate agree 🙅', async () => {
+      await paperContract.methods
+        .approveNew()
+        .send({ from: accounts[0], gas: '4200000' })
+      expectThrow(
+        paperContract.methods
+          .approveNew()
+          .send({ from: accounts[0], gas: '4200000' })
       )
     })
   })
