@@ -181,6 +181,7 @@ contract SmartPaper is AuthorList{
     uint agreeCount;
     address[] public authors;
     mapping(address => bool) isAuthor;
+    mapping(address => bool) isAgree;
     bytes16[] public md5List;
     Version[] public versions;
     mapping (bytes16 => Version) public versionMap;
@@ -205,6 +206,7 @@ contract SmartPaper is AuthorList{
         versionMap[latestPaper] = newVersion; 
         for(uint256 i = 0; i < _authors.length; i++){
             isAuthor[_authors[i]] = true;
+            isAgree[_authors[i]] = false;
         }       
     }
     function checkIn() public onlyIfAuthor(msg.sender) payable{
@@ -240,15 +242,20 @@ contract SmartPaper is AuthorList{
     function addNewAuthor(address _newAuthor) public onlyIfAuthor(msg.sender) payable{
         require(newAuthor==address(0), "Ban");
         newAuthor = _newAuthor;
-        agreeCount = 1;
+        agreeCount = 0;
     }
     function approveNew() public onlyIfAuthor(msg.sender) payable{
         agreeCount++;
+        isAgree[msg.sender] = true;
         if(agreeCount == authors.length){
             addAddressToAuthor(newAuthor);
             authors.push(newAuthor);
             isAuthor[newAuthor] = true;
             newAuthor = address(0);
+            agreeCount = 0;
+            for(uint i = 0; i<authors.length; i++){
+                isAgree[authors[i]] = false;
+            }
         }
     }
     function approveVersion(uint _versionNumber, bytes16 md5)  public onlyIfAuthor(msg.sender) payable{

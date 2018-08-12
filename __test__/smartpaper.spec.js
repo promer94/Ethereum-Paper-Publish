@@ -8,6 +8,7 @@ const crypto = require('crypto')
 
 const { smartPaperInterface, smartPaperByte } = require('../utils/contracts')
 
+const RAWINITIALVALUE = '0x0000000000000000000000000000000000000000'
 const provider = ganache.provider()
 const description = 'The Smart paper'
 const metaData = 'Written by'
@@ -38,8 +39,11 @@ describe('SmartPaper 📝', () => {
       })
       .send({
         from: accounts[0],
-        gas: '2100000'
+        gas: '4200000'
       })
+    await paperContract.methods
+      .addNewAuthor(accounts[3])
+      .send({ from: accounts[0] })
   })
 
   describe('Contract constructor tests 🎉 ', () => {
@@ -104,16 +108,16 @@ describe('SmartPaper 📝', () => {
     it('author can check in 👌', async () => {
       const second = await paperContract.methods.checkIn().send({
         from: accounts[1],
-        gas: '2100000'
+        gas: '4200000'
       })
       const third = await paperContract.methods.checkIn().send({
         from: accounts[2],
-        gas: '2100000'
+        gas: '4200000'
       })
       const status = second && third
 
       const list = await paperContract.methods.getPapers().call({
-        gas: '2100000'
+        gas: '4200000'
       })
 
       expect(status).toBeTruthy()
@@ -135,10 +139,10 @@ describe('SmartPaper 📝', () => {
         .createNewVersion(description, metaData, md5)
         .send({
           from: accounts[2],
-          gas: '2100000'
+          gas: '4200000'
         })
       const list = await paperContract.methods.getPapers().call({
-        gas: '2100000'
+        gas: '4200000'
       })
 
       expect(list[list.length - 1]).toEqual(md5)
@@ -154,22 +158,41 @@ describe('SmartPaper 📝', () => {
         .createNewVersion(description, metaData, md5)
         .send({
           from: accounts[0],
-          gas: '2100000'
+          gas: '4200000'
         })
       await paperContract.methods.approveVersion(2, md5).send({
         from: accounts[1],
-        gas: '2100000'
+        gas: '4200000'
       })
       await paperContract.methods.approveVersion(2, md5).send({
         from: accounts[2],
-        gas: '2100000'
+        gas: '4200000'
       })
 
       const list = await paperContract.methods.getPapers().call({
-        gas: '2100000'
+        gas: '4200000'
       })
 
       expect(list[list.length - 1]).toEqual(md5)
+    })
+    it('could add new authors', async () => {
+      const newAuthor = await paperContract.methods.getSummary().call()
+      expect(newAuthor['6']).toEqual(accounts[3])
+    })
+    it('could approve new authors', async () => {
+      expect.assertions(2)
+      await Promise.all(
+        accounts.filter((value, index) => index < 3).map(address =>
+          paperContract.methods.approveNew().send({
+            from: address,
+            gas: '4200000'
+          })
+        )
+      )
+      const newAuthors = await paperContract.methods.getAuthors().call()
+      const newAuthor = await paperContract.methods.getSummary().call()
+      expect(newAuthors[3]).toEqual(accounts[3])
+      expect(newAuthor['6']).toEqual(RAWINITIALVALUE)
     })
     it('cannot repeat check in 🙅', async () => {
       await expectThrow(
@@ -194,12 +217,12 @@ describe('SmartPaper 📝', () => {
         .createNewVersion(description, metaData, md5)
         .send({
           from: accounts[0],
-          gas: '2100000'
+          gas: '4200000'
         })
       await expectThrow(
         paperContract.methods.approveVersion(expectNewVersion, md5).send({
           from: accounts[4],
-          gas: '2100000'
+          gas: '4200000'
         })
       )
     })
@@ -216,12 +239,12 @@ describe('SmartPaper 📝', () => {
         .createNewVersion(description, metaData, md5)
         .send({
           from: accounts[0],
-          gas: '2100000'
+          gas: '4200000'
         })
       await expectThrow(
         paperContract.methods.approveVersion(expectNewVersion, md5).send({
           from: accounts[0],
-          gas: '2100000'
+          gas: '4200000'
         })
       )
     })

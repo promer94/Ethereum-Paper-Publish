@@ -10,7 +10,7 @@
 		"predeploy": "npm run test",
 		"deploy": "node scripts/deploy.js",
 		"test": "jest --silent",
-		"dev": "nodemon server.js"
+		"dev":"cd demo && npm start"
 	},
 	"jest": {
 		"testPathIgnorePatterns": [

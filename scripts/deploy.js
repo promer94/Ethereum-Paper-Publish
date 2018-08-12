@@ -25,7 +25,7 @@ const deployRootContact = async () => {
     .deploy({
       data: smartPaperListByte
     })
-    .send({ from: accounts[0], gas: '2100000' })
+    .send({ from: accounts[0], gas: '4100000' })
   const listContractAddress = listContract.options.address
 
   signale.success('SmartPaperList contract has been deployed')
@@ -47,9 +47,14 @@ const deployRootContact = async () => {
 
   /** Save the SmartPaperList contract address to disk */
   const addressFile = path.resolve(__dirname, '../address.json')
+  const appAddressFile = path.resolve(__dirname, '../demo/src/address.json')
   fs.writeFileSync(
     addressFile,
     `{"address":${JSON.stringify(listContractAddress)}}`
+  )
+  fs.writeFileSync(
+    appAddressFile,
+    `{"rootContract":${JSON.stringify(listContractAddress)}}`
   )
   signale.success(`Contract address saved at ${addressFile}`)
   signale.timeEnd('Deploy')
