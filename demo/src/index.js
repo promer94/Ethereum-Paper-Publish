@@ -5,13 +5,13 @@ import App from './App'
 import configureStore from './configStore'
 
 const initalState = {
-	paper: { paperAddresses: [], isPending: false, paperList: [] },
-	user: { address: [] }
+  paper: { paperAddresses: [], isPending: false, paperList: [] },
+  user: { address: [] }
 }
 const store = configureStore(initalState) //eslint-disable-line
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 )

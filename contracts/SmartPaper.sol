@@ -176,7 +176,9 @@ contract SmartPaper is AuthorList{
     bytes32 public latestDescription;
     bytes32 public latestMetaData;
     bytes16 public latestPaper;
-    uint public latestVersion; 
+    uint public latestVersion;
+    address newAuthor; 
+    uint agreeCount;
     address[] public authors;
     mapping(address => bool) isAuthor;
     bytes16[] public md5List;
@@ -235,7 +237,21 @@ contract SmartPaper is AuthorList{
         versions.push(newVersion);
         versionMap[md5] = newVersion;
     }
-    function approveVersion(uint _versionNumber, bytes16 md5)  public onlyIfAuthor(msg.sender){
+    function addNewAuthor(address _newAuthor) public onlyIfAuthor(msg.sender) payable{
+        require(newAuthor==address(0), "Ban");
+        newAuthor = _newAuthor;
+        agreeCount = 1;
+    }
+    function approveNew() public onlyIfAuthor(msg.sender) payable{
+        agreeCount++;
+        if(agreeCount == authors.length){
+            addAddressToAuthor(newAuthor);
+            authors.push(newAuthor);
+            isAuthor[newAuthor] = true;
+            newAuthor = address(0);
+        }
+    }
+    function approveVersion(uint _versionNumber, bytes16 md5)  public onlyIfAuthor(msg.sender) payable{
         Version storage version = versions[_versionNumber-1];
         require(!version.signs[msg.sender], "BAN");
         version.signs[msg.sender] = true;
@@ -256,14 +272,15 @@ contract SmartPaper is AuthorList{
         }
         versionMap[md5] = version;
     }
-    function getSummary() public view returns (bytes32, bytes32, bytes16, uint, uint, bool){
+    function getSummary() public view returns (bytes32, bytes32, bytes16, uint, uint, bool, address){
         return (
             latestDescription,
             latestMetaData,
             latestPaper,
             latestVersion,
             versions.length,
-            isAuthor[msg.sender]
+            isAuthor[msg.sender],
+            newAuthor
         );
     }
     function getVersion(uint _versionNumber) public view returns(bytes32,bytes32,bool,uint,address,bytes16,bool){

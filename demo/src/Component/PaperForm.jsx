@@ -24,8 +24,8 @@ const validateForm = throttle(state => {
 	) {
 		return { isValidate: true }
 	}
-	return { isValidate: false }
-}, 2000)
+	return null
+}, 5000)
 class PaperForm extends Component {
 	state = {
 		description: '',
@@ -57,7 +57,7 @@ class PaperForm extends Component {
 		if (transaction) {
 			this.navTimer = setTimeout(() => {
 				navigate('/dashboard')
-			}, 4000)
+			}, 3000)
 		}
 	}
 
