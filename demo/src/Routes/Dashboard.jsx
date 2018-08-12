@@ -21,6 +21,7 @@ class Dashboard extends Component {
   componentDidMount() {
     const { props } = this
     props.dispatch(updatePaper(rootContract))
+    /** keep update dashboard data */
     Dashboard.timer.push(
       setTimeout(() => {
         this.setState({ isLoading: false }, () => {
@@ -33,6 +34,7 @@ class Dashboard extends Component {
   }
 
   componentWillUnmount() {
+    /** clear all timer and setState event to prevent memory leak */
     Dashboard.timer.forEach(v => {
       clearTimeout(v)
     })

@@ -18,14 +18,13 @@ const deployRootContact = async () => {
   signale.info('SmartPaperList will be deployed')
   signale.info(`Accounts used for deploy ${accounts[0]}`)
   signale.pending('Deploying...')
-
   const initial = await web3.eth.getBalance(accounts[0])
   const initialBalance = parseFloat(fromWei(initial, 'ether'))
   const listContract = await new web3.eth.Contract(smartPaperListInterface)
     .deploy({
       data: smartPaperListByte
     })
-    .send({ from: accounts[0], gas: '4100000' })
+    .send({ from: accounts[0], gas: '4200000' })
   const listContractAddress = listContract.options.address
 
   signale.success('SmartPaperList contract has been deployed')
@@ -58,6 +57,26 @@ const deployRootContact = async () => {
   )
   signale.success(`Contract address saved at ${addressFile}`)
   signale.timeEnd('Deploy')
+  signale.time('Initial contract')
+  signale.pending('transaction pending...')
+  await listContract.methods
+    .createPaper(
+      web3.utils.toHex('Funtional Programing'),
+      web3.utils.toHex('Haskell'),
+      '0x6b6e73a67f0e67754dab5fb1140edb67',
+      [accounts[0], accounts[1]]
+    )
+    .send({ from: accounts[0], gas: '4200000' })
+  await listContract.methods
+    .createPaper(
+      web3.utils.toHex('Ethereum Smart Paper'),
+      web3.utils.toHex('Solidity and JavaScript'),
+      '0x330f955928a852b0629dd910c6894bcc',
+      [accounts[0], accounts[1]]
+    )
+    .send({ from: accounts[0], gas: '4200000' })
+  signale.success('Initialization finished')
+  signale.timeEnd('Initial contract')
   process.exit()
 }
 deployRootContact()
