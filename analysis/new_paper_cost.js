@@ -45,7 +45,7 @@ const versionTest = async times => {
       address
     ).methods
       .createPaper(toHex(description), toHex(metaData), md5(paper), accounts)
-      .send({ from: accounts[1], gas: 2100000 })
+      .send({ from: accounts[0], gas: 2100000 })
     internalLogger.info(`The ${times + 1} version is at ${to}`)
     await new web3One.eth.Contract(smartPaperInterface, to).methods
       .checkIn()
@@ -63,14 +63,14 @@ const versionTest = async times => {
       .toString()
     internalLogger.warn(cost)
     const costFile = path.resolve(__dirname, 'InitialPaper-cost.csv')
-    fs.appendFileSync(costFile, `${times},${cost},\n`)
+    fs.appendFileSync(costFile, `${times},${cost},`)
   } catch (error) {
     internalLogger.error(error.message)
   } finally {
     internalLogger.info(`The version test ${times + 1} is over`)
   }
 }
-for (let i = 0; i < 300; i += 1) {
+for (let i = 0; i < 150; i += 1) {
   setTimeout(() => {
     versionTest(i)
   }, i * 1000 * 60)
