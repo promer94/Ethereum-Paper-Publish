@@ -1,0 +1,870 @@
+2018-08-13 18:01:17: info: 1 accounts cost: 28.344546999997533 {"timestamp":"2018-08-13T17:01:17.212Z"}
+2018-08-13 18:01:17: info: test for 1 authors is over {"timestamp":"2018-08-13T17:01:17.215Z"}
+2018-08-13 18:02:23: info: 2 accounts cost: 29.38441099999949 {"timestamp":"2018-08-13T17:02:23.628Z"}
+2018-08-13 18:02:23: info: test for 2 authors is over {"timestamp":"2018-08-13T17:02:23.628Z"}
+2018-08-13 18:02:28: info: 1 accounts cost: 2.6428500000022837 {"timestamp":"2018-08-13T17:02:28.464Z"}
+2018-08-13 18:02:28: info: test for 1 authors is over {"timestamp":"2018-08-13T17:02:28.472Z"}
+2018-08-13 18:02:31: info: 3 accounts cost: 30.424275000001444 {"timestamp":"2018-08-13T17:02:31.143Z"}
+2018-08-13 18:02:31: info: test for 3 authors is over {"timestamp":"2018-08-13T17:02:31.143Z"}
+2018-08-13 18:02:36: info: 2 accounts cost: 3.180604000000642 {"timestamp":"2018-08-13T17:02:36.437Z"}
+2018-08-13 18:02:36: info: test for 2 authors is over {"timestamp":"2018-08-13T17:02:36.437Z"}
+2018-08-13 18:02:38: info: 4 accounts cost: 31.464139000013347 {"timestamp":"2018-08-13T17:02:38.033Z"}
+2018-08-13 18:02:38: info: test for 4 authors is over {"timestamp":"2018-08-13T17:02:38.033Z"}
+2018-08-13 18:02:46: info: 3 accounts cost: 3.7183579999890526 {"timestamp":"2018-08-13T17:02:46.584Z"}
+2018-08-13 18:02:46: info: test for 3 authors is over {"timestamp":"2018-08-13T17:02:46.584Z"}
+2018-08-13 18:02:47: info: 5 accounts cost: 32.50400299998546 {"timestamp":"2018-08-13T17:02:47.661Z"}
+2018-08-13 18:02:47: info: test for 5 authors is over {"timestamp":"2018-08-13T17:02:47.662Z"}
+2018-08-13 18:02:55: info: 6 accounts cost: 33.54386699999736 {"timestamp":"2018-08-13T17:02:55.612Z"}
+2018-08-13 18:02:55: info: test for 6 authors is over {"timestamp":"2018-08-13T17:02:55.612Z"}
+2018-08-13 18:02:59: info: 4 accounts cost: 4.256111999967516 {"timestamp":"2018-08-13T17:02:59.304Z"}
+2018-08-13 18:02:59: info: test for 4 authors is over {"timestamp":"2018-08-13T17:02:59.304Z"}
+2018-08-13 18:03:03: info: 7 accounts cost: 34.583731000009266 {"timestamp":"2018-08-13T17:03:03.029Z"}
+2018-08-13 18:03:03: info: test for 7 authors is over {"timestamp":"2018-08-13T17:03:03.029Z"}
+2018-08-13 18:03:08: info: 8 accounts cost: 35.622698999986824 {"timestamp":"2018-08-13T17:03:08.914Z"}
+2018-08-13 18:03:08: info: test for 8 authors is over {"timestamp":"2018-08-13T17:03:08.914Z"}
+2018-08-13 18:03:08: info: 5 accounts cost: 4.793866000005664 {"timestamp":"2018-08-13T17:03:08.965Z"}
+2018-08-13 18:03:08: info: test for 5 authors is over {"timestamp":"2018-08-13T17:03:08.966Z"}
+2018-08-13 18:03:13: info: 9 accounts cost: 36.66345899995349 {"timestamp":"2018-08-13T17:03:13.622Z"}
+2018-08-13 18:03:13: info: test for 9 authors is over {"timestamp":"2018-08-13T17:03:13.622Z"}
+2018-08-13 18:03:18: info: 6 accounts cost: 5.331619999964232 {"timestamp":"2018-08-13T17:03:18.047Z"}
+2018-08-13 18:03:18: info: test for 6 authors is over {"timestamp":"2018-08-13T17:03:18.048Z"}
+2018-08-13 18:03:18: info: 10 accounts cost: 37.70197899997356 {"timestamp":"2018-08-13T17:03:18.914Z"}
+2018-08-13 18:03:18: info: test for 10 authors is over {"timestamp":"2018-08-13T17:03:18.914Z"}
+2018-08-13 18:03:23: info: 11 accounts cost: 38.74273899994023 {"timestamp":"2018-08-13T17:03:23.706Z"}
+2018-08-13 18:03:23: info: test for 11 authors is over {"timestamp":"2018-08-13T17:03:23.706Z"}
+2018-08-13 18:03:25: info: 7 accounts cost: 5.8693739999625905 {"timestamp":"2018-08-13T17:03:25.313Z"}
+2018-08-13 18:03:25: info: test for 7 authors is over {"timestamp":"2018-08-13T17:03:25.313Z"}
+2018-08-13 18:03:29: info: 12 accounts cost: 39.78260299991234 {"timestamp":"2018-08-13T17:03:29.005Z"}
+2018-08-13 18:03:29: info: test for 12 authors is over {"timestamp":"2018-08-13T17:03:29.005Z"}
+2018-08-13 18:03:33: info: 8 accounts cost: 6.407127999960949 {"timestamp":"2018-08-13T17:03:33.910Z"}
+2018-08-13 18:03:33: info: test for 8 authors is over {"timestamp":"2018-08-13T17:03:33.911Z"}
+2018-08-13 18:03:34: info: 13 accounts cost: 40.822466999884455 {"timestamp":"2018-08-13T17:03:34.031Z"}
+2018-08-13 18:03:34: info: test for 13 authors is over {"timestamp":"2018-08-13T17:03:34.032Z"}
+2018-08-13 18:03:39: info: 14 accounts cost: 41.862778999893635 {"timestamp":"2018-08-13T17:03:39.568Z"}
+2018-08-13 18:03:39: info: test for 14 authors is over {"timestamp":"2018-08-13T17:03:39.568Z"}
+2018-08-13 18:03:42: info: 9 accounts cost: 6.944881999999097 {"timestamp":"2018-08-13T17:03:42.861Z"}
+2018-08-13 18:03:42: info: test for 9 authors is over {"timestamp":"2018-08-13T17:03:42.861Z"}
+2018-08-13 18:03:44: info: 15 accounts cost: 42.90219499982868 {"timestamp":"2018-08-13T17:03:44.831Z"}
+2018-08-13 18:03:44: info: test for 15 authors is over {"timestamp":"2018-08-13T17:03:44.832Z"}
+2018-08-13 18:03:50: info: 16 accounts cost: 43.941610999843306 {"timestamp":"2018-08-13T17:03:50.163Z"}
+2018-08-13 18:03:50: info: test for 16 authors is over {"timestamp":"2018-08-13T17:03:50.163Z"}
+2018-08-13 18:03:51: info: 10 accounts cost: 7.482636000116827 {"timestamp":"2018-08-13T17:03:51.304Z"}
+2018-08-13 18:03:51: info: test for 10 authors is over {"timestamp":"2018-08-13T17:03:51.305Z"}
+2018-08-13 18:03:55: info: 17 accounts cost: 44.98147499981542 {"timestamp":"2018-08-13T17:03:55.626Z"}
+2018-08-13 18:03:55: info: test for 17 authors is over {"timestamp":"2018-08-13T17:03:55.626Z"}
+2018-08-13 18:04:00: info: 11 accounts cost: 8.020390000115185 {"timestamp":"2018-08-13T17:04:00.364Z"}
+2018-08-13 18:04:00: info: test for 11 authors is over {"timestamp":"2018-08-13T17:04:00.365Z"}
+2018-08-13 18:04:01: info: 18 accounts cost: 46.02224199978764 {"timestamp":"2018-08-13T17:04:01.478Z"}
+2018-08-13 18:04:01: info: test for 18 authors is over {"timestamp":"2018-08-13T17:04:01.479Z"}
+2018-08-13 18:04:07: info: 19 accounts cost: 47.06210599975975 {"timestamp":"2018-08-13T17:04:07.120Z"}
+2018-08-13 18:04:07: info: test for 19 authors is over {"timestamp":"2018-08-13T17:04:07.121Z"}
+2018-08-13 18:04:10: info: 12 accounts cost: 8.558144000153334 {"timestamp":"2018-08-13T17:04:10.583Z"}
+2018-08-13 18:04:10: info: test for 12 authors is over {"timestamp":"2018-08-13T17:04:10.583Z"}
+2018-08-13 18:04:13: info: 20 accounts cost: 48.10152199977438 {"timestamp":"2018-08-13T17:04:13.463Z"}
+2018-08-13 18:04:13: info: test for 20 authors is over {"timestamp":"2018-08-13T17:04:13.463Z"}
+2018-08-13 18:04:19: info: 21 accounts cost: 49.140489999672354 {"timestamp":"2018-08-13T17:04:19.804Z"}
+2018-08-13 18:04:19: info: test for 21 authors is over {"timestamp":"2018-08-13T17:04:19.805Z"}
+2018-08-13 18:04:20: info: 13 accounts cost: 9.095898000191482 {"timestamp":"2018-08-13T17:04:20.937Z"}
+2018-08-13 18:04:20: info: test for 13 authors is over {"timestamp":"2018-08-13T17:04:20.938Z"}
+2018-08-13 18:04:25: info: 22 accounts cost: 50.179464999655465 {"timestamp":"2018-08-13T17:04:25.799Z"}
+2018-08-13 18:04:25: info: test for 22 authors is over {"timestamp":"2018-08-13T17:04:25.800Z"}
+2018-08-13 18:04:30: info: 14 accounts cost: 9.626931999991939 {"timestamp":"2018-08-13T17:04:30.646Z"}
+2018-08-13 18:04:30: info: test for 14 authors is over {"timestamp":"2018-08-13T17:04:30.646Z"}
+2018-08-13 18:04:31: info: 23 accounts cost: 51.22067299957962 {"timestamp":"2018-08-13T17:04:31.665Z"}
+2018-08-13 18:04:31: info: test for 23 authors is over {"timestamp":"2018-08-13T17:04:31.665Z"}
+2018-08-13 18:04:37: info: 24 accounts cost: 52.2609849995888 {"timestamp":"2018-08-13T17:04:37.762Z"}
+2018-08-13 18:04:37: info: test for 24 authors is over {"timestamp":"2018-08-13T17:04:37.762Z"}
+2018-08-13 18:04:42: info: 15 accounts cost: 10.17140600026778 {"timestamp":"2018-08-13T17:04:42.905Z"}
+2018-08-13 18:04:42: info: test for 15 authors is over {"timestamp":"2018-08-13T17:04:42.905Z"}
+2018-08-13 18:04:44: info: 25 accounts cost: 53.300400999523845 {"timestamp":"2018-08-13T17:04:44.050Z"}
+2018-08-13 18:04:44: info: test for 25 authors is over {"timestamp":"2018-08-13T17:04:44.050Z"}
+2018-08-13 18:04:49: info: 26 accounts cost: 54.34027199958109 {"timestamp":"2018-08-13T17:04:49.260Z"}
+2018-08-13 18:04:49: info: test for 26 authors is over {"timestamp":"2018-08-13T17:04:49.260Z"}
+2018-08-13 18:04:52: info: 16 accounts cost: 10.184160000358133 {"timestamp":"2018-08-13T17:04:52.577Z"}
+2018-08-13 18:04:52: info: test for 16 authors is over {"timestamp":"2018-08-13T17:04:52.577Z"}
+2018-08-13 18:04:56: info: 27 accounts cost: 55.37744799948996 {"timestamp":"2018-08-13T17:04:56.393Z"}
+2018-08-13 18:04:56: info: test for 27 authors is over {"timestamp":"2018-08-13T17:04:56.394Z"}
+2018-08-13 18:05:02: info: 28 accounts cost: 56.41910399961034 {"timestamp":"2018-08-13T17:05:02.744Z"}
+2018-08-13 18:05:02: info: test for 28 authors is over {"timestamp":"2018-08-13T17:05:02.744Z"}
+2018-08-13 18:05:04: info: 17 accounts cost: 11.246914000344077 {"timestamp":"2018-08-13T17:05:04.614Z"}
+2018-08-13 18:05:04: info: test for 17 authors is over {"timestamp":"2018-08-13T17:05:04.615Z"}
+2018-08-13 18:05:10: info: 29 accounts cost: 57.45987099958256 {"timestamp":"2018-08-13T17:05:10.270Z"}
+2018-08-13 18:05:10: info: test for 29 authors is over {"timestamp":"2018-08-13T17:05:10.270Z"}
+2018-08-13 18:05:16: info: 18 accounts cost: 11.776155999996263 {"timestamp":"2018-08-13T17:05:16.456Z"}
+2018-08-13 18:05:16: info: test for 18 authors is over {"timestamp":"2018-08-13T17:05:16.456Z"}
+2018-08-13 18:05:17: info: 30 accounts cost: 58.499734999554676 {"timestamp":"2018-08-13T17:05:17.067Z"}
+2018-08-13 18:05:17: info: test for 30 authors is over {"timestamp":"2018-08-13T17:05:17.067Z"}
+2018-08-13 18:05:24: info: 31 accounts cost: 59.53915099948972 {"timestamp":"2018-08-13T17:05:24.579Z"}
+2018-08-13 18:05:24: info: test for 31 authors is over {"timestamp":"2018-08-13T17:05:24.579Z"}
+2018-08-13 18:05:29: info: 19 accounts cost: 12.322422000420374 {"timestamp":"2018-08-13T17:05:29.299Z"}
+2018-08-13 18:05:29: info: test for 19 authors is over {"timestamp":"2018-08-13T17:05:29.299Z"}
+2018-08-13 18:05:31: info: 32 accounts cost: 60.57946999942487 {"timestamp":"2018-08-13T17:05:31.904Z"}
+2018-08-13 18:05:31: info: test for 32 authors is over {"timestamp":"2018-08-13T17:05:31.905Z"}
+2018-08-13 18:05:39: info: 33 accounts cost: 61.61888599935992 {"timestamp":"2018-08-13T17:05:39.130Z"}
+2018-08-13 18:05:39: info: test for 33 authors is over {"timestamp":"2018-08-13T17:05:39.131Z"}
+2018-08-13 18:05:40: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:05:40.594Z"}
+2018-08-13 18:05:40: info: test for 72 authors is over {"timestamp":"2018-08-13T17:05:40.594Z"}
+2018-08-13 18:05:40: info: 20 accounts cost: 12.860176000458523 {"timestamp":"2018-08-13T17:05:40.967Z"}
+2018-08-13 18:05:40: info: test for 20 authors is over {"timestamp":"2018-08-13T17:05:40.967Z"}
+2018-08-13 18:05:44: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:05:44.136Z"}
+2018-08-13 18:05:44: info: test for 73 authors is over {"timestamp":"2018-08-13T17:05:44.137Z"}
+2018-08-13 18:05:46: info: 34 accounts cost: 62.6596529994913 {"timestamp":"2018-08-13T17:05:46.104Z"}
+2018-08-13 18:05:46: info: test for 34 authors is over {"timestamp":"2018-08-13T17:05:46.105Z"}
+2018-08-13 18:05:47: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:05:47.434Z"}
+2018-08-13 18:05:47: info: test for 74 authors is over {"timestamp":"2018-08-13T17:05:47.434Z"}
+2018-08-13 18:05:50: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:05:50.759Z"}
+2018-08-13 18:05:50: info: test for 75 authors is over {"timestamp":"2018-08-13T17:05:50.759Z"}
+2018-08-13 18:05:52: info: 35 accounts cost: 63.69862099938928 {"timestamp":"2018-08-13T17:05:52.161Z"}
+2018-08-13 18:05:52: info: test for 35 authors is over {"timestamp":"2018-08-13T17:05:52.162Z"}
+2018-08-13 18:05:53: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:05:53.773Z"}
+2018-08-13 18:05:53: info: test for 76 authors is over {"timestamp":"2018-08-13T17:05:53.773Z"}
+2018-08-13 18:05:54: info: 21 accounts cost: 13.397930000496672 {"timestamp":"2018-08-13T17:05:54.390Z"}
+2018-08-13 18:05:54: info: test for 21 authors is over {"timestamp":"2018-08-13T17:05:54.390Z"}
+2018-08-13 18:05:56: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:05:56.369Z"}
+2018-08-13 18:05:56: info: test for 77 authors is over {"timestamp":"2018-08-13T17:05:56.369Z"}
+2018-08-13 18:05:59: info: 36 accounts cost: 64.7393879993615 {"timestamp":"2018-08-13T17:05:59.315Z"}
+2018-08-13 18:05:59: info: test for 36 authors is over {"timestamp":"2018-08-13T17:05:59.315Z"}
+2018-08-13 18:05:59: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:05:59.561Z"}
+2018-08-13 18:05:59: info: test for 78 authors is over {"timestamp":"2018-08-13T17:05:59.562Z"}
+2018-08-13 18:06:02: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:02.904Z"}
+2018-08-13 18:06:02: info: test for 79 authors is over {"timestamp":"2018-08-13T17:06:02.904Z"}
+2018-08-13 18:06:05: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:05.630Z"}
+2018-08-13 18:06:05: info: test for 80 authors is over {"timestamp":"2018-08-13T17:06:05.630Z"}
+2018-08-13 18:06:06: info: 37 accounts cost: 65.7774599993445 {"timestamp":"2018-08-13T17:06:06.052Z"}
+2018-08-13 18:06:06: info: test for 37 authors is over {"timestamp":"2018-08-13T17:06:06.052Z"}
+2018-08-13 18:06:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:08.685Z"}
+2018-08-13 18:06:08: info: test for 81 authors is over {"timestamp":"2018-08-13T17:06:08.685Z"}
+2018-08-13 18:06:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:08.783Z"}
+2018-08-13 18:06:08: info: test for 72 authors is over {"timestamp":"2018-08-13T17:06:08.783Z"}
+2018-08-13 18:06:10: info: 22 accounts cost: 13.935684000693982 {"timestamp":"2018-08-13T17:06:10.594Z"}
+2018-08-13 18:06:10: info: test for 22 authors is over {"timestamp":"2018-08-13T17:06:10.594Z"}
+2018-08-13 18:06:11: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:11.786Z"}
+2018-08-13 18:06:11: info: test for 82 authors is over {"timestamp":"2018-08-13T17:06:11.786Z"}
+2018-08-13 18:06:12: info: 38 accounts cost: 66.81867499935379 {"timestamp":"2018-08-13T17:06:12.352Z"}
+2018-08-13 18:06:12: info: test for 38 authors is over {"timestamp":"2018-08-13T17:06:12.352Z"}
+2018-08-13 18:06:12: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:12.638Z"}
+2018-08-13 18:06:12: info: test for 73 authors is over {"timestamp":"2018-08-13T17:06:12.638Z"}
+2018-08-13 18:06:14: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:14.505Z"}
+2018-08-13 18:06:14: info: test for 83 authors is over {"timestamp":"2018-08-13T17:06:14.505Z"}
+2018-08-13 18:06:16: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:16.767Z"}
+2018-08-13 18:06:16: info: test for 74 authors is over {"timestamp":"2018-08-13T17:06:16.768Z"}
+2018-08-13 18:06:17: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:17.856Z"}
+2018-08-13 18:06:17: info: test for 84 authors is over {"timestamp":"2018-08-13T17:06:17.857Z"}
+2018-08-13 18:06:18: info: 39 accounts cost: 67.85719499937386 {"timestamp":"2018-08-13T17:06:18.886Z"}
+2018-08-13 18:06:18: info: test for 39 authors is over {"timestamp":"2018-08-13T17:06:18.886Z"}
+2018-08-13 18:06:19: info: 23 accounts cost: 14.473438000572969 {"timestamp":"2018-08-13T17:06:19.262Z"}
+2018-08-13 18:06:19: info: test for 23 authors is over {"timestamp":"2018-08-13T17:06:19.262Z"}
+2018-08-13 18:06:20: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:20.012Z"}
+2018-08-13 18:06:20: info: test for 85 authors is over {"timestamp":"2018-08-13T17:06:20.013Z"}
+2018-08-13 18:06:20: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:20.972Z"}
+2018-08-13 18:06:20: info: test for 75 authors is over {"timestamp":"2018-08-13T17:06:20.973Z"}
+2018-08-13 18:06:22: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:22.730Z"}
+2018-08-13 18:06:22: info: test for 86 authors is over {"timestamp":"2018-08-13T17:06:22.730Z"}
+2018-08-13 18:06:24: info: 40 accounts cost: 68.89751399930901 {"timestamp":"2018-08-13T17:06:24.298Z"}
+2018-08-13 18:06:24: info: test for 40 authors is over {"timestamp":"2018-08-13T17:06:24.298Z"}
+2018-08-13 18:06:24: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:24.967Z"}
+2018-08-13 18:06:24: info: test for 76 authors is over {"timestamp":"2018-08-13T17:06:24.968Z"}
+2018-08-13 18:06:25: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:25.289Z"}
+2018-08-13 18:06:25: info: test for 87 authors is over {"timestamp":"2018-08-13T17:06:25.289Z"}
+2018-08-13 18:06:27: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:27.403Z"}
+2018-08-13 18:06:27: info: test for 88 authors is over {"timestamp":"2018-08-13T17:06:27.404Z"}
+2018-08-13 18:06:27: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:27.827Z"}
+2018-08-13 18:06:27: info: test for 89 authors is over {"timestamp":"2018-08-13T17:06:27.827Z"}
+2018-08-13 18:06:28: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:28.292Z"}
+2018-08-13 18:06:28: info: test for 90 authors is over {"timestamp":"2018-08-13T17:06:28.292Z"}
+2018-08-13 18:06:28: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:28.635Z"}
+2018-08-13 18:06:28: info: test for 77 authors is over {"timestamp":"2018-08-13T17:06:28.636Z"}
+2018-08-13 18:06:28: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:28.966Z"}
+2018-08-13 18:06:28: info: test for 91 authors is over {"timestamp":"2018-08-13T17:06:28.966Z"}
+2018-08-13 18:06:29: info: 41 accounts cost: 69.93872199923317 {"timestamp":"2018-08-13T17:06:29.679Z"}
+2018-08-13 18:06:29: info: test for 41 authors is over {"timestamp":"2018-08-13T17:06:29.680Z"}
+2018-08-13 18:06:29: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:29.978Z"}
+2018-08-13 18:06:29: info: test for 92 authors is over {"timestamp":"2018-08-13T17:06:29.978Z"}
+2018-08-13 18:06:30: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:30.321Z"}
+2018-08-13 18:06:30: info: test for 93 authors is over {"timestamp":"2018-08-13T17:06:30.322Z"}
+2018-08-13 18:06:30: info: 24 accounts cost: 15.011192000611118 {"timestamp":"2018-08-13T17:06:30.584Z"}
+2018-08-13 18:06:30: info: test for 24 authors is over {"timestamp":"2018-08-13T17:06:30.584Z"}
+2018-08-13 18:06:31: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:31.083Z"}
+2018-08-13 18:06:31: info: test for 94 authors is over {"timestamp":"2018-08-13T17:06:31.083Z"}
+2018-08-13 18:06:31: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:31.509Z"}
+2018-08-13 18:06:31: info: test for 95 authors is over {"timestamp":"2018-08-13T17:06:31.510Z"}
+2018-08-13 18:06:32: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:32.100Z"}
+2018-08-13 18:06:32: info: test for 96 authors is over {"timestamp":"2018-08-13T17:06:32.100Z"}
+2018-08-13 18:06:32: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:32.519Z"}
+2018-08-13 18:06:32: info: test for 97 authors is over {"timestamp":"2018-08-13T17:06:32.519Z"}
+2018-08-13 18:06:33: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:33.368Z"}
+2018-08-13 18:06:33: info: test for 98 authors is over {"timestamp":"2018-08-13T17:06:33.369Z"}
+2018-08-13 18:06:33: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:33.572Z"}
+2018-08-13 18:06:33: info: test for 78 authors is over {"timestamp":"2018-08-13T17:06:33.573Z"}
+2018-08-13 18:06:34: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:34.306Z"}
+2018-08-13 18:06:34: info: test for 99 authors is over {"timestamp":"2018-08-13T17:06:34.307Z"}
+2018-08-13 18:06:34: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:34.733Z"}
+2018-08-13 18:06:34: info: test for 100 authors is over {"timestamp":"2018-08-13T17:06:34.734Z"}
+2018-08-13 18:06:35: info: 42 accounts cost: 70.97859299960874 {"timestamp":"2018-08-13T17:06:35.009Z"}
+2018-08-13 18:06:35: info: test for 42 authors is over {"timestamp":"2018-08-13T17:06:35.009Z"}
+2018-08-13 18:06:35: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:35.182Z"}
+2018-08-13 18:06:35: info: test for 101 authors is over {"timestamp":"2018-08-13T17:06:35.182Z"}
+2018-08-13 18:06:35: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:35.847Z"}
+2018-08-13 18:06:35: info: test for 102 authors is over {"timestamp":"2018-08-13T17:06:35.847Z"}
+2018-08-13 18:06:35: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:35.959Z"}
+2018-08-13 18:06:35: info: test for 79 authors is over {"timestamp":"2018-08-13T17:06:35.959Z"}
+2018-08-13 18:06:36: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:36.551Z"}
+2018-08-13 18:06:36: info: test for 103 authors is over {"timestamp":"2018-08-13T17:06:36.552Z"}
+2018-08-13 18:06:36: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:36.635Z"}
+2018-08-13 18:06:36: info: test for 104 authors is over {"timestamp":"2018-08-13T17:06:36.635Z"}
+2018-08-13 18:06:36: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:36.816Z"}
+2018-08-13 18:06:36: info: test for 105 authors is over {"timestamp":"2018-08-13T17:06:36.816Z"}
+2018-08-13 18:06:37: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:37.743Z"}
+2018-08-13 18:06:37: info: test for 106 authors is over {"timestamp":"2018-08-13T17:06:37.743Z"}
+2018-08-13 18:06:38: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:38.068Z"}
+2018-08-13 18:06:38: info: test for 107 authors is over {"timestamp":"2018-08-13T17:06:38.068Z"}
+2018-08-13 18:06:38: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:38.836Z"}
+2018-08-13 18:06:38: info: test for 108 authors is over {"timestamp":"2018-08-13T17:06:38.837Z"}
+2018-08-13 18:06:39: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:39.277Z"}
+2018-08-13 18:06:39: info: test for 109 authors is over {"timestamp":"2018-08-13T17:06:39.277Z"}
+2018-08-13 18:06:39: info: 43 accounts cost: 72.01532099948054 {"timestamp":"2018-08-13T17:06:39.278Z"}
+2018-08-13 18:06:39: info: test for 43 authors is over {"timestamp":"2018-08-13T17:06:39.278Z"}
+2018-08-13 18:06:39: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:39.764Z"}
+2018-08-13 18:06:39: info: test for 110 authors is over {"timestamp":"2018-08-13T17:06:39.765Z"}
+2018-08-13 18:06:40: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:40.103Z"}
+2018-08-13 18:06:40: info: test for 80 authors is over {"timestamp":"2018-08-13T17:06:40.103Z"}
+2018-08-13 18:06:40: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:40.640Z"}
+2018-08-13 18:06:40: info: test for 111 authors is over {"timestamp":"2018-08-13T17:06:40.641Z"}
+2018-08-13 18:06:40: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:40.904Z"}
+2018-08-13 18:06:40: info: test for 113 authors is over {"timestamp":"2018-08-13T17:06:40.904Z"}
+2018-08-13 18:06:40: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:40.941Z"}
+2018-08-13 18:06:40: info: test for 112 authors is over {"timestamp":"2018-08-13T17:06:40.942Z"}
+2018-08-13 18:06:41: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:41.674Z"}
+2018-08-13 18:06:41: info: test for 114 authors is over {"timestamp":"2018-08-13T17:06:41.674Z"}
+2018-08-13 18:06:41: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:41.943Z"}
+2018-08-13 18:06:41: info: test for 115 authors is over {"timestamp":"2018-08-13T17:06:41.943Z"}
+2018-08-13 18:06:42: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:42.213Z"}
+2018-08-13 18:06:42: info: test for 116 authors is over {"timestamp":"2018-08-13T17:06:42.213Z"}
+2018-08-13 18:06:42: info: 44 accounts cost: 73.05698399968605 {"timestamp":"2018-08-13T17:06:42.516Z"}
+2018-08-13 18:06:42: info: test for 44 authors is over {"timestamp":"2018-08-13T17:06:42.516Z"}
+2018-08-13 18:06:42: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:42.881Z"}
+2018-08-13 18:06:42: info: test for 117 authors is over {"timestamp":"2018-08-13T17:06:42.882Z"}
+2018-08-13 18:06:43: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:43.297Z"}
+2018-08-13 18:06:43: info: test for 118 authors is over {"timestamp":"2018-08-13T17:06:43.297Z"}
+2018-08-13 18:06:43: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:43.769Z"}
+2018-08-13 18:06:43: info: test for 119 authors is over {"timestamp":"2018-08-13T17:06:43.770Z"}
+2018-08-13 18:06:43: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:43.873Z"}
+2018-08-13 18:06:43: info: test for 120 authors is over {"timestamp":"2018-08-13T17:06:43.874Z"}
+2018-08-13 18:06:44: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:44.254Z"}
+2018-08-13 18:06:44: info: test for 121 authors is over {"timestamp":"2018-08-13T17:06:44.255Z"}
+2018-08-13 18:06:44: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:44.447Z"}
+2018-08-13 18:06:44: info: test for 81 authors is over {"timestamp":"2018-08-13T17:06:44.447Z"}
+2018-08-13 18:06:44: info: 25 accounts cost: 15.548946000649266 {"timestamp":"2018-08-13T17:06:44.933Z"}
+2018-08-13 18:06:44: info: test for 25 authors is over {"timestamp":"2018-08-13T17:06:44.934Z"}
+2018-08-13 18:06:46: info: 45 accounts cost: 74.09550400002445 {"timestamp":"2018-08-13T17:06:46.043Z"}
+2018-08-13 18:06:46: info: test for 45 authors is over {"timestamp":"2018-08-13T17:06:46.043Z"}
+2018-08-13 18:06:47: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:47.605Z"}
+2018-08-13 18:06:47: info: test for 82 authors is over {"timestamp":"2018-08-13T17:06:47.606Z"}
+2018-08-13 18:06:48: info: 46 accounts cost: 75.13761499994871 {"timestamp":"2018-08-13T17:06:48.289Z"}
+2018-08-13 18:06:48: info: test for 46 authors is over {"timestamp":"2018-08-13T17:06:48.289Z"}
+2018-08-13 18:06:51: info: 47 accounts cost: 76.17748600032428 {"timestamp":"2018-08-13T17:06:51.188Z"}
+2018-08-13 18:06:51: info: test for 47 authors is over {"timestamp":"2018-08-13T17:06:51.188Z"}
+2018-08-13 18:06:51: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:51.958Z"}
+2018-08-13 18:06:51: info: test for 83 authors is over {"timestamp":"2018-08-13T17:06:51.958Z"}
+2018-08-13 18:06:53: info: 26 accounts cost: 16.086700000687415 {"timestamp":"2018-08-13T17:06:53.840Z"}
+2018-08-13 18:06:53: info: test for 26 authors is over {"timestamp":"2018-08-13T17:06:53.841Z"}
+2018-08-13 18:06:53: info: 48 accounts cost: 77.21690200041849 {"timestamp":"2018-08-13T17:06:53.904Z"}
+2018-08-13 18:06:53: info: test for 48 authors is over {"timestamp":"2018-08-13T17:06:53.904Z"}
+2018-08-13 18:06:55: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:55.435Z"}
+2018-08-13 18:06:55: info: test for 84 authors is over {"timestamp":"2018-08-13T17:06:55.436Z"}
+2018-08-13 18:06:55: info: 49 accounts cost: 78.25677300047573 {"timestamp":"2018-08-13T17:06:55.655Z"}
+2018-08-13 18:06:55: info: test for 49 authors is over {"timestamp":"2018-08-13T17:06:55.656Z"}
+2018-08-13 18:06:58: info: 50 accounts cost: 79.29709200057005 {"timestamp":"2018-08-13T17:06:58.456Z"}
+2018-08-13 18:06:58: info: test for 50 authors is over {"timestamp":"2018-08-13T17:06:58.457Z"}
+2018-08-13 18:06:59: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:06:59.629Z"}
+2018-08-13 18:06:59: info: test for 85 authors is over {"timestamp":"2018-08-13T17:06:59.630Z"}
+2018-08-13 18:07:00: info: 51 accounts cost: 80.33650800066425 {"timestamp":"2018-08-13T17:07:00.670Z"}
+2018-08-13 18:07:00: info: test for 51 authors is over {"timestamp":"2018-08-13T17:07:00.670Z"}
+2018-08-13 18:07:02: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:02.392Z"}
+2018-08-13 18:07:02: info: test for 86 authors is over {"timestamp":"2018-08-13T17:07:02.392Z"}
+2018-08-13 18:07:02: info: 52 accounts cost: 81.37727500079563 {"timestamp":"2018-08-13T17:07:02.447Z"}
+2018-08-13 18:07:02: info: test for 52 authors is over {"timestamp":"2018-08-13T17:07:02.448Z"}
+2018-08-13 18:07:04: info: 53 accounts cost: 82.41625000109707 {"timestamp":"2018-08-13T17:07:04.471Z"}
+2018-08-13 18:07:04: info: test for 53 authors is over {"timestamp":"2018-08-13T17:07:04.471Z"}
+2018-08-13 18:07:05: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:05.783Z"}
+2018-08-13 18:07:05: info: test for 87 authors is over {"timestamp":"2018-08-13T17:07:05.784Z"}
+2018-08-13 18:07:05: info: 54 accounts cost: 83.45345400102815 {"timestamp":"2018-08-13T17:07:05.816Z"}
+2018-08-13 18:07:05: info: test for 54 authors is over {"timestamp":"2018-08-13T17:07:05.817Z"}
+2018-08-13 18:07:06: info: 27 accounts cost: 16.624454000725564 {"timestamp":"2018-08-13T17:07:06.443Z"}
+2018-08-13 18:07:06: info: test for 27 authors is over {"timestamp":"2018-08-13T17:07:06.444Z"}
+2018-08-13 18:07:08: info: 55 accounts cost: 84.4942980013002 {"timestamp":"2018-08-13T17:07:08.178Z"}
+2018-08-13 18:07:08: info: test for 55 authors is over {"timestamp":"2018-08-13T17:07:08.179Z"}
+2018-08-13 18:07:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:08.361Z"}
+2018-08-13 18:07:08: info: test for 88 authors is over {"timestamp":"2018-08-13T17:07:08.361Z"}
+2018-08-13 18:07:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:08.867Z"}
+2018-08-13 18:07:08: info: test for 89 authors is over {"timestamp":"2018-08-13T17:07:08.867Z"}
+2018-08-13 18:07:09: info: 56 accounts cost: 85.53469400153517 {"timestamp":"2018-08-13T17:07:09.475Z"}
+2018-08-13 18:07:09: info: test for 56 authors is over {"timestamp":"2018-08-13T17:07:09.476Z"}
+2018-08-13 18:07:09: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:09.901Z"}
+2018-08-13 18:07:09: info: test for 90 authors is over {"timestamp":"2018-08-13T17:07:09.901Z"}
+2018-08-13 18:07:10: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:10.797Z"}
+2018-08-13 18:07:10: info: test for 91 authors is over {"timestamp":"2018-08-13T17:07:10.797Z"}
+2018-08-13 18:07:11: info: 57 accounts cost: 86.5755380014889 {"timestamp":"2018-08-13T17:07:11.069Z"}
+2018-08-13 18:07:11: info: test for 57 authors is over {"timestamp":"2018-08-13T17:07:11.069Z"}
+2018-08-13 18:07:11: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:11.839Z"}
+2018-08-13 18:07:11: info: test for 92 authors is over {"timestamp":"2018-08-13T17:07:11.840Z"}
+2018-08-13 18:07:12: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:12.646Z"}
+2018-08-13 18:07:12: info: test for 93 authors is over {"timestamp":"2018-08-13T17:07:12.647Z"}
+2018-08-13 18:07:12: info: 58 accounts cost: 87.61593400172387 {"timestamp":"2018-08-13T17:07:12.680Z"}
+2018-08-13 18:07:12: info: test for 58 authors is over {"timestamp":"2018-08-13T17:07:12.681Z"}
+2018-08-13 18:07:13: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:13.067Z"}
+2018-08-13 18:07:13: info: test for 94 authors is over {"timestamp":"2018-08-13T17:07:13.068Z"}
+2018-08-13 18:07:14: info: 59 accounts cost: 88.65319400169938 {"timestamp":"2018-08-13T17:07:14.104Z"}
+2018-08-13 18:07:14: info: test for 59 authors is over {"timestamp":"2018-08-13T17:07:14.105Z"}
+2018-08-13 18:07:14: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:14.361Z"}
+2018-08-13 18:07:14: info: test for 95 authors is over {"timestamp":"2018-08-13T17:07:14.362Z"}
+2018-08-13 18:07:15: info: 60 accounts cost: 89.69403800197142 {"timestamp":"2018-08-13T17:07:15.054Z"}
+2018-08-13 18:07:15: info: test for 60 authors is over {"timestamp":"2018-08-13T17:07:15.054Z"}
+2018-08-13 18:07:15: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:15.590Z"}
+2018-08-13 18:07:15: info: test for 96 authors is over {"timestamp":"2018-08-13T17:07:15.590Z"}
+2018-08-13 18:07:16: info: 61 accounts cost: 90.73577800199928 {"timestamp":"2018-08-13T17:07:16.223Z"}
+2018-08-13 18:07:16: info: test for 61 authors is over {"timestamp":"2018-08-13T17:07:16.223Z"}
+2018-08-13 18:07:16: info: 28 accounts cost: 17.162208000763712 {"timestamp":"2018-08-13T17:07:16.433Z"}
+2018-08-13 18:07:16: info: test for 28 authors is over {"timestamp":"2018-08-13T17:07:16.433Z"}
+2018-08-13 18:07:16: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:16.789Z"}
+2018-08-13 18:07:16: info: test for 97 authors is over {"timestamp":"2018-08-13T17:07:16.790Z"}
+2018-08-13 18:07:17: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:17.051Z"}
+2018-08-13 18:07:17: info: test for 98 authors is over {"timestamp":"2018-08-13T17:07:17.052Z"}
+2018-08-13 18:07:17: info: 62 accounts cost: 91.77483700236735 {"timestamp":"2018-08-13T17:07:17.234Z"}
+2018-08-13 18:07:17: info: test for 62 authors is over {"timestamp":"2018-08-13T17:07:17.235Z"}
+2018-08-13 18:07:17: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:17.815Z"}
+2018-08-13 18:07:17: info: test for 99 authors is over {"timestamp":"2018-08-13T17:07:17.816Z"}
+2018-08-13 18:07:18: info: 63 accounts cost: 92.81702500243227 {"timestamp":"2018-08-13T17:07:18.123Z"}
+2018-08-13 18:07:18: info: test for 63 authors is over {"timestamp":"2018-08-13T17:07:18.123Z"}
+2018-08-13 18:07:18: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:18.654Z"}
+2018-08-13 18:07:18: info: test for 100 authors is over {"timestamp":"2018-08-13T17:07:18.654Z"}
+2018-08-13 18:07:19: info: 64 accounts cost: 93.85473300244485 {"timestamp":"2018-08-13T17:07:19.095Z"}
+2018-08-13 18:07:19: info: test for 64 authors is over {"timestamp":"2018-08-13T17:07:19.095Z"}
+2018-08-13 18:07:19: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:19.164Z"}
+2018-08-13 18:07:19: info: test for 101 authors is over {"timestamp":"2018-08-13T17:07:19.165Z"}
+2018-08-13 18:07:19: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:19.625Z"}
+2018-08-13 18:07:19: info: test for 102 authors is over {"timestamp":"2018-08-13T17:07:19.625Z"}
+2018-08-13 18:07:19: info: 65 accounts cost: 94.89379200281292 {"timestamp":"2018-08-13T17:07:19.982Z"}
+2018-08-13 18:07:19: info: test for 65 authors is over {"timestamp":"2018-08-13T17:07:19.982Z"}
+2018-08-13 18:07:20: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:20.414Z"}
+2018-08-13 18:07:20: info: test for 103 authors is over {"timestamp":"2018-08-13T17:07:20.414Z"}
+2018-08-13 18:07:20: info: 66 accounts cost: 95.9337400026925 {"timestamp":"2018-08-13T17:07:20.632Z"}
+2018-08-13 18:07:20: info: test for 66 authors is over {"timestamp":"2018-08-13T17:07:20.632Z"}
+2018-08-13 18:07:21: info: 67 accounts cost: 96.97369500281638 {"timestamp":"2018-08-13T17:07:21.228Z"}
+2018-08-13 18:07:21: info: test for 67 authors is over {"timestamp":"2018-08-13T17:07:21.228Z"}
+2018-08-13 18:07:21: info: 68 accounts cost: 98.01409800297733 {"timestamp":"2018-08-13T17:07:21.711Z"}
+2018-08-13 18:07:21: info: test for 68 authors is over {"timestamp":"2018-08-13T17:07:21.711Z"}
+2018-08-13 18:07:22: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:22.029Z"}
+2018-08-13 18:07:22: info: test for 105 authors is over {"timestamp":"2018-08-13T17:07:22.030Z"}
+2018-08-13 18:07:22: info: 69 accounts cost: 99.05494200324938 {"timestamp":"2018-08-13T17:07:22.074Z"}
+2018-08-13 18:07:22: info: test for 69 authors is over {"timestamp":"2018-08-13T17:07:22.075Z"}
+2018-08-13 18:07:22: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:22.285Z"}
+2018-08-13 18:07:22: info: test for 104 authors is over {"timestamp":"2018-08-13T17:07:22.285Z"}
+2018-08-13 18:07:22: info: 70 accounts cost: 100.09176100343211 {"timestamp":"2018-08-13T17:07:22.484Z"}
+2018-08-13 18:07:22: info: test for 70 authors is over {"timestamp":"2018-08-13T17:07:22.484Z"}
+2018-08-13 18:07:22: info: 71 accounts cost: 101.13261200363013 {"timestamp":"2018-08-13T17:07:22.608Z"}
+2018-08-13 18:07:22: info: test for 71 authors is over {"timestamp":"2018-08-13T17:07:22.608Z"}
+2018-08-13 18:07:23: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:23.668Z"}
+2018-08-13 18:07:23: info: test for 106 authors is over {"timestamp":"2018-08-13T17:07:23.669Z"}
+2018-08-13 18:07:24: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:24.376Z"}
+2018-08-13 18:07:24: info: test for 107 authors is over {"timestamp":"2018-08-13T17:07:24.376Z"}
+2018-08-13 18:07:24: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:24.733Z"}
+2018-08-13 18:07:24: info: test for 108 authors is over {"timestamp":"2018-08-13T17:07:24.734Z"}
+2018-08-13 18:07:25: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:25.037Z"}
+2018-08-13 18:07:25: info: test for 109 authors is over {"timestamp":"2018-08-13T17:07:25.038Z"}
+2018-08-13 18:07:26: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:26.072Z"}
+2018-08-13 18:07:26: info: test for 110 authors is over {"timestamp":"2018-08-13T17:07:26.072Z"}
+2018-08-13 18:07:26: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:26.733Z"}
+2018-08-13 18:07:26: info: test for 111 authors is over {"timestamp":"2018-08-13T17:07:26.734Z"}
+2018-08-13 18:07:27: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:27.555Z"}
+2018-08-13 18:07:27: info: test for 112 authors is over {"timestamp":"2018-08-13T17:07:27.555Z"}
+2018-08-13 18:07:27: info: 29 accounts cost: 17.69996200080186 {"timestamp":"2018-08-13T17:07:27.665Z"}
+2018-08-13 18:07:27: info: test for 29 authors is over {"timestamp":"2018-08-13T17:07:27.665Z"}
+2018-08-13 18:07:27: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:27.820Z"}
+2018-08-13 18:07:27: info: test for 113 authors is over {"timestamp":"2018-08-13T17:07:27.820Z"}
+2018-08-13 18:07:28: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:07:28.517Z"}
+2018-08-13 18:07:28: info: test for 114 authors is over {"timestamp":"2018-08-13T17:07:28.517Z"}
+2018-08-13 18:52:46: info: 1 accounts cost: 28.344546999997533 {"timestamp":"2018-08-13T17:52:46.307Z"}
+2018-08-13 18:52:46: info: test for 1 authors is over {"timestamp":"2018-08-13T17:52:46.311Z"}
+2018-08-13 18:53:51: info: 2 accounts cost: 29.383962999992264 {"timestamp":"2018-08-13T17:53:51.651Z"}
+2018-08-13 18:53:51: info: test for 2 authors is over {"timestamp":"2018-08-13T17:53:51.651Z"}
+2018-08-13 18:53:57: info: 1 accounts cost: 2.1178500000047507 {"timestamp":"2018-08-13T17:53:57.067Z"}
+2018-08-13 18:53:57: info: test for 1 authors is over {"timestamp":"2018-08-13T17:53:57.085Z"}
+2018-08-13 18:53:59: info: 3 accounts cost: 30.423827000004167 {"timestamp":"2018-08-13T17:53:59.706Z"}
+2018-08-13 18:53:59: info: test for 3 authors is over {"timestamp":"2018-08-13T17:53:59.706Z"}
+2018-08-13 18:54:04: info: 2 accounts cost: 3.180604000000642 {"timestamp":"2018-08-13T17:54:04.461Z"}
+2018-08-13 18:54:04: info: test for 2 authors is over {"timestamp":"2018-08-13T17:54:04.461Z"}
+2018-08-13 18:54:06: info: 4 accounts cost: 31.46369100001607 {"timestamp":"2018-08-13T17:54:06.085Z"}
+2018-08-13 18:54:06: info: test for 4 authors is over {"timestamp":"2018-08-13T17:54:06.085Z"}
+2018-08-13 18:54:14: info: 5 accounts cost: 32.50355499998818 {"timestamp":"2018-08-13T17:54:14.237Z"}
+2018-08-13 18:54:14: info: test for 5 authors is over {"timestamp":"2018-08-13T17:54:14.237Z"}
+2018-08-13 18:54:14: info: 3 accounts cost: 3.7183579999890526 {"timestamp":"2018-08-13T17:54:14.425Z"}
+2018-08-13 18:54:14: info: test for 3 authors is over {"timestamp":"2018-08-13T17:54:14.425Z"}
+2018-08-13 18:54:22: info: 6 accounts cost: 33.54386699999736 {"timestamp":"2018-08-13T17:54:22.801Z"}
+2018-08-13 18:54:22: info: test for 6 authors is over {"timestamp":"2018-08-13T17:54:22.801Z"}
+2018-08-13 18:54:25: info: 4 accounts cost: 4.256111999967516 {"timestamp":"2018-08-13T17:54:25.338Z"}
+2018-08-13 18:54:25: info: test for 4 authors is over {"timestamp":"2018-08-13T17:54:25.339Z"}
+2018-08-13 18:54:29: info: 7 accounts cost: 34.58283500001471 {"timestamp":"2018-08-13T17:54:29.822Z"}
+2018-08-13 18:54:29: info: test for 7 authors is over {"timestamp":"2018-08-13T17:54:29.822Z"}
+2018-08-13 18:54:35: info: 5 accounts cost: 4.793866000005664 {"timestamp":"2018-08-13T17:54:35.135Z"}
+2018-08-13 18:54:35: info: test for 5 authors is over {"timestamp":"2018-08-13T17:54:35.135Z"}
+2018-08-13 18:54:35: info: 8 accounts cost: 35.62314700002389 {"timestamp":"2018-08-13T17:54:35.939Z"}
+2018-08-13 18:54:35: info: test for 8 authors is over {"timestamp":"2018-08-13T17:54:35.939Z"}
+2018-08-13 18:54:40: info: 9 accounts cost: 36.662562999958936 {"timestamp":"2018-08-13T17:54:40.830Z"}
+2018-08-13 18:54:40: info: test for 9 authors is over {"timestamp":"2018-08-13T17:54:40.831Z"}
+2018-08-13 18:54:43: info: 6 accounts cost: 5.331619999964232 {"timestamp":"2018-08-13T17:54:43.486Z"}
+2018-08-13 18:54:43: info: test for 6 authors is over {"timestamp":"2018-08-13T17:54:43.486Z"}
+2018-08-13 18:54:45: info: 10 accounts cost: 37.70287499996812 {"timestamp":"2018-08-13T17:54:45.350Z"}
+2018-08-13 18:54:45: info: test for 10 authors is over {"timestamp":"2018-08-13T17:54:45.350Z"}
+2018-08-13 18:54:49: info: 11 accounts cost: 38.74229099990316 {"timestamp":"2018-08-13T17:54:49.941Z"}
+2018-08-13 18:54:49: info: test for 11 authors is over {"timestamp":"2018-08-13T17:54:49.941Z"}
+2018-08-13 18:54:51: info: 7 accounts cost: 5.344373999975005 {"timestamp":"2018-08-13T17:54:51.497Z"}
+2018-08-13 18:54:51: info: test for 7 authors is over {"timestamp":"2018-08-13T17:54:51.497Z"}
+2018-08-13 18:54:55: info: 12 accounts cost: 39.78305099986983 {"timestamp":"2018-08-13T17:54:55.692Z"}
+2018-08-13 18:54:55: info: test for 12 authors is over {"timestamp":"2018-08-13T17:54:55.692Z"}
+2018-08-13 18:54:59: info: 8 accounts cost: 6.407127999960949 {"timestamp":"2018-08-13T17:54:59.375Z"}
+2018-08-13 18:54:59: info: test for 8 authors is over {"timestamp":"2018-08-13T17:54:59.375Z"}
+2018-08-13 18:54:59: info: 13 accounts cost: 40.82291499992152 {"timestamp":"2018-08-13T17:54:59.773Z"}
+2018-08-13 18:54:59: info: test for 13 authors is over {"timestamp":"2018-08-13T17:54:59.773Z"}
+2018-08-13 18:55:05: info: 14 accounts cost: 41.86233099985657 {"timestamp":"2018-08-13T17:55:05.508Z"}
+2018-08-13 18:55:05: info: test for 14 authors is over {"timestamp":"2018-08-13T17:55:05.509Z"}
+2018-08-13 18:55:09: info: 9 accounts cost: 6.944882000078678 {"timestamp":"2018-08-13T17:55:09.648Z"}
+2018-08-13 18:55:09: info: test for 9 authors is over {"timestamp":"2018-08-13T17:55:09.649Z"}
+2018-08-13 18:55:10: info: 15 accounts cost: 42.90219499982868 {"timestamp":"2018-08-13T17:55:10.562Z"}
+2018-08-13 18:55:10: info: test for 15 authors is over {"timestamp":"2018-08-13T17:55:10.563Z"}
+2018-08-13 18:55:15: info: 16 accounts cost: 43.94116299980624 {"timestamp":"2018-08-13T17:55:15.806Z"}
+2018-08-13 18:55:15: info: test for 16 authors is over {"timestamp":"2018-08-13T17:55:15.806Z"}
+2018-08-13 18:55:17: info: 10 accounts cost: 7.482636000037246 {"timestamp":"2018-08-13T17:55:17.811Z"}
+2018-08-13 18:55:17: info: test for 10 authors is over {"timestamp":"2018-08-13T17:55:17.811Z"}
+2018-08-13 18:55:21: info: 17 accounts cost: 44.98102699977835 {"timestamp":"2018-08-13T17:55:21.316Z"}
+2018-08-13 18:55:21: info: test for 17 authors is over {"timestamp":"2018-08-13T17:55:21.316Z"}
+2018-08-13 18:55:26: info: 11 accounts cost: 8.015013999988696 {"timestamp":"2018-08-13T17:55:26.354Z"}
+2018-08-13 18:55:26: info: test for 11 authors is over {"timestamp":"2018-08-13T17:55:26.354Z"}
+2018-08-13 18:55:26: info: 18 accounts cost: 46.02224199978764 {"timestamp":"2018-08-13T17:55:26.926Z"}
+2018-08-13 18:55:26: info: test for 18 authors is over {"timestamp":"2018-08-13T17:55:26.926Z"}
+2018-08-13 18:55:32: info: 19 accounts cost: 47.06031399977064 {"timestamp":"2018-08-13T17:55:32.797Z"}
+2018-08-13 18:55:32: info: test for 19 authors is over {"timestamp":"2018-08-13T17:55:32.797Z"}
+2018-08-13 18:55:36: info: 12 accounts cost: 8.558144000232915 {"timestamp":"2018-08-13T17:55:36.945Z"}
+2018-08-13 18:55:36: info: test for 12 authors is over {"timestamp":"2018-08-13T17:55:36.945Z"}
+2018-08-13 18:55:38: info: 20 accounts cost: 48.10152199977438 {"timestamp":"2018-08-13T17:55:38.239Z"}
+2018-08-13 18:55:38: info: test for 20 authors is over {"timestamp":"2018-08-13T17:55:38.240Z"}
+2018-08-13 18:55:44: info: 21 accounts cost: 49.141833999624396 {"timestamp":"2018-08-13T17:55:44.670Z"}
+2018-08-13 18:55:44: info: test for 21 authors is over {"timestamp":"2018-08-13T17:55:44.671Z"}
+2018-08-13 18:55:47: info: 13 accounts cost: 9.095898000271063 {"timestamp":"2018-08-13T17:55:47.690Z"}
+2018-08-13 18:55:47: info: test for 13 authors is over {"timestamp":"2018-08-13T17:55:47.690Z"}
+2018-08-13 18:55:51: info: 22 accounts cost: 50.17991299969253 {"timestamp":"2018-08-13T17:55:51.138Z"}
+2018-08-13 18:55:51: info: test for 22 authors is over {"timestamp":"2018-08-13T17:55:51.138Z"}
+2018-08-13 18:55:57: info: 14 accounts cost: 9.633652000229631 {"timestamp":"2018-08-13T17:55:57.229Z"}
+2018-08-13 18:55:57: info: test for 14 authors is over {"timestamp":"2018-08-13T17:55:57.229Z"}
+2018-08-13 18:55:57: info: 23 accounts cost: 51.221568999653755 {"timestamp":"2018-08-13T17:55:57.372Z"}
+2018-08-13 18:55:57: info: test for 23 authors is over {"timestamp":"2018-08-13T17:55:57.372Z"}
+2018-08-13 18:56:03: info: 24 accounts cost: 52.26143299962587 {"timestamp":"2018-08-13T17:56:03.464Z"}
+2018-08-13 18:56:03: info: test for 24 authors is over {"timestamp":"2018-08-13T17:56:03.465Z"}
+2018-08-13 18:56:07: info: 15 accounts cost: 10.17140600026778 {"timestamp":"2018-08-13T17:56:07.019Z"}
+2018-08-13 18:56:07: info: test for 15 authors is over {"timestamp":"2018-08-13T17:56:07.019Z"}
+2018-08-13 18:56:09: info: 25 accounts cost: 53.30084899956091 {"timestamp":"2018-08-13T17:56:09.096Z"}
+2018-08-13 18:56:09: info: test for 25 authors is over {"timestamp":"2018-08-13T17:56:09.096Z"}
+2018-08-13 18:56:16: info: 26 accounts cost: 54.339375999506956 {"timestamp":"2018-08-13T17:56:16.455Z"}
+2018-08-13 18:56:16: info: test for 26 authors is over {"timestamp":"2018-08-13T17:56:16.456Z"}
+2018-08-13 18:56:19: info: 16 accounts cost: 10.709160000305928 {"timestamp":"2018-08-13T17:56:19.001Z"}
+2018-08-13 18:56:19: info: test for 16 authors is over {"timestamp":"2018-08-13T17:56:19.001Z"}
+2018-08-13 18:56:21: info: 27 accounts cost: 55.37923999947907 {"timestamp":"2018-08-13T17:56:21.420Z"}
+2018-08-13 18:56:21: info: test for 27 authors is over {"timestamp":"2018-08-13T17:56:21.420Z"}
+2018-08-13 18:56:28: info: 17 accounts cost: 11.246914000344077 {"timestamp":"2018-08-13T17:56:28.922Z"}
+2018-08-13 18:56:28: info: test for 17 authors is over {"timestamp":"2018-08-13T17:56:28.922Z"}
+2018-08-13 18:56:29: info: 28 accounts cost: 56.41955199948825 {"timestamp":"2018-08-13T17:56:29.111Z"}
+2018-08-13 18:56:29: info: test for 28 authors is over {"timestamp":"2018-08-13T17:56:29.111Z"}
+2018-08-13 18:56:56: info: 29 accounts cost: 57.45987099958256 {"timestamp":"2018-08-13T17:56:56.935Z"}
+2018-08-13 18:56:56: info: test for 29 authors is over {"timestamp":"2018-08-13T17:56:56.936Z"}
+2018-08-13 18:57:35: info: 30 accounts cost: 58.49883899948054 {"timestamp":"2018-08-13T17:57:35.348Z"}
+2018-08-13 18:57:35: info: test for 30 authors is over {"timestamp":"2018-08-13T17:57:35.348Z"}
+2018-08-13 18:57:36: info: 18 accounts cost: 11.784668000302645 {"timestamp":"2018-08-13T17:57:36.326Z"}
+2018-08-13 18:57:36: info: test for 18 authors is over {"timestamp":"2018-08-13T17:57:36.327Z"}
+2018-08-13 18:58:21: info: 31 accounts cost: 59.53915099948972 {"timestamp":"2018-08-13T17:58:21.023Z"}
+2018-08-13 18:58:21: info: test for 31 authors is over {"timestamp":"2018-08-13T17:58:21.023Z"}
+2018-08-13 18:58:43: info: 19 accounts cost: 12.322422000420374 {"timestamp":"2018-08-13T17:58:43.964Z"}
+2018-08-13 18:58:43: info: test for 19 authors is over {"timestamp":"2018-08-13T17:58:43.965Z"}
+2018-08-13 18:58:53: info: 32 accounts cost: 60.5785739995099 {"timestamp":"2018-08-13T17:58:52.827Z"}
+info: test for 32 authors is over {"timestamp":"2018-08-13T17:58:52.828Z"}
+2018-08-13 18:59:33: info: 33 accounts cost: 61.61888599935992 {"timestamp":"2018-08-13T17:59:33.194Z"}
+info: test for 33 authors is over {"timestamp":"2018-08-13T17:59:33.195Z"}
+2018-08-13 18:59:42: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T17:59:42.980Z"}
+2018-08-13 18:59:42: info: test for 72 authors is over {"timestamp":"2018-08-13T17:59:42.980Z"}
+2018-08-13 19:00:05: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:00:05.759Z"}
+2018-08-13 19:00:05: info: test for 73 authors is over {"timestamp":"2018-08-13T18:00:05.759Z"}
+2018-08-13 19:00:08: info: 20 accounts cost: 12.860176000458523 {"timestamp":"2018-08-13T18:00:08.653Z"}
+2018-08-13 19:00:08: info: test for 20 authors is over {"timestamp":"2018-08-13T18:00:08.653Z"}
+2018-08-13 19:00:09: info: 34 accounts cost: 62.658756999417164 {"timestamp":"2018-08-13T18:00:09.277Z"}
+2018-08-13 19:00:09: info: test for 34 authors is over {"timestamp":"2018-08-13T18:00:09.277Z"}
+2018-08-13 19:00:29: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:00:29.106Z"}
+2018-08-13 19:00:29: info: test for 74 authors is over {"timestamp":"2018-08-13T18:00:29.106Z"}
+2018-08-13 19:00:48: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:00:48.417Z"}
+2018-08-13 19:00:48: info: test for 75 authors is over {"timestamp":"2018-08-13T18:00:48.418Z"}
+2018-08-13 19:00:58: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:00:58.946Z"}
+2018-08-13 19:00:58: info: test for 76 authors is over {"timestamp":"2018-08-13T18:00:58.946Z"}
+2018-08-13 19:01:13: info: 35 accounts cost: 63.69862099938928 {"timestamp":"2018-08-13T18:01:13.892Z"}
+2018-08-13 19:01:13: info: test for 35 authors is over {"timestamp":"2018-08-13T18:01:13.893Z"}
+2018-08-13 19:01:15: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:15.349Z"}
+2018-08-13 19:01:15: info: test for 77 authors is over {"timestamp":"2018-08-13T18:01:15.349Z"}
+2018-08-13 19:01:19: info: 21 accounts cost: 13.397930000496672 {"timestamp":"2018-08-13T18:01:19.462Z"}
+2018-08-13 19:01:19: info: test for 21 authors is over {"timestamp":"2018-08-13T18:01:19.463Z"}
+2018-08-13 19:01:27: info: 36 accounts cost: 64.73893999932443 {"timestamp":"2018-08-13T18:01:27.431Z"}
+2018-08-13 19:01:27: info: test for 36 authors is over {"timestamp":"2018-08-13T18:01:27.431Z"}
+2018-08-13 19:01:27: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:27.660Z"}
+2018-08-13 19:01:27: info: test for 78 authors is over {"timestamp":"2018-08-13T18:01:27.660Z"}
+2018-08-13 19:01:30: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:30.591Z"}
+2018-08-13 19:01:30: info: test for 79 authors is over {"timestamp":"2018-08-13T18:01:30.592Z"}
+2018-08-13 19:01:33: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:33.166Z"}
+2018-08-13 19:01:33: info: test for 80 authors is over {"timestamp":"2018-08-13T18:01:33.166Z"}
+2018-08-13 19:01:34: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:34.340Z"}
+2018-08-13 19:01:34: info: test for 81 authors is over {"timestamp":"2018-08-13T18:01:34.340Z"}
+2018-08-13 19:01:34: info: 22 accounts cost: 13.93568400053482 {"timestamp":"2018-08-13T18:01:34.988Z"}
+2018-08-13 19:01:34: info: test for 22 authors is over {"timestamp":"2018-08-13T18:01:34.988Z"}
+2018-08-13 19:01:35: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:35.325Z"}
+2018-08-13 19:01:35: info: test for 72 authors is over {"timestamp":"2018-08-13T18:01:35.325Z"}
+2018-08-13 19:01:35: info: 37 accounts cost: 65.77701199930743 {"timestamp":"2018-08-13T18:01:35.495Z"}
+2018-08-13 19:01:35: info: test for 37 authors is over {"timestamp":"2018-08-13T18:01:35.496Z"}
+2018-08-13 19:01:39: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:39.735Z"}
+2018-08-13 19:01:39: info: test for 73 authors is over {"timestamp":"2018-08-13T18:01:39.736Z"}
+2018-08-13 19:01:40: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:40.115Z"}
+2018-08-13 19:01:40: info: test for 82 authors is over {"timestamp":"2018-08-13T18:01:40.115Z"}
+2018-08-13 19:01:40: info: 38 accounts cost: 66.81777899927965 {"timestamp":"2018-08-13T18:01:40.877Z"}
+2018-08-13 19:01:40: info: test for 38 authors is over {"timestamp":"2018-08-13T18:01:40.877Z"}
+2018-08-13 19:01:41: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:41.946Z"}
+2018-08-13 19:01:41: info: test for 83 authors is over {"timestamp":"2018-08-13T18:01:41.946Z"}
+2018-08-13 19:01:43: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:43.213Z"}
+2018-08-13 19:01:43: info: test for 84 authors is over {"timestamp":"2018-08-13T18:01:43.213Z"}
+2018-08-13 19:01:43: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:43.996Z"}
+2018-08-13 19:01:43: info: test for 74 authors is over {"timestamp":"2018-08-13T18:01:43.996Z"}
+2018-08-13 19:01:46: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:46.368Z"}
+2018-08-13 19:01:46: info: test for 85 authors is over {"timestamp":"2018-08-13T18:01:46.368Z"}
+2018-08-13 19:01:46: info: 39 accounts cost: 67.85629899929972 {"timestamp":"2018-08-13T18:01:46.511Z"}
+2018-08-13 19:01:46: info: test for 39 authors is over {"timestamp":"2018-08-13T18:01:46.511Z"}
+2018-08-13 19:01:47: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:47.039Z"}
+2018-08-13 19:01:47: info: test for 75 authors is over {"timestamp":"2018-08-13T18:01:47.040Z"}
+2018-08-13 19:01:47: info: 23 accounts cost: 14.473438000572969 {"timestamp":"2018-08-13T18:01:47.161Z"}
+2018-08-13 19:01:47: info: test for 23 authors is over {"timestamp":"2018-08-13T18:01:47.161Z"}
+2018-08-13 19:01:50: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:50.766Z"}
+2018-08-13 19:01:50: info: test for 86 authors is over {"timestamp":"2018-08-13T18:01:50.766Z"}
+2018-08-13 19:01:52: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:52.014Z"}
+2018-08-13 19:01:52: info: test for 76 authors is over {"timestamp":"2018-08-13T18:01:52.015Z"}
+2018-08-13 19:01:52: info: 40 accounts cost: 68.89796199934608 {"timestamp":"2018-08-13T18:01:52.217Z"}
+2018-08-13 19:01:52: info: test for 40 authors is over {"timestamp":"2018-08-13T18:01:52.218Z"}
+2018-08-13 19:01:52: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:52.645Z"}
+2018-08-13 19:01:52: info: test for 87 authors is over {"timestamp":"2018-08-13T18:01:52.645Z"}
+2018-08-13 19:01:54: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:54.080Z"}
+2018-08-13 19:01:54: info: test for 88 authors is over {"timestamp":"2018-08-13T18:01:54.081Z"}
+2018-08-13 19:01:54: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:54.087Z"}
+2018-08-13 19:01:54: info: test for 89 authors is over {"timestamp":"2018-08-13T18:01:54.087Z"}
+2018-08-13 19:01:54: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:54.293Z"}
+2018-08-13 19:01:54: info: test for 91 authors is over {"timestamp":"2018-08-13T18:01:54.294Z"}
+2018-08-13 19:01:55: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:55.548Z"}
+2018-08-13 19:01:55: info: test for 90 authors is over {"timestamp":"2018-08-13T18:01:55.548Z"}
+2018-08-13 19:01:56: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:56.316Z"}
+2018-08-13 19:01:56: info: test for 77 authors is over {"timestamp":"2018-08-13T18:01:56.316Z"}
+2018-08-13 19:01:56: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:56.325Z"}
+2018-08-13 19:01:56: info: test for 92 authors is over {"timestamp":"2018-08-13T18:01:56.325Z"}
+2018-08-13 19:01:57: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:57.016Z"}
+2018-08-13 19:01:57: info: test for 93 authors is over {"timestamp":"2018-08-13T18:01:57.016Z"}
+2018-08-13 19:01:58: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:58.462Z"}
+2018-08-13 19:01:58: info: test for 95 authors is over {"timestamp":"2018-08-13T18:01:58.463Z"}
+2018-08-13 19:01:58: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:58.463Z"}
+info: test for 96 authors is over {"timestamp":"2018-08-13T18:01:58.463Z"}
+2018-08-13 19:01:58: info: 41 accounts cost: 69.9382739991961 {"timestamp":"2018-08-13T18:01:58.744Z"}
+2018-08-13 19:01:58: info: test for 41 authors is over {"timestamp":"2018-08-13T18:01:58.745Z"}
+2018-08-13 19:01:58: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:58.959Z"}
+2018-08-13 19:01:58: info: test for 94 authors is over {"timestamp":"2018-08-13T18:01:58.959Z"}
+2018-08-13 19:01:59: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:59.525Z"}
+2018-08-13 19:01:59: info: test for 97 authors is over {"timestamp":"2018-08-13T18:01:59.525Z"}
+2018-08-13 19:01:59: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:59.684Z"}
+2018-08-13 19:01:59: info: test for 78 authors is over {"timestamp":"2018-08-13T18:01:59.684Z"}
+2018-08-13 19:01:59: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:59.955Z"}
+2018-08-13 19:01:59: info: test for 98 authors is over {"timestamp":"2018-08-13T18:01:59.955Z"}
+2018-08-13 19:01:59: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:59.962Z"}
+2018-08-13 19:01:59: info: test for 101 authors is over {"timestamp":"2018-08-13T18:01:59.962Z"}
+2018-08-13 19:01:59: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:01:59.975Z"}
+2018-08-13 19:01:59: info: test for 99 authors is over {"timestamp":"2018-08-13T18:01:59.976Z"}
+2018-08-13 19:02:00: info: 24 accounts cost: 15.01119200077028 {"timestamp":"2018-08-13T18:02:00.422Z"}
+2018-08-13 19:02:00: info: test for 24 authors is over {"timestamp":"2018-08-13T18:02:00.422Z"}
+2018-08-13 19:02:00: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:00.581Z"}
+2018-08-13 19:02:00: info: test for 102 authors is over {"timestamp":"2018-08-13T18:02:00.582Z"}
+2018-08-13 19:02:01: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:01.520Z"}
+2018-08-13 19:02:01: info: test for 100 authors is over {"timestamp":"2018-08-13T18:02:01.520Z"}
+2018-08-13 19:02:02: info: 42 accounts cost: 70.9776969995346 {"timestamp":"2018-08-13T18:02:02.150Z"}
+2018-08-13 19:02:02: info: test for 42 authors is over {"timestamp":"2018-08-13T18:02:02.150Z"}
+2018-08-13 19:02:02: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:02.182Z"}
+info: test for 103 authors is over {"timestamp":"2018-08-13T18:02:02.182Z"}
+2018-08-13 19:02:02: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:02.288Z"}
+2018-08-13 19:02:02: info: test for 105 authors is over {"timestamp":"2018-08-13T18:02:02.288Z"}
+error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:02.288Z"}
+info: test for 104 authors is over {"timestamp":"2018-08-13T18:02:02.288Z"}
+2018-08-13 19:02:02: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:02.454Z"}
+2018-08-13 19:02:02: info: test for 79 authors is over {"timestamp":"2018-08-13T18:02:02.455Z"}
+2018-08-13 19:02:03: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:03.946Z"}
+2018-08-13 19:02:03: info: test for 107 authors is over {"timestamp":"2018-08-13T18:02:03.946Z"}
+2018-08-13 19:02:04: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:04.192Z"}
+2018-08-13 19:02:04: info: test for 106 authors is over {"timestamp":"2018-08-13T18:02:04.192Z"}
+2018-08-13 19:02:04: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:04.781Z"}
+2018-08-13 19:02:04: info: test for 109 authors is over {"timestamp":"2018-08-13T18:02:04.781Z"}
+2018-08-13 19:02:05: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:05.603Z"}
+2018-08-13 19:02:05: info: test for 108 authors is over {"timestamp":"2018-08-13T18:02:05.604Z"}
+2018-08-13 19:02:06: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:06.198Z"}
+2018-08-13 19:02:06: info: test for 113 authors is over {"timestamp":"2018-08-13T18:02:06.198Z"}
+2018-08-13 19:02:06: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:06.230Z"}
+2018-08-13 19:02:06: info: test for 112 authors is over {"timestamp":"2018-08-13T18:02:06.231Z"}
+2018-08-13 19:02:06: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:06.429Z"}
+2018-08-13 19:02:06: info: test for 110 authors is over {"timestamp":"2018-08-13T18:02:06.429Z"}
+2018-08-13 19:02:06: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:06.968Z"}
+2018-08-13 19:02:06: info: test for 111 authors is over {"timestamp":"2018-08-13T18:02:06.968Z"}
+2018-08-13 19:02:06: info: 43 accounts cost: 72.01756099966587 {"timestamp":"2018-08-13T18:02:06.972Z"}
+2018-08-13 19:02:06: info: test for 43 authors is over {"timestamp":"2018-08-13T18:02:06.973Z"}
+2018-08-13 19:02:07: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:07.610Z"}
+2018-08-13 19:02:07: info: test for 114 authors is over {"timestamp":"2018-08-13T18:02:07.610Z"}
+2018-08-13 19:02:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:08.133Z"}
+2018-08-13 19:02:08: info: test for 117 authors is over {"timestamp":"2018-08-13T18:02:08.133Z"}
+2018-08-13 19:02:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:08.183Z"}
+2018-08-13 19:02:08: info: test for 115 authors is over {"timestamp":"2018-08-13T18:02:08.183Z"}
+2018-08-13 19:02:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:08.866Z"}
+2018-08-13 19:02:08: info: test for 116 authors is over {"timestamp":"2018-08-13T18:02:08.867Z"}
+2018-08-13 19:02:08: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:08.984Z"}
+2018-08-13 19:02:08: info: test for 80 authors is over {"timestamp":"2018-08-13T18:02:08.985Z"}
+2018-08-13 19:02:09: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:09.116Z"}
+2018-08-13 19:02:09: info: test for 118 authors is over {"timestamp":"2018-08-13T18:02:09.117Z"}
+2018-08-13 19:02:09: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:09.293Z"}
+2018-08-13 19:02:09: info: test for 120 authors is over {"timestamp":"2018-08-13T18:02:09.294Z"}
+2018-08-13 19:02:09: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:09.493Z"}
+2018-08-13 19:02:09: info: test for 121 authors is over {"timestamp":"2018-08-13T18:02:09.493Z"}
+2018-08-13 19:02:09: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:09.726Z"}
+2018-08-13 19:02:09: info: test for 119 authors is over {"timestamp":"2018-08-13T18:02:09.727Z"}
+2018-08-13 19:02:10: info: 44 accounts cost: 73.05743199972312 {"timestamp":"2018-08-13T18:02:10.302Z"}
+2018-08-13 19:02:10: info: test for 44 authors is over {"timestamp":"2018-08-13T18:02:10.302Z"}
+2018-08-13 19:02:10: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:10.908Z"}
+2018-08-13 19:02:10: info: test for 81 authors is over {"timestamp":"2018-08-13T18:02:10.908Z"}
+2018-08-13 19:02:12: info: 25 accounts cost: 15.548946000649266 {"timestamp":"2018-08-13T18:02:12.800Z"}
+2018-08-13 19:02:12: info: test for 25 authors is over {"timestamp":"2018-08-13T18:02:12.800Z"}
+2018-08-13 19:02:13: info: 45 accounts cost: 74.0972959998544 {"timestamp":"2018-08-13T18:02:13.023Z"}
+info: test for 45 authors is over {"timestamp":"2018-08-13T18:02:13.023Z"}
+2018-08-13 19:02:13: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:13.490Z"}
+2018-08-13 19:02:13: info: test for 82 authors is over {"timestamp":"2018-08-13T18:02:13.490Z"}
+2018-08-13 19:02:15: info: 46 accounts cost: 75.13627100015583 {"timestamp":"2018-08-13T18:02:15.757Z"}
+2018-08-13 19:02:15: info: test for 46 authors is over {"timestamp":"2018-08-13T18:02:15.758Z"}
+2018-08-13 19:02:17: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:17.656Z"}
+2018-08-13 19:02:17: info: test for 83 authors is over {"timestamp":"2018-08-13T18:02:17.656Z"}
+2018-08-13 19:02:18: info: 47 accounts cost: 76.17614200021308 {"timestamp":"2018-08-13T18:02:18.575Z"}
+2018-08-13 19:02:18: info: test for 47 authors is over {"timestamp":"2018-08-13T18:02:18.576Z"}
+2018-08-13 19:02:20: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:20.267Z"}
+2018-08-13 19:02:20: info: test for 84 authors is over {"timestamp":"2018-08-13T18:02:20.268Z"}
+2018-08-13 19:02:21: info: 48 accounts cost: 77.21600600034435 {"timestamp":"2018-08-13T18:02:21.782Z"}
+2018-08-13 19:02:21: info: test for 48 authors is over {"timestamp":"2018-08-13T18:02:21.782Z"}
+2018-08-13 19:02:23: info: 49 accounts cost: 78.2558770004016 {"timestamp":"2018-08-13T18:02:23.185Z"}
+2018-08-13 19:02:23: info: test for 49 authors is over {"timestamp":"2018-08-13T18:02:23.185Z"}
+2018-08-13 19:02:23: info: 26 accounts cost: 16.086700000687415 {"timestamp":"2018-08-13T18:02:23.627Z"}
+2018-08-13 19:02:23: info: test for 26 authors is over {"timestamp":"2018-08-13T18:02:23.683Z"}
+2018-08-13 19:02:25: info: 50 accounts cost: 79.29754000060711 {"timestamp":"2018-08-13T18:02:25.284Z"}
+2018-08-13 19:02:25: info: test for 50 authors is over {"timestamp":"2018-08-13T18:02:25.285Z"}
+2018-08-13 19:02:26: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:26.362Z"}
+2018-08-13 19:02:26: info: test for 85 authors is over {"timestamp":"2018-08-13T18:02:26.362Z"}
+2018-08-13 19:02:28: info: 51 accounts cost: 80.33695600070132 {"timestamp":"2018-08-13T18:02:28.305Z"}
+2018-08-13 19:02:28: info: test for 51 authors is over {"timestamp":"2018-08-13T18:02:28.306Z"}
+2018-08-13 19:02:28: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:28.938Z"}
+2018-08-13 19:02:28: info: test for 86 authors is over {"timestamp":"2018-08-13T18:02:28.938Z"}
+2018-08-13 19:02:30: info: 52 accounts cost: 81.37593100100275 {"timestamp":"2018-08-13T18:02:30.176Z"}
+2018-08-13 19:02:30: info: test for 52 authors is over {"timestamp":"2018-08-13T18:02:30.176Z"}
+2018-08-13 19:02:31: info: 53 accounts cost: 82.41625000109707 {"timestamp":"2018-08-13T18:02:31.643Z"}
+2018-08-13 19:02:31: info: test for 53 authors is over {"timestamp":"2018-08-13T18:02:31.643Z"}
+2018-08-13 19:02:31: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:31.802Z"}
+2018-08-13 19:02:31: info: test for 87 authors is over {"timestamp":"2018-08-13T18:02:31.802Z"}
+2018-08-13 19:02:33: info: 54 accounts cost: 83.45703800100637 {"timestamp":"2018-08-13T18:02:33.763Z"}
+2018-08-13 19:02:33: info: test for 54 authors is over {"timestamp":"2018-08-13T18:02:33.764Z"}
+2018-08-13 19:02:34: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:34.074Z"}
+2018-08-13 19:02:34: info: test for 88 authors is over {"timestamp":"2018-08-13T18:02:34.074Z"}
+2018-08-13 19:02:34: info: 27 accounts cost: 16.624454000884725 {"timestamp":"2018-08-13T18:02:34.172Z"}
+2018-08-13 19:02:34: info: test for 27 authors is over {"timestamp":"2018-08-13T18:02:34.173Z"}
+2018-08-13 19:02:34: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:34.552Z"}
+2018-08-13 19:02:34: info: test for 89 authors is over {"timestamp":"2018-08-13T18:02:34.553Z"}
+2018-08-13 19:02:35: info: 55 accounts cost: 84.49653800116721 {"timestamp":"2018-08-13T18:02:35.510Z"}
+2018-08-13 19:02:35: info: test for 55 authors is over {"timestamp":"2018-08-13T18:02:35.510Z"}
+2018-08-13 19:02:35: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:35.653Z"}
+2018-08-13 19:02:35: info: test for 91 authors is over {"timestamp":"2018-08-13T18:02:35.654Z"}
+2018-08-13 19:02:35: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:35.858Z"}
+2018-08-13 19:02:35: info: test for 90 authors is over {"timestamp":"2018-08-13T18:02:35.859Z"}
+2018-08-13 19:02:36: info: 56 accounts cost: 85.53514200157224 {"timestamp":"2018-08-13T18:02:36.821Z"}
+2018-08-13 19:02:36: info: test for 56 authors is over {"timestamp":"2018-08-13T18:02:36.821Z"}
+2018-08-13 19:02:37: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:37.393Z"}
+2018-08-13 19:02:37: info: test for 93 authors is over {"timestamp":"2018-08-13T18:02:37.393Z"}
+2018-08-13 19:02:37: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:37.490Z"}
+2018-08-13 19:02:37: info: test for 92 authors is over {"timestamp":"2018-08-13T18:02:37.490Z"}
+2018-08-13 19:02:37: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:37.818Z"}
+2018-08-13 19:02:37: info: test for 95 authors is over {"timestamp":"2018-08-13T18:02:37.818Z"}
+2018-08-13 19:02:37: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:37.833Z"}
+2018-08-13 19:02:37: info: test for 94 authors is over {"timestamp":"2018-08-13T18:02:37.834Z"}
+2018-08-13 19:02:38: info: 57 accounts cost: 86.5755380014889 {"timestamp":"2018-08-13T18:02:38.791Z"}
+2018-08-13 19:02:38: info: test for 57 authors is over {"timestamp":"2018-08-13T18:02:38.791Z"}
+2018-08-13 19:02:39: info: 58 accounts cost: 87.61593400172387 {"timestamp":"2018-08-13T18:02:39.518Z"}
+2018-08-13 19:02:39: info: test for 58 authors is over {"timestamp":"2018-08-13T18:02:39.518Z"}
+2018-08-13 19:02:40: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:40.543Z"}
+2018-08-13 19:02:40: info: test for 96 authors is over {"timestamp":"2018-08-13T18:02:40.543Z"}
+2018-08-13 19:02:42: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:42.375Z"}
+2018-08-13 19:02:42: info: test for 98 authors is over {"timestamp":"2018-08-13T18:02:42.375Z"}
+2018-08-13 19:02:42: info: 59 accounts cost: 88.65588200192178 {"timestamp":"2018-08-13T18:02:42.501Z"}
+2018-08-13 19:02:42: info: test for 59 authors is over {"timestamp":"2018-08-13T18:02:42.501Z"}
+2018-08-13 19:02:42: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:42.569Z"}
+2018-08-13 19:02:42: info: test for 97 authors is over {"timestamp":"2018-08-13T18:02:42.569Z"}
+2018-08-13 19:02:43: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:43.007Z"}
+2018-08-13 19:02:43: info: test for 99 authors is over {"timestamp":"2018-08-13T18:02:43.007Z"}
+2018-08-13 19:02:43: info: 60 accounts cost: 89.69538200208262 {"timestamp":"2018-08-13T18:02:43.260Z"}
+2018-08-13 19:02:43: info: test for 60 authors is over {"timestamp":"2018-08-13T18:02:43.261Z"}
+2018-08-13 19:02:43: info: 28 accounts cost: 17.149216000166234 {"timestamp":"2018-08-13T18:02:43.606Z"}
+2018-08-13 19:02:43: info: test for 28 authors is over {"timestamp":"2018-08-13T18:02:43.606Z"}
+2018-08-13 19:02:44: info: 61 accounts cost: 90.73488200224347 {"timestamp":"2018-08-13T18:02:44.004Z"}
+2018-08-13 19:02:44: info: test for 61 authors is over {"timestamp":"2018-08-13T18:02:44.004Z"}
+2018-08-13 19:02:44: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:44.098Z"}
+2018-08-13 19:02:44: info: test for 101 authors is over {"timestamp":"2018-08-13T18:02:44.099Z"}
+2018-08-13 19:02:44: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:44.809Z"}
+2018-08-13 19:02:44: info: test for 100 authors is over {"timestamp":"2018-08-13T18:02:44.810Z"}
+2018-08-13 19:02:44: info: 62 accounts cost: 91.77528500240442 {"timestamp":"2018-08-13T18:02:44.838Z"}
+info: test for 62 authors is over {"timestamp":"2018-08-13T18:02:44.839Z"}
+2018-08-13 19:02:45: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:45.657Z"}
+2018-08-13 19:02:45: info: test for 102 authors is over {"timestamp":"2018-08-13T18:02:45.657Z"}
+2018-08-13 19:02:46: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:46.083Z"}
+2018-08-13 19:02:46: info: test for 104 authors is over {"timestamp":"2018-08-13T18:02:46.083Z"}
+2018-08-13 19:02:46: info: 63 accounts cost: 92.81299300241699 {"timestamp":"2018-08-13T18:02:46.125Z"}
+2018-08-13 19:02:46: info: test for 63 authors is over {"timestamp":"2018-08-13T18:02:46.125Z"}
+2018-08-13 19:02:46: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:46.513Z"}
+2018-08-13 19:02:46: info: test for 103 authors is over {"timestamp":"2018-08-13T18:02:46.514Z"}
+2018-08-13 19:02:46: info: 64 accounts cost: 93.85473300244485 {"timestamp":"2018-08-13T18:02:46.941Z"}
+2018-08-13 19:02:46: info: test for 64 authors is over {"timestamp":"2018-08-13T18:02:46.942Z"}
+2018-08-13 19:02:47: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:47.385Z"}
+2018-08-13 19:02:47: info: test for 106 authors is over {"timestamp":"2018-08-13T18:02:47.385Z"}
+2018-08-13 19:02:47: info: 65 accounts cost: 94.89424000253166 {"timestamp":"2018-08-13T18:02:47.635Z"}
+2018-08-13 19:02:47: info: test for 65 authors is over {"timestamp":"2018-08-13T18:02:47.635Z"}
+2018-08-13 19:02:48: info: 66 accounts cost: 95.93642800291491 {"timestamp":"2018-08-13T18:02:48.439Z"}
+2018-08-13 19:02:48: info: test for 66 authors is over {"timestamp":"2018-08-13T18:02:48.439Z"}
+2018-08-13 19:02:48: info: 67 accounts cost: 96.97279900306057 {"timestamp":"2018-08-13T18:02:48.987Z"}
+2018-08-13 19:02:48: info: test for 67 authors is over {"timestamp":"2018-08-13T18:02:48.988Z"}
+2018-08-13 19:02:49: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:49.659Z"}
+2018-08-13 19:02:49: info: test for 105 authors is over {"timestamp":"2018-08-13T18:02:49.660Z"}
+2018-08-13 19:02:49: info: 68 accounts cost: 98.0158900031256 {"timestamp":"2018-08-13T18:02:49.671Z"}
+2018-08-13 19:02:49: info: test for 68 authors is over {"timestamp":"2018-08-13T18:02:49.671Z"}
+2018-08-13 19:02:49: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:49.823Z"}
+2018-08-13 19:02:49: info: test for 107 authors is over {"timestamp":"2018-08-13T18:02:49.824Z"}
+2018-08-13 19:02:49: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:49.934Z"}
+2018-08-13 19:02:49: info: test for 110 authors is over {"timestamp":"2018-08-13T18:02:49.934Z"}
+2018-08-13 19:02:50: info: 69 accounts cost: 99.05404600317524 {"timestamp":"2018-08-13T18:02:50.065Z"}
+2018-08-13 19:02:50: info: test for 69 authors is over {"timestamp":"2018-08-13T18:02:50.065Z"}
+2018-08-13 19:02:50: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:50.239Z"}
+2018-08-13 19:02:50: info: test for 108 authors is over {"timestamp":"2018-08-13T18:02:50.240Z"}
+2018-08-13 19:02:50: info: 70 accounts cost: 100.09355300326206 {"timestamp":"2018-08-13T18:02:50.460Z"}
+2018-08-13 19:02:50: info: test for 70 authors is over {"timestamp":"2018-08-13T18:02:50.461Z"}
+2018-08-13 19:02:50: info: 71 accounts cost: 101.131716003556 {"timestamp":"2018-08-13T18:02:50.578Z"}
+2018-08-13 19:02:50: info: test for 71 authors is over {"timestamp":"2018-08-13T18:02:50.578Z"}
+2018-08-13 19:02:50: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:50.921Z"}
+2018-08-13 19:02:50: info: test for 109 authors is over {"timestamp":"2018-08-13T18:02:50.921Z"}
+2018-08-13 19:02:52: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:52.254Z"}
+2018-08-13 19:02:52: info: test for 111 authors is over {"timestamp":"2018-08-13T18:02:52.254Z"}
+2018-08-13 19:02:52: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:52.382Z"}
+2018-08-13 19:02:52: info: test for 116 authors is over {"timestamp":"2018-08-13T18:02:52.383Z"}
+2018-08-13 19:02:53: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:53.249Z"}
+2018-08-13 19:02:53: info: test for 114 authors is over {"timestamp":"2018-08-13T18:02:53.249Z"}
+2018-08-13 19:02:53: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:53.603Z"}
+2018-08-13 19:02:53: info: test for 112 authors is over {"timestamp":"2018-08-13T18:02:53.603Z"}
+2018-08-13 19:02:53: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:53.690Z"}
+2018-08-13 19:02:53: info: test for 113 authors is over {"timestamp":"2018-08-13T18:02:53.691Z"}
+2018-08-13 19:02:53: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:53.950Z"}
+2018-08-13 19:02:53: info: test for 115 authors is over {"timestamp":"2018-08-13T18:02:53.950Z"}
+2018-08-13 19:02:54: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:54.032Z"}
+2018-08-13 19:02:54: info: test for 117 authors is over {"timestamp":"2018-08-13T18:02:54.032Z"}
+2018-08-13 19:02:55: info: 29 accounts cost: 17.69996200080186 {"timestamp":"2018-08-13T18:02:55.199Z"}
+2018-08-13 19:02:55: info: test for 29 authors is over {"timestamp":"2018-08-13T18:02:55.200Z"}
+2018-08-13 19:02:55: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:55.274Z"}
+2018-08-13 19:02:55: info: test for 119 authors is over {"timestamp":"2018-08-13T18:02:55.274Z"}
+2018-08-13 19:02:56: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:56.106Z"}
+2018-08-13 19:02:56: info: test for 118 authors is over {"timestamp":"2018-08-13T18:02:56.106Z"}
+2018-08-13 19:02:56: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:56.566Z"}
+2018-08-13 19:02:56: info: test for 121 authors is over {"timestamp":"2018-08-13T18:02:56.566Z"}
+2018-08-13 19:02:57: error: VM Exception while processing transaction: revert {"timestamp":"2018-08-13T18:02:57.657Z"}
+2018-08-13 19:02:57: info: test for 120 authors is over {"timestamp":"2018-08-13T18:02:57.657Z"}
+2018-08-13 19:03:01: info: 30 accounts cost: 18.23771600084001 {"timestamp":"2018-08-13T18:03:01.123Z"}
+2018-08-13 19:03:01: info: test for 30 authors is over {"timestamp":"2018-08-13T18:03:01.123Z"}
+2018-08-13 19:03:06: info: 31 accounts cost: 18.77547000087816 {"timestamp":"2018-08-13T18:03:06.503Z"}
+2018-08-13 19:03:06: info: test for 31 authors is over {"timestamp":"2018-08-13T18:03:06.504Z"}
+2018-08-13 19:03:11: info: 32 accounts cost: 19.313224000916307 {"timestamp":"2018-08-13T18:03:11.830Z"}
+2018-08-13 19:03:11: info: test for 32 authors is over {"timestamp":"2018-08-13T18:03:11.830Z"}
+2018-08-13 19:03:20: info: 33 accounts cost: 19.850978001113617 {"timestamp":"2018-08-13T18:03:20.263Z"}
+2018-08-13 19:03:20: info: test for 33 authors is over {"timestamp":"2018-08-13T18:03:20.263Z"}
+2018-08-13 19:03:25: info: 34 accounts cost: 20.388732001151766 {"timestamp":"2018-08-13T18:03:25.408Z"}
+2018-08-13 19:03:25: info: test for 34 authors is over {"timestamp":"2018-08-13T18:03:25.408Z"}
+2018-08-13 19:03:30: info: 35 accounts cost: 20.926486001030753 {"timestamp":"2018-08-13T18:03:30.724Z"}
+2018-08-13 19:03:30: info: test for 35 authors is over {"timestamp":"2018-08-13T18:03:30.724Z"}
+2018-08-13 19:03:36: info: 36 accounts cost: 21.4642400010689 {"timestamp":"2018-08-13T18:03:36.536Z"}
+2018-08-13 19:03:36: info: test for 36 authors is over {"timestamp":"2018-08-13T18:03:36.536Z"}
+2018-08-13 19:03:42: info: 37 accounts cost: 22.00199400110705 {"timestamp":"2018-08-13T18:03:42.580Z"}
+2018-08-13 19:03:42: info: test for 37 authors is over {"timestamp":"2018-08-13T18:03:42.580Z"}
+2018-08-13 19:03:47: info: 38 accounts cost: 22.5397480011452 {"timestamp":"2018-08-13T18:03:47.527Z"}
+2018-08-13 19:03:47: info: test for 38 authors is over {"timestamp":"2018-08-13T18:03:47.527Z"}
+2018-08-13 19:03:50: info: 39 accounts cost: 23.07750200134251 {"timestamp":"2018-08-13T18:03:50.861Z"}
+2018-08-13 19:03:50: info: test for 39 authors is over {"timestamp":"2018-08-13T18:03:50.862Z"}
+2018-08-13 19:03:55: info: 40 accounts cost: 23.615256001221496 {"timestamp":"2018-08-13T18:03:55.437Z"}
+2018-08-13 19:03:55: info: test for 40 authors is over {"timestamp":"2018-08-13T18:03:55.437Z"}
+2018-08-13 19:04:00: info: 41 accounts cost: 24.153010001100483 {"timestamp":"2018-08-13T18:04:00.209Z"}
+2018-08-13 19:04:00: info: test for 41 authors is over {"timestamp":"2018-08-13T18:04:00.210Z"}
+2018-08-13 19:04:05: info: 42 accounts cost: 24.69076400097947 {"timestamp":"2018-08-13T18:04:05.853Z"}
+2018-08-13 19:04:05: info: test for 42 authors is over {"timestamp":"2018-08-13T18:04:05.853Z"}
+2018-08-13 19:04:10: info: 43 accounts cost: 25.228518000540134 {"timestamp":"2018-08-13T18:04:10.021Z"}
+2018-08-13 19:04:10: info: test for 43 authors is over {"timestamp":"2018-08-13T18:04:10.022Z"}
+2018-08-13 19:04:13: info: 44 accounts cost: 25.746111999706045 {"timestamp":"2018-08-13T18:04:13.836Z"}
+2018-08-13 19:04:13: info: test for 44 authors is over {"timestamp":"2018-08-13T18:04:13.836Z"}
+2018-08-13 19:04:18: info: 45 accounts cost: 26.30402600061643 {"timestamp":"2018-08-13T18:04:18.242Z"}
+2018-08-13 19:04:18: info: test for 45 authors is over {"timestamp":"2018-08-13T18:04:18.243Z"}
+2018-08-13 19:04:24: info: 46 accounts cost: 26.84178000049542 {"timestamp":"2018-08-13T18:04:24.941Z"}
+2018-08-13 19:04:24: info: test for 46 authors is over {"timestamp":"2018-08-13T18:04:24.942Z"}
+2018-08-13 19:04:27: info: 47 accounts cost: 27.379534000056083 {"timestamp":"2018-08-13T18:04:27.764Z"}
+2018-08-13 19:04:27: info: test for 47 authors is over {"timestamp":"2018-08-13T18:04:27.765Z"}
+2018-08-13 19:04:30: info: 48 accounts cost: 27.91728799993507 {"timestamp":"2018-08-13T18:04:30.708Z"}
+2018-08-13 19:04:30: info: test for 48 authors is over {"timestamp":"2018-08-13T18:04:30.708Z"}
+2018-08-13 19:04:33: info: 49 accounts cost: 28.455041999814057 {"timestamp":"2018-08-13T18:04:33.923Z"}
+2018-08-13 19:04:33: info: test for 49 authors is over {"timestamp":"2018-08-13T18:04:33.923Z"}
+2018-08-13 19:04:37: info: 50 accounts cost: 28.992796000011367 {"timestamp":"2018-08-13T18:04:37.188Z"}
+2018-08-13 19:04:37: info: test for 50 authors is over {"timestamp":"2018-08-13T18:04:37.188Z"}
+2018-08-13 19:04:40: info: 51 accounts cost: 29.530549999890354 {"timestamp":"2018-08-13T18:04:40.199Z"}
+2018-08-13 19:04:40: info: test for 51 authors is over {"timestamp":"2018-08-13T18:04:40.199Z"}
+2018-08-13 19:04:42: info: 52 accounts cost: 30.06830399976934 {"timestamp":"2018-08-13T18:04:42.838Z"}
+2018-08-13 19:04:42: info: test for 52 authors is over {"timestamp":"2018-08-13T18:04:42.838Z"}
+2018-08-13 19:04:46: info: 53 accounts cost: 30.58186599828332 {"timestamp":"2018-08-13T18:04:46.341Z"}
+2018-08-13 19:04:46: info: test for 53 authors is over {"timestamp":"2018-08-13T18:04:46.342Z"}
+2018-08-13 19:04:48: info: 54 accounts cost: 31.143811999208992 {"timestamp":"2018-08-13T18:04:48.915Z"}
+2018-08-13 19:04:48: info: test for 54 authors is over {"timestamp":"2018-08-13T18:04:48.915Z"}
+2018-08-13 19:04:51: info: 55 accounts cost: 31.681565999406303 {"timestamp":"2018-08-13T18:04:51.860Z"}
+2018-08-13 19:04:51: info: test for 55 authors is over {"timestamp":"2018-08-13T18:04:51.860Z"}
+2018-08-13 19:04:53: info: 56 accounts cost: 32.21931999928529 {"timestamp":"2018-08-13T18:04:53.935Z"}
+2018-08-13 19:04:53: info: test for 56 authors is over {"timestamp":"2018-08-13T18:04:53.936Z"}
+2018-08-13 19:04:57: info: 57 accounts cost: 32.75707399916428 {"timestamp":"2018-08-13T18:04:57.553Z"}
+2018-08-13 19:04:57: info: test for 57 authors is over {"timestamp":"2018-08-13T18:04:57.553Z"}
+2018-08-13 19:04:59: info: 58 accounts cost: 33.294827999043264 {"timestamp":"2018-08-13T18:04:59.616Z"}
+2018-08-13 19:04:59: info: test for 58 authors is over {"timestamp":"2018-08-13T18:04:59.616Z"}
+2018-08-13 19:05:01: info: 59 accounts cost: 33.83258199892225 {"timestamp":"2018-08-13T18:05:01.126Z"}
+2018-08-13 19:05:01: info: test for 59 authors is over {"timestamp":"2018-08-13T18:05:01.127Z"}
+2018-08-13 19:05:02: info: 60 accounts cost: 34.37033599880124 {"timestamp":"2018-08-13T18:05:02.800Z"}
+2018-08-13 19:05:02: info: test for 60 authors is over {"timestamp":"2018-08-13T18:05:02.801Z"}
+2018-08-13 19:05:04: info: 61 accounts cost: 34.908089998680225 {"timestamp":"2018-08-13T18:05:04.938Z"}
+2018-08-13 19:05:04: info: test for 61 authors is over {"timestamp":"2018-08-13T18:05:04.938Z"}
+2018-08-13 19:05:07: info: 62 accounts cost: 35.44584399855921 {"timestamp":"2018-08-13T18:05:07.402Z"}
+2018-08-13 19:05:07: info: test for 62 authors is over {"timestamp":"2018-08-13T18:05:07.402Z"}
+2018-08-13 19:05:07: info: 63 accounts cost: 35.9835979984382 {"timestamp":"2018-08-13T18:05:07.817Z"}
+2018-08-13 19:05:07: info: test for 63 authors is over {"timestamp":"2018-08-13T18:05:07.817Z"}
+2018-08-13 19:05:09: info: 64 accounts cost: 36.52135199799886 {"timestamp":"2018-08-13T18:05:09.409Z"}
+2018-08-13 19:05:09: info: test for 64 authors is over {"timestamp":"2018-08-13T18:05:09.409Z"}
+2018-08-13 19:05:10: info: 65 accounts cost: 37.05910599819617 {"timestamp":"2018-08-13T18:05:10.087Z"}
+2018-08-13 19:05:10: info: test for 65 authors is over {"timestamp":"2018-08-13T18:05:10.087Z"}
+2018-08-13 19:05:11: info: 66 accounts cost: 37.59685999807516 {"timestamp":"2018-08-13T18:05:11.765Z"}
+2018-08-13 19:05:11: info: test for 66 authors is over {"timestamp":"2018-08-13T18:05:11.765Z"}
+2018-08-13 19:05:12: info: 67 accounts cost: 38.13461399795415 {"timestamp":"2018-08-13T18:05:12.221Z"}
+2018-08-13 19:05:12: info: test for 67 authors is over {"timestamp":"2018-08-13T18:05:12.221Z"}
+2018-08-13 19:05:12: info: 68 accounts cost: 38.672367997833135 {"timestamp":"2018-08-13T18:05:12.914Z"}
+2018-08-13 19:05:12: info: test for 68 authors is over {"timestamp":"2018-08-13T18:05:12.914Z"}
+2018-08-13 19:05:13: info: 69 accounts cost: 39.21012199771212 {"timestamp":"2018-08-13T18:05:13.546Z"}
+2018-08-13 19:05:13: info: test for 69 authors is over {"timestamp":"2018-08-13T18:05:13.546Z"}
+2018-08-13 19:05:13: info: 70 accounts cost: 39.22287599748415 {"timestamp":"2018-08-13T18:05:13.837Z"}
+2018-08-13 19:05:13: info: test for 70 authors is over {"timestamp":"2018-08-13T18:05:13.837Z"}
+2018-08-13 19:05:14: info: 71 accounts cost: 39.76062999736314 {"timestamp":"2018-08-13T18:05:14.184Z"}
+2018-08-13 19:05:14: info: test for 71 authors is over {"timestamp":"2018-08-13T18:05:14.184Z"}
