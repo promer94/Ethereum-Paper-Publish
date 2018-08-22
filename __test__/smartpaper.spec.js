@@ -21,7 +21,6 @@ let paperContract
 
 const web3 = new Web3(provider)
 const { toHex } = web3.utils
-const { hexToUtf8 } = web3.utils
 
 describe('SmartPaper 📝', () => {
   beforeEach(async () => {
@@ -50,25 +49,6 @@ describe('SmartPaper 📝', () => {
       expect(paperContract.options.address).toBeDefined()
     })
     describe('Contract has correct initial properties 🎉', () => {
-      it('description 👌', async () => {
-        const _description = await paperContract.methods
-          .latestDescription()
-          .call()
-        expect(hexToUtf8(_description)).toBe(description)
-      })
-      it('metaData 👌', async () => {
-        const _metaData = await paperContract.methods.latestMetaData().call()
-        expect(hexToUtf8(_metaData)).toBe(metaData)
-      })
-      it('latestPaper 👌', async () => {
-        const _paperMd5 = await paperContract.methods.latestPaper().call()
-        expect(_paperMd5).toEqual(
-          `0x${crypto
-            .createHash('md5')
-            .update(paper)
-            .digest('hex')}`
-        )
-      })
       it('paperList 👌', async () => {
         const firstPaper = await paperContract.methods.md5List(0).call()
         expect(firstPaper).toBe(
