@@ -1,5 +1,46 @@
-\documentclass [12pt]{article}
+\documentclass [11pt]{article}
+  \usepackage{listings}
+  \usepackage{color}
+  \definecolor{lightgray}{rgb}{.9,.9,.9}
+  \definecolor{darkgray}{rgb}{.4,.4,.4}
+  \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+  
+  \usepackage{listings, xcolor}
 
+  \definecolor{verylightgray}{rgb}{.97,.97,.97}
+  \lstdefinelanguage{Solidity}{
+    keywords=[1]{anonymous, assembly, assert, balance, break, call, callcode, case, catch, class, constant, continue, contract, debugger, default, delegatecall, delete, do, else, emit, event, export, external, false, finally, for, function, gas, if, implements, import, in, indexed, instanceof, interface, internal, is, length, library, log0, log1, log2, log3, log4, memory, modifier, new, payable, pragma, private, protected, public, pure, push, require, return, returns, revert, selfdestruct, send, storage, struct, suicide, super, switch, then, this, throw, transfer, true, try, typeof, using, value, view, while, with, addmod, ecrecover, keccak256, mulmod, ripemd160, sha256, sha3}, % generic keywords including crypto operations
+    keywordstyle=[1]\color{blue}\bfseries,
+    keywords=[2]{address, bool, byte, bytes, bytes1, bytes2, bytes3, bytes4, bytes5, bytes6, bytes7, bytes8, bytes9, bytes10, bytes11, bytes12, bytes13, bytes14, bytes15, bytes16, bytes17, bytes18, bytes19, bytes20, bytes21, bytes22, bytes23, bytes24, bytes25, bytes26, bytes27, bytes28, bytes29, bytes30, bytes31, bytes32, enum, int, int8, int16, int24, int32, int40, int48, int56, int64, int72, int80, int88, int96, int104, int112, int120, int128, int136, int144, int152, int160, int168, int176, int184, int192, int200, int208, int216, int224, int232, int240, int248, int256, mapping, string, uint, uint8, uint16, uint24, uint32, uint40, uint48, uint56, uint64, uint72, uint80, uint88, uint96, uint104, uint112, uint120, uint128, uint136, uint144, uint152, uint160, uint168, uint176, uint184, uint192, uint200, uint208, uint216, uint224, uint232, uint240, uint248, uint256, var, void, ether, finney, szabo, wei, days, hours, minutes, seconds, weeks, years},	% types; money and time units
+    keywordstyle=[2]\color{teal}\bfseries,
+    keywords=[3]{block, blockhash, coinbase, difficulty, gaslimit, number, timestamp, msg, data, gas, sender, sig, value, now, tx, gasprice, origin},	% environment variables
+    keywordstyle=[3]\color{violet}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=false,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{gray}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    morestring=[b]',
+    morestring=[b]"
+  }
+  
+  \lstset{
+    language=Solidity,
+    backgroundcolor=\color{verylightgray},
+    extendedchars=true,
+    basicstyle=\footnotesize\ttfamily,
+    showstringspaces=false,
+    showspaces=false,
+    numbers=left,
+    numberstyle=\footnotesize,
+    numbersep=9pt,
+    tabsize=2,
+    breaklines=true,
+    showtabs=false,
+    captionpos=b
+  }
+  
 \title{Distributed ledgers application in Science: Smart
 Papers on the Ethereum}
 \author{YixuanXu (yx5u17@ecs.soton.ac.uk)\\University of Southampton}
@@ -19,24 +60,87 @@ Papers on the Ethereum}
 \newpage
 \section{Introduction}
 \subsection{Project aim}
-Digitization and Web technologies are now changing the way of publishing and disseminating the knowledge.
+\paragraph{}Digitization and Web technologies are now changing the way of publishing and disseminating the knowledge.
 It becomes more convenient and less expensive for people to access the knowledge. 
 The knowledge creation process is more dynamic right now. 
 Text/graphics/rich media can be changed quickly and easily while at the same time being available to all the audiences.
 However, most of current methods of academic publication are static, that means, they cannot be revised over time\cite{heller2014dynamic}. 
-Web technologies actually have the power to make it more dynamic but is currently underused. On the other hands, journals, publishers and funders control
+Web technologies actually have the power to make it more dynamic but is currently underused. On the other hands, journals, publishers and funders fully control
 the entire process of academic publishing. The view of authors who should also participate in the publishing process tends to be underrepresented. 
 Despite that fact that the current academic publishing system is advance and productive, 
 authors still want a more open and decentralize publishing process \cite{d2018authors}.
-The aim of this project is trying to provide a prototype decentralize application 
-to help authors to manage their publish and their attribution agreements in a trusted way. 
+\paragraph{}In the past, the scholarly books were keeping improving and updating for the centuries by releasing the new editions. 
+Mistakes would be corrected, new result would be added and feedbacks would be used for improvement. 
+Revising books allowed author to keep track with novel development \cite{heller2014dynamic}. 
+Many handbooks and schoolbooks have been revised over and over again, resulting massive amount of quality publications.
+In the contrast to books, academic paper were a kind of snapshot of certain scientific knowledge. 
+Most of them were just published once. If there is a new finding, usually a new articles need to be published. 
+But this kind of process are currently under debate and development \cite{heller2014dynamic}. 
+The number of authors who want a more open process in scientific publishing is increasing rapidly. 
+When it comes to the traditional of academic publishing, 
+publishers play an important role of filtering good research, rejecting papers 
+without sufficient conclusions. 
+They make their decisions based on the peer-review process which is fully controlled by themselves. 
+Since this kind of peer-review process usually will take a significant amount of time and is one of the
+main reason of delaying publications, researcher came up with a new idea of doing publishing. A initial version
+will be firstly released, then it could be updated after receiving the feedbacks from pre-peer-review. 
+All the version will be always available and the changes made in the pre-peer-review process will also be stored after the publishing of final version.
+The models allows the tracking of the development of academic papers. 
+This improvements make the process of publishing process more dynamic and flexible.
+But, there are some vital problems that have been discussed under such models 
+which is the mechanism to manage the interactions between authors and contributor in a trust way \cite{Khoe:1994:CML:2288694.2294265}.
+How can authors make agreements with each other about which version should be available ?
+How can authors determine their contributions to the papers in a unprejudiced way ? On the other hand,
+the contributions of reviewers is ignored in this model.
+\paragraph{}In last few years, Distributed Ledger Technology have attracted public attentions as 
+the most advanced tool that can provide a decentralized solutions to manage the interaction 
+between people that may not trust each other. 
+It also could guarantees of security and consistence without the need for admin. 
+The special tools which could achieve such functionality is called Smart Contract. For the question about the publishing model,
+Smart contract could programed to help authors to making decision in a decentralized way. The aim of this project is trying to provide a prototype of decentralize application 
+to help authors to manage their publish and their attribution agreements in a dynamic and trusted way. 
+The application itself will use the Blockchain technology \cite{buterin2013ethereum}, so nobody can fully control the whole process.
+It could be more reliable than the current publishing system. 
+The implementation will be evaluated by the cost of using such system. 
+A detailed cost analysis and data visualization will also presented.  
 \subsection{Outline}
+\paragraph{}In Section 2, firstly the chances, advantage, and challenges of dynamic scholarly publication formats will introduced. 
+Then a general background of Blockchain will be presented. After that, 
+a more specific description about the smart contract on Ethereum would be shown for the following part
+\paragraph{}In Section 3, it would give detailed design of the application. 
+By comparing the Blockchain technology with the current Web technology, 
+It should gives more clear explanation why Blockchain is preferred for this project
+\paragraph{}In Section 4, it will focus on the Implementation. 
+All the important implementation details will be described here
+\paragraph{}Section 5 demonstrate the cost of using the decentralize application. 
+The analysis consists of the visualization and specific code review.
+\paragraph{}Section 6 will discuss the advantage and disadvantage of the current implementation.
+Potential improvement would also be covered in this section.
+\paragraph{}Section 7 will give a summary about the project and conclusion.
 \section{Background Research}
-\subsection{Dynamic Publishing}
-\subsection{BlockChain Technology}
+\subsection{Modern publishing models example}
+Because of the development of web technologies, 
+several models have been provided based on the modern web technologies to improve the process of the academic publish, 
+making authors manage and produce their works more easier. 
+DEIP \cite{DEIP} is a platform that aimed at effective and 
+fair distribution of resource allocated to scientific and research activities.
+It proposed a community-driven models that encourage the open knowledge without restriction.
+The users of this platform could be both author and reviewers and have free access to all the publication. 
+All the record of review will be recorded and reviewers will be awarded with the decentralized protocol.
+Scienceroot \cite{science} is another blockchain-based publishing platform, 
+it tries to creating a scientific publishing model which will reward and sustain researchers instead of maximizing the publishers' profit 
+by using a fully decentralized storage platform called IPFS \cite{benet2014ipfs}. 
+The Pluto \cite{Pluto} is also a platform that is trying to help researchers to get funding in a decentralized ways. 
+It also wants to establish a more proper evaluation index for the academic publications. 
+The ideas of these kinds of platforms are really aggressive but inspiring. 
+They are trying to give the power back to authors and reviewers and to make the knowledge more open and accessible to everyone.
+It could be found that modern publishing system requires more transparent review process and more trustable collaborations between authors.
+An interesting fact is that all platforms use the Ethereum as their core framework. 
+It is vital to understand what kind of roles the Ethereum plays in these models.  
+\subsection{Blockchain Technology}
 \subsection{Ethereum}
 \section{Design}
-\subsection{Motivation}
+\subsection{Usercases}
 \subsection{Data Structure}
 \subsection{Decentralize Application Workflow }
 \subsection{Workspace Setup}
@@ -50,7 +154,6 @@ to help authors to manage their publish and their attribution agreements in a tr
 \subsection{Cost analysis}
 \subsection{Cost analysis design}
 \subsection{Visualization}
-\section{Explanation}
 \section{Discussion}
 \subsection{Good}
 \subsection{Bad}

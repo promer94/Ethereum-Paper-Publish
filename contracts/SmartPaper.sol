@@ -173,18 +173,18 @@ contract SmartPaper is AuthorList{
         mapping (address => bool) signs;
         uint voterCount;
     }
-    bytes32 public latestDescription;
-    bytes32 public latestMetaData;
-    bytes16 public latestPaper;
-    uint public latestVersion;
-    address newAuthor; 
-    uint agreeCount;
+    bytes32 private latestDescription;
+    bytes32 private latestMetaData;
+    bytes16 private latestPaper;
+    uint private latestVersion;
+    address private newAuthor; 
+    uint private agreeCount;
     address[] public authors;
     mapping(address => bool) isAuthor;
     mapping(address => bool) isAgree;
     bytes16[] public md5List;
     Version[] public versions;
-    mapping (bytes16 => Version) public versionMap;
+    mapping (bytes16 => Version) public versionMap
     constructor (bytes32 _description, bytes32 _metaData, bytes16 _paperMD5, address[] _authors) public{
         require(_authors.length > 0, "Invalid authors list");
         authors = _authors;
