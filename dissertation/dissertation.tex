@@ -200,8 +200,23 @@ Author will use the smart contract to publish their works and collaborate with o
 Once decision is made, smart contract will guarantee the result of decision won't be change by anyone.
 All the versions and meta data about contributions will be safely stored on the Ethereum.
 \section{Design}
-\subsection{UserCase}
+\subsection{Requirements}
+The first step of software developing is to identify the requirements from the specification,
+then finding the correspond user cases.
+The aim of this project is to provide a prototype of decentralize application 
+to help authors to manage their publish and their attribution agreements.
+Based on this, we could have these simple user cases:
+\begin{itemize}
+  \item Researchers should have their identities based on addresses of their Ethereum accounts
+  \item Researchers should be able to use smart contract to publish a research artifacts, which will be represented by the hash of files
+  \item Researchers should be able approve the contracts that belongs to themselves after verifying their local files with the online files with respect to a specific version
+  \item The paper contracts should contains the description, metadata and version list of the research artifacts.
+  \item New researchers could be added to an ongoing paper with the agreements of all the previous researchers.
+  \item The application should be open sourced and decentralized. Anyone could deploy their own instances.
+\end{itemize}
+The paper smart contract will be design based these requirements.  
 \subsection{Decentralize Application Workflow }
+
 \subsection{Workspace Setup}
 \section{Implementation}
 \subsection{Technology Stack}

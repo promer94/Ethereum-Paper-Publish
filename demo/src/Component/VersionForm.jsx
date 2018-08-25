@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Loader from 'react-loaders'
 import { toast } from 'react-toastify'
-import { throttle } from 'lodash'
+import { throttle } from 'lodash/throttle'
 import { createVersion } from '../action/action'
 import web3 from '../Web3/web3'
 
