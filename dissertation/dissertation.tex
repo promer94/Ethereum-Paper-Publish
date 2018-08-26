@@ -1,12 +1,12 @@
-\documentclass [12pt]{article}
+\documentclass [12pt]{report}
   \usepackage{listings}
   \usepackage{color}
   \definecolor{lightgray}{rgb}{.9,.9,.9}
   \definecolor{darkgray}{rgb}{.4,.4,.4}
   \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
-  
+  \usepackage{graphicx}
+  \usepackage{float}
   \usepackage{listings, xcolor}
-
   \definecolor{verylightgray}{rgb}{.97,.97,.97}
   \lstdefinelanguage{Solidity}{
     keywords=[1]{anonymous, assembly, assert, balance, break, call, callcode, case, catch, class, constant, continue, contract, debugger, default, delegatecall, delete, do, else, emit, event, export, external, false, finally, for, function, gas, if, implements, import, in, indexed, instanceof, interface, internal, is, length, library, log0, log1, log2, log3, log4, memory, modifier, new, payable, pragma, private, protected, public, pure, push, require, return, returns, revert, selfdestruct, send, storage, struct, suicide, super, switch, then, this, throw, transfer, true, try, typeof, using, value, view, while, with, addmod, ecrecover, keccak256, mulmod, ripemd160, sha256, sha3}, % generic keywords including crypto operations
@@ -58,8 +58,8 @@ Papers on the Ethereum}
 	This work is all about \dots
 \end{abstract}
 \newpage
-\section{Introduction}
-\subsection{Project aim}
+\chapter{Introduction}
+\section{Project aim}
 \paragraph{}Digitization and Web technologies are now changing the way of publishing and disseminating the knowledge.
 It becomes more convenient and less expensive for people to access the knowledge. 
 The knowledge creation process is more dynamic right now. 
@@ -103,7 +103,7 @@ The application itself will use the blockchain technology \cite{buterin2013ether
 It could be more reliable than the current publishing system. 
 The implementation will be evaluated by the cost of using such system. 
 A detailed cost analysis and data visualization will also presented.  
-\subsection{Outline}
+\section{Outline}
 \paragraph{}In Section 2, firstly it will present some modern publishing systems based on the blockchain.  
 Then a general background of blockchain will be presented. After that, 
 a more specific description about the smart contract on Ethereum would be shown for the following part
@@ -117,8 +117,8 @@ The analysis consists of the visualization and specific code review.
 \paragraph{}Section 6 will discuss the advantage and disadvantage of the current implementation.
 Potential improvement would also be covered in this section.
 \paragraph{}Section 7 will give a summary about the project and conclusion.
-\section{Background Research}
-\subsection{Modern publishing models example}
+\chapter{Background Research}
+\section{Modern publishing models example}
 \paragraph{}Because of the development of web technologies, 
 several models have been provided based on the modern web technologies to improve the process of the academic publish, 
 making authors manage and produce their works more easier. 
@@ -137,7 +137,7 @@ They are trying to give the power back to authors and reviewers and to make the 
 It could be found that modern publishing system requires more transparent review process and more trustable collaborations between authors.
 The current Blockchain technologis have huge potential in aspect of creating decentralized application. So it could be found that all of above platform are 
 using the Ethereum \cite{buterin2013ethereum} as their core framework. 
-\subsection{Blockchain}
+\section{Blockchain}
 \paragraph{Technology}
 On its most basic level, 
 the blockchain is a new kind of information technology 
@@ -162,8 +162,7 @@ so they are all linked meaning if one is changed than all the other blocks linke
 This works to make the data entered tamper-proof. 
 This model is the workings of the first generation blockchain which is known as Bitcoin.
 Its functionalities are mainly focused on the small data storage, which is the history of transactions.
-\paragraph{Features}
-Blockchain are trying to create a secured, trusted, 
+\paragraph{}Blockchain are trying to create a secured, trusted, 
 shared database and they do this through encryption and hashing,
 proof of work and network consensus. The hashing and linking of blocks 
 makes it difficult to go back and change a previous block once entered. 
@@ -176,7 +175,7 @@ which is powered by open source community and encryption.
 It is tamper proof, once information is put into the database it can not be altered. 
 It is a shared database as many people would have a up-to-date copy so that all have a single source of truth.
 Likewise, it is transparent, all the transactions and alteration made to the blockchain is visible to everyone.
-\paragraph{Evolution}With in a few years,the second generation of blockchain emerged design as a network on which developers could build applications. 
+\paragraph{}With in a few years,the second generation of blockchain emerged design as a network on which developers could build applications. 
 It is going to be more like a distributed virtual computer than just database.
 This was made technically possible by the development of the Ethereum platform. 
 Ethereum is an open-source, public, blockchain-based distributed computing platform featuring smart contract functionality.
@@ -190,7 +189,7 @@ As of 2018 Ethereum is largest and most popular platform for building distribute
 It has been a major step forward to become a global distributed computer, 
 a massive globally distributed cloud computing platform upon which we can run any application at scale and speed,
 with the assurance that it has the security, resilience and trustworthiness of today's blockchain.
-\paragraph{Smart Paper model}
+\paragraph{}
 By reviewing the blockchain technology, it is easy to find out that Ethereum is really powerful to
 help authors to make agreements and set their outcomes in stone so that they cannot be later repudiated.
 In \cite{Khoe:1994:CML:2288694.2294265}, 
@@ -199,8 +198,19 @@ that preserves a single version of the truth through the collaborative process.
 Author will use the smart contract to publish their works and collaborate with others.
 Once decision is made, smart contract will guarantee the result of decision won't be change by anyone.
 All the versions and meta data about contributions will be safely stored on the Ethereum.
-\section{Design}
-\subsection{Requirements}
+\chapter{Design}
+For a traditional publish model, it could be described as \ref{model}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{traditionModel.png}
+  \caption{Traditional publish model}
+  \label{model}
+\end{figure}
+In this model, the power is centralized. Publishes takes all the responsibilities of filtering the good researches, 
+rejecting papers with methods that are insufficient to draw the stated conclusion and the distributing widely\cite{heller2014dynamic}. 
+The whole process is not transparent enough to the public.
+It is vital to make everyone equal in this system.
+\section{Requirements}
 The first step of software developing is to identify the requirements from the specification,
 then finding the correspond user cases.
 The aim of this project is to provide a prototype of decentralize application 
@@ -211,26 +221,35 @@ Based on this, we could have these simple user cases:
   \item Researchers should be able to use smart contract to publish a research artifacts, which will be represented by the hash of files
   \item Researchers should be able approve the contracts that belongs to themselves after verifying their local files with the online files with respect to a specific version
   \item The paper contracts should contains the description, metadata and version list of the research artifacts.
+  \item The contents of papers could be update with the agreements of all authors. 
   \item New researchers could be added to an ongoing paper with the agreements of all the previous researchers.
   \item The application should be open sourced and decentralized. Anyone could deploy their own instances.
+  \item The review process could be community-driven and powered by publisher.
 \end{itemize}
-The paper smart contract will be design based these requirements.  
-\subsection{Decentralize Application Workflow }
-
-\subsection{Workspace Setup}
-\section{Implementation}
-\subsection{Technology Stack}
-\subsection{Compiler deploy api testing}
-\subsection{Client Development}
-\subsection{Client Deployment}
-\section{Evaluation}
-\subsection{Cost analysis}
-\subsection{Cost analysis design}
-\subsection{Visualization}
-\section{Discussion}
-\subsection{Good}
-\subsection{Bad}
-\section{Conclusion}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{smartPaperModel.png}
+  \caption{Smart paper publish model}
+  \label{smartPaper}
+\end{figure}
+The paper smart contract will be design based these requirements. 
+Based on the power of smart paper, we could have a new mechanism described as \ref{smartPaper}. 
+In this model, the whole process of publishing would not be controlled by any individuals or organizations.
+\section{Decentralize Application Workflow}
+\section{Workspace Setup}
+\chapter{Implementation}
+\section{Technology Stack}
+\section{Compiler deploy api testing}
+\section{Client Development}
+\section{Client Deployment}
+\chapter{Evaluation}
+\section{Cost analysis}
+\section{Cost analysis design}
+\section{Visualization}
+\chapter{Discussion}
+\section{Good}
+\section{Bad}
+\chapter{Conclusion}
 \bibliographystyle{ieee}
 \bibliography{ECS}
 \end{document}
