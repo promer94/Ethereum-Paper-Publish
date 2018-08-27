@@ -206,7 +206,7 @@ For a traditional publish model, it could be described as \ref{model}.
   \caption{Traditional publish model}
   \label{model}
 \end{figure}
-In this model, the power is centralized. Publishes takes all the responsibilities of filtering the good researches, 
+In this model, publishes takes all the responsibilities of filtering the good researches, 
 rejecting papers with methods that are insufficient to draw the stated conclusion and the distributing widely\cite{heller2014dynamic}. 
 The whole process is not transparent enough to the public.
 It is vital to make everyone equal in this system.
@@ -232,11 +232,43 @@ Based on this, we could have these simple user cases:
   \caption{Smart paper publish model}
   \label{smartPaper}
 \end{figure}
-The paper smart contract will be design based these requirements. 
-Based on the power of smart paper, we could have a new mechanism described as \ref{smartPaper}. 
+The smart paper be design based these requirements. 
+Based on the power of smart paper, we could have a new mechanism described as figure \ref{smartPaper}. 
 In this model, the whole process of publishing would not be controlled by any individuals or organizations.
-\section{Decentralize Application Workflow}
-\section{Workspace Setup}
+The smart paper consists of smart contracts which is used to implement those functionalities. 
+\section{Smart Contract}
+Three kinds of contracts, 
+which are RBAC(Role based access control), smartPaper and smartPaperList, 
+will be used in this project.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{uml.png}
+  \caption{Smart Paper Design}
+  \label{uml} 
+\end{figure}
+The initial design in design in \cite{Khoe:1994:CML:2288694.2294265} consider the single version of paper as a standalone contract.
+However, it will increase the cost of smart paper. The current design is more cheaper by making the single version just a special data structure.
+RBAC is a special contracts used for access managements. It maintain a hash table of the address of authors. 
+Every time authors want to publish or approve a new version, 
+RBAC will check the if authors belongs to this paper. 
+Smart paper contains all the core functionalities, 
+in the prototype application the hash of file will be stored instead of real file. The description and metadata will also stored in the contract.
+Author can use the smart paper contract to publish new versions, then others authors need to approve the new version.
+Once the new version is confirmed, 
+it would be public available to the reviewers.  
+The smart paper list contract is used to control all the smart paper and create new smart papers. 
+It is the entry point of application.
+\section{The Smart Paper workflow in Ethereum}
+To begin with, a description of paper, metadata of paper, an array of addresses of authors and the file is submitted by a writer. 
+The smart paper list will take those information and create a new smart paper contract which contains all the information. 
+Then all the authors need to use the new smart paper contract to approve the initial version. Once a new version is finished, 
+follow the same step, 
+writer need to use smart paper contract to release a new version by providing the new description, metadata and file.
+Then all the authors also need to approve the new version to make it public.
+The smart paper workflow involves multiple working versions with dynamic collaborators. 
+Version can become published and made available for annotating.
+The smart paper list contract will keep the records of all the smart paper create by itself. 
+User can access addresses of all the smart papers through this contract and check specific information of a paper by a specific address.
 \chapter{Implementation}
 \section{Technology Stack}
 \section{Compiler deploy api testing}
