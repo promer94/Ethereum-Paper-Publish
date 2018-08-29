@@ -3,7 +3,7 @@ import { Link } from '@reach/router'
 import { connect } from 'react-redux'
 import Loader from 'react-loaders'
 import { toast } from 'react-toastify'
-import { debounce } from 'lodash/debounce'
+import { debounce } from 'lodash'
 import PaperListItem from '../Component/PaperListItem'
 import { updatePaper } from '../action/action'
 
