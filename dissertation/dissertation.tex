@@ -1,4 +1,4 @@
-\documentclass [12pt]{report}
+\documentclass [11pt]{report}
   \usepackage{listings}
   \usepackage{color}
   \definecolor{lightgray}{rgb}{.9,.9,.9}
@@ -187,6 +187,7 @@ The system has been very successful attracting a large and dedicated community o
 The important contribution of Ethereum as the second generation of blockchain is that 
 it worked to extend the capacity of the technology from primary
 being a database to becoming more a general platform for running decentralized application and smart contracts.
+It provides developers with a powerful but simple turing-complete language called Solidity that used for build smart contracts.
 As of 2018 Ethereum is largest and most popular platform for building distributed application. 
 It has been a major step forward to become a global distributed computer, 
 a massive globally distributed cloud computing platform upon which we can run any application at scale and speed,
@@ -202,6 +203,9 @@ Authors will use the smart contract to publish their works and collaborate with 
 Once decision is made, smart contract will guarantee the result of decision won't be change by anyone.
 All the versions and meta data about contributions will be safely stored on the Ethereum.
 \chapter{Design}
+For a information system, the state flow and data structure are the two key point.
+The state flow is related to the service logic. It concerns how to operator data, how data changes. 
+The application interface and the implementation of interact should be built based on those information
 For a traditional publish model, it could be described as \ref{model}.
 \begin{figure}[H]
   \centering
@@ -211,8 +215,9 @@ For a traditional publish model, it could be described as \ref{model}.
 \end{figure}
 In this model, publishes takes all the responsibilities of filtering the good researches, 
 rejecting papers with methods that are insufficient to draw the stated conclusion and the distributing widely\cite{heller2014dynamic}. 
-The whole process is not transparent enough to the public.
-It is vital to make everyone equal in this system.
+The whole system is too centralized. 
+On the other hand, the process of producing paper is not transparent to the public. It is hard for authors to determine their contributions for the paper.
+The peer-review process is also not transparent enough. There should be a channel for authors and publishers to exchange those vital information.
 \section{Requirements}
 The first step of software developing is to identify the requirements from the specification,
 then finding the correspond user cases.
@@ -238,7 +243,36 @@ Based on this, we could have these simple user cases:
 The smart paper be design based these requirements. 
 Based on the power of smart paper, we could have a new mechanism described as figure \ref{smartPaper}. 
 In this model, the whole process of publishing would not be controlled by any individuals or organizations.
+Authors could use the smart paper to do their publishing which will keep the full records of producing process. 
+publisher could use smart paper to organize open peer-review. 
+The smart paper will be a powerful but user-friendly tool for both authors and publishers.
+Their contribution will be recorded permanently on the Ethereum. 
 The smart paper consists of smart contracts which is used to implement those functionalities. 
+\section{Data structure}
+The fundamental data unit for the smart contract used in these project is paper, 
+which could be created and managed by authors and be reviewed by reviewers.
+the paper has it own basic properties such as description, metadata, hash of files and the list of authors.
+Here are the properties that should be included in the paper contract:
+\begin{itemize}
+  \item \textbf{Description} the description of these paper, which help reviewer to understand the area of the paper.
+  \item \textbf{Metadata} the metadata of these paper, which contains the contributions, comments and all the other important metadata of the paper.
+  \item \textbf{latestMd5} the hash of files, which is the latest version.
+  \item \textbf{versionNumber} the number of latest version, which will shows the latest published version to the public.
+  \item \textbf{authorList} the list of Authors, which is the users who could control this contract
+  \item \textbf{versionList} the list of versions, which contains of all the version in these contract.
+  \item \textbf{isAuthor} a mapping of address to boolean value, which indicate that if the user is the author of paper.
+\end{itemize}
+The version of paper has complicated structure so we have to use a special keywords called 'struct' to construct it. 
+This keyword works like 'struct' in C programing language.
+For version, there are some properties:
+\begin{itemize}
+  \item \textbf{versionNumber} the unique Id for the current version.
+  \item \textbf{md5} the hash of current version.
+  \item \textbf{isPublished} the status of current version.
+  \item \textbf{isSigned} the mapping of address to boolean, which indicate if the author is agreed this version
+  \item \textbf{voterCount} the number of how many authors is agreed with this version, if the number is equal to number of authors, the state of version will be changed
+\end{itemize}
+These is the key design of the data structure of the project. The rest of design of the other contracts could be found at the source code.
 \section{Smart Contract}
 Three kinds of contracts, 
 which are RBAC(Role based access control), smartPaper and smartPaperList, 
@@ -273,10 +307,190 @@ Version can become published and made available for annotating.
 The smart paper list contract will keep the records of all the smart paper create by itself. 
 User can access addresses of all the smart papers through this contract and check specific information of a paper by a specific address.
 \chapter{Implementation}
-\section{Technology Stack}
-\section{Compiler deploy api testing}
-\section{Client Development}
-\section{Client Deployment}
+\section{New web service}
+What the Ethereum platform really provides with the developers is a new kind of fundamental infrastructure for the current web service.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{triditionalWebService.png}
+  \caption{Traditional Web Service}
+  \label{service} 
+\end{figure} 
+The traditional web service, which could be described as \ref{service}, is a too centralized system.
+The backend and database are fully controlled by cloud service providers. If developers want to store their data safely, 
+they have to chose those big companies such as Google and Amazon, which is expensive. 
+Otherwise, they may suffer from the data loss. 
+Cloud service providers have the admin accounts that could access all of the data even modify them without any permission.
+The blockchain technologies could change this situation. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{EthereumWeb.png}
+  \caption{Decentralized web service}
+  \label{newservice} 
+\end{figure}
+\ref{newservice} illustrates the new design of decentralized application. Developers will program the service into the contract. 
+For the project, all the functionalities of requirements will be coded into three contracts. The the contracts will be compiled into bytes code. 
+Those files will be hardcoded into the frontend source codes so that JavaScript will be able to use those contracts to interact with the Ethereum network.
+After receiving the information sent by the frontend, the Ethereum network will execute the code passed by the frontend, 
+changing the state of network and keep and record, 
+giving the response. The entire process does not need any cloud service provider. 
+All the data will store safely in a fully decentralized system. 
+Although the inner mechanism will change 
+but user will have almost the same experience as the current web service 
+since the frontend technology stack is the same.
+\section{Development workflow}
+The Ethereum network provide the developers with a tool called Remix \cite{remix}. 
+However, it has limited functionalities. 
+It could help the developers to deploy the contract and only allow the developers to test the contract by hands.
+It does provide the source control for Solidity. There is another open source called truffle \cite{truffle}, 
+which is the most popular development framework for Ethereum. But truffle itself is too complicated. For these project, 
+it is really important that we should a deep understanding about the new technology. The best choice is to create our own developing workflow.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{developWorkFlow.png}
+  \caption{Development workflow}
+  \label{develop} 
+\end{figure}
+Inspiring by the truffle and remix, we could establish a basic workflow based on JavaScript ecosystem, which could be described as \ref{develop}.
+After finishing the smart contract, Solc \cite{solc} which is Solidity compiler written in JavaScript will be used to compiled the source code.
+Then web3.js and the compiled smart contracts will be used for tested by jest which is a JavaScript test framework. 
+After passing all the test, the contracts will be deployed on the Ethereum test network by Ganache.
+Then with the UI code, user will be able to use the application to do the academic publishing.
+\section{Workspace setup}
+Before starting write code, some prerequisites should be satisfied
+\begin{itemize}
+  \item \textbf{Git} Version control
+  \item \textbf{Node.js} The major technology stack of the project is the JavaScript.
+  \item \textbf{Npm} The nodejs package manager, which will help us to manage tools like Solc and Jest.
+  \item \textbf{Text editor} It is suggested to use Vscode. 
+\end{itemize}
+After setting all the environment, a workspace should be initialed for the future development, 
+which contains these directory:
+\begin{itemize}
+  \item \textbf{contracts} store the contracts source code
+  \item \textbf{compiled} store the compiled contract
+  \item \textbf{scripts} scripts used to start compile, test and deploy.
+  \item \textbf{test} define how test will conducted. 
+  \item \textbf{package.json} used for npm to manager the project.
+\end{itemize}  
+\section{The Paper contract}
+\subsection{Source code}
+\begin{lstlisting}[language=Solidity]
+  pragma solidity ^0.4.24;
+  contract SmartPaper is AuthorList{
+    struct Version{
+        uint versionNumber;
+        bytes32 versionDescription;
+        bytes32 metaData;
+        bool isPublished;
+        mapping (address => bool) signs;
+        uint voterCount;
+    }
+    bytes32 private latestDescription;
+    bytes32 private latestMetaData;
+    bytes16 private latestPaper;
+    uint public latestVersion;
+    address private newAuthor; 
+    uint private agreeCount;
+    address[] public authors;
+    mapping(address => bool) isAuthor;
+    mapping(address => bool) isAgree;
+    bytes16[] public md5List;
+    Version[] public versions;
+    mapping (bytes16 => Version) public versionMap;
+    constructor (bytes32 _description, bytes32 _metaData, bytes16 _paperMD5, address[] _authors) public{
+        require(_authors.length > 0, "Invalid authors list");
+        authors = _authors;
+        latestPaper = _paperMD5;
+        md5List.push(latestPaper);
+        latestMetaData = _metaData;
+        latestDescription = _description;
+        uint versionNumber = uint(1); 
+        addAddressesToAuthorList(_authors);
+        Version memory newVersion = Version({
+            versionNumber: versionNumber,
+            versionDescription:latestDescription,
+            metaData:latestMetaData,
+            isPublished:false,
+            voterCount:1
+        });
+        versions.push(newVersion);
+        versions[0].signs[msg.sender] = true;
+        versionMap[latestPaper] = newVersion; 
+        for(uint256 i = 0; i < _authors.length; i++){
+            isAuthor[_authors[i]] = true;
+            isAgree[_authors[i]] = false;
+        }       
+    }
+    function checkIn() public onlyIfAuthor(msg.sender) payable{
+        require(versions[0].signs[msg.sender] == false, "Ban");
+        versions[0].signs[msg.sender] = true;
+        versions[0].voterCount++;
+        if(versions[0].voterCount == authors.length + 1){
+            versions[0].isPublished = true;
+            latestVersion = versions[0].versionNumber;
+        }
+        versionMap[md5List[0]] = versions[0];
+    }
+    function createNewVersion(bytes32 versionDescription, bytes32 metaData, bytes16 md5) public
+    onlyIfAuthor(msg.sender) payable {
+        uint versionNumber = latestVersion + 1;
+        Version memory newVersion = Version({
+            versionNumber: versionNumber,
+            versionDescription:versionDescription,
+            metaData:metaData,
+            isPublished:false,
+            voterCount:1
+        });
+        md5List.push(md5);
+        versions.push(newVersion);
+        versionMap[md5] = newVersion;
+    }
+    function addNewAuthor(address _newAuthor) public onlyIfAuthor(msg.sender) payable{
+        require(newAuthor==address(0), "Ban");
+        newAuthor = _newAuthor;
+        agreeCount = 0;
+    }
+    function approveNew(address _newAuthor) public onlyIfAuthor(msg.sender) payable{
+        require(newAuthor == _newAuthor,"BAN");
+        agreeCount++;
+        isAgree[msg.sender] = true;
+        if(agreeCount == authors.length){
+            addAddressToAuthor(newAuthor);
+            authors.push(newAuthor);
+            isAuthor[newAuthor] = true;
+            newAuthor = address(0);
+            agreeCount = 0;
+            for(uint i = 0; i<authors.length; i++){
+                isAgree[authors[i]] = false;
+            }
+        }
+    }
+    function approveVersion(uint _versionNumber, bytes16 md5)  public onlyIfAuthor(msg.sender) payable{
+        Version storage version = versions[_versionNumber-1];
+        require(!version.signs[msg.sender], "BAN");
+        version.signs[msg.sender] = true;
+        version.voterCount++;
+        if(version.voterCount==authors.length + 1){
+            version.isPublished = true;
+            latestVersion = version.versionNumber;
+            latestDescription = version.versionDescription;
+            latestMetaData = version.metaData;
+            latestPaper = md5;
+            versionMap[md5] = version;
+            require(versionMap[md5].versionNumber == versions[_versionNumber-1].versionNumber, "BAN");
+            require(versionMap[md5].versionDescription == versions[_versionNumber-1].versionDescription, "BAN");
+            require(versionMap[md5].isPublished == versions[_versionNumber-1].isPublished, "BAN");
+            require(versionMap[md5].metaData == versions[_versionNumber-1].metaData, "BAN");
+            require(versionMap[md5].voterCount == versions[_versionNumber-1].voterCount, "BAN");
+            require(latestVersion == versions[_versionNumber-1].versionNumber, "BAN");
+        }
+        versionMap[md5] = version;
+    }
+} 
+\end{lstlisting}
+It could be noticed that the implementation of Paper contract is more complicated than the design. 
+There are some extra private properties to help contract to manage the internal state. 
+It has six major public application interface.
 \chapter{Evaluation}
 \section{Cost analysis}
 \section{Cost analysis design}
