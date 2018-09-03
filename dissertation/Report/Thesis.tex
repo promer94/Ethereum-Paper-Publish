@@ -1,5 +1,12 @@
-\documentclass [11pt]{report}
-  \usepackage{listings}
+%% ----------------------------------------------------------------
+%% Thesis.tex
+%% ---------------------------------------------------------------- 
+\documentclass{ecsthesis}      % Use the Thesis Style
+% Location of your graphics files
+\usepackage[numbers]{natbib}            % Use Natbib style for the refs.
+\hypersetup{colorlinks=true}   % Set to false for black/white printing
+\input{Definitions}            % Include your abbreviations
+\usepackage{listings}
   \usepackage{color}
   \definecolor{lightgray}{rgb}{.9,.9,.9}
   \definecolor{darkgray}{rgb}{.4,.4,.4}
@@ -40,24 +47,43 @@
     showtabs=false,
     captionpos=b
   }
-  
-\title{Distributed ledgers application in Science: Smart
-Papers on the Ethereum}
-\author{YixuanXu (yx5u17@ecs.soton.ac.uk)\\University of Southampton}
-
+%% ----------------------------------------------------------------
 \begin{document}
+\frontmatter
+\title      {Distributed ledgers application in Science: \\
+Smart Papers on the Ethereum}
+\authors    {\texorpdfstring
+             {\href{mailto:yx5u17@soton.ac.uk}{Yixuan Xu}}
+             {Yixuan Xu}
+            }
+
+\supervisors{\texorpdfstring
+             {\href{e.simperl@soton.ac.uk}{Professor Elena Simperl}}
+             {Professor Elena Simperl}
+            }
+
+\examiners  {\texorpdfstring
+             {\href{mailto:gvm@ecs.soton.ac.uk}{Dr Geoff Merrett
+             }}
+             {Dr Geoff Merrett}
+            }
+
+\addresses  {\deptname\\\univname}
+\date       {\today}
+			
+\subject    {}
+\keywords   {}
 \maketitle
-\newpage
-\tableofcontents
-\newpage
-\listoffigures
-\newpage
-\listoftables
-\newpage
 \begin{abstract}
-	This work is all about \dots
+This work is all about \dots
 \end{abstract}
-\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+%\lstlistoflistings
+%\dedicatory{To \dots}
+\mainmatter
+%% ----------------------------------------------------------------
 \chapter{Introduction}
 \section{Project aim}
 \paragraph{}Digitization and Web technologies are now changing the way of publishing and disseminating the knowledge.
@@ -138,7 +164,7 @@ It could be found that modern publishing system requires more transparent review
 The current Blockchain technologis have huge potential in aspect of creating decentralized application. So it could be found that all of above platform are 
 using the Ethereum \cite{buterin2013ethereum} as their core framework. 
 \section{Blockchain}
-\paragraph{Technology}
+\subsection{Technology}
 On its most basic level, 
 the blockchain is a new kind of information technology 
 which is the combination of encryption methods with distributed computing.
@@ -175,7 +201,7 @@ which is powered by open source community and encryption.
 It is tamper proof, once information is put into the database it can not be altered. 
 It is a shared database as many people would have a up-to-date copy so that all have a single source of truth.
 Likewise, it is transparent, all the transactions and alteration made to the blockchain is visible to everyone.
-\paragraph{Ethereum}
+\subsection{Ethereum}
 With in a few years,
 the second generation of blockchain emerged design as a network on which developers could build applications. 
 It is going to be more like a distributed virtual computer than just database.
@@ -309,21 +335,21 @@ User can access addresses of all the smart papers through this contract and chec
 \chapter{Implementation}
 \section{New web service}
 What the Ethereum platform really provides with the developers is a new kind of fundamental infrastructure for the current web service.
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{triditionalWebService.png}
-  \caption{Traditional Web Service}
-  \label{service} 
-\end{figure} 
 The traditional web service, which could be described as \ref{service}, is a too centralized system.
 The backend and database are fully controlled by cloud service providers. If developers want to store their data safely, 
 they have to chose those big companies such as Google and Amazon, which is expensive. 
 Otherwise, they may suffer from the data loss. 
 Cloud service providers have the admin accounts that could access all of the data even modify them without any permission.
-The blockchain technologies could change this situation. 
+The blockchain technologies could change this situation.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{EthereumWeb.png}
+  \includegraphics[width=0.6\textwidth]{triditionalWebService.png}
+  \caption{Traditional Web Service}
+  \label{service} 
+\end{figure} 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{EthereumWeb.png}
   \caption{Decentralized web service}
   \label{newservice} 
 \end{figure}
@@ -346,7 +372,7 @@ which is the most popular development framework for Ethereum. But truffle itself
 it is really important that we should a deep understanding about the new technology. The best choice is to create our own developing workflow.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{developWorkFlow.png}
+  \includegraphics[width=0.6\textwidth]{developWorkFlow.png}
   \caption{Development workflow}
   \label{develop} 
 \end{figure}
@@ -508,7 +534,7 @@ These contract also provides user with many useful tools which is free.
 Since the smart contract has finished, the next step would be compile these contracts by Solc.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{compile.png}
+  \includegraphics[width=0.6\textwidth]{compile.png}
   \caption{Compile Result}
   \label{compile} 
 \end{figure}
@@ -521,7 +547,7 @@ It could also help the client side to implements the functionality of searching.
 The next step for development flow is testing.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{test.png}
+  \includegraphics[width=0.6\textwidth]{test.png}
   \caption{Test Result}
   \label{test} 
 \end{figure}
@@ -533,6 +559,8 @@ Those tests could give a strong fundamental base to iterate the development of c
 \section{Good}
 \section{Bad}
 \chapter{Conclusion}
+\backmatter
 \bibliographystyle{ieee}
 \bibliography{ECS}
 \end{document}
+%% ----------------------------------------------------------------
