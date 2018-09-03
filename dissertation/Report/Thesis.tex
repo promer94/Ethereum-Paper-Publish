@@ -1,10 +1,10 @@
 %% ----------------------------------------------------------------
 %% Thesis.tex
 %% ---------------------------------------------------------------- 
-\documentclass{ecsthesis}      % Use the Thesis Style
+\documentclass[openany,12pt]{ecsthesis}      % Use the Thesis Style
 % Location of your graphics files
 \usepackage[numbers]{natbib}            % Use Natbib style for the refs.
-\hypersetup{colorlinks=true}   % Set to false for black/white printing
+\hypersetup{colorlinks=false}   % Set to false for black/white printing
 \input{Definitions}            % Include your abbreviations
 \usepackage{listings}
   \usepackage{color}
@@ -334,6 +334,12 @@ The smart paper list contract will keep the records of all the smart paper creat
 User can access addresses of all the smart papers through this contract and check specific information of a paper by a specific address.
 \chapter{Implementation}
 \section{New web service}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{triditionalWebService.png}
+  \caption{Traditional Web Service}
+  \label{service} 
+\end{figure}
 What the Ethereum platform really provides with the developers is a new kind of fundamental infrastructure for the current web service.
 The traditional web service, which could be described as \ref{service}, is a too centralized system.
 The backend and database are fully controlled by cloud service providers. If developers want to store their data safely, 
@@ -343,13 +349,7 @@ Cloud service providers have the admin accounts that could access all of the dat
 The blockchain technologies could change this situation.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{triditionalWebService.png}
-  \caption{Traditional Web Service}
-  \label{service} 
-\end{figure} 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.6\textwidth]{EthereumWeb.png}
+  \includegraphics[width=0.8\textwidth]{EthereumWeb.png}
   \caption{Decentralized web service}
   \label{newservice} 
 \end{figure}
@@ -372,7 +372,7 @@ which is the most popular development framework for Ethereum. But truffle itself
 it is really important that we should a deep understanding about the new technology. The best choice is to create our own developing workflow.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{developWorkFlow.png}
+  \includegraphics[width=0.8\textwidth]{developWorkFlow.png}
   \caption{Development workflow}
   \label{develop} 
 \end{figure}
@@ -534,7 +534,7 @@ These contract also provides user with many useful tools which is free.
 Since the smart contract has finished, the next step would be compile these contracts by Solc.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{compile.png}
+  \includegraphics[width=0.8\textwidth]{compile.png}
   \caption{Compile Result}
   \label{compile} 
 \end{figure}
@@ -547,14 +547,118 @@ It could also help the client side to implements the functionality of searching.
 The next step for development flow is testing.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{test.png}
+  \includegraphics[width=0.8\textwidth]{test.png}
   \caption{Test Result}
   \label{test} 
 \end{figure}
-There are 19 unit tests for those two key contracts which means all the functionalities are tested. 
-Those tests could give a strong fundamental base to iterate the development of contracts.
-\section{Cost analysis design}
-\section{Visualization}
+Testing is really implement for the robustness of software. 
+JavaScript ecosystem has lots of useful tools to help us do the.
+Jest, which is a JavaScript test framework, 
+provides us with useful information about the result of tests in the terminal.
+There are 19 unit tests for those two key contracts which means all the functionalities are tested. Although tests cannot eliminate bugs,
+those tests could give a strong fundamental base to iterate the development of contracts. Every time the contracts code changes, 
+all the test will be re-run to make sure the changes won't break the previous code. 
+New test should be added if there are new functionalities.
+\subsection{Deploy}
+The last step for development flow is deploying. 
+The contracts have be deployed on the Ethereum network to become a public service.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{deploy.png}
+  \caption{Deploy Result}
+  \label{deploy} 
+\end{figure}
+A smartPaperList contract will be deployed, which is the entry point of the application.
+The contract will be used to keep track of 
+all the smart papers created under this contract 
+so that user does not need to remember every addresses of their smart papers. 
+The development process is also a transaction. 
+In \ref{deploy}, the hash of transaction is displayed for developer to check. 
+Once a transaction is finished, 
+the address of smartPaperList contract will be returned and stored on disk. 
+The address will be used for the application development. 
+The authors will use this address to use smartPaperList to create smart paper instead of directly creating the smart paper.
+It is more convenient for authors to manage their papers.
+\subsection{Continues Integration}
+Since the workflow has been established, we would like to automate the whole process rather than running them by head.
+In this project, the GitLab CI is used for continue integration. 
+Once a new version is pushed onto GitLab, 
+it will have a pipeline that run the three steps of development workflow.
+Once all the steps is successful, the continues integration will pass. 
+This could really help to have a better robustness of our project.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{ci.png}
+  \caption{Continues Integration Result}
+  \label{ci} 
+\end{figure}
+\section{Client development}
+The user of the client would be authors and reviewers. 
+Author will create papers, approve papers, create versions and approve versions. 
+For a Ethereum application, there is no need for user system. 
+Authors and reviewers just need to use their accounts of the Ethereum. 
+However, the application do need a Ethereum wallet. Users have to download a Ethereum wallet in advance,
+which is the only part that is different from the current web service.
+We chose the MetaMask which is a really user-friendly Ethereum wallet for the client.
+For a typical web application, the flow of the information would be list -- details -- interact. 
+In the application, it would be:
+\begin{itemize}
+  \item List of paper -- details of a specific paper -- Add new paper
+  \item Details of a specific paper -- list of versions -- Add new version or new author
+\end{itemize}
+So that we need three forms to help the authors to submit their jobs.
+\begin{itemize}
+  \item \textbf{The new paper form} this form will be used for authors to create a new paper. the address of new paper will be stored in paper list
+  \item \textbf{The new version form} this form will be used for authors to create a new version. The paper will have a list of version.
+  \item \textbf{The new author form} this form will be used for authors to add a new author.
+\end{itemize}
+The client is a modern JavaScript single page application implemented by React.js \cite{react}.
+The source code could be found at \href{https://gitlab.com/yixuanxu94/Ethereum-Paper-Publish}{Ethereum-Paper-Publish}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{app1.png}
+  \caption{List of smart paper}
+  \label{list} 
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{app2.png}
+  \caption{The new paper form}
+  \label{form}
+\end{figure}
+\chapter{Evaluation}
+The aim of the project is to do the cost analysis of the application implemented in chapter 4.
+This would be the key index for the evaluation of the project.
+\section{Cost analysis}
+\subsection{Ecosystem in ethereum}
+Before doing the cost analysis, the first step is to understand the ecosystem in the ethereum.
+\subsubsection{Gas}
+Each low level operations available in the Ethereum network is called OPCODE. It contains some operations such as ADD, CREATE.
+Those OPCODEs comes with a number called 'gas'. Gas is an abstract number that represented the complexity of the current operation.
+Typically, ADD will use three gas and MUL will use five gas, it could be noticed that MUL is more complex than ADD. What's more, 
+all the transactions will cost 210000 gas as a base.
+\subsubsection{Gas price}
+Gas is fixed per operation, but the price of gas is dynamic and is determined by the market. 
+Gas price is the value that represents how much Ether the user is going to pay per user. When users send transactions, they will be asked to set a gas price.
+The miners will be paid out this fee, so the transactions with higher gas price will be recorded with higher priority. The actual cost would be:
+\begin{equation}
+  totalCost = gasPrice * gasUsed
+\end{equation}
+\subsubsection{Gas limit}
+Gas limit refers to the maximum amount of gas that can be used for a single transaction.
+More computational work need higher gas limit. For our analysis, we using the default gas limit which is 2100000 gas.
+Gas limit is a special mechanism to prevent user from spending two much Ether due to buggy codes or errors on the Ethereum network. 
+\subsection{Result}
+In project, the cost of creating a new paper and releasing a new version are the two major index that matters.
+After doing some experiment, it is found out that the key factor which would affect the cost is the number of authors.
+After using the automate testing scripts to collect the data, the result is visualized.
+\subsubsection{The cost of creating a new paper}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{papercost.png}
+  \caption{The cost of creating a new version}
+  \label{papercost}
+\end{figure}
 \chapter{Discussion}
 \section{Good}
 \section{Bad}
