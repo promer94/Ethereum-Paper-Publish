@@ -648,17 +648,224 @@ The miners will be paid out this fee, so the transactions with higher gas price 
 Gas limit refers to the maximum amount of gas that can be used for a single transaction.
 More computational work need higher gas limit. For our analysis, we using the default gas limit which is 2100000 gas.
 Gas limit is a special mechanism to prevent user from spending two much Ether due to buggy codes or errors on the Ethereum network. 
-\subsection{Result}
+\subsection{Visualization and analysis}
 In project, the cost of creating a new paper and releasing a new version are the two major index that matters.
 After doing some experiment, it is found out that the key factor which would affect the cost is the number of authors.
+Some test scripts were written by changing the number of authors 
+but setting default value for rest of arguments which is submitted to the Ethereum network
 After using the automate testing scripts to collect the data, the result is visualized.
 \subsubsection{The cost of creating a new paper}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{papercost.png}
+  \includegraphics[width=0.9\textwidth]{papercost.png}
   \caption{The cost of creating a new version}
   \label{papercost}
 \end{figure}
+Let's start with the cost of publishing a new Paper. 
+The red-line indicates that the linear relationship between the number of authors and the total cost of deploying a new paper contract. And the red-line does not pass the zero point, 
+which means there is fundamental cost for creating a paper. Because all the transactions will cost some gas as a base.
+Under the default gas limit, the max number of authors is 71. The blue-line is the average cost for a single user to create a new paper.
+In order to explain the reason for the shape of these two lines, we need firstly recap some knowledge about the Ethereum. 
+Comparing to the Bitcoin, the Ethereum has the featuring to do complex computation on the blockchain. 
+A miner execute the computation associated with each transaction, resulting in an updated state. Upon successfully mining a block, miner will be rewarded based on the computation cost.
+The OPCODEs determines the cost of the transactions. Revisiting the source code of smart contract, there are:
+\begin{lstlisting}[language=Solidity]
+  function createPaper(bytes32 _description, bytes32 _metaData, bytes16 _paperMD5, address[] _authors){
+    ...//
+}
+\end{lstlisting}
+This is the public interface of creating a new smart paper. It requires four arguments to executing it. 
+The inner logic is actually simple which is just storing all the arguments on the Ethereum. 
+However, the fourth arguments is a dynamic array. 
+When the Ethereum tries to store the array, it has to iterate it. if n is the length of the list of authors,
+the Ethereum need to take n steps to copy it. The same OPCODEs used for copy addresses and store addresses would be execute n times. 
+It could be found that this mechanism is really similar to the time complexity used in computer science. 
+For the first three arguments which are fixed-size arrays, the cost would be a constant number which could be described as O(1).
+For an array with n elements, the cost would be O(N), which means a linear growth speed. 
+Added up the cost, the total cost should be O(N) which is exactly the result of the visualization.
+So the math model of the cost of creating a paper could be described as:
+\begin{equation}
+  totalCost = numOfAuthors * A + B
+\end{equation}
+\begin{equation}
+  averageCost = A + B/numOfAuthors
+\end{equation}
+The number of the result that shows on the visualization is not precise 
+because it was from the local test network. 
+The gas used for each OPCODE is different from the real Ethereum network. 
+But the math model for the cost of creating papers should be the same. 
+Since the math model is a simple linear model, 
+the actual cost could be estimated by sampling some data points.
+\begin{table}[H] 
+  \centering
+  \caption{Cost on the Rinkeby Test Network}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline Number of Author & 1 & 2&3&4  \\
+  \hline Cost of creating a new paper &£0.45&£0.47&£0.49&£0.51\\
+  \hline
+ \end{tabular}
+\end{table}
+The table presents the sample data that were acquired from the Rinkeby Test Network, which is a real Ethereum test network.
+Then the data were used to calculated the index of equation (5.2). 
+so there is:
+\begin{equation}
+  totalCost = numOfAuthors * 0.02 + 0.4300
+\end{equation}
+From these equation, the actual cost of creating a new paper on Rinkeby Test Network could be visualized as below.
+The base cost is £0.45 per paper. 
+Every new user will cost extra £0.02. 
+It also should be noticed that the author who create the paper would pay more to the Ethereum network.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{apapercost.png}
+  \caption{Cost of creating a paper on Rinkeby Test Network}
+  \label{creatingpaper} 
+\end{figure}
+Although the total cost will increase with respect to the growth of authors, 
+the blue-line in \ref{papercost} indicates that the average cost for a single user is actually decreasing.
+The system encourage authors to collaborate.
+\subsubsection{The cost of publising a new version}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{versioncost.png}
+  \caption{The cost of publishing a new version}
+  \label{versioncost}
+\end{figure}
+Another number that this project is really cared about is the cost of publishing a new version.
+According to \ref{versioncost}, it indicate the same relationship as the cost of creating a paper.
+But if we check out code
+\begin{lstlisting}[language=Solidity]
+  function createNewVersion(bytes32 versionDescription, bytes32 metaData, bytes16 md5){
+    ...//
+}
+\end{lstlisting}
+The three arguments are all fix-sized arrays. 
+Using the same mechanism to analysis, it should give us a constant complexity which means a fixed number.
+There should not be a linear relationship. 
+After checking the test scripts, it was found out that the cost of publishing a new version consist two parts.
+Every time there is a new version, all the authors need to approve it to make it published.
+\begin{equation}
+  costOfNewVersion = costOfCreate + numOfAuthors * costOfApprove
+\end{equation}
+Rewriting the test scripts, the new visualizations are below.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{cversioncost.png}
+  \caption{The cost of create a new version}
+  \label{fxxk1}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{fxxk.png}
+  \caption{The cost of approve a new version}
+  \label{fxxk1}
+\end{figure}
+Adding up these two numbers, it will result in figure \ref{versioncost}.
+For the same reason, the number of the result is not accurate because it wa from the local test network.
+We need to do sampling on the Rinkeby Test Network, then using the data to calculate the index for the linear model.
+\begin{table}[H] 
+  \centering
+  \caption{Cost on the Rinkeby Test Network}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline Number of Author & 1 & 2&3&4  \\
+  \hline Cost of publishing a version &£0.28&£0.34&£0.40&£0.46\\
+  \hline
+ \end{tabular}
+\end{table}
+Using the data to calculate the equation below.
+\begin{equation}
+  costOfVersion = numOfAuthors * A + B
+\end{equation}
+The result would be
+\begin{equation}
+  costOfVersion = numOfAuthors * 0.06 + 0.22
+\end{equation}
+The cost of creating a new version is £0.22 per version. Every extra author will cost £0.06.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{rversioncost.png}
+  \caption{The cost of publishing a new version on Rinkeby Test Network}
+  \label{fxxk1}
+\end{figure}
+\subsubsection{the cost of approve a version}
+When doing the sampling on Rinkeby test network, 
+it turned out that not all of the authors will pay same amount to the Ethereum.
+The real amount that every author will pay is shown below.
+\begin{table}[H] 
+  \centering
+  \caption{Cost of approve}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline  Authors & Author 1 & Author 2 & Author 3& Author 4\\
+  \hline Cost of approve & £0.058 & £0.058 & £0.058 & £0.12 \\
+  \hline
+ \end{tabular}
+\end{table}
+The last author will have to pay more to the Ethereum network. 
+This is because of the implementation of the approving function.
+\begin{lstlisting}[language=Solidity]
+  function approveVersion(uint _versionNumber, bytes16 md5)  public onlyIfAuthor(msg.sender) payable{
+        Version storage version = versions[_versionNumber-1];
+        require(!version.signs[msg.sender], "BAN");
+        version.signs[msg.sender] = true;
+        version.voterCount++;
+        if(version.voterCount==authors.length + 1){
+            version.isPublished = true;
+            latestVersion = version.versionNumber;
+            latestDescription = version.versionDescription;
+            latestMetaData = version.metaData;
+            latestPaper = md5;
+            versionMap[md5] = version;
+            require(versionMap[md5].versionNumber == versions[_versionNumber-1].versionNumber, "BAN");
+            require(versionMap[md5].versionDescription == versions[_versionNumber-1].versionDescription, "BAN");
+            require(versionMap[md5].isPublished == versions[_versionNumber-1].isPublished, "BAN");
+            require(versionMap[md5].metaData == versions[_versionNumber-1].metaData, "BAN");
+            require(versionMap[md5].voterCount == versions[_versionNumber-1].voterCount, "BAN");
+            require(latestVersion == versions[_versionNumber-1].versionNumber, "BAN");
+        }
+        versionMap[md5] = version;
+    }
+}
+\end{lstlisting}
+The source code indicates that when last authors approve the version, 
+there will some extra operations need to be executing. 
+The status of the version will be changed to 'published', 
+the list of the hash of files and latest version number will be updated.
+These extra OPCODEs will consume extra gas so that tha last one would have to pay more to the Ethereum network.
+\subsubsection{Result}
+In general, the price of using the prototype application implemented in chapter 4 is lower than the estimated.
+The cost of creating a papers with 4 authors would be £0.49 and cost of publishing a new version would be £0.46.
+Comparing to hundreds of dollars of publication fee, it seem really attractive. 
+However, the application itself is just a prototype with limit functionalities. 
+The files are not even stored in the application. 
+The low cost comes from the simplified data structure. 
+Another important reason is the price of the Ether. Currently, the price is about £250. 
+But the highest price of Ether is £1250. The price of the ethereum is really unstable.
+Actually we are caught in a dilemma. If the price of the Ethereum is high, 
+it will attract more node to participate in the network. 
+So we could have more stable and secure application. But it would be expensive.
+If the price of the Ethereum is low, it will lead to a weak decentralized network.
+The application could be unstable and less secure even though it would be cheaper. 
+Comparing to the centralized service, it would not have any advantages. 
+The Ethereum network in fact has another vital feature which is not covered in this project.
+It could be used to build your own Cryptocurrency. 
+It is really important for a decentralized application to have it own ecosystem. More details will be discussed at chapter 6.
+\section{Project Management}
+\subsection{Open source}
+There are many open source libraries and resource used in this project to improve the quality.
+\begin{itemize}
+  \item \textbf{Node.js} An open source JavaScript runtime, which is the fundamental technology stack of the project
+  \item \textbf{Npm} Node.js package manager.
+  \item \textbf{Solc} Solidity compiler implemented in JavaScript.
+  \item \textbf{Ganache} Local Ethereum test network
+  \item \textbf{truffle-hdwallet-provider} Tools for deploying smart contract
+  \item \textbf{Web3} This is the Ethereum compatible JavaScript API which implements the Generic JSON RPC spec
+  \item \textbf{Jest} JavaScript test framework used to test the smart contract.
+  \item \textbf{React.js} JavaScript framework for building user interface.
+  \item \textbf{Redux} State management for React.js
+\end{itemize}
+All the resource used in the project are correctly cited with respect to the requirements of their license
+\subsection{Risk management}
+It is an extremely important task to measuring
 \chapter{Discussion}
 \section{Good}
 \section{Bad}
