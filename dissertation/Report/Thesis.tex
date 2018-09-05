@@ -1,10 +1,9 @@
-%% ----------------------------------------------------------------
 %% Thesis.tex
 %% ---------------------------------------------------------------- 
 \documentclass[openany,12pt]{ecsthesis}      % Use the Thesis Style
 % Location of your graphics files
 \usepackage[numbers]{natbib}            % Use Natbib style for the refs.
-\hypersetup{colorlinks=false}   % Set to false for black/white printing
+\hypersetup{colorlinks=true}   % Set to false for black/white printing
 \input{Definitions}            % Include your abbreviations
 \usepackage{listings}
   \usepackage{color}
@@ -75,8 +74,20 @@ Smart Papers on the Ethereum}
 \keywords   {}
 \maketitle
 \begin{abstract}
-This work is all about \dots
+This work is all about using the modern web technology to help authors to do academic publishing.
+Current publishing system is powerful and advanced. 
+But it can still be improved by the Ethereum network. In this project, a model called smart paper will be used. 
+It enables authors to collaborate with each others and help authors to manage their publications. 
+The publications are dynamic in the smart paper, which means user can renew the paper with a new version. 
+It encourage the reuse of text. 
+All the functionality will be implemented by the programing language called Solidity which is provided by the Ethereum.
+The development flow were based on the ecosystem of JavaScript. The user interface will also be built on JavaScript. 
+A detailed cost analysis of the application is provided in this dissertation, 
+which is also the major index used for evaluation. 
+There is also a discussion about the developer experience, cost for a decentralized application and my personal thoughts about the blockchain technology
+
 \end{abstract}
+\setcounter{tocdepth}{3}
 \tableofcontents
 \listoffigures
 \listoftables
@@ -229,9 +240,9 @@ Authors will use the smart contract to publish their works and collaborate with 
 Once decision is made, smart contract will guarantee the result of decision won't be change by anyone.
 All the versions and meta data about contributions will be safely stored on the Ethereum.
 \chapter{Design}
-For a information system, the state flow and data structure are the two key point.
+For a information system, the state flow and data structure are the two key points.
 The state flow is related to the service logic. It concerns how to operator data, how data changes. 
-The application interface and the implementation of interact should be built based on those information
+The application interface and the implementation of interact should be built based on those information.
 For a traditional publish model, it could be described as \ref{model}.
 \begin{figure}[H]
   \centering
@@ -240,24 +251,24 @@ For a traditional publish model, it could be described as \ref{model}.
   \label{model}
 \end{figure}
 In this model, publishes takes all the responsibilities of filtering the good researches, 
-rejecting papers with methods that are insufficient to draw the stated conclusion and the distributing widely\cite{heller2014dynamic}. 
+rejecting papers with methods that are insufficient to draw the stated conclusion and the distributing the papers widely\cite{heller2014dynamic}. 
 The whole system is too centralized. 
 On the other hand, the process of producing paper is not transparent to the public. It is hard for authors to determine their contributions for the paper.
 The peer-review process is also not transparent enough. There should be a channel for authors and publishers to exchange those vital information.
 \section{Requirements}
 The first step of software developing is to identify the requirements from the specification,
-then finding the correspond user cases.
-The aim of this project is to provide a prototype of decentralize application 
-to help authors to manage their publish and their attribution agreements.
+then finding the user cases.
+The aim of this project is to develop a prototype of decentralize application 
+to help authors to manage their publications and their attribution agreements.
 Based on this, we could have these simple user cases:
 \begin{itemize}
   \item Researchers should have their identities based on addresses of their Ethereum accounts
   \item Researchers should be able to use smart contract to publish a research artifacts, which will be represented by the hash of files
   \item Researchers should be able approve the contracts that belongs to themselves after verifying their local files with the online files with respect to a specific version
-  \item The paper contracts should contains the description, metadata and version list of the research artifacts.
-  \item The contents of papers could be update with the agreements of all authors. 
+  \item The paper contracts should contain the description, metadata and version list of the research artifacts.
+  \item The content of papers could be update with the agreements of all authors. 
   \item New researchers could be added to an ongoing paper with the agreements of all the previous researchers.
-  \item The application should be open sourced and decentralized. Anyone could deploy their own instances.
+  \item The application should be open source and decentralized. Anyone could deploy their own instances.
   \item The review process could be community-driven and powered by publisher.
 \end{itemize}
 \begin{figure}[H]
@@ -273,7 +284,7 @@ Authors could use the smart paper to do their publishing which will keep the ful
 publisher could use smart paper to organize open peer-review. 
 The smart paper will be a powerful but user-friendly tool for both authors and publishers.
 Their contribution will be recorded permanently on the Ethereum. 
-The smart paper consists of smart contracts which is used to implement those functionalities. 
+The smart paper consists of smart contracts which are used to implement those functionalities. 
 \section{Data structure}
 The fundamental data unit for the smart contract used in these project is paper, 
 which could be created and managed by authors and be reviewed by reviewers.
@@ -298,7 +309,7 @@ For version, there are some properties:
   \item \textbf{isSigned} the mapping of address to boolean, which indicate if the author is agreed this version
   \item \textbf{voterCount} the number of how many authors is agreed with this version, if the number is equal to number of authors, the state of version will be changed
 \end{itemize}
-These is the key design of the data structure of the project. The rest of design of the other contracts could be found at the source code.
+These are the key design of the data structure of the project. The rest of design of the other contracts could be found at the source code.
 \section{Smart Contract}
 Three kinds of contracts, 
 which are RBAC(Role based access control), smartPaper and smartPaperList, 
@@ -309,28 +320,27 @@ will be used in this project.
   \caption{Smart Paper Design}
   \label{uml} 
 \end{figure}
-The initial design in design in \cite{Khoe:1994:CML:2288694.2294265} consider the single version of paper as a standalone contract.
+The initial design in \cite{Khoe:1994:CML:2288694.2294265} consider the single version of paper as a standalone contract.
 However, it will increase the cost of smart paper. The current design is more cheaper by making the single version just a special data structure.
-RBAC is a special contracts used for access managements. It maintain a hash table of the address of authors. 
+RBAC is a special contracts used for access managements. It will maintain a hash table of the address of authors. 
 Every time authors want to publish or approve a new version, 
-RBAC will check the if authors belongs to this paper. 
-Smart paper contains all the core functionalities, 
-in the prototype application the hash of file will be stored instead of real file. The description and metadata will also stored in the contract.
-Author can use the smart paper contract to publish new versions, then others authors need to approve the new version.
+RBAC will check the if user is the author of the current paper. 
+In the prototype application the hash of file will be stored instead of real file. The description and metadata will also stored in the contract.
+Author can use the smart paper contract to publish new versions, then other authors need to approve the new version.
 Once the new version is confirmed, 
-it would be public available to the reviewers.  
+it will be public available to the reviewers.  
 The smart paper list contract is used to control all the smart paper and create new smart papers. 
-It is the entry point of application.
+It will be the entry point of application.
 \section{The Smart Paper workflow in Ethereum}
-To begin with, a description of paper, metadata of paper, an array of addresses of authors and the file is submitted by a writer. 
-The smart paper list will take those information and create a new smart paper contract which contains all the information. 
+To begin with, a description of paper, metadata of paper, an array of addresses of authors and the file should be submitted by a writer. 
+The smartPaperList will take those information and create a new smart paper contract which contains all the information. 
 Then all the authors need to use the new smart paper contract to approve the initial version. Once a new version is finished, 
 follow the same step, 
 writer need to use smart paper contract to release a new version by providing the new description, metadata and file.
 Then all the authors also need to approve the new version to make it public.
 The smart paper workflow involves multiple working versions with dynamic collaborators. 
 Version can become published and made available for annotating.
-The smart paper list contract will keep the records of all the smart paper create by itself. 
+The smartPaperList contract will keep the records of all the smart papers created by itself. 
 User can access addresses of all the smart papers through this contract and check specific information of a paper by a specific address.
 \chapter{Implementation}
 \section{New web service}
@@ -343,7 +353,7 @@ User can access addresses of all the smart papers through this contract and chec
 What the Ethereum platform really provides with the developers is a new kind of fundamental infrastructure for the current web service.
 The traditional web service, which could be described as \ref{service}, is a too centralized system.
 The backend and database are fully controlled by cloud service providers. If developers want to store their data safely, 
-they have to chose those big companies such as Google and Amazon, which is expensive. 
+they have to chose those big companies such as Google and Amazon, which can be expensive. 
 Otherwise, they may suffer from the data loss. 
 Cloud service providers have the admin accounts that could access all of the data even modify them without any permission.
 The blockchain technologies could change this situation.
@@ -357,7 +367,7 @@ The blockchain technologies could change this situation.
 For the project, all the functionalities of requirements will be coded into three contracts. The the contracts will be compiled into bytes code. 
 Those files will be hardcoded into the frontend source codes so that JavaScript will be able to use those contracts to interact with the Ethereum network.
 After receiving the information sent by the frontend, the Ethereum network will execute the code passed by the frontend, 
-changing the state of network and keep and record, 
+changing the state of network and keep the record, 
 giving the response. The entire process does not need any cloud service provider. 
 All the data will store safely in a fully decentralized system. 
 Although the inner mechanism will change 
@@ -366,10 +376,10 @@ since the frontend technology stack is the same.
 \section{Development workflow}
 The Ethereum network provide the developers with a tool called Remix \cite{remix}. 
 However, it has limited functionalities. 
-It could help the developers to deploy the contract and only allow the developers to test the contract by hands.
-It does provide the source control for Solidity. There is another open source called truffle \cite{truffle}, 
-which is the most popular development framework for Ethereum. But truffle itself is too complicated. For these project, 
-it is really important that we should a deep understanding about the new technology. The best choice is to create our own developing workflow.
+It could help the developers to deploy the contract but only allows the developers to test the contract by hands.
+It does not provide the source control for Solidity. There is another open source project called truffle \cite{truffle}, 
+which is the most popular development framework for Ethereum. But truffle itself is too complicated. For our project, 
+it is really important that we should a deep understanding about the new technology. The best choice is to create our own development workflow.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{developWorkFlow.png}
@@ -378,8 +388,8 @@ it is really important that we should a deep understanding about the new technol
 \end{figure}
 Inspiring by the truffle and remix, we could establish a basic workflow based on JavaScript ecosystem, which could be described as \ref{develop}.
 After finishing the smart contract, Solc \cite{solc} which is Solidity compiler written in JavaScript will be used to compiled the source code.
-Then web3.js and the compiled smart contracts will be used for tested by jest which is a JavaScript test framework. 
-After passing all the test, the contracts will be deployed on the Ethereum test network by Ganache.
+Then web3.js and the compiled smart contracts will be used for tested by jest \cite{jest} which is a JavaScript test framework. 
+After passing all the test, the contracts will be deployed on the Ethereum test network by Ganache \cite{ganache}.
 Then with the UI code, user will be able to use the application to do the academic publishing.
 \section{Workspace setup}
 Before starting write code, some prerequisites should be satisfied
@@ -389,14 +399,14 @@ Before starting write code, some prerequisites should be satisfied
   \item \textbf{Npm} The nodejs package manager, which will help us to manage tools like Solc and Jest.
   \item \textbf{Text editor} It is suggested to use Vscode. 
 \end{itemize}
-After setting all the environment, a workspace should be initialed for the future development, 
+After setting the environment, a workspace should be initialed for the future development, 
 which contains these directory:
 \begin{itemize}
   \item \textbf{contracts} store the contracts source code
   \item \textbf{compiled} store the compiled contract
   \item \textbf{scripts} scripts used to start compile, test and deploy.
   \item \textbf{test} define how test will conducted. 
-  \item \textbf{package.json} used for npm to manager the project.
+  \item \textbf{package.json} used for npm to manage the project.
 \end{itemize}  
 \section{The Paper contract}
 \subsection{Source code}
@@ -520,18 +530,18 @@ It has six major public application interface which is design to satisfy the req
 One of the authors firstly create a paper by using the \textbf{createNewPaper(constructor)}, 
 then the other author need to use \textbf{checkIn} to approve the initial version.
 If a new version need to be published, an author will use \textbf{createNewVersion}. 
-All the other authors need to user \textbf{approveVersion} to make sure they have the consensus.
-If the team decide to add a new number, they could do that by \textbf{addNewAuthor} and \textbf{approveNewAuthor}.
-Every time the user want to use these function, 
+All the other authors need to use \textbf{approveVersion} to make sure they have the consensus.
+If the team decides to add a new number, they could do that by \textbf{addNewAuthor} and \textbf{approveNewAuthor}.
+Every time the user want to use these functions, 
 it will start a transaction on the Ethereum which means they need to pay for it.
 The transaction will be handled by a Ethereum wallet. It is typically a browser extension. 
 A popular example would be MetaMask \cite{metamask}. 
 It is vital to remind of users to download the extension to use the application.
 These contract also provides user with many useful tools which is free. 
-\textbf{isAuthor} is an example that can quickly check if an user belongs to this paper.
+\textbf{isAuthor} is an example that can quickly check if a user is the author of current paper.
 \section{Compile, Test, Deploy}
 \subsection{Compile}
-Since the smart contract has finished, the next step would be compile these contracts by Solc.
+Since the smart contract has finished, the next step would be compile these contracts by Solc \cite{solc}.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{compile.png}
@@ -552,16 +562,16 @@ The next step for development flow is testing.
   \label{test} 
 \end{figure}
 Testing is really implement for the robustness of software. 
-JavaScript ecosystem has lots of useful tools to help us do the.
-Jest, which is a JavaScript test framework, 
+JavaScript ecosystem has lots of useful tools to help us do that.
+Jest \cite{jest}, which is a JavaScript test framework, 
 provides us with useful information about the result of tests in the terminal.
 There are 19 unit tests for those two key contracts which means all the functionalities are tested. Although tests cannot eliminate bugs,
 those tests could give a strong fundamental base to iterate the development of contracts. Every time the contracts code changes, 
 all the test will be re-run to make sure the changes won't break the previous code. 
-New test should be added if there are new functionalities.
+New tests should be added if there are new functionalities.
 \subsection{Deploy}
 The last step for development flow is deploying. 
-The contracts have be deployed on the Ethereum network to become a public service.
+The contracts have to be deployed on the Ethereum network to become a public service.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{deploy.png}
@@ -572,7 +582,7 @@ A smartPaperList contract will be deployed, which is the entry point of the appl
 The contract will be used to keep track of 
 all the smart papers created under this contract 
 so that user does not need to remember every addresses of their smart papers. 
-The development process is also a transaction. 
+The process of deployment is also a transaction. 
 In \ref{deploy}, the hash of transaction is displayed for developer to check. 
 Once a transaction is finished, 
 the address of smartPaperList contract will be returned and stored on disk. 
@@ -580,8 +590,8 @@ The address will be used for the application development.
 The authors will use this address to use smartPaperList to create smart paper instead of directly creating the smart paper.
 It is more convenient for authors to manage their papers.
 \subsection{Continues Integration}
-Since the workflow has been established, we would like to automate the whole process rather than running them by head.
-In this project, the GitLab CI is used for continue integration. 
+Since the workflow has been established, we would like to automate the whole process rather than running them by hand.
+In this project, the GitLab CI \cite{gitlab} is used for continue integration. 
 Once a new version is pushed onto GitLab, 
 it will have a pipeline that run the three steps of development workflow.
 Once all the steps is successful, the continues integration will pass. 
@@ -603,12 +613,12 @@ We chose the MetaMask which is a really user-friendly Ethereum wallet for the cl
 For a typical web application, the flow of the information would be list -- details -- interact. 
 In the application, it would be:
 \begin{itemize}
-  \item List of paper -- details of a specific paper -- Add new paper
-  \item Details of a specific paper -- list of versions -- Add new version or new author
+  \item \textbf{List of paper} -- details of a specific paper -- Add new paper
+  \item \textbf{Details of a specific paper} -- list of versions -- Add new version or new author
 \end{itemize}
 So that we need three forms to help the authors to submit their jobs.
 \begin{itemize}
-  \item \textbf{The new paper form} this form will be used for authors to create a new paper. the address of new paper will be stored in paper list
+  \item \textbf{The new paper form} this form will be used for authors to create a new paper. the address of new paper will be stored in list of papers
   \item \textbf{The new version form} this form will be used for authors to create a new version. The paper will have a list of version.
   \item \textbf{The new author form} this form will be used for authors to add a new author.
 \end{itemize}
@@ -652,8 +662,8 @@ Gas limit is a special mechanism to prevent user from spending two much Ether du
 In project, the cost of creating a new paper and releasing a new version are the two major index that matters.
 After doing some experiment, it is found out that the key factor which would affect the cost is the number of authors.
 Some test scripts were written by changing the number of authors 
-but setting default value for rest of arguments which is submitted to the Ethereum network
-After using the automate testing scripts to collect the data, the result is visualized.
+but setting default value for rest of arguments which is submitted to the Ethereum network.
+After using the automate testing scripts to collect the data, the results are visualized.
 \subsubsection{The cost of creating a new paper}
 \begin{figure}[H]
   \centering
@@ -678,7 +688,7 @@ This is the public interface of creating a new smart paper. It requires four arg
 The inner logic is actually simple which is just storing all the arguments on the Ethereum. 
 However, the fourth arguments is a dynamic array. 
 When the Ethereum tries to store the array, it has to iterate it. if n is the length of the list of authors,
-the Ethereum need to take n steps to copy it. The same OPCODEs used for copy addresses and store addresses would be execute n times. 
+the Ethereum need to take n steps to copy it. The same OPCODEs used for copy addresses and store addresses would be executed n times. 
 It could be found that this mechanism is really similar to the time complexity used in computer science. 
 For the first three arguments which are fixed-size arrays, the cost would be a constant number which could be described as O(1).
 For an array with n elements, the cost would be O(N), which means a linear growth speed. 
@@ -833,7 +843,7 @@ the list of the hash of files and latest version number will be updated.
 These extra OPCODEs will consume extra gas so that tha last one would have to pay more to the Ethereum network.
 \subsubsection{Result}
 In general, the price of using the prototype application implemented in chapter 4 is lower than the estimated.
-The cost of creating a papers with 4 authors would be £0.49 and cost of publishing a new version would be £0.46.
+The cost of creating a paper with 4 authors would be £0.49 and cost of publishing a new version would be £0.46.
 Comparing to hundreds of dollars of publication fee, it seem really attractive. 
 However, the application itself is just a prototype with limit functionalities. 
 The files are not even stored in the application. 
@@ -853,23 +863,166 @@ It is really important for a decentralized application to have it own ecosystem.
 \subsection{Open source}
 There are many open source libraries and resource used in this project to improve the quality.
 \begin{itemize}
-  \item \textbf{Node.js} An open source JavaScript runtime, which is the fundamental technology stack of the project
-  \item \textbf{Npm} Node.js package manager.
-  \item \textbf{Solc} Solidity compiler implemented in JavaScript.
-  \item \textbf{Ganache} Local Ethereum test network
-  \item \textbf{truffle-hdwallet-provider} Tools for deploying smart contract
-  \item \textbf{Web3} This is the Ethereum compatible JavaScript API which implements the Generic JSON RPC spec
-  \item \textbf{Jest} JavaScript test framework used to test the smart contract.
-  \item \textbf{React.js} JavaScript framework for building user interface.
-  \item \textbf{Redux} State management for React.js
+  \item \textbf{Node.js} \cite{nodejs} An open source JavaScript runtime, which is the fundamental technology stack of the project
+  \item \textbf{Npm} \cite{npm} Node.js package manager.
+  \item \textbf{Solc} \cite{solc} Solidity compiler implemented in JavaScript.
+  \item \textbf{Ganache} \cite{ganache} Local Ethereum test network
+  \item \textbf{truffle-hdwallet-provider} \cite{ganache} Tools for deploying smart contract
+  \item \textbf{Web3} \cite{web3} This is the Ethereum compatible JavaScript API which implements the Generic JSON RPC spec
+  \item \textbf{Jest} \cite{jest} JavaScript test framework used to test the smart contract.
+  \item \textbf{React.js} \cite{react} JavaScript framework for building user interface.
+  \item \textbf{Redux} \cite{redux} State management for React.js
 \end{itemize}
-All the resource used in the project are correctly cited with respect to the requirements of their license
+All the resource used in the project are correctly cited with respect to the requirements of their licenses.
 \subsection{Risk management}
-It is an extremely important task to measuring
+It is an extremely important task to measuring risks associated with the project. 
+So the GitLab \cite{gitlab} was used for version control and continues integration, which can keep a back up of project and make sure the project is working correctly.
+Google docs also was used for exchanging the information with the supervisor. It kept a record of the meetings. The whole process was controlled.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{gitlab.png}
+  \caption{GitLab}
+  \label{fxxk4}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{googledoc.png}
+  \caption{Google docs}
+  \label{fxxk3}
+\end{figure}
 \chapter{Discussion}
-\section{Good}
-\section{Bad}
+In this chapter, a more deeper discussion 
+about the application built in chapter 4 and Ethereum will be present.
+The questions mentioned at the chapter 5 will also be discussed.
+The status of blockchain changes really fast, it is vital to update the knowledge about ethereum network.
+The price of the cryptocurrency has been keeping decreasing for the last three mouths. 
+Publics gradually realize the current blockchain technology is still at its early stage.
+\section{Developer experience}
+The developer experience for developing a decentralize application on Ethereum is really good because it has solid ecosystem which is main powered by JavaScript. 
+If you are a experienced JavaScript developer, 
+you would be familiar with all the tools used for development and you can easily set up your workspace in a day.
+If you are not familiar with JavaScript, it may take your some time to understand how those tools works, 
+but the process would not cost you too much time. 
+Ethereum provides developers with a good design of application interfaces. For real world application,
+developer could use truffle \cite{truffle} to easily develop and deploy contracts, using jest \cite{jest} to test the contracts and using frontend framework such as React.js or Vue.js to build user interface.
+There are also many continue integration tools to improve the robustness of the application.
+But when it comes to the Solidity, the situation is not good as the tools provided by JavaScript ecosystem. Although the Solidity is a turing-complete language, 
+it does not have a powerful standard library like Python or Java and its ecosystem is limited.
+This means that developers has to build everything from the ground. Ethereum virtual machine only has limit the depth of call stack, 
+which means the developers has to keep the inner implementation of the contract simple. Otherwise, it will cause the overflow of stack, 
+which may cause the loss of users. The compiler of the Solidity is also at its early stage, 
+it cannot optimize the code like the GCC or OpenJDK which can easily accelerate the program.
+\section{Cost for a decentralized application}
+In chapter 5, an analysis about the cost of authors on the Ethereum network is presented. 
+It gives a attractive price about the cost of system. 
+But that is not the actual cost of the application. There are other fees for running a application.
+The cost of building and deploying the application should also be considered. 
+For a real world application, you have to store the paper of user. 
+But store data permanently on the Ethereum is extremely expensive. 
+It has no sense to use Ethereum to store data.
+One of possible alternative is only storing the key data such as the hash of the paper, 
+using Ethereum network as a snapshot or a hash table which could be used to verifying the data.
+The application will be almost same as the traditional web application but with Ethereum network verifying their data.
+For these model, 
+the price would be slight higher than the traditional web application and 
+the application won't be fully decentralized as expected. But the price is predictable and  
+the whole application does not heavily rely on Solidity to provide functionalities, 
+which means developer could make best use of their previous knowledge and ecosystem of the language they are familiar with.
+It could have a relative stable global consensus and is more secure than the traditional web application.
+For those platform mentioned at background research \cite{DEIP} \cite{Pluto}, most of them use this model.
+But in this model, the Ethereum is basically treated as a stable distributed database. It indeed has much more power. 
+\paragraph{}
+There are also some other alternatives. One of them is using the ipfs \cite{benet2014ipfs}. Comparing to the Ethereum network, 
+ipfs is more like a protocol rather than a fundamental infrastructure. In the past, the streaming service like YouTube or Netflix is not good enough for users. 
+Most of people will download video to watch. Peer-to-Peer downloading is really popular at that time. 
+When user is downloading the file, 
+as same time it will shared the part that has already downloaded with other users.
+For a popular resources, the download speed is really fast because there are many user doing the uploading.
+The ipfs is actually inspired by such mechanism. It can provide the developer with a fully decentralized file storage service.
+By combining the Ethereum network with the ipfs, it should give us a secure and stable system. But the reality is that such a combination will highly increase the complexity of the system.
+Both the Ethereum and the ipfs are not a stable project, they are changing really fast. It leeds to trouble of maintaining the application build by them. 
+There is no exciting model for such combination, 
+it requires a brand new design of the system which would have higher requirements for the developers. 
+In fact, 
+the ipfs system does not has its own ecosystem so it has only limited number of nodes right now 
+and is not stable enough for a production application. 
+So in the model, the price for the application is not predictable at all. It has much higher risks.
+\section{Blockchain constraints}
+The mining required to support the Bitcoin network currently consumes too much energy. 
+A lost of this is being fueled by cheap but dirty coal energy in China where almost half of the mining is currently being done.
+This high energy consumption is not scalable for larger adoption. 
+The Ethereum and bitcoin use a lot of technical tricks and incentives 
+to make sure that their consensus accurate without a central authority.
+The problem is, it is difficult to preserver this balance while also growing the number of users. Current blockchain require global consensus on the order and outcome of all transfers.
+In the Ethereum all smart contracts are stored publicly every node of the blockchain, which has trade-offs. 
+The downside is that performance issue arise in that every node is calculating all the smart contracts in real time,
+resulting in lower speeds. This is clearly a cumbersome task. For cryptocurrency, speed is measured by TPS(transaction per second). 
+The Ethereum network theoretical maximum capacity is up to 15 transactions per second. Visa's network is capable of handling more than 24000 transactions per second.
+The advocate of blockchain claims that blockchain technology could solve the trust issue. 
+But the reality problem is that trust issue is not only a technical issue but also social issue.
+Even though all the blockchain technologies are open source projects. Not everyone understand how to code, 
+they still need to rely on others to audit the source code.At the early of 2018, blockchain is most attractive topic in the technology industry, 
+the price of cryptocurrencies is extremely high. But most of them turns out to be Pyramid scheme. 
+Many of Investors just use it to do initial coin offering and get rich. 
+What we call the blockchain today is really just a very limited and often very inefficient version of
+this, we still have many very difficult problems to solve before we get there. Possibly that end state
+will look something like the blockchain of today but possibly it will look very different. 
+Those behaviors really damaged the ecosystem of the Ethereum.
+\section{Token Economies}
+In chapter 5, it turns out that the application implemented in chapter 4 is caught in dilemma. 
+The application is heavily relied on the Ethereum ecosystem which will lead a unstable price and performance. For a real production-ready decentralized application, 
+it must have it own ecosystem. 
+That's the reason why the Ethereum provide the feature that everyone can create their cryptocurrency easily on the Ethereum network.
+Most of the current discussion about the Ethereum remains at the level of the technology and possibilities of distributed ledger as a distributed database with a strong global consensus. 
+However its implications go far beyond this as the Ethereum concept is more than just a database or ledger. 
+It is a new organizing paradigm for the discovery, valuation, and transfer of all discrete units of value via token markets systems.
+\paragraph{}
+A token is a quantified unit of value that is recorded on the blockchain, this value could be of any kind.
+Token economies consist of a network of independent nodes that act autonomously, 
+but through incentive structure and the single system of the market self-organized to create emergent coordination 
+and thus a distributed management system. For a publishing system, we could have a paper token, where anyone who provides a high quality paper or who does a grate review can earn token.
+Investors could use tokens to fund authors. Thus instead of having a centralized publisher, 
+there is token market that works to create signals 
+that align people's incentive with maintaining and growing the collection of quality papers.
+It is not just an information technology but also an institution technology in the Ethereum that it encourage us to design incentive structures in the form of token economies. 
+This is where things get complex 
+as we move into the realm of designing economies and incentive systems for 
+coordinating human activity in a decentralized fashion, 
+something that could potentially enable the coordinating of all human activity at a much larger scale than has been possible before.
 \chapter{Conclusion}
+\section{Summary}
+In general, the application for the project works well. It could meet all the requirements of the design of project. 
+It helps author to create their paper and release new version easily. 
+The user interface is almost same as the traditional web service. 
+It also provides us with a attractive price, 
+which are £0.49 for a new paper and £0.46 for a new version.
+However, it is just a prototype application which cannot be scaled.
+What the authors and publishers need is a real world application. 
+I have accomplish the tasks for the project of master of science. 
+I personally also have learnt a lot of knowledge about JavaScript, Ethereum, distributed system. 
+Those help me to enhance my coding.
+However the current design of the smart paper is not good enough for a production-ready application.
+The blockchain still need time to satisfy the requirements for the developer.
+\section{Future development}
+The third generation of the blockchain is actually happening right now. 
+It would be good topic to migrate our current design on the third generation of blockchain.
+On the other hand, the current system lacks of the design of ecosystem by token.
+If we could design a stable ecosystem, the application will be more valuable. 
+For experienced developers, replacing the current compile flow with truffle \cite{truffle} would be a better choice
+\chapter{Statement}
+\paragraph{Statement of Originality}
+\begin{itemize}
+  \item I have read and understood the \href{https://secure.ecs.soton.ac.uk/notes/ai/}{ECS Academic Integrity} information and the University’s 
+  \href{https://secure.ecs.soton.ac.uk/notes/ai/}{Academic Integrity Guidance for Students}
+  \item I am aware that failure to act in accordance with the \href{https://secure.ecs.soton.ac.uk/notes/ai/}{Regulations Governing Academic Integrity} may lead to the imposition of penalties which, for the most serious cases, may include termination of programme.
+  \item I consent to the University copying and distributing any or all of my work in any form and using third parties (who may be based outside the EU/EEA) to verify whether my work contains plagiarised material, and for quality assurance purposes.
+  \item \textbf{I have acknowledged all sources, and identified any content taken from elsewhere.}
+  \item \textbf{I have not used any resources produced by anyone else.}
+  \item \textbf{I did all the work myself, or with my allocated group, and have not helped anyone else.}
+  \item \textbf{The material in the report is genuine, and I have included all my data/code/designs.}
+  \item \textbf{I have not submitted any part of this work for another assessment.}
+  \item \textbf{My work did not involve human participants, their cells or data, or animals.}
+\end{itemize}
 \backmatter
 \bibliographystyle{ieee}
 \bibliography{ECS}
