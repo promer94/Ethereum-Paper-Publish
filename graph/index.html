@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <link rel="stylesheet" src="./style.css">
+    <title>Simple cost analysis</title>
+    <style>
+      body{
+        font-size: 20px
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card my-2">
+            <div class="card-title">
+              <h3 class="text-center">The cost of publishing a new Paper</h3>
+            </div>
+            <div class="card-image">
+              <canvas id="initialCost"></canvas>
+            </div>
+           <div class="card-body text-justify">
+              <p>
+                According to the
+                <span class="text-danger">red-line</span> of the above picture, we could observe that the linear relationship between the number of
+                authors and the total cost of deploying a new paper contract. The
+                <span class="text-primary">blue-line</span> is the average cost for a single user to create a new paper.
+              </p>
+              <p>
+                In order to explain why, we need first recap some knowledge about the Ethereum. Comparing to the Bitcoin, the Ehtereum has
+                the feature to do complex computation on the blockchain. A miner executes the computation associated with
+                each transaction(contract), resulting in an updated state. Upon successfully mining a block, miner will be
+                rewarded base on the computation cost. The contract code determines the cost of the transactions.
+              </p>
+              <p>
+                Let's look at our contract code.
+
+              </p>
+              <p>
+                <code>
+                  paper (bytes32 _description, bytes32 _metaData, bytes16 _paperMD5, address[] _authors){}
+                </code>
+              </p>
+              <p>
+                This is the public interface of creating a new smart paper. It requires four arguments to executing it. The inner logic is
+                actually simple which is just storing all the arguments in the contract. But we should notice the that
+                the fourth argument is mutable array. If we want copy this array,contracts need to iterate it and it usually
+                takes O(N). For the rest arguments which are fixed-size arrays, the cost would be O(1). So the total cost
+                should be O(N) which is exactly the result of the picture.
+              </p>
+              <p>
+                Now, we get the math model of the cost of creating a new paper:
+
+              </p>
+              <p>
+                <code>Cost = numOfAuthors * A + B</code>
+              </p>
+              <p>
+                <code>averageCost = A + B/numOfAuthors</code>
+              </p>
+              <p>
+                The number of result shows on the picture is not precise because it was from the local test network. But the math model should
+                be same. Only need a few data from real network, we could rebuild this line and get more precise data
+              </p>
+              <p>
+                <table class="table table-hover">
+                  <thead>
+                    <tbody>
+                      <tr>
+                        <th class="row">Number of Authors</th>
+                        <th>
+                          1
+                        </th>
+                        <th>
+                          2
+                        </th>
+                        <th>3</th>
+                        <th>4</th>
+                      </tr>
+                      <tr>
+                        <th class="row">
+                          Cost
+                        </th>
+                        <th>
+                          £0.45
+                        </th>
+                        <th>
+                          £0.47
+                        </th>
+                        <th>£0.49</th>
+                        <th>£0.51</th>
+                      </tr>
+                    </tbody>
+                </table>
+              </p>
+              <p>
+                The table presents the test result that we got from the Rinkeby Test Network, which is a real Ethereum test network. So we
+                can get a new graph here
+              </p>
+
+            </div>
+            <div class="card-title text-center">
+              <h3>The cost on Rinkeby Test Network</h3>
+            </div
+            <div class="card-image">
+              <canvas id="realInitialCost"></canvas>
+            </div>
+          </div>
+          <div class="card my-2 row">
+            <div class="card-title text-center">
+              <h3 class="center-align flow-text">The cost of publishing a new version</h3>
+            </div>
+            <div class="card-image">
+              <canvas id="approveCost"></canvas>
+            </div>
+            <div class="card-body">
+              <p>
+                When we look at cost of publishing a new version, the
+                <span class="text-danger">red-line</span> and
+                <span class="text-primary">blue-line</blue-line>
+                </span> also gives us a linear relations. But if we look at out code
+              </p>
+              <p>
+                <code>
+                  createNewVersion(bytes32 versionDescription, bytes32 metaData, bytes16 md5)
+                </code>
+              </p>
+              <p>
+                It has nothing to do with the number of authors. Is there anything wrong?
+              </p>
+              <p>Actually the cost of publishing a new version contains of two parts. the first part is creating a new paper,
+                the second is that every user need to approve this version.</p>
+            </div>
+            <div class="cart-title text-center">
+              <h3>The cost of create a new version</h3>
+            </div>
+            <div class="card-image">
+              <canvas id="createCost"></canvas>
+            </div>
+            <div class="cart-title text-center">
+                <h3>The cost of approve a new version</h3>
+              </div>
+            <div class="card-image">
+              <canvas id="versionCost">
+              </canvas>
+            </div>
+            <div class="card-body text-justify">
+              <p>
+                Indeed, the create cost is actually a const number. The approve cost has linear relations with the number of authors. So
+                the total cost is still a linear relation with respect to the number of authors.
+              </p>
+              <p>
+                Follow the same methods we used for estimation the cost of new paper, we could have another table about the version cost.
+              </p>
+              <p>
+                  <table class="table table-hover">
+                    <thead>
+                      <tbody>
+                        <tr>
+                          <th class="row">Number of Authors</th>
+                          <th>
+                            1
+                          </th>
+                          <th>
+                            2
+                          </th>
+                          <th>3</th>
+                          <th>4</th>
+                        </tr>
+                        <tr>
+                          <th class="row">
+                            Cost
+                          </th>
+                          <th>
+                            £0.28
+                          </th>
+                          <th>
+                            £0.34
+                          </th>
+                          <th>£0.40</th>
+                          <th>£0.46</th>
+                        </tr>
+                      </tbody>
+                  </table>
+                </p>
+            </div>
+            <div class="card-image">
+              <canvas id="theCost"></canvas>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+
+</html>
