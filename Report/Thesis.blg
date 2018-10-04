@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Thesis.aux
+The style file: ieee.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ECS.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Khoe:1994:CML:2288694.2294265
+Warning--empty journal in DEIP
+Warning--empty journal in science
+Warning--empty journal in Pluto
+Warning--empty journal in nakamoto2008bitcoin
+
+Done.
+You've used 21 entries,
+            4087 wiz_defined-function locations,
+            899 strings with 8750 characters,
+and the built_in function-call counts, 7621 in all, are:
+= -- 521
+> -- 101
+< -- 18
++ -- 58
+- -- 18
+* -- 308
+:= -- 1268
+add.period$ -- 43
+call.type$ -- 21
+change.case$ -- 21
+chr.to.int$ -- 42
+cite$ -- 26
+duplicate$ -- 678
+empty$ -- 773
+format.name$ -- 23
+if$ -- 1687
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 131
+newline$ -- 110
+num.names$ -- 9
+pop$ -- 449
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 561
+stack$ -- 0
+substring$ -- 119
+swap$ -- 348
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 21
+warning$ -- 5
+while$ -- 17
+width$ -- 23
+write$ -- 189
+(There were 5 warnings)

@@ -1,0 +1,67 @@
+\contentsline {chapter}{Abstract}{ii}{dummy.1}
+\contentsline {chapter}{Contents}{iii}{dummy.2}
+\contentsline {chapter}{List of Figures}{v}{dummy.4}
+\contentsline {chapter}{List of Tables}{v}{dummy.6}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.8}
+\contentsline {section}{\numberline {1.1}Project aim}{1}{section.9}
+\contentsline {paragraph}{}{1}{section*.10}
+\contentsline {paragraph}{}{1}{section*.11}
+\contentsline {paragraph}{}{2}{section*.12}
+\contentsline {section}{\numberline {1.2}Outline}{3}{section.13}
+\contentsline {paragraph}{}{3}{section*.14}
+\contentsline {paragraph}{}{3}{section*.15}
+\contentsline {paragraph}{}{3}{section*.16}
+\contentsline {paragraph}{}{3}{section*.17}
+\contentsline {paragraph}{}{3}{section*.18}
+\contentsline {paragraph}{}{3}{section*.19}
+\contentsline {chapter}{\numberline {2}Background Research}{4}{chapter.20}
+\contentsline {section}{\numberline {2.1}Modern publishing models example}{4}{section.21}
+\contentsline {paragraph}{}{4}{section*.22}
+\contentsline {section}{\numberline {2.2}Blockchain}{5}{section.23}
+\contentsline {subsection}{\numberline {2.2.1}Technology}{5}{subsection.24}
+\contentsline {subsection}{\numberline {2.2.2}Ethereum}{6}{subsection.25}
+\contentsline {paragraph}{}{6}{section*.26}
+\contentsline {chapter}{\numberline {3}Design}{7}{chapter.27}
+\contentsline {section}{\numberline {3.1}Requirements}{8}{section.29}
+\contentsline {section}{\numberline {3.2}Data structure}{9}{section.31}
+\contentsline {section}{\numberline {3.3}Smart Contract}{10}{section.32}
+\contentsline {section}{\numberline {3.4}The Smart Paper workflow in Ethereum}{11}{section.34}
+\contentsline {chapter}{\numberline {4}Implementation}{13}{chapter.35}
+\contentsline {section}{\numberline {4.1}New web service}{13}{section.36}
+\contentsline {section}{\numberline {4.2}Development workflow}{15}{section.39}
+\contentsline {section}{\numberline {4.3}Workspace setup}{16}{section.41}
+\contentsline {section}{\numberline {4.4}The Paper contract}{16}{section.42}
+\contentsline {subsection}{\numberline {4.4.1}Source code}{16}{subsection.43}
+\contentsline {section}{\numberline {4.5}Compile, Test, Deploy}{20}{section.157}
+\contentsline {subsection}{\numberline {4.5.1}Compile}{20}{subsection.158}
+\contentsline {subsection}{\numberline {4.5.2}Test}{20}{subsection.160}
+\contentsline {subsection}{\numberline {4.5.3}Deploy}{22}{subsection.162}
+\contentsline {subsection}{\numberline {4.5.4}Continues Integration}{22}{subsection.164}
+\contentsline {section}{\numberline {4.6}Client development}{23}{section.166}
+\contentsline {chapter}{\numberline {5}Evaluation}{25}{chapter.169}
+\contentsline {section}{\numberline {5.1}Cost analysis}{25}{section.170}
+\contentsline {subsection}{\numberline {5.1.1}Ecosystem in ethereum}{25}{subsection.171}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Gas}{25}{subsubsection.172}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Gas price}{25}{subsubsection.173}
+\contentsline {subsubsection}{\numberline {5.1.1.3}Gas limit}{26}{subsubsection.175}
+\contentsline {subsection}{\numberline {5.1.2}Visualization and analysis}{26}{subsection.176}
+\contentsline {subsubsection}{\numberline {5.1.2.1}The cost of creating a new paper}{27}{subsubsection.177}
+\contentsline {subsubsection}{\numberline {5.1.2.2}The cost of publising a new version}{29}{subsubsection.188}
+\contentsline {subsubsection}{\numberline {5.1.2.3}the cost of approve a version}{31}{subsubsection.201}
+\contentsline {subsubsection}{\numberline {5.1.2.4}Result}{33}{subsubsection.226}
+\contentsline {section}{\numberline {5.2}Project Management}{33}{section.227}
+\contentsline {subsection}{\numberline {5.2.1}Open source}{33}{subsection.228}
+\contentsline {subsection}{\numberline {5.2.2}Risk management}{34}{subsection.229}
+\contentsline {chapter}{\numberline {6}Discussion}{35}{chapter.232}
+\contentsline {section}{\numberline {6.1}Developer experience}{35}{section.233}
+\contentsline {section}{\numberline {6.2}Cost for a decentralized application}{36}{section.234}
+\contentsline {paragraph}{}{36}{section*.235}
+\contentsline {section}{\numberline {6.3}Blockchain constraints}{37}{section.236}
+\contentsline {section}{\numberline {6.4}Token Economies}{38}{section.237}
+\contentsline {paragraph}{}{38}{section*.238}
+\contentsline {chapter}{\numberline {7}Conclusion}{39}{chapter.239}
+\contentsline {section}{\numberline {7.1}Summary}{39}{section.240}
+\contentsline {section}{\numberline {7.2}Future development}{39}{section.241}
+\contentsline {chapter}{\numberline {8}Statement}{40}{chapter.242}
+\contentsline {paragraph}{Statement of Originality}{40}{section*.243}
+\contentsline {chapter}{Bibliography}{41}{dummy.244}

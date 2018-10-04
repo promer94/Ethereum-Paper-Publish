@@ -4,11 +4,11 @@ import { Provider } from 'react-redux'
 import App from './App'
 import configureStore from './configStore'
 
-const initalState = {
+const initialState = {
   paper: { paperAddresses: [], isPending: false, paperList: [] },
   user: { address: [] }
 }
-const store = configureStore(initalState) //eslint-disable-line
+const store = configureStore(initialState) //eslint-disable-line
 ReactDOM.render(
   <Provider store={store}>
     <App />
